@@ -102,7 +102,6 @@
 
       $.each(transpose, function(i,col){
         $.each(col, function(i,row){
-          console.log(row.replace(',',''));
           col[i] = parseInt(row.replace(',','')) ? parseInt(row.replace(',','')) : row;
         })
       });
