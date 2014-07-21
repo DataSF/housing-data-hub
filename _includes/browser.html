@@ -1,0 +1,26 @@
+{% for category in site.categories %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#{{ category | first | replace: ' ','-' }}">
+        {{ category | first | capitalize }}
+      </a>
+    </h4>
+  </div>
+  <div id="{{ category | first | replace: ' ','-' }}" class="panel-collapse collapse in">
+    <div class="panel-body">
+      <ul>
+        {% assign count = '0' %}
+        {% for posts in category %}
+          {% for post in posts %}
+          {% if post.url %}
+          {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+          <li><a href="{{post.url}}" data-content-id="{{ count }}">{{post.title}}</a></li>
+          {% endif %}
+          {% endfor %}
+        {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}
