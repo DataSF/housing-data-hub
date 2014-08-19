@@ -13,7 +13,7 @@ title: Policies & Programs
     {% for post in sorted_posts %}
     {% assign postdir = post.path | split:"/" %}
     {% if postdir[1] == 'policies'%}
-    <a href="{{post.url}}">
+    <a href="{{site.baseurl}}{{post.url}}">
       <div class="col-sm-6 policy-preview">
         <div class="row">
           <div class="col-sm-2 thumbnail-holder" style="background-image: url(https://www.filepicker.io/api/file/gFb7Ghz0QMaRQQmUYQVz)">
