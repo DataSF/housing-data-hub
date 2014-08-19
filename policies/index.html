@@ -1,0 +1,31 @@
+---
+layout: fixed
+title: Policies & Programs
+---
+<div class="row">
+  <div class="col-sm-12">
+    <p>Current policies related to affordable housing for the City of San Francisco</p>
+  </div>
+</div>
+<div class="row" id="policies-listing">
+  <div class="col-sm-12">
+    {% assign sorted_posts = (site.posts | sort: 'title') %}
+    {% for post in sorted_posts %}
+    {% assign postdir = post.path | split:"/" %}
+    {% if postdir[1] == 'policies'%}
+    <a href="{{post.url}}">
+      <div class="col-sm-6 policy-preview">
+        <div class="row">
+          <div class="col-sm-2 thumbnail-holder" style="background-image: url(https://www.filepicker.io/api/file/gFb7Ghz0QMaRQQmUYQVz)">
+          </div>
+          <div class="col-sm-10 policy-summary">
+            <h4>{{post.title}}</h4>
+            <p>{{post.summary}}<p>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

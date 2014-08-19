@@ -3,11 +3,11 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+
 body {
-  padding-top: 60px;
+  padding-top: 50px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
-
-
 /*
  * Global add-ons
  */
@@ -16,13 +16,12 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-
-
 /*
  * Sidebar
  */
 
 /* Hide for mobile, show later */
+
 .sidebar {
   display: none;
 }
@@ -36,15 +35,17 @@ body {
     display: block;
     padding: 20px;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
   }
 }
-
 /* Sidebar navigation */
+
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
+  margin-right: -21px;
+  /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
 }
@@ -56,8 +57,6 @@ body {
   color: #fff;
   background-color: #428bca;
 }
-
-
 /*
  * Main content
  */
@@ -74,8 +73,6 @@ body {
 .main .page-header {
   margin-top: 0;
 }
-
-
 /*
  * Placeholder dashboard ideas
  */
@@ -94,3 +91,77 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+.darkener {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.masthead {
+  height: 200px;
+  color: white;
+  margin-bottom: 30px;
+}
+.policies.masthead {
+  background: #333 url(/images/ggb_at_dusk.jpg) 50% 50% no-repeat;
+}
+.data-browser.masthead {
+  background: #333 url(/images/san-francisco-city-night.jpg) 50% 50% no-repeat;
+}
+.container-fluid {
+  position: relative;
+}
+.masthead .container {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+.masthead h2 {
+  position: absolute;
+  bottom: 20px;
+}
+.masthead.home {
+  background: url(/images/san-francisco-fly-to-barcelona.jpg) 0% 0%;
+  position: relative;
+  height: calc(100% - 50px);
+  margin-bottom: 30px;
+}
+.masthead.home h1 {
+  margin: 25% 0 20px;
+}
+h1.top {
+  margin-top: 0;
+}
+h4.panel-title {
+  text-transform: capitalize;
+}
+.policy-preview .policy-summary {
+  height: 100px;
+  overflow: hidden;
+}
+/* Navbar overrides */
+
+.navbar-inverse {
+  background-color: #326d89;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: #2b5e76;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+  background-color: #2b5e76;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #999;
+}
+

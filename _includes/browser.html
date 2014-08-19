@@ -1,26 +1,34 @@
-{% for category in site.categories %}
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h4 class="panel-title">
+<div class="panel-group" id="accordion">
+  {% for category in site.categories %}
+  {% assign matchCat = category | first %}
+  {% assign pageCatLower = page.category | downcase %}
+  <div class="panel panel-default">
+    
+    <div class="panel-heading">
       <a data-toggle="collapse" data-parent="#accordion" href="#{{ category | first | replace: ' ','-' }}">
-        {{ category | first | capitalize }}
+      <h4 class="panel-title">
+        {{ category | first }}
+      </h4>
       </a>
-    </h4>
-  </div>
-  <div id="{{ category | first | replace: ' ','-' }}" class="panel-collapse collapse in">
-    <div class="panel-body">
-      <ul>
-        {% assign count = '0' %}
-        {% for posts in category %}
-          {% for post in posts %}
-          {% if post.url %}
+    </div>
+
+    <div id="{{ category | first | replace: ' ','-' }}" class="panel-collapse collapse {% if pageCatLower == matchCat %} in {% endif %} ">
+      <div class="panel-body">
+        <ul>
+          {% assign count = '0' %} 
+          {% for posts in category %} 
+          {% for post in posts %} 
+          {% if post.url %} 
           {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-          <li><a href="{{site.baseurl}}/{{post.url}}" data-content-id="{{ count }}">{{post.title}}</a></li>
-          {% endif %}
+
+          <li {% if post.url == page.url %} class="active" {%endif%}><a href="{{site.baseurl}}{{post.url}}" data-content-id="{{ count }}">{{post.title}}</a>
+          </li>
+          {% endif %} 
+          {% endfor %} 
           {% endfor %}
-        {% endfor %}
         </ul>
+      </div>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}

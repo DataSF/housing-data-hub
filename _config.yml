@@ -1,2 +1,20 @@
 baseurl: /i-can-framework
 permalink:	/:categories/:title
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+navigation:
+- text: Home
+  url: /
+  actual: /index.html
+- text: 'Policies & Programs'
+  url: /policies/
+  actual: /policies/index.html
+  layout: policy
+- text: Data Browser
+  url: /data-browser/
+  actual: /data-browser/index.html
+  layout: data
+- text: About
+  url: /about/
+  actual: /about/index.html

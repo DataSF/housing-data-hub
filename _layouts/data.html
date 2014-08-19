@@ -9,22 +9,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
   <title>Housing Policy Guide</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="{{site.baseurl}}/style.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/styles/c3.css" rel="stylesheet">
-
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  {% include meta.html %}
 </head>
 
 <body>
@@ -39,9 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5 col-md-4">
-          <div class="panel-group" id="accordion">
             {% include browser.html %}
-          </div>
         </div>
         <div class="col-sm-7 col-md-8">
           <h1 class="top">{{ page.title }}</h1>

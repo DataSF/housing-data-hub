@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">SF Housing Policy Hub</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        {% unless page.layout == 'front' %}
+        <ul class="nav navbar-nav navbar-right">
+          {% for link in site.navigation %}
+          {% assign current = nil %}
+          {% if page.url == link.actual or page.layout == link.layout %}
+            {% assign current = 'active' %}
+          {% endif %}
+          <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+            <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endunless %}
+      </div>
+    </div>
+  </nav>
+</header>
