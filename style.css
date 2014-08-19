@@ -1,3 +1,5 @@
+---
+---
 /*
  * Base structure
  */
@@ -106,10 +108,10 @@ body {
   margin-bottom: 30px;
 }
 .policies.masthead {
-  background: #333 url(/images/ggb_at_dusk.jpg) 50% 50% no-repeat;
+  background: #333 url({{site.baseurl}}/images/ggb_at_dusk.jpg) 50% 50% no-repeat;
 }
 .data-browser.masthead {
-  background: #333 url(/images/san-francisco-city-night.jpg) 50% 50% no-repeat;
+  background: #333 url({{site.baseurl}}/images/san-francisco-city-night.jpg) 50% 50% no-repeat;
 }
 .container-fluid {
   position: relative;
@@ -124,7 +126,7 @@ body {
   bottom: 20px;
 }
 .masthead.home {
-  background: url(/images/san-francisco-fly-to-barcelona.jpg) 0% 0%;
+  background: url({{site.baseurl}}/images/san-francisco-fly-to-barcelona.jpg) 0% 0%;
   position: relative;
   height: calc(100% - 50px);
   margin-bottom: 30px;
