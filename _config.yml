@@ -18,3 +18,111 @@ navigation:
 - text: About
   url: /about/
   actual: /about/index.html
+
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://jasonlally.com/i-can-framework'
+  media: 'images'
+  metadata:
+    _posts/data:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "data"
+      - name: "category"
+        field:
+          element: "text"
+          label: "Category"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          help: "The title will show up in the lefthand navigation"
+      - name: "chart-title"
+        field:
+          element: "text"
+          label: "Chart Title"
+          help: "This title will show up above the chart"
+      - name: "data"
+        field:
+          element: "text"
+          label: "Data Source Link"
+          help: "Enter the link to the data source here. If it is stored in the data folder of this site, please just enter the full filename only."
+      - name: "column"
+        field:
+          element: "text"
+          label: "Data Column"
+          help: "Enter the column name that you would either like to map or categorize your chart data by."
+      - name: "type"
+        field:
+          element: "select"
+          options:
+            - name: 'Map'
+              value: 'map'
+            - name: 'Bar Chart'
+              value: 'bar'
+            - name: 'Line Chart'
+              value: 'line'
+            - name: 'Area Chart'
+              value: 'area'
+      - name: "scale"
+        field:
+          element: "text"
+          label: "Number of data categories"
+          help: "This is used to calculate the number of buckets for choropleth maps."
+          value: "5"
+      - name: "colors"
+        field:
+          element: select
+          label: "Choropleth Colors"
+          help: "If this dataset should be displayed in a map, specify the choropleth color ramp from Colorbrewer.org"
+          options:
+            - name: 'Blues'
+              value: 'Blues'
+            - name: 'Greens'
+              value: 'Greens'
+            - name: 'Oranges'
+              value: 'Oranges'
+      - name: "axis-type"
+        field:
+          element: "select"
+          label: "Axis Type"
+          options:
+            - name: 'Category'
+              value: 'category'
+            - name: 'Time Series'
+              value: 'timeseries'
+            - name: 'Continuous'
+              value: ''
+      - name: "y-format"
+        field:
+          element: "select"
+          label: "Y Format"
+          options:
+            - name: "$x"
+              value: "$,"
+            - name: "x,xxx"
+              value: ","
+      - name: "units"
+        field:
+          element: "text"
+          label: "Unit description"
+          help: "Enter the description of the units, if displaying data on a map"
+      - name: "source"
+        field:
+          element: "textarea"
+          label: "Data Source Attribution"
+          help: "Where did this data come from?"
+      - name: "notes"
+        field:
+          element: "textarea"
+          label: "Notes"
+          help: "List any relevant notes about this datasource"
+      - name: "policy-link"
+        field:
+          element: "text"
+          label: "Policy Link"
+          help: "Provide a link to the relevant policy"
+
+
