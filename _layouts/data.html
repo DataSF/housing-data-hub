@@ -27,10 +27,18 @@
             {% include browser.html %}
         </div>
         <div class="col-sm-7 col-md-8">
-          <h1 class="top">{{ page.title }}</h1>
-          <div id="chart"></div>
+          <h1 class="chart-title top">{{ page.chart-title }}</h1>
           {{content}}
-          <a href="{{ page.policy-link }}">More on this policy</a>
+          <div id="chart"></div>
+          <div class="row">
+            <div class="col-md-9">
+              <p>Source: {{page.source}}</p>
+              <p>Notes: {{page.notes}}</p>
+            </div>
+            <div class="col-md-3">
+              <a href="{{ page.policy-link }}">More on this policy</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

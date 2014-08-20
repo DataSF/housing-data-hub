@@ -1,13 +1,14 @@
 ---
 layout: data
-title: Project Locations
-category: Inclusionary Housing
-data: census.csv
+title: Percent of owners paying 35% or more of household income on owner costs
+category: Housing Affordability
 policy-link: 'http://google.com'
-type: map
-column: HC03_VC64
+data: census.csv
+column: HC03_VC171
 scale: 5
-color: Blues
+colors: Greens
+type: map
+units: percent renter-occupied
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.

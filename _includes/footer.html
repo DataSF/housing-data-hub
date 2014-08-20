@@ -26,6 +26,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.3.5/tabletop.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="{{site.baseurl}}/js/c3.js"></script>
+<script type="text/javascript" src="http://leafletjs.com/examples/us-states.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+<script src="{{site.baseurl}}/js/colorbrewer.js"></script>
+
 <script>
 window.onload = function() {
   init()
@@ -40,6 +44,8 @@ function init() {
       callback: showInfo,
       simpleSheet: true
     })
+  } else if ("{{page.type}}" == "map") {
+    generateMap();
   } else {
     generateChart(dataURL);
   }
@@ -97,6 +103,206 @@ function showInfo(data, tabletop) {
     }
   });
 }
+
+function generateMap() {
+  var map = L.mapbox.map('chart', 'datasf.j9b9ihf0', {
+    accessToken: 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg'
+  }).setView([37.774929, -122.419416], 12);
+
+  var popup = new L.Popup({
+    autoPan: false
+  });
+
+  var geofile = '{{site.baseurl}}/data/sf_census_tracts.json',
+    geojson, json, column = '{{page.column}}'
+
+  {% if page.colors %}
+  var colors = '{{page.colors}}';
+  {% else %}
+  var colors = 'Blues';
+  {% endif %}
+
+  {% if page.scale %}
+  var scale = {{page.scale}}; 
+  {% else %}
+  var scale = 5; 
+  {% endif %}
+
+  $.ajax({
+    type: "GET",
+    url: "{{site.baseurl}}/data/{{page.data}}",
+    dataType: "text",
+    success: function(data) {
+      json = scaleData(csvJSON(data));
+    }
+  });
+
+  $.getJSON(geofile, function(geodata) {
+    geodata = addDataToGeoJson(json, geodata)
+    geojson = L.geoJson(geodata, {
+      style: getStyle,
+      onEachFeature: onEachFeature
+    }).addTo(map);
+    var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+  });
+
+  function scaleData(data) {
+    valuesOnlyArray = extractValuesFromObjectArray(data)
+    quantizer = new Quantizer(valuesOnlyArray, scale)
+    $.each(data, function(i, dataObject) {
+      dataObject.scaledValue = quantizer.quantizeNumber(parseFloat(dataObject[column]))
+    })
+    return data;
+  }
+  // Function inspired by code in awesome project by Dave Guarino https://github.com/daguar/easy-choropleths
+  // Adds `scaled_value` and `value` from data objects into geojson features as, eg, feature.properties.scaled_value
+  function addDataToGeoJson(data, geojson) {
+    var dataHash = {};
+    $.each(data, function(i, dataObject) {
+      dataHash[dataObject['GEOID10']] = dataObject
+    });
+    $.each(geojson.features, function(i, feature) {
+      geoid = feature.properties.GEOID10;
+      dataObject = dataHash[geoid];
+
+      if (dataObject) {
+        feature.properties.scaledValue = dataObject.scaledValue;
+        feature.properties.value = parseFloat(dataObject[column]);
+      } else {
+        feature.properties.scaledValue = -1;
+        feature.properties.value = -1;
+      }
+    });
+    return geojson;
+  }
+
+  //CSV to json - see: http://techslides.com/convert-csv-to-json-in-javascript/
+  function csvJSON(csv) {
+    var lines = csv.split("\r"); //excel uses carriage returns instead of new lines (may need to fix this either on upload)
+    var result = [];
+    var headers = lines[0].split(",");
+
+    for (var i = 1; i < lines.length; i++) {
+      var obj = {};
+      var currentline = lines[i].split(",");
+      for (var j = 0; j < headers.length; j++) {
+        obj[headers[j]] = currentline[j];
+      }
+      result.push(obj);
+    }
+    //return result; //JavaScript object
+    return result; //JSON
+  }
+
+  function extractValuesFromObjectArray(dataObjectArray) {
+    return $.map(dataObjectArray, function(dataObject) {
+      return parseFloat(dataObject[column]);
+    });
+  }
+
+  // Quantizing data into buckets
+  // Given 
+  var min, max;
+
+  function Quantizer(dataArray, s) {
+    min = d3.min(dataArray);
+    max = d3.max(dataArray);
+
+    this.quantizeNumber = d3.scale.quantize()
+      .domain([min, max])
+      .range(d3.range(1, s + 1)) // Start with only mapping on 1-5 color scale
+  }
+
+  //array of values
+  //quantize
+  //
+  // statesData comes from the 'us-states.js' script included above
+  /*
+  var statesLayer = L.geoJson(statesData, {
+    style: getStyle,
+    onEachFeature: onEachFeature
+  }).addTo(map);
+  */
+  function getStyle(feature) {
+    col = getColor(feature.properties.scaledValue, 5);
+    return {
+      fillColor: col,
+      weight: 1,
+      opacity: 0.3,
+      color: 'black',
+      fillOpacity: 0.7
+    };
+  }
+
+  // get color depending on population density value
+  function getColor(num, s) {
+    return colorbrewer[colors][s][num - 1];
+  }
+
+  function onEachFeature(feature, layer) {
+    layer.on({
+      mousemove: mousemove,
+      mouseout: mouseout
+    });
+  }
+
+  var closeTooltip;
+
+  function mousemove(e) {
+    var layer = e.target;
+
+    popup.setLatLng(e.latlng);
+    popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
+      layer.feature.properties.value + ' {{page.units}}');
+
+    if (!popup._map) popup.openOn(map);
+    window.clearTimeout(closeTooltip);
+
+    // highlight feature
+    layer.setStyle({
+      weight: 3,
+      opacity: 0.4,
+      fillOpacity: 0.95
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+      layer.bringToFront();
+    }
+  }
+
+  function mouseout(e) {
+    geojson.resetStyle(e.target);
+    closeTooltip = window.setTimeout(function() {
+      map.closePopup();
+    }, 100);
+  }
+
+  function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+  }
+
+  function getLegendHTML() {
+    var legendColors = d3.scale.quantize()
+      .domain([min,max])
+      .range(colorbrewer[colors][scale]);
+
+    var labels = [];
+
+    for (var i = 0; i < scale; i++) {
+      var range = legendColors.invertExtent(colorbrewer[colors][scale][i]);
+      from = Math.round(range[0] * 100)/100;
+      to = Math.round(range[1] * 100)/100;
+
+      labels.push(
+        '<i style="background:' + getColor(i + 1, scale) + '"></i> ' +
+        from + (to ? '&ndash;' + to : '+'));
+    }
+    //return '<span>hello</span>';
+
+    return '<span>{{page.units}}</span><br>' + labels.join('<br>');
+  }
+}
+
 
 function generateChart(data) {
   var type = '{{page.type}}';
