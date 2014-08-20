@@ -56,6 +56,8 @@ prose:
           help: "Enter the column name that you would either like to map or categorize your chart data by."
       - name: "type"
         field:
+          label: "Visualization Type"
+          help: "Select the type of visualization you would like to relate to the data source"
           element: "select"
           options:
             - name: 'Map'
