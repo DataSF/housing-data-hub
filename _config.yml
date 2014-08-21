@@ -1,4 +1,4 @@
-baseurl: /i-can-framework
+baseurl: /housing-policy-hub
 permalink:	/:categories/:title
 markdown: redcarpet
 redcarpet:
