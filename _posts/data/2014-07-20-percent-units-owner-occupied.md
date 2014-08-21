@@ -1,14 +1,22 @@
 ---
 layout: data
-title: Percent of units that are owner-occupied
+title: "Percent of units that are owner-occupied"
 category: Occupancy and Tenure
-policy-link: 'http://google.com'
+"policy-link": "http://google.com"
 data: census.csv
 column: HC03_VC63
-scale: 5
+scale: 
+  - 5
+  - "5"
 colors: Blues
 type: map
-units: percent of owner-occupied units
+units: "percent of owner-occupied units"
+published: true
+"axis-type": category
+"y-format": "$,"
+source: US Census. American Community Survey.
+notes: "This data needs no notes, maybe."
+"chart-title": "Percent of units that are owner-occupied"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+The map shows what percent of housing units in the census tract are occupied by owners (versus renters).
