@@ -19,7 +19,6 @@ navigation:
   url: /about/
   actual: /about/index.html
 
-
 prose:
   rooturl: '_posts'
   siteurl: 'http://jasonlally.com/i-can-framework'

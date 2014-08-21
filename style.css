@@ -216,6 +216,12 @@ h1.chart-title {
   font-size: 25px;
 }
 
+table {
+  width: 100%;
+max-width: 100%;
+margin-bottom: 20px;
+}
+
 .map-legend i {
   width: 18px;
   height: 18px;
