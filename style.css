@@ -8,7 +8,12 @@
 
 body {
   margin-top: 87px;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 /*
  * Global add-ons
@@ -148,6 +153,7 @@ h4.panel-title {
 
 .navbar {
   min-height: 55px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
 .navbar-inverse {
   background-color: #326d89;
@@ -204,6 +210,10 @@ h4.panel-title {
 }
 #chart {
   height: 400px;
+}
+
+h1.chart-title {
+  font-size: 25px;
 }
 
 .map-legend i {

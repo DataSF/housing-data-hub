@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5 col-md-4">
-            {% include browser.html %}
+          {% include browser.html %}
         </div>
         <div class="col-sm-7 col-md-8">
           <h1 class="chart-title top">{{ page.chart-title }}</h1>
@@ -39,6 +39,11 @@
               <a href="{{ page.policy-link }}">More on this policy</a>
             </div>
           </div>
+          <!-- Edit current page -->
+          <a href="{% if page.path %}//prose.io/#jasonlally/i-can-framework/edit/gh-pages/{{ page.path }}{% else %}//prose.io/#zzolo/zzolo.github.com{% endif %}" target="_blank">Edit this page in Prose.io</a>
+
+          <!-- Add post -->
+          <a href="//prose.io/#jasonlally/i-can-framework/new/gh-pages/_posts" target="_blank">Add a post with Prose.io</a>
         </div>
       </div>
     </div>

@@ -1,9 +1,13 @@
 ---
 layout: data
-title: Housing fee
-chart-title: Amount of Affordable Housing Fee collected by year
+title: Inclusionary pipeline
+chart-title: Inclusionary unit pipeline by construction status
 category: Inclusionary Housing
 policy-link: 'http://google.com'
+data: bmr_pipeline.csv
+x: Status
+type: bar
+axis-type: category
 source: Mayor's Office of Housing and Community Development
 ---
 
