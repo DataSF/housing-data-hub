@@ -2,7 +2,7 @@
 layout: data
 title: Units over time
 chart-title: Completed inclusionary units by year
-category: Inclusionary Housing
+category: Inclusionary-Housing
 policy-link: 'http://google.com'
 data: bmr_completed_over_time.csv
 x: Year

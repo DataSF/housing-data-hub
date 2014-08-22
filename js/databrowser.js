@@ -1,9 +1,9 @@
 ---
 ---
-var browserData = [
+var browserData =
+{
 {% for post in site.posts reversed | sort: title %}
 {% if post.layout == 'data' %}
-  {
   	"{{post.id | replace:'"','\"'}}": {
   		"category" : "{{post.category}}",
   		"data" : "{{post.data}}",
@@ -18,8 +18,7 @@ var browserData = [
   		"units" : "{{post.units}}",
   		"y-format" : "{{post.y-format}}",
   		"axis-type" : "{{post.axis-type}}"
-  	}
-  } {% unless forloop.last %},{% endunless%}
+  	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
-];
+};

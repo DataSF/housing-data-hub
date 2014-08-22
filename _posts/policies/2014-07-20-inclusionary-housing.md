@@ -1,6 +1,8 @@
 ---
 layout: policy
 summary: Inclusionary housing programs require new private housing developments to “include” affordable units or pay a fee.
+dataBrowserCategory: inclusionary-housing
+category: Inclusionary-Housing
 ---
 
 The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units.

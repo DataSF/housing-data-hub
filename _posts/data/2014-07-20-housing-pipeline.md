@@ -2,7 +2,7 @@
 layout: data
 title: Housing pipeline
 chart-title: Number of housing units by permit status
-category: Population and Housing
+category: Population-and-Housing
 policy-link: 'http://google.com'
 source: SF Planning Department
 ---

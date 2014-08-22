@@ -2,7 +2,7 @@
 layout: data
 title: Housing fee
 chart-title: Amount of Affordable Housing Fee collected by year
-category: Inclusionary Housing
+category: Inclusionary-Housing
 policy-link: 'http://google.com'
 source: Mayor's Office of Housing and Community Development
 ---

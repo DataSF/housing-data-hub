@@ -7,7 +7,7 @@
     <div class="panel-heading">
       <a data-toggle="collapse" data-parent="#accordion" href="#{{ category | first | replace: ' ','-' }}">
       <h4 class="panel-title">
-        {{ category | first }}
+        {{ category | first | replace: "-"," " }}
       </h4>
       </a>
     </div>

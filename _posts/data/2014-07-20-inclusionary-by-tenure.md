@@ -2,7 +2,7 @@
 layout: data
 title: Units by tenure
 chart-title: Completed inclusionary units by tenure by year
-category: Inclusionary Housing
+category: Inclusionary-Housing
 data: bmr_by_tenure.csv
 x: Year
 column: Year

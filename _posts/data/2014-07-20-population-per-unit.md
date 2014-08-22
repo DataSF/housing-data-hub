@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Ratio of Population to Housing Units by Decade
-category: Population and Housing
+category: Population-and-Housing
 policy-link: 'http://google.com'
 data: ratio_of_population_units_by_decade.csv
 x: Decade

@@ -2,7 +2,7 @@
 layout: data
 title: Housing age
 chart-title: Number of housing units by age
-category: Population and Housing
+category: Population-and-Housing
 policy-link: 'http://google.com'
 ---
 
