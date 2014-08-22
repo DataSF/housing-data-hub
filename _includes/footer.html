@@ -179,8 +179,7 @@ function generateMap(params) {
       }
       result.push(obj);
     }
-    //return result; //JavaScript object
-    return result; //JSON
+    return result;
   }
 
   function extractValuesFromObjectArray(dataObjectArray) {
@@ -189,8 +188,6 @@ function generateMap(params) {
     });
   }
 
-  // Quantizing data into buckets
-  // Given 
   var min, max;
 
   function Quantizer(dataArray, s) {
@@ -202,16 +199,6 @@ function generateMap(params) {
       .range(d3.range(1, s + 1)) // Start with only mapping on 1-5 color scale
   }
 
-  //array of values
-  //quantize
-  //
-  // statesData comes from the 'us-states.js' script included above
-  /*
-  var statesLayer = L.geoJson(statesData, {
-    style: getStyle,
-    onEachFeature: onEachFeature
-  }).addTo(map);
-  */
   function getStyle(feature) {
     col = getColor(feature.properties.scaledValue, 5);
     return {
@@ -242,7 +229,7 @@ function generateMap(params) {
 
     popup.setLatLng(e.latlng);
     popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
-      layer.feature.properties.value + units );
+      layer.feature.properties.value + " " + units );
 
     if (!popup._map) popup.openOn(map);
     window.clearTimeout(closeTooltip);
@@ -288,7 +275,7 @@ function generateMap(params) {
     }
     //return '<span>hello</span>';
 
-    return '<span>'+ units + '</span><br>' + labels.join('<br>');
+    return '<span>&nbsp;'+ units + '</span><br>' + labels.join('<br>');
   }
 }
 
