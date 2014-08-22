@@ -39,12 +39,16 @@ window.onload = function() {
   //todo: add custom styles to style.css
   $('table').addClass('table table-striped');
   $('#organizations').before($('#viz-wrapper'));
+  {% if page.layout == 'policy' %}
+  buildTOC();
   var vizData = browserData[$('.data-browser-select').val()];
   loadViz(vizData);
   $('.data-browser-select').change(function(){
     vizData = browserData[$(this).val()];
     loadViz(vizData);
   });
+  $('body').scrollspy({ target: '.nav-toc' })
+  {% endif %}
 }
 
 function loadViz(params) {
@@ -53,6 +57,13 @@ function loadViz(params) {
     } else {
       generateMap(params);
     }
+}
+
+function buildTOC() {
+  $('h2').each(function(i,el){
+    $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a></li>');
+    //vappend('<a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a>');
+  })
 }
 
 function init(layout) {
@@ -65,20 +76,25 @@ function init(layout) {
 
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, data;
+  var geojson, json, column, d, container, units;
 
   if(params) {
     column = params.column;
-    data = params.data;
+    d = params.data;
     if(params.colors != '') {
       colors = params.colors
     }
     if(params.scale != '') {
-      scale = params.scale
+      scale = parseInt(params.scale);
     }
+    container = 'map';
+    units = params.units;
+    $('#chart').hide();
+    $('#map').show();
   } else {
     column = '{{page.column}}';
-    data = "{{page.data}}";
+    units = '{{page.units}}';
+    d = "{{page.data}}";
     {% if page.colors %}
     var colors = '{{page.colors}}';
     {% else %}
@@ -90,9 +106,10 @@ function generateMap(params) {
     {% else %}
     var scale = 5; 
     {% endif %}
+    container = 'chart';
   }
 
-  var map = L.mapbox.map('chart', 'datasf.j9b9ihf0', {
+  var map = L.mapbox.map(container, 'datasf.j9b9ihf0', {
     accessToken: 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg'
   }).setView([37.774929, -122.419416], 12);
 
@@ -102,7 +119,7 @@ function generateMap(params) {
 
   $.ajax({
     type: "GET",
-    url: "{{site.baseurl}}/data/" + data,
+    url: "{{site.baseurl}}/data/" + d,
     dataType: "text",
     success: function(data) {
       json = scaleData(csvJSON(data));
@@ -271,7 +288,7 @@ function generateMap(params) {
     }
     //return '<span>hello</span>';
 
-    return '<span>{{page.units}}</span><br>' + labels.join('<br>');
+    return '<span>'+ units + '</span><br>' + labels.join('<br>');
   }
 }
 
@@ -279,6 +296,8 @@ function generateMap(params) {
 function generateChart(params) {
   if (params) {
     var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column;
+    $('#chart').show();
+    $('#map').hide();
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
       axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.x}}';

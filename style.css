@@ -277,3 +277,40 @@ aside h1 {
 aside p {
   font-size: .95em;
 }
+
+.affix {
+  width: inherit;
+  position: fixed;
+  top: 125px;
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;
+}
+.affix-top {
+
+}
+
+.toc.nav>li>a:hover, .toc.nav>li>a:focus {
+text-decoration: none;
+background-color: transparent;
+border-left: 3px solid #326d89;
+}
+
+.toc.nav>li.active>a {
+  border-left: 3px solid #326d89;
+}
+
+h2 {
+  color: #326d89;
+}
+
+h2:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -90px; 
+  height: 90px; 
+  visibility: hidden; 
+}
