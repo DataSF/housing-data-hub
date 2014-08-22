@@ -2,7 +2,7 @@
 layout: data
 title: Fee allocation
 chart-title: Allocation of Affordable Housing Fee by project type
-category: Inclusionary Housing
+category: Inclusionary-Housing
 policy-link: 'http://google.com'
 source: Mayor's Office of Housing and Community Development
 ---

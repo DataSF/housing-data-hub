@@ -9,6 +9,8 @@
 body {
   margin-top: 87px;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -126,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 3;
 }
-.masthead h2 {
+.masthead h1 {
   position: absolute;
   bottom: 20px;
 }
@@ -161,6 +163,8 @@ h4.panel-title {
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
   line-height: 25px;
+  font-size: .875em;
+  font-weight: 400;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
   background-color: #2b5e76;
@@ -235,4 +239,78 @@ margin-bottom: 20px;
 
 .leaflet-popup-content-wrapper {
   pointer-events: none;
+}
+
+.table {
+  font-size: .95em;
+}
+
+.sidenote {
+  float: left;
+  width: 120px;
+  margin: .2143em 0 0 -164px; 
+  /*padding-top: .75em;*/
+  font-size: .875em !important;
+  line-height: 1.42857 !important;
+} /* 14/20px (matches 24px line-height every 6 lines) with 3px to match baselines */
+.sidenote > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.sidenote p+p {
+  margin-top: 1.5em;
+}
+
+aside.well {
+  float: right;
+  width: 50%;
+  clear: both;
+  margin: 0 0 20px 20px;
+}
+
+aside h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+aside p {
+  font-size: .95em;
+}
+
+.affix {
+  width: inherit;
+  position: fixed;
+  top: 125px;
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;
+}
+.affix-top {
+
+}
+
+.toc.nav>li>a:hover, .toc.nav>li>a:focus {
+text-decoration: none;
+background-color: transparent;
+border-left: 3px solid #326d89;
+}
+
+.toc.nav>li.active>a {
+  border-left: 3px solid #326d89;
+}
+
+h2 {
+  color: #326d89;
+}
+
+h2:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -90px; 
+  height: 90px; 
+  visibility: hidden; 
 }

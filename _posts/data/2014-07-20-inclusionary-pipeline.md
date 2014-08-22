@@ -2,10 +2,11 @@
 layout: data
 title: Inclusionary pipeline
 chart-title: Inclusionary unit pipeline by construction status
-category: Inclusionary Housing
+category: Inclusionary-Housing
 policy-link: 'http://google.com'
 data: bmr_pipeline.csv
 x: Status
+column: Status
 type: bar
 axis-type: category
 source: Mayor's Office of Housing and Community Development

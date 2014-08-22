@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,19 +17,39 @@
     <div class="container-fluid masthead policies">
       <div class="darkener"></div>
       <div class="container">
-        <h2>{{page.title}}</h2>
+        <h1>{{page.title}}</h1>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-sm-7">
-          <h3>Summary</h3>
-          <p>{{ page.summary }}</p>
-          <h3>Description</h3>
-          {{ content }}
+          <article role="article">
+            <h2 id="summary" class="sr-only">Summary</h2>
+            <p class="lead">{{ page.summary }}</p>
+            <h2 id="description">Description</h2>
+            {{ content }}
+            <div id="viz-wrapper">
+              <h2 id="data">Data</h2>
+              {% assign pageCat = page.data-category | downcase | replace: " ", "-" %}
+              <select class="form-control data-browser-select">
+                {% for post in site.categories[pageCat] reversed %}
+                {% if post.layout == 'data' %}
+                <option value="{{post.id}}">{{post.chart-title}}</option>
+                {% endif %}
+                {% endfor %}
+              </select>
+              <div id="chart"></div>
+              <div id="map" style="height: 500px;"></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-5" style="position:relative;">
+          <aside class="nav-toc" data-spy="affix" data-offset-top="200" role="complementary">
+          <ul class="nav toc">
+          </ul>
+          </aside>
         </div>
       </div>
-
     </div>
   </main>
   {% include footer.html %}

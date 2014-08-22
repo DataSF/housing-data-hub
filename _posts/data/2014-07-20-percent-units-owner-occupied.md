@@ -1,14 +1,14 @@
 ---
 layout: data
 title: "Percent of units that are owner-occupied"
-category: Occupancy and Tenure
+category: Occupancy-and-Tenure
 "policy-link": "http://google.com"
 data: census.csv
 column: HC03_VC63
 scale: 5
 colors: Blues
 type: map
-units: "percent of owner-occupied units"
+units: "percent owner-occupied units"
 published: true
 "axis-type": category
 "y-format": "$,"

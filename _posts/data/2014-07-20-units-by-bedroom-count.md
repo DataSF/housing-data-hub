@@ -1,6 +1,8 @@
 ---
 layout: data
-category: Inclusionary Housing
+title: Units by bedroom
+chart-title: Units by bedroom
+category: Inclusionary-Housing
 policy-link: 'http://google.com'
 ---
 

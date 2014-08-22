@@ -29,85 +29,87 @@
 <script type="text/javascript" src="http://leafletjs.com/examples/us-states.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
 <script src="{{site.baseurl}}/js/colorbrewer.js"></script>
+<script src="{{site.baseurl}}/js/databrowser.js"></script>
 
 <script>
 window.onload = function() {
+  {% if page.layout == 'data' %}
   init()
+  {% endif %}
   //todo: add custom styles to style.css
   $('table').addClass('table table-striped');
-};
+  $('#organizations').before($('#viz-wrapper'));
+  {% if page.layout == 'policy' %}
+  buildTOC();
+  var vizData = browserData[$('.data-browser-select').val()];
+  loadViz(vizData);
+  $('.data-browser-select').change(function(){
+    vizData = browserData[$(this).val()];
+    loadViz(vizData);
+  });
+  $('body').scrollspy({ target: '.nav-toc' })
+  {% endif %}
+}
 
-var dataURL = '{{page.data}}';
+function loadViz(params) {
+  if (params.type != 'map') {
+      generateChart(params);
+    } else {
+      generateMap(params);
+    }
+}
 
-function init() {
-  if (dataURL.indexOf("google") > -1) {
-    Tabletop.init({
-      key: dataURL,
-      callback: showInfo,
-      simpleSheet: true
-    })
-  } else if ("{{page.type}}" == "map") {
+function buildTOC() {
+  $('h2').each(function(i,el){
+    $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a></li>');
+    //vappend('<a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a>');
+  })
+}
+
+function init(layout) {
+  if ("{{page.type}}" == "map") {
     generateMap();
   } else {
-    generateChart(dataURL);
+    generateChart();
   }
 }
 
-function showInfo(data, tabletop) {
-  //Step 1: connect to data and transform to array of rows or columns
-  //template: specify column headers in meta data or pull them somehow from data (this is possible via Socrata)
-  var sheetName = tabletop.foundSheetNames[0];
-  var d = [
-    ['Decade', 'Population', 'Housing Units']
-  ].concat(tabletop.sheets(sheetName).toArray());
+function generateMap(params) {
+  var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
+  var geojson, json, column, d, container, units;
 
-  /*
-      var transpose = d[0].map(function(col, i) { 
-        return d.map(function(row) {
-          return row[i] 
-        });
-      });*/
-
-  //Step 2: clean up data as needed (strings to numbers, empty strings to null)
-  $.each(d, function(i, row) {
-    $.each(row, function(i, val) {
-      row[i] = parseInt(val.replace(',', '')) ? parseInt(val.replace(',', '')) : val;
-      row[i] = row[i] == '' ? null : row[i];
-    })
-  });
-
-  //Step 3: connect data to visualization (chart)
-  //
-  /*
-      var chart = c3.generate({
-        data: {
-            // another meta data field or could be inferred from first column (preferred)
-            x: 'Decade',
-            rows: d,
-            //type could be another variable in meta data
-            types: {
-              'Population': 'area',
-              'Housing Units': 'area'
-            }
-        }
-      });
-*/
-  var chart = c3.generate({
-    data: {
-      x: 'PROPUSE',
-      url: 'https://data.sfgov.org/api/views/anu2-prcx/rows.csv?accessType=DOWNLOAD',
-      type: 'bar'
-    },
-    axis: {
-      x: {
-        type: 'category'
-      }
+  if(params) {
+    column = params.column;
+    d = params.data;
+    if(params.colors != '') {
+      colors = params.colors
     }
-  });
-}
+    if(params.scale != '') {
+      scale = parseInt(params.scale);
+    }
+    container = 'map';
+    units = params.units;
+    $('#chart').hide();
+    $('#map').show();
+  } else {
+    column = '{{page.column}}';
+    units = '{{page.units}}';
+    d = "{{page.data}}";
+    {% if page.colors %}
+    var colors = '{{page.colors}}';
+    {% else %}
+    var colors = 'Blues';
+    {% endif %}
 
-function generateMap() {
-  var map = L.mapbox.map('chart', 'datasf.j9b9ihf0', {
+    {% if page.scale %}
+    var scale = {{page.scale}}; 
+    {% else %}
+    var scale = 5; 
+    {% endif %}
+    container = 'chart';
+  }
+
+  var map = L.mapbox.map(container, 'datasf.j9b9ihf0', {
     accessToken: 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg'
   }).setView([37.774929, -122.419416], 12);
 
@@ -115,24 +117,9 @@ function generateMap() {
     autoPan: false
   });
 
-  var geofile = '{{site.baseurl}}/data/sf_census_tracts.json',
-    geojson, json, column = '{{page.column}}'
-
-  {% if page.colors %}
-  var colors = '{{page.colors}}';
-  {% else %}
-  var colors = 'Blues';
-  {% endif %}
-
-  {% if page.scale %}
-  var scale = {{page.scale}}; 
-  {% else %}
-  var scale = 5; 
-  {% endif %}
-
   $.ajax({
     type: "GET",
-    url: "{{site.baseurl}}/data/{{page.data}}",
+    url: "{{site.baseurl}}/data/" + d,
     dataType: "text",
     success: function(data) {
       json = scaleData(csvJSON(data));
@@ -301,15 +288,20 @@ function generateMap() {
     }
     //return '<span>hello</span>';
 
-    return '<span>{{page.units}}</span><br>' + labels.join('<br>');
+    return '<span>'+ units + '</span><br>' + labels.join('<br>');
   }
 }
 
 
-function generateChart(data) {
-  var type = '{{page.type}}';
-  var axisType = '{{page.axis-type}}';
-  var yFormat = '{{page.y-format}}';
+function generateChart(params) {
+  if (params) {
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column;
+    $('#chart').show();
+    $('#map').hide();
+  } else {
+    var data = '{{page.data}}', type = '{{page.type}}', 
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.x}}';
+  }
   if (type == '') {
     type = 'area';
   }
@@ -319,7 +311,7 @@ function generateChart(data) {
 
   var chart = c3.generate({
     data: {
-      x: '{{page.x}}',
+      x: x,
       url: '{{site.url}}/data/' + data,
       type: type
     },

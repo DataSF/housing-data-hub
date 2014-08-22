@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Population vs. Housing Units by Decade
-category: Population and Housing
+category: Population-and-Housing
 policy-link: 'http://google.com'
 data: 'pop_housing_units_by_decade.csv'
 x: Decade
