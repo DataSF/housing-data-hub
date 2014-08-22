@@ -242,7 +242,7 @@ function generateMap(params) {
 
     popup.setLatLng(e.latlng);
     popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
-      layer.feature.properties.value + ' {{page.units}}');
+      layer.feature.properties.value + units );
 
     if (!popup._map) popup.openOn(map);
     window.clearTimeout(closeTooltip);
@@ -312,7 +312,7 @@ function generateChart(params) {
   var chart = c3.generate({
     data: {
       x: x,
-      url: '{{site.url}}/data/' + data,
+      url: '{{site.baseurl}}/data/' + data,
       type: type
     },
     axis: {
