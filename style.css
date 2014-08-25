@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 h1.top {
   margin-top: 0;
 }
-h4.panel-title {
+h3.panel-title {
   text-transform: capitalize;
 }
 .policy-preview .policy-summary {

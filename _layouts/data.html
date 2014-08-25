@@ -32,8 +32,8 @@
           <div id="chart"></div>
           <div class="row">
             <div class="col-md-9">
-              <p>Source: {{page.source}}</p>
-              <p>Notes: {{page.notes}}</p>
+              {% if page.source %} <p>Source: {{page.source}}</p> {% endif %}
+              {% if page.notes %} <p>Notes: {{page.notes}}</p> {% endif %}
             </div>
             <div class="col-md-3">
               <a href="{{ page.policy-link }}">More on this policy</a>

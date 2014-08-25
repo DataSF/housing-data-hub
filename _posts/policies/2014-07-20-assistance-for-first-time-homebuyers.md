@@ -1,7 +1,7 @@
 ---
 layout: policy
 summary: First time homebuyers that meet income thresholds or other criteria can receive loan or down payment assistance and counseling for buying their first home.
-category: Assistance-to-Homeowners
+data-category: Assistance-to-Homeowners
 ---
 Buyer assistance programs reduce the upfront and ongoing costs of buying a home, which increases the ability of buyers to afford a home. The goal of the program is to create more home owners.
 

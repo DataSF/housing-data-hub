@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Project Locations
-chart-title: Project Locations
+title: Project locations
+chart-title: Project locations
 category: Inclusionary-Housing
 data: census.csv
 policy-link: 'http://google.com'

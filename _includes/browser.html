@@ -1,34 +1,34 @@
 <div class="panel-group" id="accordion">
-  {% for category in site.categories %}
-  {% assign matchCat = category | first %}
+  {% for group in site.data.browser %}
+  <h2>{{ group.supergroup}}</h2>
+  {% for cat in group.categories %}
+  {% assign category = site.categories[cat] %}
+  {% assign matchCat = cat %}
   {% assign pageCatLower = page.category | downcase %}
   <div class="panel panel-default">
-    
     <div class="panel-heading">
-      <a data-toggle="collapse" data-parent="#accordion" href="#{{ category | first | replace: ' ','-' }}">
-      <h4 class="panel-title">
-        {{ category | first | replace: "-"," " }}
-      </h4>
+      <a data-toggle="collapse" data-parent="#accordion" href="#{{ cat replace: ' ','-' }}">
+      <h3 class="panel-title">
+        {{ cat | replace: "-"," " }}
+      </h3>
       </a>
     </div>
 
-    <div id="{{ category | first | replace: ' ','-' }}" class="panel-collapse collapse {% if pageCatLower == matchCat %} in {% endif %} ">
+    <div id="{{ cat | replace: ' ','-' }}" class="panel-collapse collapse {% if pageCatLower == matchCat %} in {% endif %} ">
       <div class="panel-body">
         <ul>
           {% assign count = '0' %} 
-          {% for posts in category %} 
-          {% for post in posts %} 
+          {% for post in category reversed %} 
           {% if post.url %} 
           {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-
           <li {% if post.url == page.url %} class="active" {%endif%}><a href="{{site.baseurl}}{{post.url}}" data-content-id="{{ count }}">{{post.title}}</a>
           </li>
           {% endif %} 
-          {% endfor %} 
           {% endfor %}
         </ul>
       </div>
     </div>
   </div>
+  {% endfor %}
   {% endfor %}
 </div>
