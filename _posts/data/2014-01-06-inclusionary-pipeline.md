@@ -1,15 +1,20 @@
 ---
 layout: data
 title: Inclusionary pipeline
-chart-title: Inclusionary unit pipeline by construction status
-category: Inclusionary-Housing
-policy-link: 'http://google.com'
+"chart-title": Inclusionary unit pipeline by construction status
+category: "Inclusionary-Housing"
+"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: bmr_pipeline.csv
 x: Status
 column: Status
 type: bar
-axis-type: category
-source: Mayor's Office of Housing and Community Development
+"axis-type": category
+source: "Mayor's Office of Housing and Community Development."
+published: true
+scale: "5"
+colors: Blues
+"y-format": ","
+notes: null
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+As part of the Inclusionary Housing program, we track units that are in the process of being built. Inclusionary units must first be entitled (i.e. receive the right to build the development) by the City Planning Department. Next, the Department of Building Inspections issues permits to build. Finally, the first construction document authorizes construction to begin.
