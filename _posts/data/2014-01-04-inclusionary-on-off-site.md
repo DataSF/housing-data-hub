@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Units by on/off site
-"chart-title": Completed inclusionary units by on versus off site by year
+"chart-title": "Completed inclusionary units by on versus off-site by year"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: bmr_on_off_site.csv
