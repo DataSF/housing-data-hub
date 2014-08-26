@@ -7,7 +7,7 @@ category: "Inclusionary-Housing"
 data: bmr_completed_over_time.csv
 x: Year
 column: Year
-source: "Mayor's Office of Housing and Community Development."
+source: null
 published: true
 type: area
 scale: "5"
