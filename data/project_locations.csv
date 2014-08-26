@@ -1,0 +1,305 @@
+label,latitude,longitude,accuracy,status
+333-355 01st Street 94105,37.787031,-122.393642,9,Completed
+750 02nd Street 94107,37.780006,-122.390271,9,Completed
+201 02nd Street 94105,37.786864,-122.397709,9,Entitled
+5800 03rd Street 94124,37.725277,-122.395194,9,Completed
+2290 03rd Street 94107,37.760798,-122.388902,9,Entitled
+5800 03rd Street 94124,37.725277,-122.395194,9,Completed
+4343 03rd Street 94124,37.73808,-122.389287,9,Completed
+2235 03rd Street 94107,37.761425,-122.388259,9,Completed
+555-557 04th Street 94107,37.778883,-122.397179,8,Completed
+260 05th Street 94103,37.78071,-122.403971,8,First Const Doc Issued
+345 06th Street 94107,37.778165,-122.404677,9,Entitled
+788 08th Avenue 94103,37.770086,-122.404013,8,Completed
+350 08th Street 94103,37.774224,-122.408873,9,BP Issued
+1701 09th Avenue 94122,37.756383,-122.466062,9,Completed
+1266 09th Avenue 94122,37.764671,-122.466148,9,Completed
+248/252 09th Street 94103,37.774127,-122.412521,9,BP Issued
+55 09th Street 94103,37.777034,-122.415263,9,First Const Doc Issued
+121 09th Street 94013,33.431108,-94.042455,8,Completed
+480 14th Street 94103,37.768257,-122.423928,9,Completed
+1501 15th Street 94110,37.766542,-122.417978,9,First Const Doc Issued
+2401 16th Street 94110,37.765444,-122.410697,9,BP Issued
+1150 16th Street 94107,37.76632,-122.399008,8,Entitled
+1000 16th Street 94107,37.766457,-122.396934,8,First Const Doc Issued
+3371 17th Street 94110,37.763311,-122.421278,8,Completed
+1001 17th Street 94107,37.765025,-122.394131,9,Entitled
+1717 17th Street 94103,37.764478,-122.400858,9,First Const Doc Issued
+1701 19th Avenue 94122,37.756014,-122.476637,8,Completed
+2350 19th Avenue 94107,37.760782,-122.405709,8,Entitled
+3711 19th Avenue 94132,37.720561,-122.475865,9,Entitled
+3500 19th Street 94110,37.760307,-122.421762,9,Completed
+3620 19th Street 94110,37.76062,-122.424363,9,Completed
+638 19th Street 94107,37.762084,-122.389011,9,Completed
+3520 20th Street 94110,37.758854,-122.419785,9,Completed
+616 20th Street 94107,37.760768,-122.387975,9,Completed
+2900 22nd Street 94132,37.734501,-122.477979,8,Completed
+3922-32 24th Street 94114,37.751518,-122.430753,8,Completed
+3418 26th Street 94110,37.749202,-122.418984,9,First Const Doc Issued
+317 29th Street 94131,37.743428,-122.427597,9,Completed
+1131 43rd Avenue 94122,37.764259,-122.502984,8,Completed
+601 Alabama Street 94110,37.761193,-122.411278,9,Completed
+2251 Alemany Blvd 94112,37.717265,-122.442984,8,Completed
+600 Anza Blvd 94118,37.780374,-122.45291,8,Completed
+300 Arkansas Street 94107,37.762398,-122.398474,8,Completed
+329 Bay Street 94133,37.805511,-122.412648,9,Completed
+901-933 Bayshore Blvd. 94124,37.732524,-122.40442,8,Completed
+2428 Bayshore Blvd. 94134,37.710971,-122.404376,9,Completed
+2011 Bayshore Blvd. 94134,37.71497,-122.398787,9,Completed
+300 Beale Street 94105,37.788176,-122.392522,9,Completed
+400 Beale Street 94105,37.787067,-122.391128,9,Completed
+388 Beale Street 94105,37.787602,-122.391911,9,Completed
+501 Beale Street 94105,37.786287,-122.389054,9,Completed
+77 Bluxome Street 94107,37.77626,-122.397105,9,Completed
+39-43 Boardman Place 94103,37.77461,-122.402912,8,Completed
+785-787 Brannan Street 94103,37.773131,-122.40272,9,Completed
+801 Brannan Street 94103,37.77145,-122.404134,9,Entitled
+1622-1650 Broadway Blvd 94109,37.795652,-122.424255,8,BP Issued
+800 Brotherhood Way 94132,37.714635,-122.480307,8,First Const Doc Issued
+2101 Bryant Street 94110,37.760477,-122.409988,8,Completed
+218-220 Buchanan Street 94102,37.771992,-122.427038,8,First Const Doc Issued
+1299 Bush Street 94109,37.788717,-122.418436,9,Completed
+1452 Bush Street 94109,37.788768,-122.421284,9,Completed
+901 Bush Street 94109,37.78956,-122.412236,9,Completed
+2655 Bush Street 94104,37.786027,-122.44125,9,First Const Doc Issued
+1635 California Street 94109,37.790214,-122.421362,9,Completed
+2829 California Street 94115,37.787757,-122.440978,9,Completed
+2525 California Street 94115,37.788348,-122.435986,9,Completed
+1630 California Street 94109,37.790644,-122.421532,9,Completed
+1 Capitol Avenue 94112,37.710892,-122.45903,9,Entitled
+376 Castro Street 94114,37.762924,-122.435514,9,Entitled
+3400 Cesar Chavez Street 94110,37.748473,-122.418462,9,Completed
+690 Chestnut Street 94133,37.803839,-122.414563,9,Completed
+520 Chestnut Street 94133,37.803933,-122.412155,8,Completed
+741 Clement Street 94118,37.782657,-122.467256,9,Completed
+470 Clementina Street 94103,37.779589,-122.405657,9,Completed
+69 Clementina Street 94105,37.786419,-122.396387,9,Completed
+436 Clementina Street 94103,37.780136,-122.404954,9,Completed
+468 Clementina Street 94103,37.779572,-122.405426,8,First Const Doc Issued
+672-676 B Clipper (aka 25th Street) 94114,37.749696,-122.43393,5,Completed
+1255-1275 Columbus Avenue 94133,37.805784,-122.418142,8,Entitled
+4 Craut Street 94112,37.730783,-122.428393,8,Completed
+1 & 101 Crescent Way 94134,41.993494,-91.643001,3,Completed
+301-501 Crescent Way 94134,37.711929,-122.388606,9,Completed
+601 Crescent Way 94134,37.711331,-122.389,8,Entitled
+599 Crestmont Drive 94131,37.758873,-122.460922,9,Entitled
+100 Diana Street 94131,37.729819,-122.396432,8,Completed
+606-624 Divisadero Street (1728 Hayes) 94117,37.775466,-122.437805,8,Entitled
+200 Dolores Street 94114,37.766085,-122.426908,9,Completed
+1598 Dolores Street 94110,37.743927,-122.424738,9,Completed
+25-35 Dolores Street 94103,37.768605,-122.426534,9,BP Issued
+30 Dore Street 94103,37.774041,-122.41346,9,Completed
+101 Executive Park 94134,37.711387,-122.393694,8,Completed
+NA Executive Park St. Francis Bay Phase III 94124,37.730417,-122.384425,3,Completed
+149 Fair Oaks 94110,37.754316,-122.423915,9,Completed
+280 Fell Street 94102,37.776162,-122.422441,9,Completed
+1275 Fell Street 94117,37.773744,-122.43897,9,Completed
+631 Folsom Street 94107,37.784718,-122.396743,9,Completed
+829 Folsom Street 94107,37.781251,-122.401832,9,Completed
+855 Folsom Street 94107,37.781015,-122.402093,9,Completed
+821 Folsom Street 94107,37.781467,-122.401558,9,Completed
+1168-1174 Folsom Street 94103,37.775714,-122.409743,9,Completed
+201 Folsom Street 94105,37.788145,-122.391182,9,First Const Doc Issued
+900 Folsom Street 94103,37.780128,-122.403957,9,First Const Doc Issued
+231 Franklin Street 94102,37.776689,-122.421478,9,Completed
+181 Fremont Street 94107,37.7897,-122.39535,9,First Const Doc Issued
+333 Fremont Street 94105,37.787367,-122.392773,8,First Const Doc Issued
+340-350 Fremont Street 94105,37.787047,-122.392963,9,BP Issued
+355-399 Fremont Street 94105,37.787249,-122.392627,8,First Const Doc Issued
+325 Fremont Street 94105,37.787766,-122.392934,9,BP Issued
+375 Fremont Street 94105,37.787054,-122.392387,8,Entitled
+733 Front Street 94111,37.79805,-122.399952,9,Completed
+555 Fulton Street 94118,37.778194,-122.42581,9,BP Issued
+344 Fulton Street 94102,37.778892,-122.422466,8,BP Issued
+3425 Geary Blvd 94118,37.781344,-122.455692,8,Completed
+651-655 Geary Blvd. 94102,37.786529,-122.414037,9,Entitled
+6900 Geary Blvd. (aka 499 33rd Ave.) 94109,37.780025,-122.493469,9,Completed
+6901 Geary Blvd. (aka 501 33rd Street) 94103,37.779397,-122.493429,9,Completed
+2743-2761 Geary Street 94103,37.781942,-122.448715,9,Completed
+5400 Geary Street 94121,37.78114,-122.477591,9,Entitled
+1828 Geneva Avenue 94134,37.709541,-122.423915,8,Completed
+965-985 Geneva Avenue 94112,37.715926,-122.439423,9,#N/A
+950 Gilman Street (aka Arelious Walker Dr.; aka 900 Gilman) 94124,37.730417,-122.384425,3,#N/A
+525-527 Gough Street 94102,37.778386,-122.423306,8,Completed
+333 Grant Avenue 94108,37.790157,-122.405756,9,Completed
+300 Grant Avenue 94103,37.789646,-122.405442,8,Entitled
+1450 Greenwich Street 94109,37.800756,-122.423558,9,Completed
+401 Grove Street 94102,37.777492,-122.42356,9,Completed
+400 Grove Street 94102,37.777835,-122.423192,8,First Const Doc Issued
+1728-48 Haight Street 94117,37.769658,-122.450932,9,Completed
+645 Haight Street 94117,37.771751,-122.432844,9,Completed
+2652 Harrison Street 94110,37.755107,-122.412477,9,Completed
+101 Harrison Street 94105,37.788851,-122.38943,8,Completed
+2690 Harrison Street 94110,37.754418,-122.4121,8,Completed
+333 Harrison Street 94105,37.786552,-122.391306,9,Completed
+870 Harrison Street 94107,37.779743,-122.401357,9,First Const Doc Issued
+642 Harrison Street 94110,37.783826,-122.396438,9,Entitled
+1 Hawthorne Street 94105,37.785736,-122.398952,9,Completed
+342 Hayes Street 94102,37.777162,-122.422158,9,Completed
+450 Hayes Street,37.776799,-122.423859,8,Entitled
+580 Hayes Street 94102,37.776747,-122.425949,9,Entitled
+1 Henry Adams 94103,37.769617,-122.403358,9,Entitled
+88 Hoff /3338 17th St 94110,37.763582,-122.420916,9,Completed
+1277 Howard Street 94103,37.775217,-122.412637,9,Completed
+1234 Howard Street 94103,37.775995,-122.412507,9,Completed
+1945 Hyde Street 94109,37.798814,-122.41923,9,Completed
+336 Hyde Street 94109,37.784029,-122.415997,8,Completed
+168 Hyde Street 94102,37.782402,-122.415481,9,Completed
+245-259 Hyde Street 94109,37.783334,-122.415976,9,Entitled
+680 Illinois Street 94107,37.763372,-122.387857,8,Completed
+740 Illinois Street (and 2121 3rd Street) 94107,38.379071,-89.795667,9,First Const Doc Issued
+1578 Indiana Street 94107,37.750474,-122.390696,9,Completed
+1275-1301 Indiana Street 94107,37.7539,-122.390782,8,Completed
+1275-1301 Indiana Street 94107,37.7539,-122.390782,8,Completed
+833-881 Jamestown Avenue 94124,37.716825,-122.390662,8,First Const Doc Issued
+16 Jessie (aka One Ecker Place) 94105,37.789822,-122.39914,5,Completed
+410 Jessie Street 94103,37.783184,-122.407694,9,Completed
+418-420 Jessie Street 94103,37.782635,-122.407747,8,Completed
+570 Jessie Street 94103,37.780821,-122.410316,9,Entitled
+180 Jones Street 94102,37.782898,-122.412383,8,Entitled
+2545 Judah Street 94122,37.760901,-122.489529,9,Completed
+153 Kearny 94133,37.789511,-122.404162,9,Entitled
+601 King Street (aka 888 7th St.) 94107,37.770553,-122.400405,9,Completed
+8 Landers Street 94114,37.767556,-122.427979,9,Completed
+40-50 Lansing (aka 50 Lansing or 40 Lansing) 94105,37.789018,-122.391506,3,Completed
+81 Lansing Street 94105,37.785731,-122.394284,9,Completed
+45 Lansing Street 94105,37.786,-122.393867,9,First Const Doc Issued
+1601 Larkin Street 94109,37.792779,-122.419763,9,Entitled
+545 Leavenworth 94109,37.786108,-122.414958,9,Completed
+1888 Lombard Street 94123,37.800386,-122.432463,8,Completed
+2298 Lombard Street 94123,37.799712,-122.439177,9,Completed
+2353 Lombard Street 94123,37.79911,-122.44012,9,Entitled
+25 Lusk 94107,37.778526,-122.394353,9,Entitled
+430 Main Street 94105,37.787517,-122.390055,9,Entitled
+1130 Mariposa Street 94109,37.764163,-122.3953,9,Completed
+2299 Market Street 94114,37.764261,-122.432886,8,Completed
+2001 Market Street 94114,37.768318,-122.427109,9,Completed
+690 Market Street 94108,37.788252,-122.403079,9,Completed
+1960-1998 Market Street 94114,37.769864,-122.426407,9,Completed
+1167 Market Street 94103,37.77908,-122.413549,9,Completed
+1167 Market Street 94103,37.77908,-122.413549,9,Completed
+1407-1435 Market Street 94103,37.77619,-122.41796,8,Completed
+1600 Market Street 94102,37.774076,-122.421044,9,Completed
+938-942 Market Street 94102,37.783603,-122.408622,8,Completed
+1167 Market Street 94103,37.77908,-122.413549,9,Completed
+1407-1435 Market Street,34.236885,-77.930415,8,First Const Doc Issued
+2175 Market Street 94114,37.766286,-122.429913,9,First Const Doc Issued
+1167 Market Street 94103,37.77908,-122.413549,9,Completed
+1390 Market Street 94102,37.77737,-122.417193,9,Entitled
+555 and 575 Market Street 94105,37.78966,-122.400436,9,Entitled
+715-19 Market Street 94103,37.787037,-122.403883,9,Entitled
+2200 Market Street 94114,37.765832,-122.431459,9,Completed
+973 Market Street 94102,37.783213,-122.409074,8,First Const Doc Issued
+1844 Market Street 94102,37.771457,-122.424547,9,Completed
+125 Mason Street 94102,37.784802,-122.409747,9,Completed
+2001 McAllister Street 94117,37.776381,-122.44569,9,Completed
+83 - 91 McAllister Street 94117,37.7807,-122.41327,9,Completed
+68 McCoppin 94103,37.771859,-122.421864,9,Completed
+8 McLea Court 94103,37.772347,-122.408458,9,Completed
+701 Minnesota 94107,37.76139,-122.390378,9,Completed
+900 Minnesota Street 94107,37.759755,-122.390488,9,Completed
+301 Mission Street 94105,37.790834,-122.395879,9,Completed
+5810 Mission Street 94112,37.709533,-122.45139,9,Completed
+3249 Mission Street 94110,37.744851,-122.420348,8,Completed
+3184 Mission Street 94110,37.746134,-122.419761,9,Completed
+1905 Mission Street 94110,37.766511,-122.419539,9,Completed
+1160 Mission Street 94103,37.77839,-122.412238,9,Completed
+2200 Mission Street 94110,37.761699,-122.419651,9,Completed
+1880-1886 Mission Street 94110,37.766918,-122.42082,9,Completed
+5735-5757 Mission Street 94112,37.709766,-122.449857,8,Entitled
+706 Mission Street 94103,37.786254,-122.402128,8,Entitled
+2554-2558 Mission Street 94110,37.755988,-122.419101,9,First Const Doc Issued
+1875 Mission Street 94110,37.767101,-122.419446,9,First Const Doc Issued
+1415 Mission Street 94103,37.774897,-122.415912,9,BP Issued
+1321 Mission Street 94105,37.776009,-122.414982,8,First Const Doc Issued
+5050 Mission Street 94112,37.717635,-122.440523,9,Entitled
+1400 Mission Street 94103,37.775286,-122.41596,8,First Const Doc Issued
+1099 Mississippi Street 94107,37.752727,-122.393331,9,Completed
+1000 Mississippi Street (aka 1001 Texas) 94107,37.761824,-122.398587,3,Entitled
+639 Missouri Street (aka 25 Sierra) 94107,37.761824,-122.398587,3,Completed
+843-847 Montgomery Street 94133,37.796975,-122.403659,8,Completed
+75 Moss Street 94103,37.777621,-122.407565,9,Completed
+574 Natoma Street 94103,37.779022,-122.409493,9,Completed
+537 Natoma Street 94103,37.779383,-122.408459,9,Completed
+199 New Montgomery 94105,37.786606,-122.399099,9,Completed
+74 New Montgomery 94105,37.787535,-122.401149,9,Completed
+134-140 New Montgomery Street 94105,37.786664,-122.399774,9,Entitled
+"2601 Newhall, Armstrong, Orsi, Williams, Lydia, Bitting, Kalmanovitz 94124",37.727444,-122.396806,5,Completed
+248 Ocean Avenue 94112,37.723444,-122.442083,9,Completed
+98 Ocean Avenue 94112,37.723609,-122.438821,8,Completed
+1490 Ocean Avenue 94112,37.724563,-122.457814,9,Entitled
+1150 Ocean Avenue 94112,37.723831,-122.454781,9,Completed
+8100 Oceanview Terrace 94127,37.7105,-122.467775,9,Completed
+4-20 Octavia Blvd. 94102,37.772337,-122.423834,8,First Const Doc Issued
+1355 Pacific Avenue 94109,37.795296,-122.417541,9,Completed
+1645 Pacific Avenue 94109,37.794657,-122.422326,9,First Const Doc Issued
+55 Page Street 94102,37.773982,-122.421936,9,Completed
+Parcel P 94102,52.204448,22.695461,5,First Const Doc Issued
+1461 Pine Street 94109,37.789442,-122.419739,9,Completed
+725 Pine Street 94108,37.791014,-122.407697,9,Completed
+1 Polk Street 94102,37.776819,-122.418418,9,Completed
+101 Polk Street 94102,37.777516,-122.418084,8,Entitled
+1946 Polk Street (AKA 1591 or 1596 Pacific) 94109,37.792979,-122.421242,3,Completed
+600 Portola 94127,37.745414,-122.452537,9,Completed
+949 Post Street 94109,37.786884,-122.417433,9,Completed
+480 Potrero 94110,37.763478,-122.407671,9,BP Issued
+1 Powell Street 94102,37.784695,-122.408189,9,Completed
+150 Powell Street 94102,37.786192,-122.407571,9,Completed
+2351 Powell Street 94133,37.80631,-122.41229,9,Completed
+1731 Powell Street 94133,37.80066,-122.411303,9,Entitled
+300 - 314 Randolph Street 94132,37.714495,-122.465925,9,Entitled
+450 Rhode Island (aka 450 Kansas) 94107,37.761824,-122.398587,3,Completed
+1 Rincon Hill (aka 425 First Street - Tower One Only) 94105,37.789018,-122.391506,3,Completed
+1 Rincon Hill (aka 425 First/401Harrison St) 94105,37.789018,-122.391506,3,First Const Doc Issued
+246 Ritch Street 94107,37.780247,-122.395805,9,Completed
+2895 San Bruno Avenue 94134,37.725541,-122.402449,9,BP Issued
+1800-1820 San Jose (aka 8-18 Colonial and 305-315 Santa Rosa) 94112,37.278858,-121.826029,8,Completed
+1301 San Jose Avenue (aka Bosworth or Milton) 94112,37.722549,-122.441062,3,Completed
+201 Sansome Street 94104,37.792231,-122.401228,9,Completed
+3190 Scott Street 94123,37.799048,-122.440649,9,Completed
+2900 Sloat (aka Wawona) 94116,37.743242,-122.497668,3,Completed
+2800 Sloat Blvd. 94116,37.735901,-122.50485,9,Entitled
+1 South Park Avenue 94107,37.782069,-122.392744,9,Completed
+550 South Van Ness Avenue 94110,37.76431,-122.417613,9,Completed
+140 South Van Ness Avenue 94103,37.771627,-122.418559,9,Completed
+566 South Van Ness Avenue 94110,37.763992,-122.41782,9,Completed
+793 South Van Ness Avenue 94110,37.760673,-122.416701,9,Entitled
+"300 Spear Street (aka 160 Harrison, 301 Main) 94105",37.789018,-122.391506,3,Completed
+1 Stanyan Street 94118,37.781303,-122.456297,8,Entitled
+527-529 Stevenson Street 94103,37.781241,-122.410371,8,First Const Doc Issued
+1285 Sutter Street 94109,37.787336,-122.421184,9,Completed
+2161 Sutter Street 94115,37.785551,-122.435855,9,Completed
+1158 Sutter Street 94108,37.7895,-122.4077,9,Completed
+1080 Sutter Street 94109,37.788179,-122.417962,9,Completed
+832 Sutter Street 94109,37.788569,-122.414107,8,Entitled
+693 Sutter Street 94102,37.788663,-122.411648,9,BP Issued
+723 Taylor Street 94108,37.789195,-122.412202,9,Completed
+41 Tehama Street 94105,37.787235,-122.396277,9,Entitled
+475 Tehama Street (aka 470 Clementina) 94103,37.77264,-122.409915,3,Completed
+675 Townsend (aka 660 King or 701 8th Street) 94103,37.770059,-122.403535,9,Completed
+310 Townsend Street 94107,37.777026,-122.39574,9,Completed
+88 Townsend Street 94107,37.78094,-122.390505,9,Completed
+178 Townsend Street 94107,37.779527,-122.392291,9,Completed
+177 Townsend Street (aka 170 King Street) 94107,37.778811,-122.391371,9,Completed
+899 Valencia Street 94110,37.758507,-122.421269,8,First Const Doc Issued
+1050 Valencia Street 94110,37.755944,-122.421318,9,BP Issued
+286 Valencia Street 94103,37.768304,-122.422531,9,Completed
+222 Valencia Street 94103,37.769443,-122.422623,9,Completed
+299 Valencia Street 94110,37.768269,-122.422078,9,Completed
+411 Valencia Street 94410,37.766304,-122.422018,8,Completed
+270-284 Valencia Street 94103,37.768353,-122.422265,8,Completed
+2655 Van Ness Avenue 94109,37.80014,-122.424632,9,Completed
+1868 Van Ness Avenue 94109,37.792799,-122.422751,8,Completed
+1901 Van Ness Avenue 94109,37.793091,-122.422999,8,Completed
+900 Van Ness Avenue 94109,37.784052,-122.420642,9,Completed
+750 Van Ness Avenue 94102,37.782427,-122.420573,9,Completed
+77 Van Ness Avenue 94103,37.773828,-122.418664,9,Completed
+1800 Van Ness Avenue 94109,37.792549,-122.422292,9,Completed
+818 Van Ness Avenue 94109,37.783203,-122.420568,9,Completed
+2601 Van Ness Avenue 94109,37.799662,-122.424617,9,Entitled
+2559 Van Ness Avenue 94109,37.79921,-122.424482,9,First Const Doc Issued
+100 Van Ness Avenue 94102,37.776721,-122.419177,9,First Const Doc Issued
+929 Vermont Street 94107,37.757839,-122.40335,9,Completed
+1840 Washington Street 94109,37.793212,-122.423746,9,Completed
+1725 Washington Street 94109,37.792924,-122.421729,9,Completed
+53 Wilder Street 94131,37.733981,-122.433437,9,Completed

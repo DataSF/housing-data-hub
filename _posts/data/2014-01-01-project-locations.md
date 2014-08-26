@@ -3,10 +3,9 @@ layout: data
 title: Project locations
 chart-title: Project locations
 category: Inclusionary-Housing
-data: census.csv
-policy-link: 'http://google.com'
-type: map
-column: HC03_VC64
+data: project_locations.csv
+type: map-point
+column: status
 scale: 5
 color: Blues
 ---
