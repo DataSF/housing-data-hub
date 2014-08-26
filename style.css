@@ -120,6 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 .data-browser.masthead {
   background: #333 url({{site.baseurl}}/images/san-francisco-city-night.jpg) 50% 50% no-repeat;
 }
+.home.masthead {
+  background: url({{site.baseurl}}/images/san-francisco-fly-to-barcelona.jpg) 50% 50% no-repeat;
+}
+.about.masthead {
+   background: url({{site.baseurl}}/images/sf_chinatown.jpg) 50% 50% no-repeat;
+}
 .container-fluid {
   position: relative;
 }
@@ -127,20 +133,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   position: relative;
   z-index: 3;
-}
+} 
+
 .masthead h1 {
   position: absolute;
   bottom: 20px;
 }
-.masthead.home {
-  background: url({{site.baseurl}}/images/san-francisco-fly-to-barcelona.jpg) 0% 0%;
-  position: relative;
-  height: calc(100% - 50px);
-  margin-bottom: 30px;
-}
-.masthead.home h1 {
-  margin: 25% 0 20px;
-}
+
 h1.top {
   margin-top: 0;
 }
@@ -313,4 +312,20 @@ h2:before {
   margin-top: -90px; 
   height: 90px; 
   visibility: hidden; 
+}
+
+button p {
+  font-size: 18px;
+}
+
+.policy-summary p {
+  color: black;
+}
+
+.policy-summary p:hover {
+  color: grey;
+}
+
+.policy-preview {
+  margin-bottom: 20px;
 }
