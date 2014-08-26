@@ -1,14 +1,20 @@
 ---
 layout: data
-title: 'Units by on/off site'
-chart-title: Completed inclusionary units by on versus off site by year
-category: Inclusionary-Housing
-policy-link: 'http://google.com'
+title: Units by on/off site
+"chart-title": Completed inclusionary units by on versus off site by year
+category: "Inclusionary-Housing"
+"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: bmr_on_off_site.csv
 x: Year
 column: Year
 type: bar
-source: Mayor's Office of Housing and Community Development
+source: "Mayor's Office of Housing and Community Development."
+published: true
+scale: "5"
+colors: Blues
+"axis-type": category
+"y-format": ","
+notes: null
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+When building inclusionary units, developers have the option of electing to build units on the main site or at a second location. If a developer selects the off-site option, they must build a higher percentage of units than on-site (e.g. 12% of total units for on-site versus 20% for off-site). Off-site units must also be within a mile of the main development.
