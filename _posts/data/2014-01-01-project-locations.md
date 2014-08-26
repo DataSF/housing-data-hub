@@ -4,13 +4,9 @@ title: Project locations
 "chart-title": Project locations by status
 category: "Inclusionary-Housing"
 data: project_locations.csv
-type: 
-  - "map-point"
-  - map
+type: "map-point"
 column: status
-scale: 
-  - 5
-  - "5"
+scale: "5"
 color: Blues
 published: true
 colors: Blues
