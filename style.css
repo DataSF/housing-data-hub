@@ -329,3 +329,7 @@ button p {
 .policy-preview {
   margin-bottom: 20px;
 }
+
+a:hover button {
+  text-decoration: none;
+}

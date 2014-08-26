@@ -59,8 +59,10 @@ prose:
           help: "Select the type of visualization you would like to relate to the data source"
           element: "select"
           options:
-            - name: 'Map'
+            - name: 'Map: Choropleth'
               value: 'map'
+            - name: 'Map: Point'
+              value: 'map-point'
             - name: 'Bar Chart'
               value: 'bar'
             - name: 'Line Chart'
@@ -101,6 +103,8 @@ prose:
           element: "select"
           label: "Y Format"
           options:
+            - name: "None"
+              value: ""
             - name: "$x"
               value: "$,"
             - name: "x,xxx"
