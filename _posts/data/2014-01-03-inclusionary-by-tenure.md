@@ -14,6 +14,7 @@ colors: Blues
 "y-format": ","
 source: null
 notes: null
+"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 ---
 
 The Inclusionary Program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development.
