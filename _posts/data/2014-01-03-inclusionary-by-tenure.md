@@ -11,9 +11,9 @@ type: bar
 scale: "5"
 colors: Blues
 "axis-type": category
-"y-format": "$,"
+"y-format": ","
 source: null
 notes: null
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+The Inclusionary Program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development.
