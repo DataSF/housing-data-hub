@@ -112,7 +112,7 @@ function generateMap(params) {
   var popup = new L.Popup({
     autoPan: false
   });
-  if(mapType = "map-point") {
+  if(mapType == "map-point") {
     omnivore.csv('{{site.baseurl}}/data/' + d) 
       .on('ready', function(layer) {
         // An example of customizing marker styles based on an attribute.
@@ -182,13 +182,12 @@ function generateMap(params) {
   function addDataToGeoJson(data, geojson) {
     var dataHash = {};
     $.each(data, function(i, dataObject) {
-      dataHash[dataObject['GEOID10']] = dataObject
+      dataHash[dataObject['GEOID10']] = dataObject;
     });
     $.each(geojson.features, function(i, feature) {
       geoid = feature.properties.GEOID10;
       dataObject = dataHash[geoid];
-
-      if (dataObject) {
+      if (dataObject && !(isNaN(parseFloat(dataObject[column])))) {
         feature.properties.scaledValue = dataObject.scaledValue;
         feature.properties.value = parseFloat(dataObject[column]);
       } else {
@@ -234,7 +233,7 @@ function generateMap(params) {
   }
 
   function getStyle(feature) {
-    col = getColor(feature.properties.scaledValue, 5);
+    col = getColor(feature.properties.scaledValue, scale);
     return {
       fillColor: col,
       weight: 1,
@@ -246,6 +245,9 @@ function generateMap(params) {
 
   // get color depending on population density value
   function getColor(num, s) {
+    if(num === -1) {
+      return "transparent";
+    }
     return colorbrewer[colors][s][num - 1];
   }
 
@@ -260,24 +262,27 @@ function generateMap(params) {
 
   function mousemove(e) {
     var layer = e.target;
-
-    popup.setLatLng(e.latlng);
-    popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
-      layer.feature.properties.value + " " + units );
-
-    if (!popup._map) popup.openOn(map);
-    window.clearTimeout(closeTooltip);
-
-    // highlight feature
-    layer.setStyle({
-      weight: 3,
-      opacity: 0.4,
-      fillOpacity: 0.95
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-      layer.bringToFront();
+    var value = layer.feature.properties.value + " " + units;
+    if(layer.feature.properties.value == -1) {
+      value = "No Data";
     }
+      popup.setLatLng(e.latlng);
+      popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
+        value );
+
+      if (!popup._map) popup.openOn(map);
+      window.clearTimeout(closeTooltip);
+
+      // highlight feature
+      layer.setStyle({
+        weight: 3,
+        opacity: 0.4,
+        fillOpacity: 0.95
+      });
+
+      if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+      }
   }
 
   function mouseout(e) {

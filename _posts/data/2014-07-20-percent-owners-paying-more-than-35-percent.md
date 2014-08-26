@@ -6,10 +6,8 @@ category: "Housing-Affordability"
 "policy-link": "http://google.com"
 data: census.csv
 column: HC03_VC171
-scale: 
-  - 5
-  - "5"
-colors: Greens
+scale: 6
+colors: Oranges
 type: map
 units: "percent owners paying more than 35%+ of hh income"
 published: true
