@@ -2,16 +2,6 @@
   <div class="text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <ul class="nav nav-pills nav-justified">
-            <li><a href="/">A project of #DataSF</a>
-            </li>
-            <li><a href="#">About</a>
-            </li>
-            <li><a href="#">Something here</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -53,22 +43,21 @@ window.onload = function() {
 }
 
 function loadViz(params) {
-  if (params.type != 'map') {
-      generateChart(params);
-    } else {
+  if (['map-point','map'].indexOf(params.type) != -1) {
       generateMap(params);
+    } else {
+      generateChart(params);
     }
 }
 
 function buildTOC() {
   $('h2').each(function(i,el){
     $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a></li>');
-    //vappend('<a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a>');
   })
 }
 
 function init(layout) {
-  if ("{{page.type}}" == "map") {
+  if (['map-point','map'].indexOf("{{page.type}}") != -1) {
     generateMap();
   } else {
     generateChart();
@@ -79,7 +68,12 @@ function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
   var geojson, json, column, d, container, units;
 
+  //detect point, polygon
+  //if point map via omnivore
+  //if polygon map via join
+
   if(params) {
+    mapType = params.type;
     column = params.column;
     d = params.data;
     if(params.colors != '') {
@@ -93,6 +87,7 @@ function generateMap(params) {
     $('#chart').hide();
     $('#map').show();
   } else {
+    mapType = '{{page.type}}';
     column = '{{page.column}}';
     units = '{{page.units}}';
     d = "{{page.data}}";
@@ -110,32 +105,69 @@ function generateMap(params) {
     container = 'chart';
   }
 
-  var map = L.mapbox.map(container, 'datasf.j9b9ihf0', {
-    accessToken: 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg'
-  }).setView([37.774929, -122.419416], 12);
+  L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
+
+  var map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.774929, -122.419416], 12);
 
   var popup = new L.Popup({
     autoPan: false
   });
+  if(mapType = "map-point") {
+    omnivore.csv('{{site.baseurl}}/data/' + d) 
+      .on('ready', function(layer) {
+        // An example of customizing marker styles based on an attribute.
+        // In this case, the data, a CSV file, has a column called 'state'
+        // with values referring to states. Your data might have different
+        // values, so adjust to fit.
+        this.eachLayer(function(marker) {
+            if (marker.toGeoJSON().properties.status === 'Completed') {
+                // The argument to L.mapbox.marker.icon is based on the
+                // simplestyle-spec: see that specification for a full
+                // description of options.
+                marker.setIcon(L.mapbox.marker.icon({
+                    'marker-color': '#8dd3c7',
+                    'marker-size': 'small'
+                }));
+            } else if (marker.toGeoJSON().properties.status === 'Entitled') {
+                marker.setIcon(L.mapbox.marker.icon({
+                  'marker-color': '#fdb462',
+                  'marker-size': 'small'
+                }));
+            } else {
+              marker.setIcon(L.mapbox.marker.icon({
+                    'marker-color': '#ffed6f',
+                    'marker-size': 'small'
+                }));
+            }
+            // Bind a popup to each icon based on the same properties
+            marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties.status);
+        });
+    })
+    .addTo(map);
 
-  $.ajax({
-    type: "GET",
-    url: "{{site.baseurl}}/data/" + d,
-    dataType: "text",
-    success: function(data) {
-      json = scaleData(csvJSON(data));
-    }
-  });
+    map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+        keepOpen: false
+    }));
+  } else {
+    $.ajax({
+      type: "GET",
+      url: "{{site.baseurl}}/data/" + d,
+      dataType: "text",
+      success: function(data) {
+        json = scaleData(csvJSON(data));
+      }
+    });
 
-  $.getJSON(geofile, function(geodata) {
-    geodata = addDataToGeoJson(json, geodata)
-    geojson = L.geoJson(geodata, {
-      style: getStyle,
-      onEachFeature: onEachFeature
-    }).addTo(map);
-    var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
-  });
-
+    $.getJSON(geofile, function(geodata) {
+      geodata = addDataToGeoJson(json, geodata)
+      geojson = L.geoJson(geodata, {
+        style: getStyle,
+        onEachFeature: onEachFeature
+      }).addTo(map);
+      var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+    });
+  }
+    
   function scaleData(data) {
     valuesOnlyArray = extractValuesFromObjectArray(data)
     quantizer = new Quantizer(valuesOnlyArray, scale)
@@ -144,6 +176,7 @@ function generateMap(params) {
     })
     return data;
   }
+
   // Function inspired by code in awesome project by Dave Guarino https://github.com/daguar/easy-choropleths
   // Adds `scaled_value` and `value` from data objects into geojson features as, eg, feature.properties.scaled_value
   function addDataToGeoJson(data, geojson) {
