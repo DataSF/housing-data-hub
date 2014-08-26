@@ -1,10 +1,20 @@
 ---
 layout: data
 title: Units by tenure
-chart-title: Completed inclusionary units by tenure by year
-category: Inclusionary-Housing
+"chart-title": Completed inclusionary units by tenure by year
+category: "Inclusionary-Housing"
 data: bmr_by_tenure.csv
 x: Year
 column: Year
+published: true
+type: bar
+scale: "5"
+colors: Blues
+"axis-type": category
+"y-format": ","
+source: "Mayor's Office of Housing and Community Development."
+notes: null
+"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+
+The Inclusionary Housing program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development. Prior to 1999, no rental inclusionary units were built in San Francisco.
