@@ -21,7 +21,7 @@ navigation:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://jasonlally.com/i-can-framework'
+  siteurl: 'http://jasonlally.com/housing-policy-hub'
   media: 'images'
   metadata:
     _posts/data:
@@ -59,16 +59,16 @@ prose:
           help: "Select the type of visualization you would like to relate to the data source"
           element: "select"
           options:
-            - name: 'Map: Choropleth'
-              value: 'map'
+            - name: 'Area Chart'
+              value: 'area'
             - name: 'Map: Point'
               value: 'map-point'
             - name: 'Bar Chart'
               value: 'bar'
             - name: 'Line Chart'
               value: 'line'
-            - name: 'Area Chart'
-              value: 'area'
+            - name: 'Map: Choropleth'
+              value: 'map'
       - name: "scale"
         field:
           element: "text"
@@ -79,19 +79,84 @@ prose:
         field:
           element: select
           label: "Choropleth Colors"
-          help: "If this dataset should be displayed in a map, specify the choropleth color ramp from Colorbrewer.org"
+          help: "If this dataset should be displayed in a map, specify the choropleth color ramp. These are based on colorbrewer color profiles."
           options:
+            - name: 'Yellow-Green'
+              value: 'YlGn'
+            - name: 'Yellow-Green-Blue'
+              value: 'YlGnBu'
+            - name: 'Green-Blue'
+              value: 'GnBu'
+            - name: 'Blue-Green'
+              value: 'BuGn'
+            - name: 'Purple-Blue-Green'
+              value: 'PuBuGn'
+            - name: 'Purble-Blue'
+              value: 'PuBu'
+            - name: 'Blue-Purple'
+              value: 'BuPu'
+            - name: 'Red-Purple'
+              value: 'RdPu'
+            - name: 'Purple-Red'
+              value: 'PuRd'
+            - name: 'Orange-Red'
+              value: 'OrRd'
+            - name: 'Yellow-Orange-Red'
+              value: 'YlOrRd'
+            - name: 'Yellow-Orange-Brown'
+              value: 'YlOrBr'
+            - name: 'Purples'
+              value: 'Purples'
             - name: 'Blues'
               value: 'Blues'
             - name: 'Greens'
               value: 'Greens'
             - name: 'Oranges'
               value: 'Oranges'
+            - name: 'Reds'
+              value: 'Reds'
+            - name: 'Greys'
+              value: 'Greys'
+            - name: 'Diverging: Purple-Orange'
+              value: 'PuOr'
+            - name: 'Diverging: BrBG'
+              value: 'BrBG'
+            - name: 'Diverging: PiYG'
+              value: 'PiYG'
+            - name: 'Diverging: RdBu'
+              value: 'RdBu'
+            - name: 'Diverging: RdGy'
+              value: 'RdGy'
+            - name: 'Diverging: RdYlBu'
+              value: 'RdYlBu'
+            - name: 'Diverging: Spectral'
+              value: 'Spectral'
+            - name: 'Diverging: RdYlGn'
+              value: 'RdYlGn'
+            - name: 'Qualitative: Accent'
+              value: 'Accent'
+            - name: 'Qualitative: Dark2'
+              value: 'Dark2'
+            - name: 'Qualitative: Paired'
+              value: 'Paired'
+            - name: 'Qualitative: Pastel1'
+              value: 'Pastel1'
+            - name: 'Qualitative: Pastel2'
+              value: 'Pastel2'
+            - name: 'Qualitative: Set1'
+              value: 'Set1'
+            - name: 'Qualitative: Set2'
+              value: 'Set2'
+            - name: 'Qualitative: Set3'
+              value: 'Set3'
       - name: "axis-type"
         field:
           element: "select"
           label: "Axis Type"
+          help: 'The chart needs to know if your x-axis is a special type. In general, it is fine to keep the default.'
           options:
+            - name: 'Default'
+              value: ''
             - name: 'Category'
               value: 'category'
             - name: 'Time Series'
@@ -116,12 +181,12 @@ prose:
           help: "Enter the description of the units, if displaying data on a map"
       - name: "source"
         field:
-          element: "textarea"
+          element: "text"
           label: "Data Source Attribution"
           help: "Where did this data come from?"
       - name: "notes"
         field:
-          element: "textarea"
+          element: "text"
           label: "Notes"
           help: "List any relevant notes about this datasource"
       - name: "policy-link"
@@ -129,5 +194,19 @@ prose:
           element: "text"
           label: "Policy Link"
           help: "Provide a link to the relevant policy"
+    _posts/policies:
+      - name: 'layout'
+        field:
+          element: 'hidden'
+          value: 'policy'
+      - name: 'summary'
+        field:
+          element: 'text'
+          label: 'Summary'
+      - name: 'data-category'
+        field:
+          element: 'text'
+          label: 'Related Data Category'
+          help: 'Please indicate what category of data should show up in the embedded data browser in this policy page.'
 
 
