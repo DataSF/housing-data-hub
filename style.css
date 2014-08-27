@@ -333,3 +333,7 @@ button p {
 a:hover button {
   text-decoration: none;
 }
+
+footer {
+  background-color: #222;
+}
