@@ -5,7 +5,7 @@ category: Occupancy-and-Tenure
 "policy-link": "http://google.com"
 data: census.csv
 column: HC03_VC63
-scale: 6
+scale: "6"
 colors: Blues
 type: map
 units: "percent owner-occupied units"

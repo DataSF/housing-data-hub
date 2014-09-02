@@ -7,9 +7,8 @@ data: project_locations.csv
 type: "map-point"
 column: status
 scale: "5"
-color: Blues
+colors: Dark2
 published: true
-colors: Blues
 "axis-type": category
 "y-format": "$,"
 source: "Mayor's Office of Housing and Community Development."

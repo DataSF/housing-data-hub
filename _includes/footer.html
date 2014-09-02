@@ -113,42 +113,65 @@ function generateMap(params) {
   var popup = new L.Popup({
     autoPan: false
   });
-  if(mapType == "map-point") {
-    omnivore.csv('{{site.baseurl}}/data/' + d) 
-      .on('ready', function(layer) {
-        // An example of customizing marker styles based on an attribute.
-        // In this case, the data, a CSV file, has a column called 'state'
-        // with values referring to states. Your data might have different
-        // values, so adjust to fit.
-        this.eachLayer(function(marker) {
-            if (marker.toGeoJSON().properties.status === 'Completed') {
-                // The argument to L.mapbox.marker.icon is based on the
-                // simplestyle-spec: see that specification for a full
-                // description of options.
-                marker.setIcon(L.mapbox.marker.icon({
-                    'marker-color': '#8dd3c7',
-                    'marker-size': 'small'
-                }));
-            } else if (marker.toGeoJSON().properties.status === 'Entitled') {
-                marker.setIcon(L.mapbox.marker.icon({
-                  'marker-color': '#fdb462',
-                  'marker-size': 'small'
-                }));
-            } else {
-              marker.setIcon(L.mapbox.marker.icon({
-                    'marker-color': '#ffed6f',
-                    'marker-size': 'small'
-                }));
-            }
-            // Bind a popup to each icon based on the same properties
-            marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties.status);
-        });
-    })
-    .addTo(map);
 
+  if(mapType == "map-point") {
+    var customLayer = L.geoJson(null, {
+    // http://leafletjs.com/reference.html#geojson-style
+      style: function(feature) {
+          return {
+              color: '#f00'
+          };
+      }
+    });
+
+    var markerCats = [];
+    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, L.mapbox.featureLayer()) 
+      .on('ready', function(layer) {
+        this.eachLayer(function(marker) {
+          if(markerCats.indexOf(marker.toGeoJSON().properties[column]) == -1) {
+            markerCats.push(marker.toGeoJSON().properties[column]);
+          }
+          marker.setIcon(L.mapbox.marker.icon({
+            'marker-color': colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])],
+            'marker-size': 'small'
+          }));
+
+          //Set the property on the feature so symbols don't disappear on filter, this probably won't work with 
+          //custom icons...
+          marker.toGeoJSON().properties['marker-color'] = colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])];
+          marker.toGeoJSON().properties['marker-size'] = 'small';
+
+          marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column]);
+        });
+        console.log(csvLayer.toGeoJSON());
+        map.legendControl.addLegend(getPointLegendHTML(markerCats));
+      }).addTo(map);
     map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
-        keepOpen: false
+      keepOpen: false
     }));
+
+
+
+    $('#chart').on('click', 'i', function(e) {
+      $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
+      $(this).toggleClass('off');
+      
+      var enabled = {};
+      $('.legend-filter').each(function(i,el){
+        if($(el).prop('checked')) enabled[$(el).val()] = true;
+      });
+
+      csvLayer.setFilter(function(feature) {
+        return (feature.properties['status'] in enabled);
+      });
+
+      //this is duplicative of above, need to collapse this into a single function call to set the popup
+      //TODO: abstract popup binding to function that can be called from here and when initially loading the layer
+      csvLayer.eachLayer(function(marker){
+        marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column])
+      })
+    });
+
   } else {
     $.ajax({
       type: "GET",
@@ -306,8 +329,8 @@ function generateMap(params) {
 
     for (var i = 0; i < scale; i++) {
       var range = legendColors.invertExtent(colorbrewer[colors][scale][i]);
-      from = Math.round(range[0] * 100)/100;
-      to = Math.round(range[1] * 100)/100;
+      from = Math.round(range[0] * 10)/10;
+      to = Math.round(range[1] * 10)/10;
 
       labels.push(
         '<i style="background:' + getColor(i + 1, scale) + '"></i> ' +
@@ -315,7 +338,37 @@ function generateMap(params) {
     }
     //return '<span>hello</span>';
 
-    return '<span>&nbsp;'+ units + '</span><br>' + labels.join('<br>');
+    return '<span>'+ units + '</span><br>' + labels.join('<br>');
+  }
+
+  function getPointLegendHTML(categories) {
+    var labels = [];
+    var container = $('<div>');
+    var title = $('<span>');
+    title.html('Legend');
+    container.append(title);
+
+    for (var i=0; i < categories.length; i++) {
+      var item = $('<div class="legend-item">');
+
+      var symbol = $('<i>');
+      symbol.css("background", getColor(i + 1, categories.length));
+      item.append(symbol);
+
+      var checkbox = $('<input class="legend-filter" type="checkbox" id="' + i + '" checked="true" style="display:none;" value="'+ categories[i] + '" />');
+      item.append(checkbox);
+
+      var label = $('<span>').html(categories[i]);
+      item.append(label);
+
+      container.append(item);
+      labels.push(label);
+      /*
+      labels.push(
+        '<i style="background:' + getColor(i + 1, categories.length) + '"></i> ' + categories[i]);*/
+    }
+    //$('span').after()
+    return $('<div>').append(container).html();
   }
 }
 
