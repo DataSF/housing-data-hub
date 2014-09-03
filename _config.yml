@@ -24,7 +24,7 @@ prose:
   siteurl: 'http://jasonlally.com/housing-policy-hub'
   media: 'images'
   metadata:
-    _posts/data:
+    _posts/data-browser:
       - name: "layout"
         field:
           element: "hidden"
