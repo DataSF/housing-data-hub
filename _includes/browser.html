@@ -16,7 +16,7 @@
 
     <div id="{{ cat | replace: ' ','-' }}" class="panel-collapse collapse {% if pageCatLower == matchCat %} in {% endif %} ">
       <div class="panel-body">
-        <ul>
+        <ul class="nav-browser">
           {% assign count = '0' %} 
           {% for post in category reversed %} 
           {% if post.url %} 

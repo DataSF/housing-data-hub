@@ -1,0 +1,34 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+	<div id="msg">
+
+	</div>
+	<script src="{{site.baseurl}}/js/cookies.min.js"></script>
+	<script src="{{site.baseurl}}/js/jquery.md5.js"></script>
+	<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}	
+	function p(i) {
+		var k = getParameterByName('k');
+		var hash = '3aa82943f73c294e02465d24b578e783';
+		if(k == hash) {
+			Cookies.set('housing-hub-logged-in','true');			
+			console.log(Cookies.get('housing-hub-logged-in'));
+			window.location.href = "{{site.baseurl}}/";
+		} else {
+			document.getElementById("msg").innerHTML = "Invalid";
+		}
+	}
+	p();
+	</script>
+</body>
+</html>
