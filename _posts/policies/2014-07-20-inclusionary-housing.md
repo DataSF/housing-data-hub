@@ -5,6 +5,8 @@ summary: Inclusionary housing programs require new private housing developments 
 published: true
 ---
 
+Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.
+
 The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units.
 
 <aside role="complementary" class="well">
