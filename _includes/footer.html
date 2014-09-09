@@ -68,9 +68,11 @@ function init(layout) {
   }
 }
 
+var map;
+
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, d, container, units;
+  var geojson, json, column, d, container, units, mapType;
 
   //detect point, polygon
   //if point map via omnivore
@@ -79,6 +81,9 @@ function generateMap(params) {
   if(params) {
     mapType = params.type;
     column = params.column;
+    var desc = params.description;
+    var source = params.source;
+    var notes = params.notes;
     d = params.data;
     if(params.colors != '') {
       colors = params.colors
@@ -88,8 +93,8 @@ function generateMap(params) {
     }
     container = 'map';
     units = params.units;
-    $('#chart').hide();
-    $('#map').show();
+    $('#chart-wrapper').hide();
+    $('#map-wrapper').show();
   } else {
     mapType = '{{page.type}}';
     column = '{{page.column}}';
@@ -111,7 +116,12 @@ function generateMap(params) {
 
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
 
-  var map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.774929, -122.419416], 12);
+  if(!map) {
+    map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.774929, -122.419416], 12);
+    map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+      keepOpen: false
+    }));
+  }
 
   var popup = new L.Popup({
     autoPan: false
@@ -149,13 +159,14 @@ function generateMap(params) {
         console.log(csvLayer.toGeoJSON());
         map.legendControl.addLegend(getPointLegendHTML(markerCats));
       }).addTo(map);
-    map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
-      keepOpen: false
-    }));
+    
+    if(desc) {
+      $('#' + container + '-wrapper .description').html(desc);
+      $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
+      $('#' + container + '-wrapper .notes').html(notes);
+    }
 
-
-
-    $('#chart').on('click', 'i', function(e) {
+    $('#' + container).on('click', 'i', function(e) {
       $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
       $(this).toggleClass('off');
       
@@ -378,9 +389,10 @@ function generateMap(params) {
 
 function generateChart(params) {
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column;
-    $('#chart').show();
-    $('#map').hide();
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes;
+    $('#chart-wrapper').show();
+    $('#map-wrapper').hide();
+    var container = 'chart';
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
       axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.x}}';
@@ -391,6 +403,12 @@ function generateChart(params) {
   if (yFormat != '') {
     yFormat = d3.format(yFormat)
   }
+
+  if(desc) {
+      $('#' + container + '-wrapper .description').html(desc);
+      $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
+      $('#' + container + '-wrapper .notes').html(notes);
+    }
 
   var chart = c3.generate({
     data: {
