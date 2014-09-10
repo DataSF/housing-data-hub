@@ -18,11 +18,6 @@ Inclusionary rules require that new private housing developments with 10 or more
 
 The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, certain conditions determine preferences in the lottery ranking process.
 
-<aside role="complementary" class="well">
-<h1>Costa-Hawkins</h1>
-<p>The Costa-Hawkins Rental Housing Act of 1996 allows landlords “to establish the initial rental rate for a dwelling or unit.” A 2009 California court decision found that requiring inclusionary rentals violates this act. Only projects that receive public assistance or financing can include inclusionary rental units.</p>
-</aside>
-
 In its current form, this program emphasizes the “Affordable Housing Fee”. Developers may apply for an alternative to the fee. Below is a brief summary of each option.
 
 Alternatives | Name | What is it
