@@ -72,7 +72,7 @@ var map;
 
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, d, container, units, mapType;
+  var geojson, json, column, d, container, units, mapType, margin;
 
   //detect point, polygon
   //if point map via omnivore
@@ -99,6 +99,7 @@ function generateMap(params) {
     mapType = '{{page.type}}';
     column = '{{page.column}}';
     units = '{{page.units}}';
+    margin = '{{page.margin}}';
     d = "{{page.data}}";
     {% if page.colors %}
     var colors = '{{page.colors}}';
@@ -192,7 +193,7 @@ function generateMap(params) {
       url: "{{site.baseurl}}/data/" + d,
       dataType: "text",
       success: function(data) {
-        json = scaleData(csvJSON(data));
+        json = scaleData(d3.csv.parse(data));
       }
     });
 
@@ -228,29 +229,15 @@ function generateMap(params) {
       if (dataObject && !(isNaN(parseFloat(dataObject[column])))) {
         feature.properties.scaledValue = dataObject.scaledValue;
         feature.properties.value = parseFloat(dataObject[column]);
+        if(margin != "") {
+          feature.properties.margin = parseFloat(dataObject[margin]);
+        }
       } else {
         feature.properties.scaledValue = -1;
         feature.properties.value = -1;
       }
     });
     return geojson;
-  }
-
-  //CSV to json - see: http://techslides.com/convert-csv-to-json-in-javascript/
-  function csvJSON(csv) {
-    var lines = csv.split("\r"); //excel uses carriage returns instead of new lines (may need to fix this either on upload)
-    var result = [];
-    var headers = lines[0].split(",");
-
-    for (var i = 1; i < lines.length; i++) {
-      var obj = {};
-      var currentline = lines[i].split(",");
-      for (var j = 0; j < headers.length; j++) {
-        obj[headers[j]] = currentline[j];
-      }
-      result.push(obj);
-    }
-    return result;
   }
 
   function extractValuesFromObjectArray(dataObjectArray) {
@@ -300,7 +287,10 @@ function generateMap(params) {
 
   function mousemove(e) {
     var layer = e.target;
-    var value = layer.feature.properties.value + " " + units;
+    var value = "<p>" + layer.feature.properties.value + " " + units + "</p>";
+    if(layer.feature.properties.margin) {
+      value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
+    }
     if(layer.feature.properties.value == -1) {
       value = "No Data";
     }
@@ -395,7 +385,7 @@ function generateChart(params) {
     var container = 'chart';
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.x}}';
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}';
   }
   if (type == '') {
     type = 'area';

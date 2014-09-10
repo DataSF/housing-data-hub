@@ -73,6 +73,10 @@ main {
   margin-bottom: 20px;
 }
 
+ul.nav-browser li.active {
+  font-weight: bold;
+}
+
 .main {
   padding: 20px;
 }
@@ -143,9 +147,15 @@ main {
   bottom: 20px;
 }
 
-h1.top {
+h1.top, h2:first {
   margin-top: 0;
 }
+
+.description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 h3.panel-title {
   text-transform: capitalize;
 }

@@ -33,14 +33,16 @@
           <h1 class="chart-title top">{{ page.chart-title }}</h1>
           {{content}}
           <div id="chart"></div>
-          <div class="row">
-            <div class="col-md-9">
+          <div class="row" style="margin-top: 20px;">
+            <div class="{% if page.policy-link %} col-md-7 {% else %} col-md-12 {% endif %}">
               {% if page.source %} <p>Source: {{page.source}}</p> {% endif %}
               {% if page.notes %} <p>Notes: {{page.notes}}</p> {% endif %}
             </div>
-            <div class="col-md-3">
-              <a href="{{ page.policy-link }}">More on this policy</a>
+            {% if page.policy-link %}
+            <div class="col-md-5">
+              <a href="{{ page.policy-link }}"><button type="button" style="width:100%" class="btn btn-primary btn-lg btn-block">Read more about this policy</button></a>
             </div>
+            {% endif %}
           </div>
          <div id="edit-links">
            <!-- Edit current page -->
