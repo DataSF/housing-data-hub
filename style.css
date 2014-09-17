@@ -346,3 +346,16 @@ a:hover button {
 footer {
   background-color: #222;
 }
+/*
+ * a11y
+ */
+.hidden {
+  border: 0 none;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  z-index: -1000;
+}
