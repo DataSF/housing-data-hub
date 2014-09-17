@@ -10,4 +10,4 @@ source: Bay Area Census and US Census, “1990 Census of Population and Housing 
 notes: The census did not collect data on housing units before 1940.
 ---
 
-This chart shows that since 1940, the average number of people per household has decreased. Note, the decrease has been only slight since 1960 at just .2. This number is generally influneced by demographic shifts like more empty-nesters, singles and couples without children living in cities. This is an important number to understand over time and into the future as the City considers policies to make San Francisco affordable for families of varying means.
+This chart shows that since 1940, the average number of people per household has decreased. This number is generally influneced by demographic shifts like more empty-nesters, singles and couples without children living in cities.
