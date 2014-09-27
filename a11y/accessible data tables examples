@@ -1,0 +1,64 @@
+//SPECIAL NOTE: If the bar chart has more than one color of bar, the bar need to have something other than color to differentiate them. Color blind people can't tell the difference between blue and black bar, so use hashes and dots, for example. 
+//SPECIAL NOTE2: If the bar chart has more than one type of bar (with legend) we'll need to use a table with three columns, so just add column using td's, not th's.
+//GOAL: We want to have a link that appears before the combo box that takes users to an accessible version of the maps and charts on another page. Link text: "Screen reader users click here for text-only version of the following data."
+
+
+For inclusionary housing:
+<h3>Inclusionary housing</h3>	
+<p>As part of the Inclusionary Housing program, we track units that are in the process of being built. Inclusionary units must first be entitled (i.e. receive the right to build the development) by the City Planning Department. Next, the Department of Building Inspections issues permits to build. Finally, the first construction document authorizes construction to begin. Note that a construction document does not mean the units are under construction - just that they could be.</p>
+<div class="source"><strong>Source:</strong> Mayor's Office of Housing and Community Development</div>
+<table class="table table-striped table-bordered">
+	<thead>
+	<tr>
+		<th>Type</th>
+		<th>Units</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td>Entitled</td>
+		<td>600</td>
+		</tr>
+		<tr>
+		<td>Building Permit Issued</td>
+		<td>150</td>
+		</tr>
+		<tr>
+		<td>First Construction Document Issued</td>
+		<td>750</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+For mapped visual representations:
+//(Later we want to create a page with jumplinks and headings...prototype to come...)
+<h3>Project locations by status</h3>
+<p><Some explanatory text about how to use the data table if necessary)The data table below shows the location of projects with inclusionary units across the city by project status. The location of inclusionary units matches general construction patterns as inclusionary units are located on or nearby private construction projects.</p>
+<table class="table table-striped table-bordered">
+	<thead>
+	<tr>
+		<th>Address</th>
+		<th>Zip</th>
+		<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td>1578 Indiana Street</td>
+		<td>94107</td>
+		<td>Completed</td>
+		</tr>
+		<tr>
+		<td>149 Fair Oaks 94110</td>
+		<td>94110</td>
+		<td>Completed</td>
+		</tr>
+		<tr>
+		<td>1 Stanyan Street</td>
+		<td>94118</td>
+		<td>Entitled</td>
+		</tr>
+	</tbody>
+</table>
