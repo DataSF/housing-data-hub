@@ -139,6 +139,12 @@ function generateMap(params) {
     });
 
     var markerCats = [];
+    {% if page.legend-cats %}
+    markerCats = {{page.legend-cats}};
+    {% endif %}
+    if(params) {
+      markerCats = ['Entitled','BP Issued','First Const Doc Issued','Completed'];
+    }
     var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, L.mapbox.featureLayer()) 
       .on('ready', function(layer) {
         this.eachLayer(function(marker) {
@@ -403,7 +409,14 @@ function generateChart(params) {
   var chart = c3.generate({
     data: {
       x: x,
+      /*
+      columns: [
+        ['Tenure','Units'],
+        ['Rental Units',632],
+        ['Ownership Units',500]
+      ],*/
       url: '{{site.baseurl}}/data/' + data,
+      //groups: [['Rental Units','Ownership Units']],
       type: type
     },
     axis: {
@@ -417,5 +430,6 @@ function generateChart(params) {
       }
     }
   });
+  console.log(chart.data);
 }
 </script>

@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Units by tenure
+title: Units by tenure (over time)
 "chart-title": Completed inclusionary units by tenure by year
 category: "Inclusionary-Housing"
 data: bmr_by_tenure.csv
