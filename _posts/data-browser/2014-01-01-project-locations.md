@@ -14,6 +14,7 @@ published: true
 source: "Mayor's Office of Housing and Community Development."
 notes: null
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
+legend-cats: "['Entitled','BP Issued','First Const Doc Issued','Completed']"
 ---
 
 The map below shows the location of projects with inclusionary units across the city by project status. The location of inclusionary units matches general construction patterns as inclusionary units are located on or nearby private construction projects.
