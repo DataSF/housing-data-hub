@@ -9,10 +9,10 @@ published: true
 type: area
 scale: "5"
 colors: YlGn
-"chart-title": Total population and housing units by decade.
+"chart-title": Total population and housing units by decade
 column: Decade
-source: Bay Area Census and US Census, “1990 Census of Population and Housing (1990 CPH)”.
+source: "Bay Area Census and US Census, “1990 Census of Population and Housing (1990 CPH)”."
 notes: The census did not collect data on housing units before 1940.
 ---
 
-You can see here the growth in housing units and population over time. Starting in 1950, the population decreased, following national trends of suburbanization. Losses continued through 1980. The City recovered it's population losses around 2000 and the population continues to grow as more people are seeking out city living. Growth in housing has only now started to awaken, with an average of 3000 units of housing added per year over the period 2000 to 2010 and 1800 units added per year in the period 1990 to 2000. Prior to this, growth in housing was relatively flat with just under 18,000 units added over a three decade period (1960 to 1990).
+Between 1950 and 1980, the population of San Francisco decreased. By 2000, the City recovered its population losses and continues to grow. The number of housing units increased in recent decades, adding 3,000 housing units per year on average from 2000 to 2010 (or more than 30,000 units) and 1,800 units per year from 1990 to 2000 (approximately 18,000 units). Prior to this, growth in housing was relatively flat with just under 18,000 units added over a three decade period (1960 to 1990).
