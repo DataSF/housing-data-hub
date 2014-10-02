@@ -73,6 +73,7 @@ var map;
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
   var geojson, json, column, d, container, units, mapType, margin;
+  var overlay = '{{site.baseurl}}/data/sup_districts.json';
 
   //detect point, polygon
   //if point map via omnivore
@@ -129,15 +130,6 @@ function generateMap(params) {
   });
 
   if(mapType == "map-point") {
-    var customLayer = L.geoJson(null, {
-    // http://leafletjs.com/reference.html#geojson-style
-      style: function(feature) {
-          return {
-              color: '#f00'
-          };
-      }
-    });
-
     var markerCats = [];
     {% if page.legend-cats %}
     markerCats = {{page.legend-cats}};
@@ -145,16 +137,65 @@ function generateMap(params) {
     if(params) {
       markerCats = ['Entitled','BP Issued','First Const Doc Issued','Completed'];
     }
-    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, L.mapbox.featureLayer()) 
+
+    function bindPointPopup(feature, layer) {
+      var popupContent = "<h1>" + feature.properties.label + "</h1>";
+      popupContent += "<p>" + feature.properties[column] + "</p>";
+      layer.bindPopup(popupContent);
+    }
+
+    var customLayer = L.geoJson(null, {
+    // http://leafletjs.com/reference.html#geojson-style
+      /*style: function(feature) {
+          console.log(feature);
+          return {
+              color: '#f00'
+          };
+      },*/
+      pointToLayer: function(feature, latlng) {
+        return new L.CircleMarker(latlng, {
+          radius: 4,
+          color: '#000',
+          fillColor: getColor(markerCats.indexOf(feature.properties[column]) + 1,8),
+          fillOpacity: 1,
+          stroke: true,
+          weight: 1,
+          opacity: .8
+        });
+      },
+      onEachFeature: bindPointPopup
+    });
+
+    map.legendControl.addLegend(getPointLegendHTML(markerCats));
+
+
+    $.getJSON(overlay, function(geodata) {
+      geojson = L.geoJson(geodata, {
+        style: {
+          fill: false,
+          weight: 2
+        }
+      }).addTo(map);
+      //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+    });
+
+
+    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer).addTo(map);
+
+    console.log(customLayer.toGeoJSON());
+    /* 
       .on('ready', function(layer) {
         this.eachLayer(function(marker) {
           if(markerCats.indexOf(marker.toGeoJSON().properties[column]) == -1) {
             markerCats.push(marker.toGeoJSON().properties[column]);
           }
+          
           marker.setIcon(L.mapbox.marker.icon({
             'marker-color': colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])],
             'marker-size': 'small'
           }));
+
+
 
           //Set the property on the feature so symbols don't disappear on filter, this probably won't work with 
           //custom icons...
@@ -163,10 +204,9 @@ function generateMap(params) {
 
           marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column]);
         });
-        console.log(csvLayer.toGeoJSON());
         map.legendControl.addLegend(getPointLegendHTML(markerCats));
       }).addTo(map);
-    
+    */
     if(desc) {
       $('#' + container + '-wrapper .description').html(desc);
       $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
@@ -181,10 +221,14 @@ function generateMap(params) {
       $('.legend-filter').each(function(i,el){
         if($(el).prop('checked')) enabled[$(el).val()] = true;
       });
-
-      csvLayer.setFilter(function(feature) {
+      /*
+      csvLayer.options.filter(function(feature) {
         return (feature.properties['status'] in enabled);
-      });
+      });*/
+
+      csvLayer.eachLayer(function(layer){
+        console.log(layer);
+      })
 
       //this is duplicative of above, need to collapse this into a single function call to set the popup
       //TODO: abstract popup binding to function that can be called from here and when initially loading the layer
