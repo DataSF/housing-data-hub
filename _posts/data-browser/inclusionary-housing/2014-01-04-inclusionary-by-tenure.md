@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Units by tenure (over time)
-"chart-title": Completed inclusionary units by tenure by year
+title: Units over time by tenure
+"chart-title": "Inclusionary program units by tenure by year: all completed projects, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 data: bmr_by_tenure.csv
 x: Year

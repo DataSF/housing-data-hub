@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Units over time
-"chart-title": Completed inclusionary units by year
+"chart-title": "Inclusionary program units by year: all completed projects, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: bmr_completed_over_time.csv

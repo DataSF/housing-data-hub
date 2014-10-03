@@ -24,6 +24,7 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <script src="{{site.baseurl}}/js/cookies.min.js"></script>
 <script src="{{site.baseurl}}/js/ga.js"></script>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
 
 <script>
 window.onload = function() {
@@ -123,6 +124,7 @@ function generateMap(params) {
     map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
       keepOpen: false
     }));
+    L.control.fullscreen().addTo(map);
   }
 
   var popup = new L.Popup({
@@ -170,19 +172,24 @@ function generateMap(params) {
 
 
     $.getJSON(overlay, function(geodata) {
-      geojson = L.geoJson(geodata, {
+      var overlay = L.geoJson(geodata, {
         style: {
           fill: false,
           weight: 2
         }
       }).addTo(map);
+
+      overlay.bringToBack();
       //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
     });
 
+    var layerData;
 
-    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer).addTo(map);
-
-    console.log(customLayer.toGeoJSON());
+    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer)
+      .on('ready', function() {
+        layerData = csvLayer.toGeoJSON();
+      })
+      .addTo(map);
     /* 
       .on('ready', function(layer) {
         this.eachLayer(function(marker) {
@@ -216,25 +223,15 @@ function generateMap(params) {
     $('#' + container).on('click', 'i', function(e) {
       $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
       $(this).toggleClass('off');
-      
       var enabled = {};
       $('.legend-filter').each(function(i,el){
         if($(el).prop('checked')) enabled[$(el).val()] = true;
       });
-      /*
-      csvLayer.options.filter(function(feature) {
+      csvLayer.clearLayers();
+      csvLayer.options.filter = function(feature, layer) {
         return (feature.properties['status'] in enabled);
-      });*/
-
-      csvLayer.eachLayer(function(layer){
-        console.log(layer);
-      })
-
-      //this is duplicative of above, need to collapse this into a single function call to set the popup
-      //TODO: abstract popup binding to function that can be called from here and when initially loading the layer
-      csvLayer.eachLayer(function(marker){
-        marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column])
-      })
+      }
+      csvLayer.addData(layerData);
     });
 
   } else {
