@@ -1,25 +1,29 @@
 ---
 layout: policy
 summary: Housing preference programs give target groups priority access to affordable housing programs.
+published: true
 ---
-The goal of preference programs is to ensure that certain groups have access to affordable programs. If an individual or family meets the criteria of a preference program they can obtain priority access to housing programs and opportunities.
 
-The details of preference programs vary depending on the source of the program or funds and can be subject to legal constraints, including fair housing laws. The Housing Opportunities for Persons with AIDS (HOPWA) is a long-standing example of a federal preference program. In San Francisco, local preference programs vary in response to changing conditions over time or to support specific policy goals. Read below for details on active programs.
+The goal of a local preference program is to ensure that certain disadvantaged and/or displaced groups have access to affordable programs. If an individual meets the criteria of a preference program they can obtain priority access to City sponsored affordable housing programs and opportunities, including down payment assistance programs.
 
-#### Certificate of Preference Program
+Some affordable housing programs use state and federal funds, which may limit the use of local preference programs. As a result, cities must obtain special permission from the funding agency to implement the local preference program.
 
-This Certificate of Preference Program (COP) is available to residents displaced by the former San Francisco Redevelopment Agency in the 1960’s and 1970’s when the Agency was implementing its federally-funded urban renewal program. The preferential considerations are given for MOHCD-funded housing projects and former San Francisco Redevelopment Agency Funded housing projects.
+<aside role="complementary" class="well">
+<h1>A  note on income eligibility</h1>
+<p>Housing preference programs have no income requirements.  However, when program participants use their preference certificate to obtain affordable housing, they must meet the income requirements of the housing opportunity. </p>
+</aside>
 
-Through MOHCD’s COP Second Loan Program COP holders who were displaced from the Western Addition and Bayview Hunters can receive help with the purchase of their first home.
+There are two active preference programs in San Francisco.
 
-#### Ellis Act Housing Preference Program
+###  Certificate of Preference Program
+The Certificate of Preference Program (COP) is available to residents displaced by the former San Francisco Redevelopment Agency in the 1960’s and 1970’s when the Agency was implementing its federally-funded urban renewal program. The preferential considerations are given for all City and Office of Community Investment and Infrastructure (OCII) sponsored housing projects. 
 
-The Ellis Act Housing Preference Program, launched in April 2014, gives preference in all affordable housing programs administered or funded by the City for certain tenants who are evicted under the Ellis Act. Eligibility depends on different criteria such as length of stay, date when the eviction notice is received, and the health condition of the tenant.
+### Ellis Act Housing Preference Program
 
 The 1986 Ellis Act is a California State law that allows property owners to evict tenants in order to exit the rental business.
+The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. Eligibility depends on criteria such as length of stay, date when the eviction notice is received, and the health condition of the tenant. 
 
-<div class="sideblurb">
-<h5>Difference between COP and EAHP preferences</h5>
-
-COP certificate holders receive first preference to all available City funded affordable housing opportunities. The EAHP certificate holders receive second preference.
-</div>
+<aside role="complementary" class="well">
+<h1>Difference between COP and EAHP preferences</h1>
+<p>COP certificate holders receive first preference to available City and OCII funded affordable housing opportunities. EAHP certificate holders receive second preference unless additional local preferences apply.</p>
+</aside>
