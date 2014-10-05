@@ -22,6 +22,7 @@ Multiple types of finance programs exist, from simple, short-term loans provided
 The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) are the City’s lead agencies for affordable housing financing. Working in partnership with the City’s affordable housing developers, their funding pipeline includes approximately 4,500 new units scheduled for production by 2020, as well as 3,500 units to be rehabilitated and preserved during that period.
 
 The funding sources for MOHCD loans include:
+
 - Affordable housing fees under the Inclusionary Housing Program
 - Affordable housing fees under the Jobs-Linkage Program
 - General funds
@@ -33,6 +34,7 @@ The funding sources for MOHCD loans include:
 OCII funds come from tax increment financing (TIF). Read more about TIF in the sidebar.
 
 When MOHCD and OCII pledge funds to projects, this attracts other state and federal investments, which usually include some combination of:
+
 - Low-Income Housing Tax Credits
 - Tax-Exempt bond financing
 - HUD 202 funding (senior housing)
@@ -48,6 +50,7 @@ When MOHCD and OCII pledge funds to projects, this attracts other state and fede
 
 ### Target Groups
 Affordable housing funding programs often restrict occupancy to certain populations. In San Francisco, City policies reflect extensive public input and pursue specific goals to address community needs. Target groups for San Francisco’s affordable housing programs include:
+
 - Low-income families and seniors
 - Veterans
 - The chronically homeless
