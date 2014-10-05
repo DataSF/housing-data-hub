@@ -23,12 +23,12 @@ Multiple types of finance programs exist, from simple, short-term loans provided
 ### How does San Francisco Finance Affordable Housing?
 The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) are the City’s lead agencies for affordable housing financing. Working in partnership with the City’s affordable housing developers, their funding pipeline includes approximately 4,500 new units scheduled for production by 2020, as well as 3,500 units to be rehabilitated and preserved during that period.
 
-The funding sources for MOHCD loans include: 
+The funding sources for MOHCD loans include:
 - Affordable housing fees under the Inclusionary Housing Program
 - Affordable housing fees under the Jobs-Linkage Program
 - General funds
 - Bond Financing (which requires voter approval)
-- Funding from the former San Francisco Redevelopment Agency 
+- Funding from the former San Francisco Redevelopment Agency
 - CDBG and HOME entitlement funding from HUD
 - Miscellaneous sources of funds
 
