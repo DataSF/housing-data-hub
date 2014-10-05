@@ -1,8 +1,10 @@
 ---
 layout: policy
-summary: Financing programs lower the cost of producing or maintaining housing developments. In exchange for financial assistance, developers create or maintain affordable units.
+summary: "Financing programs lower the cost of producing or maintaining housing developments. In exchange for financial assistance, developers create or maintain affordable units."
+published: true
 ---
-The goal of financing programs is to increase or maintain the supply of affordable units. Financing programs encourage the production or maintenance of affordable housing by reducing the costs of developing or operating housing developments.
+
+Housing developers use debt or equity to finance the construction or rehabilitation of housing. But low-income rents and sales prices cannot cover the costs of repaying market-rate financing. Below-market rate financing bridges the gap.
 
 #### What are the costs of developing and operating housing?
 
