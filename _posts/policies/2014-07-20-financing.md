@@ -33,6 +33,11 @@ The funding sources for MOHCD loans include:
 
 OCII funds come from tax increment financing (TIF). Read more about TIF in the sidebar.
 
+<aside role="complementary" class="well">
+<h1>Loss of tax increment financing (TIF)</h1>
+<p>Historically, the largest source of local financing was TIF, which was used to fund San Francisco’s Redevelopment Agency (SFRA). SFRA would identify areas of the City in need of development and implement a long-term revitalization plan for the area. If areas saw an increase in property tax revenues (above a 2% inflation rate), the increase was returned to SFRA for reinvestment in the project area. This funding would be used in part to support creation of affordable housing. In 2012, California dissolved redevelopment agencies, removing this source of funding. The Office of Community Investment and Infrastructure (OCII) is the successor agency to SFRA, and carries out its recognized payment obligations.</p>
+</aside>
+
 When MOHCD and OCII pledge funds to projects, this attracts other state and federal investments, which usually include some combination of:
 
 - Low-Income Housing Tax Credits
@@ -42,11 +47,6 @@ When MOHCD and OCII pledge funds to projects, this attracts other state and fede
 - State funding (multiple programs)
 - Project-based Section 8 rental subsidies (and other miscellaneous rental/operating subsidies)
 - Federal Home Loan Bank Affordable Housing Program
-
-<aside role="complementary" class="well">
-<h1>Loss of tax increment financing (TIF)</h1>
-<p>Historically, the largest source of local financing was TIF, which was used to fund San Francisco’s Redevelopment Agency (SFRA). SFRA would identify areas of the City in need of development and implement a long-term revitalization plan for the area. If areas saw an increase in property tax revenues (above a 2% inflation rate), the increase was returned to SFRA for reinvestment in the project area. This funding would be used in part to support creation of affordable housing. In 2012, California dissolved redevelopment agencies, removing this source of funding. The Office of Community Investment and Infrastructure (OCII) is the successor agency to SFRA, and carries out its recognized payment obligations.</p>
-</aside>
 
 ### Target Groups
 Affordable housing funding programs often restrict occupancy to certain populations. In San Francisco, City policies reflect extensive public input and pursue specific goals to address community needs. Target groups for San Francisco’s affordable housing programs include:
