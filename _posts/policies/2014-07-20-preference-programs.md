@@ -18,12 +18,12 @@ There are two active preference programs in San Francisco.
 ###  Certificate of Preference Program
 The Certificate of Preference Program (COP) is available to residents displaced by the former San Francisco Redevelopment Agency in the 1960’s and 1970’s when the Agency was implementing its federally-funded urban renewal program. The preferential considerations are given for all City and Office of Community Investment and Infrastructure (OCII) sponsored housing projects. 
 
+### Ellis Act Housing Preference Program
+
 <aside role="complementary" class="well">
 <h1>Difference between COP and EAHP preferences</h1>
 <p>COP certificate holders receive first preference to available City and OCII funded affordable housing opportunities. EAHP certificate holders receive second preference unless additional local preferences apply.</p>
 </aside>
-
-### Ellis Act Housing Preference Program
 
 The 1986 Ellis Act is a California State law that allows property owners to evict tenants in order to exit the rental business.
 The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. Eligibility depends on criteria such as length of stay, date when the eviction notice is received, and the health condition of the tenant. 
