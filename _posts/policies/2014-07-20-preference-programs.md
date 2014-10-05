@@ -27,3 +27,15 @@ The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preferenc
 <h1>Difference between COP and EAHP preferences</h1>
 <p>COP certificate holders receive first preference to available City and OCII funded affordable housing opportunities. EAHP certificate holders receive second preference unless additional local preferences apply.</p>
 </aside>
+
+## Organizations
+Organization | What it does
+-------------|--------------
+[Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the Certificate of Preference (COP) program and the application process for the Ellis Act Housing Preference (EAHP) Certificate.
+
+## Resources
+- [Certificate of Preference Program (COP) Rules, 2008](http://sf-moh.org/modules/showdocument.aspx?documentid=7516)
+- [Certificate of Preference Program (COP) Brochure](http://sf-moh.org/modules/showdocument.aspx?documentid=7517)
+- [Certificate of Preference Program (COP) Displacement Addresses](http://sf-moh.org/index.aspx?page=1155)
+- [Ellis Act Housing Preference Program (EAHP) Procedures Manual, 2014](http://sf-moh.org/modules/showdocument.aspx?documentid=7921)
+- [Ellis Act Housing Preference Program Frequently Asked Questions](http://sf-moh.org/modules/showdocument.aspx?documentid=7938)
