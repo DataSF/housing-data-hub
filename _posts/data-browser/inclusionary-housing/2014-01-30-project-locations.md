@@ -6,7 +6,7 @@ category: "Inclusionary-Housing"
 data: inclusionary/project_locations_with_units.csv
 type: "map-point"
 column: status
-scale: "4"
+scale: "5"
 colors: RdYlGn
 published: true
 "axis-type": category
