@@ -24,6 +24,7 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <script src="{{site.baseurl}}/js/cookies.min.js"></script>
 <script src="{{site.baseurl}}/js/ga.js"></script>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
 
 <script>
 window.onload = function() {
@@ -73,6 +74,7 @@ var map;
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
   var geojson, json, column, d, container, units, mapType, margin;
+  var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
 
   //detect point, polygon
   //if point map via omnivore
@@ -122,6 +124,7 @@ function generateMap(params) {
     map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
       keepOpen: false
     }));
+    L.control.fullscreen().addTo(map);
   }
 
   var popup = new L.Popup({
@@ -129,15 +132,6 @@ function generateMap(params) {
   });
 
   if(mapType == "map-point") {
-    var customLayer = L.geoJson(null, {
-    // http://leafletjs.com/reference.html#geojson-style
-      style: function(feature) {
-          return {
-              color: '#f00'
-          };
-      }
-    });
-
     var markerCats = [];
     {% if page.legend-cats %}
     markerCats = {{page.legend-cats}};
@@ -145,16 +139,89 @@ function generateMap(params) {
     if(params) {
       markerCats = ['Entitled','BP Issued','First Const Doc Issued','Completed'];
     }
-    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, L.mapbox.featureLayer()) 
+
+    function bindPointPopup(feature, layer) {
+      var popupContent = "<h1>" + feature.properties.label + "</h1>";
+      popupContent += "<p>" + feature.properties[column] + "</p>";
+      layer.bindPopup(popupContent);
+    }
+
+    var customLayer = L.geoJson(null, {
+    // http://leafletjs.com/reference.html#geojson-style
+      /*style: function(feature) {
+          console.log(feature);
+          return {
+              color: '#f00'
+          };
+      },*/
+      pointToLayer: function(feature, latlng) {
+        return new L.CircleMarker(latlng, {
+          radius: 4,
+          color: '#000',
+          fillColor: getColor(markerCats.indexOf(feature.properties[column]) + 1,8),
+          fillOpacity: 1,
+          stroke: true,
+          weight: 1,
+          opacity: .8
+        });
+      },
+      onEachFeature: bindPointPopup
+    });
+
+    map.legendControl.addLegend(getPointLegendHTML(markerCats));
+
+    var overlayLayer;
+    var overlayLayers = [];
+    for (var i = 0; i < overlays.length; i++) {
+      (function(i) {
+        $.getJSON(overlays[i], function(geodata) {
+          overlayLayers[i] = L.geoJson(geodata, {
+            style: {
+              fill: false,
+              weight: 2
+            }
+          });
+        })
+        .done(function(){
+          if(i = overlays.length - 1) {
+            setLayers(overlayLayers);
+          }
+        });
+      })(i);
+    };
+    
+    function setLayers(layers) {
+      //Todo: abstract this so that I can pass in names of layers earlier on, for now, these are hard coded
+      var baseLayers = {
+        "No Overlay": new L.layerGroup(),
+        "Supervisor Districts": layers[0],
+        "Neighborhoods": layers[1]
+      }
+      L.control.layers(baseLayers,{}).addTo(map);
+    }
+    
+    //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+
+    var layerData;
+
+    var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer)
+      .on('ready', function() {
+        layerData = csvLayer.toGeoJSON();
+      })
+      .addTo(map);
+    /* 
       .on('ready', function(layer) {
         this.eachLayer(function(marker) {
           if(markerCats.indexOf(marker.toGeoJSON().properties[column]) == -1) {
             markerCats.push(marker.toGeoJSON().properties[column]);
           }
+          
           marker.setIcon(L.mapbox.marker.icon({
             'marker-color': colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])],
             'marker-size': 'small'
           }));
+
+
 
           //Set the property on the feature so symbols don't disappear on filter, this probably won't work with 
           //custom icons...
@@ -163,10 +230,9 @@ function generateMap(params) {
 
           marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column]);
         });
-        console.log(csvLayer.toGeoJSON());
         map.legendControl.addLegend(getPointLegendHTML(markerCats));
       }).addTo(map);
-    
+    */
     if(desc) {
       $('#' + container + '-wrapper .description').html(desc);
       $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
@@ -176,21 +242,15 @@ function generateMap(params) {
     $('#' + container).on('click', 'i', function(e) {
       $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
       $(this).toggleClass('off');
-      
       var enabled = {};
       $('.legend-filter').each(function(i,el){
         if($(el).prop('checked')) enabled[$(el).val()] = true;
       });
-
-      csvLayer.setFilter(function(feature) {
+      csvLayer.clearLayers();
+      csvLayer.options.filter = function(feature, layer) {
         return (feature.properties['status'] in enabled);
-      });
-
-      //this is duplicative of above, need to collapse this into a single function call to set the popup
-      //TODO: abstract popup binding to function that can be called from here and when initially loading the layer
-      csvLayer.eachLayer(function(marker){
-        marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column])
-      })
+      }
+      csvLayer.addData(layerData);
     });
 
   } else {
@@ -391,7 +451,15 @@ function generateChart(params) {
     var container = 'chart';
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}';
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}';
+      if(legend == '') {
+        legend = 'bottom';
+      }
+      if(groups != '') {
+        groups = groups.split(',');
+      } else {
+        groups = [];
+      }
   }
   if (type == '') {
     type = 'area';
@@ -416,14 +484,19 @@ function generateChart(params) {
         ['Ownership Units',500]
       ],*/
       url: '{{site.baseurl}}/data/' + data,
-      //groups: [['Rental Units','Ownership Units']],
+      groups: [ groups ],
+      //groups: [['Fault Evictions','No Fault Evictions']],
       type: type
+    },
+    legend: {
+      position: legend
     },
     axis: {
       x: {
         type: axisType
       },
       y: {
+        min: 0,
         tick: {
           format: yFormat
         }

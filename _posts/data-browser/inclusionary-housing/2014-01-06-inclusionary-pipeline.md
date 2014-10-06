@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Inclusionary pipeline
-"chart-title": Inclusionary unit pipeline by permit status
+title: Units in process
+"chart-title": Inclusionary units going through the planning, permitting and development process as of 2014 Q1
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: bmr_pipeline.csv
