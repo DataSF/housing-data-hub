@@ -451,7 +451,15 @@ function generateChart(params) {
     var container = 'chart';
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}';
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}';
+      if(legend == '') {
+        legend = 'bottom';
+      }
+      if(groups != '') {
+        groups = groups.split(',');
+      } else {
+        groups = [];
+      }
   }
   if (type == '') {
     type = 'area';
@@ -476,15 +484,19 @@ function generateChart(params) {
         ['Ownership Units',500]
       ],*/
       url: '{{site.baseurl}}/data/' + data,
-      groups: [],
+      groups: [ groups ],
       //groups: [['Fault Evictions','No Fault Evictions']],
       type: type
+    },
+    legend: {
+      position: legend
     },
     axis: {
       x: {
         type: axisType
       },
       y: {
+        min: 0,
         tick: {
           format: yFormat
         }
