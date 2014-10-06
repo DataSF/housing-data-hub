@@ -7,7 +7,7 @@ data: inclusionary/project_locations_with_units.csv
 type: "map-point"
 column: status
 scale: "4"
-colors: Paired
+colors: Set2
 published: true
 "axis-type": category
 "y-format": "$,"
