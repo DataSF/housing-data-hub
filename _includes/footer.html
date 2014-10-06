@@ -74,7 +74,7 @@ var map;
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
   var geojson, json, column, d, container, units, mapType, margin;
-  var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/sffind_neighborhoods.json'];
+  var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
 
   //detect point, polygon
   //if point map via omnivore
@@ -193,6 +193,7 @@ function generateMap(params) {
     function setLayers(layers) {
       //Todo: abstract this so that I can pass in names of layers earlier on, for now, these are hard coded
       var baseLayers = {
+        "No Overlay": new L.layerGroup(),
         "Supervisor Districts": layers[0],
         "Neighborhoods": layers[1]
       }
@@ -475,7 +476,8 @@ function generateChart(params) {
         ['Ownership Units',500]
       ],*/
       url: '{{site.baseurl}}/data/' + data,
-      //groups: [['Rental Units','Ownership Units']],
+      groups: [],
+      //groups: [['Fault Evictions','No Fault Evictions']],
       type: type
     },
     axis: {
