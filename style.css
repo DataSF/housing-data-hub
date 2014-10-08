@@ -225,7 +225,7 @@ h3.panel-title {
   }
 }
 #chart {
-  height: 400px;
+  height: 500px;
 }
 
 h1.chart-title {
@@ -248,10 +248,6 @@ margin-bottom: 20px;
 .map-legend i.off {
   opacity: 0.2;
   border: thin solid black;
-}
-
-.leaflet-popup-close-button {
-  display: none;
 }
 
 .leaflet-popup-content-wrapper {
@@ -355,6 +351,20 @@ a:hover button {
 footer {
   background-color: #222;
 }
+/*
+Popups
+ */
+.leaflet-popup-content h1 {
+  font-size: 18px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.leaflet-popup-content p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 /*
  * a11y
  */
