@@ -142,7 +142,14 @@ function generateMap(params) {
 
     function bindPointPopup(feature, layer) {
       var popupContent = "<h1>" + feature.properties.label + "</h1>";
-      popupContent += "<p>" + feature.properties[column] + "</p>";
+      popupContent += "<p>" + feature.properties.description + "</p>";
+      var popup = '{{page.popup}}';
+      if(popup != '') {
+        popup = popup.split(',');
+        for(var i = 0; i < popup.length; i++) {
+          popupContent += "<p>" + popup[i].trim() + ": " + feature.properties[popup[i].trim()] + "</p>";
+        }
+      }
       layer.bindPopup(popupContent);
     }
 
@@ -175,12 +182,16 @@ function generateMap(params) {
     for (var i = 0; i < overlays.length; i++) {
       (function(i) {
         $.getJSON(overlays[i], function(geodata) {
-          overlayLayers[i] = L.geoJson(geodata, {
+          geojson = L.geoJson(geodata, {
             style: {
-              fill: false,
-              weight: 2
-            }
+              weight: 1,
+              opacity: 0.4,
+              color: 'black',
+              fillOpacity: 0
+            },
+            onEachFeature: onEachFeature
           });
+          overlayLayers[i] = geojson;
         })
         .done(function(){
           if(i = overlays.length - 1) {
@@ -209,30 +220,7 @@ function generateMap(params) {
         layerData = csvLayer.toGeoJSON();
       })
       .addTo(map);
-    /* 
-      .on('ready', function(layer) {
-        this.eachLayer(function(marker) {
-          if(markerCats.indexOf(marker.toGeoJSON().properties[column]) == -1) {
-            markerCats.push(marker.toGeoJSON().properties[column]);
-          }
-          
-          marker.setIcon(L.mapbox.marker.icon({
-            'marker-color': colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])],
-            'marker-size': 'small'
-          }));
 
-
-
-          //Set the property on the feature so symbols don't disappear on filter, this probably won't work with 
-          //custom icons...
-          marker.toGeoJSON().properties['marker-color'] = colorbrewer[colors][8][markerCats.indexOf(marker.toGeoJSON().properties[column])];
-          marker.toGeoJSON().properties['marker-size'] = 'small';
-
-          marker.bindPopup(marker.toGeoJSON().properties.label + ": " + marker.toGeoJSON().properties[column]);
-        });
-        map.legendControl.addLegend(getPointLegendHTML(markerCats));
-      }).addTo(map);
-    */
     if(desc) {
       $('#' + container + '-wrapper .description').html(desc);
       $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
@@ -248,7 +236,7 @@ function generateMap(params) {
       });
       csvLayer.clearLayers();
       csvLayer.options.filter = function(feature, layer) {
-        return (feature.properties['status'] in enabled);
+        return (feature.properties[column] in enabled);
       }
       csvLayer.addData(layerData);
     });
@@ -343,16 +331,36 @@ function generateMap(params) {
   }
 
   function onEachFeature(feature, layer) {
+    var parent = layer;
     layer.on({
       mousemove: mousemove,
-      mouseout: mouseout
+      mouseout: mouseout,
+      dblclick: zoomToFeature
     });
   }
 
   var closeTooltip;
 
+  // control that shows state info on hover
+  var info = L.control({position: 'bottomleft'});
+
+  info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+  };
+
+  info.update = function (props) {
+    this._div.innerHTML = (props ?
+      '<b>' + props.label + '</b>'
+      : '');
+  };
+
+  info.addTo(map);
+
   function mousemove(e) {
     var layer = e.target;
+    /*
     var value = "<p>" + layer.feature.properties.value + " " + units + "</p>";
     if(layer.feature.properties.margin) {
       value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
@@ -366,17 +374,18 @@ function generateMap(params) {
 
       if (!popup._map) popup.openOn(map);
       window.clearTimeout(closeTooltip);
-
+    */
       // highlight feature
       layer.setStyle({
         weight: 3,
-        opacity: 0.4,
-        fillOpacity: 0.95
+        opacity: 0.4
       });
 
       if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
       }
+
+      info.update(layer.feature.properties);
   }
 
   function mouseout(e) {
@@ -384,10 +393,15 @@ function generateMap(params) {
     closeTooltip = window.setTimeout(function() {
       map.closePopup();
     }, 100);
+    info.update();
   }
 
   function zoomToFeature(e) {
+    console.log(e.target.getBounds());
     map.fitBounds(e.target.getBounds());
+    if(map.getZoom() > 12) {
+      map.setView([37.774929, -122.419416], 12);
+    }
   }
 
   function getLegendHTML() {
@@ -433,11 +447,7 @@ function generateMap(params) {
 
       container.append(item);
       labels.push(label);
-      /*
-      labels.push(
-        '<i style="background:' + getColor(i + 1, categories.length) + '"></i> ' + categories[i]);*/
     }
-    //$('span').after()
     return $('<div>').append(container).html();
   }
 }
@@ -445,7 +455,7 @@ function generateMap(params) {
 
 function generateChart(params) {
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes;
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups;
     $('#chart-wrapper').show();
     $('#map-wrapper').hide();
     var container = 'chart';
@@ -455,12 +465,12 @@ function generateChart(params) {
       if(legend == '') {
         legend = 'bottom';
       }
-      if(groups != '') {
+  }
+  if(groups != '') {
         groups = groups.split(',');
       } else {
         groups = [];
       }
-  }
   if (type == '') {
     type = 'area';
   }
@@ -485,7 +495,6 @@ function generateChart(params) {
       ],*/
       url: '{{site.baseurl}}/data/' + data,
       groups: [ groups ],
-      //groups: [['Fault Evictions','No Fault Evictions']],
       type: type
     },
     legend: {
@@ -503,6 +512,5 @@ function generateChart(params) {
       }
     }
   });
-  console.log(chart.data);
 }
 </script>

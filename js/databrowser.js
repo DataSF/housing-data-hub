@@ -17,7 +17,8 @@ var browserData =
   		"type" : "{{post.type}}",
   		"units" : "{{post.units}}",
   		"y-format" : "{{post.y-format}}",
-  		"axis-type" : "{{post.axis-type}}"
+  		"axis-type" : "{{post.axis-type}}",
+      "groups" : "{{post.groups}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
