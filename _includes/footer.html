@@ -73,7 +73,7 @@ var map;
 
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, d, container, units, mapType, margin;
+  var geojson, json, column, d, container, units, mapType, margin, popup;
   var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
 
   //detect point, polygon
@@ -86,6 +86,7 @@ function generateMap(params) {
     var desc = params.description;
     var source = params.source;
     var notes = params.notes;
+    popup = params.popup;
     d = params.data;
     if(params.colors != '') {
       colors = params.colors
@@ -102,6 +103,7 @@ function generateMap(params) {
     column = '{{page.column}}';
     units = '{{page.units}}';
     margin = '{{page.margin}}';
+    popup = '{{page.popup}}';
     d = "{{page.data}}";
     {% if page.colors %}
     var colors = '{{page.colors}}';
@@ -117,19 +119,18 @@ function generateMap(params) {
     container = 'chart';
   }
 
-  L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
+  if (popup != '') {
+    popup = popup.split(',')
+  }
 
+  L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
   if(!map) {
-    map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.774929, -122.419416], 12);
+    map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
     map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
       keepOpen: false
     }));
     L.control.fullscreen().addTo(map);
   }
-
-  var popup = new L.Popup({
-    autoPan: false
-  });
 
   if(mapType == "map-point") {
     var markerCats = [];
@@ -141,14 +142,16 @@ function generateMap(params) {
     }
 
     function bindPointPopup(feature, layer) {
-      var popupContent = "<h1>" + feature.properties.label + "</h1>";
+      var popupContent = "<h1 class='popup-title'>" + feature.properties.label + "</h1>";
       popupContent += "<p>" + feature.properties.description + "</p>";
-      var popup = '{{page.popup}}';
-      if(popup != '') {
-        popup = popup.split(',');
+      if(Array.isArray(popup)) {
+        popupContent += "<p>";
         for(var i = 0; i < popup.length; i++) {
-          popupContent += "<p>" + popup[i].trim() + ": " + feature.properties[popup[i].trim()] + "</p>";
+          if (feature.properties[popup[i].trim()] != '') {
+            popupContent += "<b>" + popup[i].trim() + "</b>: " + feature.properties[popup[i].trim()] + "</br>";
+          }
         }
+        popupContent += "</p>";
       }
       layer.bindPopup(popupContent);
     }
@@ -208,7 +211,7 @@ function generateMap(params) {
         "Supervisor Districts": layers[0],
         "Neighborhoods": layers[1]
       }
-      L.control.layers(baseLayers,{}).addTo(map);
+      L.control.layers(baseLayers,{},{autoZIndex: false}).addTo(map);
     }
     
     //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
@@ -258,6 +261,9 @@ function generateMap(params) {
         onEachFeature: onEachFeature
       }).addTo(map);
       var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+    });
+    var autoPopup = new L.Popup({
+      autoPan: false
     });
   }
     
@@ -331,7 +337,6 @@ function generateMap(params) {
   }
 
   function onEachFeature(feature, layer) {
-    var parent = layer;
     layer.on({
       mousemove: mousemove,
       mouseout: mouseout,
@@ -360,21 +365,22 @@ function generateMap(params) {
 
   function mousemove(e) {
     var layer = e.target;
-    /*
-    var value = "<p>" + layer.feature.properties.value + " " + units + "</p>";
-    if(layer.feature.properties.margin) {
-      value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
-    }
-    if(layer.feature.properties.value == -1) {
-      value = "No Data";
-    }
-      popup.setLatLng(e.latlng);
-      popup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
+    if(mapType != "map-point") {
+      var value = "<p>" + layer.feature.properties.value + " " + units + "</p>";
+      if(layer.feature.properties.margin) {
+        value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
+      }
+      if(layer.feature.properties.value == -1) {
+        value = "No Data";
+      }
+      autoPopup.setLatLng(e.latlng);
+      autoPopup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
         value );
 
-      if (!popup._map) popup.openOn(map);
+      if (!autoPopup._map) autoPopup.openOn(map);
       window.clearTimeout(closeTooltip);
-    */
+    }
+    
       // highlight feature
       layer.setStyle({
         weight: 3,
@@ -382,7 +388,7 @@ function generateMap(params) {
       });
 
       if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToFront();
+        layer.bringToBack();
       }
 
       info.update(layer.feature.properties);
@@ -390,9 +396,11 @@ function generateMap(params) {
 
   function mouseout(e) {
     geojson.resetStyle(e.target);
-    closeTooltip = window.setTimeout(function() {
+    if(mapType == 'map') {
+      closeTooltip = window.setTimeout(function() {
       map.closePopup();
     }, 100);
+    }
     info.update();
   }
 
