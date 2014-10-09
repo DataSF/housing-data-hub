@@ -37,6 +37,7 @@ window.onload = function() {
   $('#organizations').before($('#viz-wrapper'));
   {% if page.layout == 'policy' %}
   buildTOC();
+  $('.nav.toc').append('<li><a href="#">Back to Top</a></li>');
   var vizData = browserData[$('.data-browser-select').val()];
   loadViz(vizData);
   $('.data-browser-select').change(function(){
