@@ -126,20 +126,18 @@ function generateMap(params) {
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
   if(!map) {
     map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
-    map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+    /*map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
       keepOpen: false
-    }));
+    }));*/
     L.control.fullscreen().addTo(map);
   }
 
   if(mapType == "map-point") {
     var markerCats = [];
     {% if page.legend-cats %}
-    markerCats = {{page.legend-cats}};
+    legendCats = '{{page.legend-cats}}';
+    markerCats = legendCats.split(",");
     {% endif %}
-    if(params) {
-      markerCats = ['Entitled','BP Issued','First Const Doc Issued','Completed'];
-    }
 
     function bindPointPopup(feature, layer) {
       var popupContent = "<h1 class='popup-title'>" + feature.properties.label + "</h1>";
@@ -165,10 +163,14 @@ function generateMap(params) {
           };
       },*/
       pointToLayer: function(feature, latlng) {
+        if(markerCats.indexOf(feature.properties[column]) == -1) {
+          markerCats.push(feature.properties[column]);
+        }
+        console.log(markerCats.length);
         return new L.CircleMarker(latlng, {
           radius: 4,
           color: '#000',
-          fillColor: getColor(markerCats.indexOf(feature.properties[column]) + 1,8),
+          fillColor: getColor(markerCats.indexOf(feature.properties[column]) + 1, markerCats.length < 3 ? 3 : markerCats.length),
           fillOpacity: 1,
           stroke: true,
           weight: 1,
@@ -177,8 +179,6 @@ function generateMap(params) {
       },
       onEachFeature: bindPointPopup
     });
-
-    map.legendControl.addLegend(getPointLegendHTML(markerCats));
 
     var overlayLayer;
     var overlayLayers = [];
@@ -221,6 +221,7 @@ function generateMap(params) {
     var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer)
       .on('ready', function() {
         layerData = csvLayer.toGeoJSON();
+        map.legendControl.addLegend(getPointLegendHTML(markerCats));
       })
       .addTo(map);
 
@@ -407,10 +408,10 @@ function generateMap(params) {
   }
 
   function zoomToFeature(e) {
-    console.log(e.target.getBounds());
-    map.fitBounds(e.target.getBounds());
-    if(map.getZoom() > 12) {
-      map.setView([37.774929, -122.419416], 12);
+    if(map.getZoom() >= 12) {
+      map.setView(e.latlng, map.getZoom() + 1);
+    } else {
+      map.fitBounds(e.target.getBounds());
     }
   }
 
@@ -436,6 +437,7 @@ function generateMap(params) {
   }
 
   function getPointLegendHTML(categories) {
+    console.log(categories);
     var labels = [];
     var container = $('<div>');
     var title = $('<span>');
