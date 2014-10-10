@@ -17,7 +17,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.3.5/tabletop.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="{{site.baseurl}}/js/c3.js"></script>
-<script type="text/javascript" src="http://leafletjs.com/examples/us-states.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
 <script src="{{site.baseurl}}/js/colorbrewer.js"></script>
 <script src="{{site.baseurl}}/js/databrowser.js"></script>
@@ -188,9 +187,9 @@ function generateMap(params) {
         $.getJSON(overlays[i], function(geodata) {
           geojson = L.geoJson(geodata, {
             style: {
-              weight: 1,
+              weight: 2,
               opacity: 0.4,
-              color: 'black',
+              color: '#808080',
               fillOpacity: 0
             },
             onEachFeature: onEachFeature
@@ -322,9 +321,9 @@ function generateMap(params) {
     col = getColor(feature.properties.scaledValue, scale);
     return {
       fillColor: col,
-      weight: 1,
+      weight: 2,
       opacity: 0.3,
-      color: 'black',
+      color: '#808080',
       fillOpacity: 0.7
     };
   }
@@ -385,7 +384,8 @@ function generateMap(params) {
       // highlight feature
       layer.setStyle({
         weight: 3,
-        opacity: 0.4
+        opacity: 0.4,
+        color: d3.rgb('#808080').darker()
       });
 
       if (!L.Browser.ie && !L.Browser.opera) {
@@ -396,6 +396,7 @@ function generateMap(params) {
   }
 
   function mouseout(e) {
+    var to = e.originalEvent.toElement
     geojson.resetStyle(e.target);
     if(mapType == 'map') {
       closeTooltip = window.setTimeout(function() {
@@ -505,6 +506,9 @@ function generateChart(params) {
       url: '{{site.baseurl}}/data/' + data,
       groups: [ groups ],
       type: type
+    },
+    color: {
+      pattern: ['#5a9bd4','#7ac36a','#faa75b','#9e67ab','#ce7058','#d77fb4','#f15a60','#737373']
     },
     legend: {
       position: legend
