@@ -366,6 +366,16 @@ Popups
 }
 
 /*
+Charts
+ */
+.c3 line, .c3 path {
+  stroke: #d9d9d9;
+}
+
+.c3 .tick text {
+  stroke: #666666;
+}
+/*
  * a11y
  */
 .hidden {
