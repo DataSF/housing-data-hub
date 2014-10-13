@@ -44,3 +44,7 @@ Other|||
 [2] For both capital improvements and lead remediation, the tenant is temporarily displaced and provided with compensation. Once repairs are complete, the tenant may move back into the unit.
 [3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.
 
+## Organizations
+Organization | What it does
+-------------|--------------
+[Rent Arbitration Board](http://www.sfrb.org/)	| The Rent Board: implements the rent ordinance and establishes additional rules; arbitrates and mediates disputes between tenants and landlords; investigates complaints of wrongful evictions and provides other services, such as counseling on the details of the law.
