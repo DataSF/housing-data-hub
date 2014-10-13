@@ -17,7 +17,7 @@ Rent control affects housing affordability in a variety of ways. Evictions can a
 
 The table below summarizes the reasons for evictions, distinguishes between good faith or “no fault” evictions and “fault” evictions, where the tenant has committed an act that serves as a “just cause” for eviction, and indicates evictions that impact the supply of rent controlled units.
 
-Reason for eviction|Fault or No Fault|Supply Impact*|Citation
+Reason for eviction|Fault or No Fault|Supply Impact[1]|Citation
 -------------------|-----------------|----------------------------------------------------------|--------
 Non-payment of Rent|Fault||37.9(a)(1)(A)
 Habitual Late Payment of Rent or Frequently returned checks|Fault||37.9(a)(1)(B-C)
@@ -30,11 +30,15 @@ Unapproved Subtenant|Fault||37.9(a)(7)
 Owner Move In|No Fault|Yes|37.9(a)(8)
 Condo Conversion|No Fault|Yes|37.9(a)(9)
 Demolition|No Fault|Yes|37.9(a)(10)
-Capital Improvement |No Fault||37.9(a)(11)
+Capital Improvement[2] |No Fault||37.9(a)(11)
 Substantial Rehabilitation|No Fault||37.9(a)(12)
 Ellis Act Withdrawal|No Fault|Yes|37.9(a)(13)
-Lead Remediation |No Fault||37.9(a)(14)
-Development Agreement|No Fault|Depends|37.9(a)(15)
+Lead Remediation[2] |No Fault||37.9(a)(14)
+Development Agreement|No Fault|Depends[3]|37.9(a)(15)
 Good Samaritan Tenancy Ends|No Fault||37.9(a)(16)
 Roommate Living in Same Unit|No Fault||37.9(b)
 Other|||
+
+[1] Some no fault evictions can indicate a change in unit status. For these units, the eviction may result in a loss, either permanently or for a substantial period of time, of the rent controlled unit in the rental market. Some of these units may return to being rentals. If the owners convert back to rentals, the unit still falls under the rent control ordinance.
+[2] For both capital improvements and lead remediation, the tenant is temporarily displaced and provided with compensation. Once repairs are complete, the tenant may move back into the unit.
+[3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.   
