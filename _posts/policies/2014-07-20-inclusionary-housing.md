@@ -22,10 +22,12 @@ The BMR units are allocated through a lottery process. All individuals and house
 <h1>Income levels served</h1>
 <p>Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income.
 The 2014 levels are in the table below.</p>
+
 Persons per Household | One | Two | Three | Four
 ----------------------|-----|-----|-------|------
 55% AMI | $37,350| $42,750| $48,050| $53,400
 120% AMI| $81,550| $93,250| $104,900| $116,500
+
 </aside>
 
 In its current form, this program emphasizes the “Affordable Housing Fee.” Developers may apply for an alternative to the fee. Below is a brief summary of each option.
