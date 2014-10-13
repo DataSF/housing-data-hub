@@ -7,16 +7,26 @@ published: true
 
 Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.
 
-The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units.
+The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units. 
 
 <aside role="complementary" class="well">
 <h1>Other sources of inclusionary units</h1>
-<p>The former redevelopment agency, now the Office of Community Investment and Infrastructure, is another source of inclusionary units. A smaller number of units were produced as the result of conversions from rentals to condominiums.</p>
+<p>The successor to the former redevelopment agency, now the Office of Community Investment and Infrastructure (OCII), is another source of inclusionary units. Another small source of inclusionary units is the result of conversions from rentals to condominiums in the 1970s and 1980s.</p>
 </aside>
 
 Inclusionary rules require that new private housing developments with 10 or more units must either pay a fee or include in the project a subset of units that are affordable (for rent or ownership). Developers also have the option of building affordable units off-site. Collectively, these units are called “Below Market Rate” (BMR) units.
 
-The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, certain conditions determine preferences in the lottery ranking process.
+The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
+
+<aside role="complementary" class="well">
+<h1>Income levels served</h1>
+<p>Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income.
+The 2014 levels are in the table below.</p>
+Persons per Household | One | Two | Three | Four
+-------------|------|------|------|------
+55% AMI | $37,350| $42,750| $48,050| $53,400
+120% AMI| $81,550| $93,250| $104,900| $116,500
+</aside>
 
 In its current form, this program emphasizes the “Affordable Housing Fee”. Developers may apply for an alternative to the fee. Below is a brief summary of each option.
 
