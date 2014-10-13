@@ -17,7 +17,7 @@ Rent control affects housing affordability in a variety of ways. Evictions can a
 
 The table below summarizes the reasons for evictions, distinguishes between good faith or “no fault” evictions and “fault” evictions, where the tenant has committed an act that serves as a “just cause” for eviction, and indicates evictions that impact the supply of rent controlled units.
 
-Reason for eviction|Fault or No Fault|Temporary to permanent reduction in rent controlled units|Citation
+Reason for eviction|Fault or No Fault|Supply Impact*|Citation
 -------------------|-----------------|----------------------------------------------------------|--------
 Non-payment of Rent|Fault||37.9(a)(1)(A)
 Habitual Late Payment of Rent or Frequently returned checks|Fault||37.9(a)(1)(B-C)
