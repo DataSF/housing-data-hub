@@ -23,8 +23,8 @@ The BMR units are allocated through a lottery process. All individuals and house
 <p>Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income.
 The table shows income levels based on persons per household.</p>
 
-| One | Two | Three | Four
-----------------------|-----|-----|-------|------
+AMI | One | Two | Three | Four
+----|-----|-----|-------|------
 55% AMI | $37,350| $42,750| $48,050| $53,400
 120% AMI| $81,550| $93,250| $104,900| $116,500
 
