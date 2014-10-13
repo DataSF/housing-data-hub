@@ -16,8 +16,6 @@ The San Francisco inclusionary housing program was created in 1992 and is now ca
 
 Inclusionary rules require that new private housing developments with 10 or more units must either pay a fee or include in the project a subset of units that are affordable (for rent or ownership). Developers also have the option of building affordable units off-site. Collectively, these units are called “Below Market Rate” (BMR) units.
 
-The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
-
 <aside role="complementary" class="well">
 <h1>Income levels served</h1>
 <p>Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income.
@@ -29,6 +27,8 @@ AMI | One | Two | Three | Four
 120% AMI| $81,550| $93,250| $104,900| $116,500
 
 </aside>
+
+The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
 
 In its current form, this program emphasizes the “Affordable Housing Fee.” Developers may apply for an alternative to the fee. Below is a brief summary of each option.
 
