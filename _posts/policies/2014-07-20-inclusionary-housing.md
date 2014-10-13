@@ -7,12 +7,12 @@ published: true
 
 Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.
 
-The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units. 
-
 <aside role="complementary" class="well">
 <h1>Other sources of inclusionary units</h1>
 <p>The successor to the former redevelopment agency, now the Office of Community Investment and Infrastructure (OCII), is another source of inclusionary units. Another small source of inclusionary units is the result of conversions from rentals to condominiums in the 1970s and 1980s.</p>
 </aside>
+
+The San Francisco inclusionary housing program was created in 1992 and is now captured under Section 415 of the San Francisco Planning Code. Section 415 is the primary source of inclusionary units. 
 
 Inclusionary rules require that new private housing developments with 10 or more units must either pay a fee or include in the project a subset of units that are affordable (for rent or ownership). Developers also have the option of building affordable units off-site. Collectively, these units are called “Below Market Rate” (BMR) units.
 
