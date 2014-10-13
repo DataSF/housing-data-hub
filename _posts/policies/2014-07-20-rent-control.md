@@ -7,6 +7,7 @@ published: true
 The goal of rent control is safeguard tenants from excessive rent increases and, at the same time, to assure landlords of fair and adequate rents. In this type of program, the City regulates rent increases and evictions in the private market, but does not provide the housing itself.
 
 San Francisco’s rent control law, Chapter 37 of the Administrative Code, was passed in 1979 and it:
+
 - Created limits on how much landlords can increase rent for units built before June 13, 1979
 - Established rules for when landlords can lawfully evict 
 - Established the Rent Arbitration Board to implement the law
@@ -41,4 +42,5 @@ Other|||
 
 [1] Some no fault evictions can indicate a change in unit status. For these units, the eviction may result in a loss, either permanently or for a substantial period of time, of the rent controlled unit in the rental market. Some of these units may return to being rentals. If the owners convert back to rentals, the unit still falls under the rent control ordinance.
 [2] For both capital improvements and lead remediation, the tenant is temporarily displaced and provided with compensation. Once repairs are complete, the tenant may move back into the unit.
-[3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.   
+[3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.
+
