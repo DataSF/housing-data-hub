@@ -1,6 +1,6 @@
 ---
 layout: policy
-summary: Rent control is a housing policy that regulates rent adjustments and evictions by private landlords.  Details
+summary: "Rent control is a housing policy that regulates rent adjustments and evictions by private landlords. "
 published: true
 ---
 
