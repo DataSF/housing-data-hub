@@ -48,3 +48,10 @@ Other|||
 Organization | What it does
 -------------|--------------
 [Rent Arbitration Board](http://www.sfrb.org/)	| The Rent Board: implements the rent ordinance and establishes additional rules; arbitrates and mediates disputes between tenants and landlords; investigates complaints of wrongful evictions and provides other services, such as counseling on the details of the law.
+
+## Resources
+- [Rent Board Service Overview page](http://www.sfrb.org/index.aspx?page=8)
+- [Annual Eviction Reports](http://www.sfrb.org/index.aspx?page=46)
+- [Annual Statistical Reports](http://www.sfrb.org/index.aspx?page=48)
+- [SF Rent Ordinance](http://www.sfrb.org/index.aspx?page=7) (Chapter 37: The Residential Rent Stabilization and Arbitration Ordinance)
+
