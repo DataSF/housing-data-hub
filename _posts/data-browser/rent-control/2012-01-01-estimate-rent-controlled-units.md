@@ -5,6 +5,7 @@ category: "Rent-Control"
 data: rent-control/rent_control_estimates_by_tract.csv
 column: RntCon_pct
 margin: RntCon_moe
+policy-link: rent-control
 scale: "5"
 colors: YlGnBu
 type: map
