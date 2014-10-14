@@ -2,6 +2,7 @@
 layout: policy
 summary: "Rent control is a housing policy that regulates rent adjustments and evictions by private landlords. "
 published: true
+data-category: "rent-control"
 ---
 
 The goal of rent control is safeguard tenants from excessive rent increases and, at the same time, to assure landlords of fair and adequate rents. In this type of program, the City regulates rent increases and evictions in the private market, but does not provide the housing itself.
