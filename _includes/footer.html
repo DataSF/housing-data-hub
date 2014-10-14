@@ -505,12 +505,21 @@ function generateChart(params) {
       $('#' + container + '-wrapper .notes').html(notes);
     }
 
+  var emphasis = '{{page.emphasis}}';
+
+  emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
+
+  console.log(emphasis);
+
   var chart = c3.generate({
     data: {
       x: x,
       url: '{{site.baseurl}}/data/' + data,
       groups: [ groups ],
-      type: type
+      type: type,
+      color: function(color, d) {
+        return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#'+emphasis[2]) : color;
+      }
     },
     color: {
       pattern: ['#5a9bd4','#7ac36a','#faa75b','#9e67ab','#ce7058','#d77fb4','#f15a60','#737373']

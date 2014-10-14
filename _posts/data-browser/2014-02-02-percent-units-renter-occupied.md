@@ -6,7 +6,7 @@ category: "Occupancy-and-Tenure"
 data: DEC_10_DP_DPDP1.csv
 column: HD02_S184
 scale: "5"
-colors: YlGnBu
+colors: PuBu
 legend-title: Percent renter-occupied
 type: map
 units: "%"

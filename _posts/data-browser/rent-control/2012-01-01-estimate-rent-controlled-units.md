@@ -10,7 +10,7 @@ scale: "5"
 colors: YlGnBu
 type: map
 units: "%"
-published: true
+published: false
 "axis-type": category
 "y-format": "$,"
 legend-title: "Percent rent controlled"
