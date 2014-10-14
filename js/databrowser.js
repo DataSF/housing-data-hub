@@ -21,7 +21,7 @@ var browserData =
       "groups" : "{{post.groups}}",
       "popup" : "{{post.popup}}",
       "margin": "{{post.margin}}",
-      "legendTitle": "{{post.legend-tite}}"
+      "legendTitle": "{{post.legend-title}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
