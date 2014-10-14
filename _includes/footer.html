@@ -73,19 +73,15 @@ var map;
 
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, d, container, units, mapType, margin, popup;
+  var geojson, json, column, d, container, units, mapType, margin, popup, desc, source, notes;
   var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
-
-  //detect point, polygon
-  //if point map via omnivore
-  //if polygon map via join
 
   if(params) {
     mapType = params.type;
     column = params.column;
-    var desc = params.description;
-    var source = params.source;
-    var notes = params.notes;
+    desc = params.description;
+    source = params.source;
+    notes = params.notes;
     popup = params.popup;
     d = params.data;
     if(params.colors != '') {
@@ -124,13 +120,20 @@ function generateMap(params) {
   }
 
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
-  if(!map) {
+
+  if(map) {
+    //Todo: find a way to keep the map from reseetting, wasteful to keep loading the same data on every switch
+    map.remove();
+  }
     map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
     /*map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
       keepOpen: false
     }));*/
     L.control.fullscreen().addTo(map);
-  }
+
+  desc ? $('#' + container + '-wrapper .description').html(desc) : '';
+  source ? $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source) : '';
+  notes ? $('#' + container + '-wrapper .notes').html('<b>Notes:</b> ' + notes) : '';
 
   if(mapType == "map-point") {
     var markerCats = [];
@@ -220,15 +223,9 @@ function generateMap(params) {
     var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer)
       .on('ready', function() {
         layerData = csvLayer.toGeoJSON();
-        map.legendControl.addLegend(getPointLegendHTML(markerCats));
+        legend = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
       })
       .addTo(map);
-
-    if(desc) {
-      $('#' + container + '-wrapper .description').html(desc);
-      $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
-      $('#' + container + '-wrapper .notes').html(notes);
-    }
 
     $('#' + container).on('click', 'i', function(e) {
       $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
@@ -531,6 +528,7 @@ function generateChart(params) {
       },
       y: {
         min: 0,
+        padding: {bottom:0},
         tick: {
           format: yFormat
         }

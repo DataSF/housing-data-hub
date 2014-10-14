@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Estimate of rent-controlled units
+title: Tenure over time
 category: "Occupancy-and-Tenure"
 data: tenure_by_decade.csv
 "y-format": ","
