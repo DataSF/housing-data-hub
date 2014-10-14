@@ -1,6 +1,6 @@
 ---
 layout: data
-title: "Units subject to rent control"
+title: "Estimated units subject to rent control"
 category: "Rent-Control"
 data: rent-control/rent_control_universe.csv
 column: Year
@@ -13,8 +13,7 @@ published: true
 "y-format": ","
 emphasis: "Rental,0,185aa9"
 legend-title: "Percent rent controlled"
-source: "U.S. Census Bureau, 2012 American Community Survey 5-Year Estimates."
-notes: "Rent control estimates include all rental properties built before 1980. However, because the rent control ordinance only covers properties built before June 1979 and because it does not cover single family homes/condos where tenants moved in after 1996, or SRO units where tenants remain less than 28 consecutive days, this data is likely an over-estimate. Read more about the calculation methodology at the SF Indicators Project."
-"chart-title": "Estimated percentage of rent controlled units by census tract"
+source: "U.S. Census Bureau, 2012 American Community Survey 5-Year Estimates. Tenure by Year Built."
+"chart-title": "Estimated number of units built before and after 1980 by tenure"
 ---
-The San Francisco Rent Ordinance was passed in 1979 and covers rental housing units built before June 13, 1979. The City does not have an official count of rent controlled units as units move in and out of rent control and landlords are not required to “register” rent controlled units. The map below uses the [Department of Public Health’s methodology](http://www.sfindicatorproject.org/indicators/view/192) to estimate the possible universe of rent controlled units by census tract. This is an overestimate as it does not account for exemptions or changes in status since the last estimate. Each estimate has a corresponding margin of error noted in the popup.
+The San Francisco Rent Ordinance was passed in 1979 and covers rental housing units built before June 13, 1979. The City does not have an official count of rent controlled units as units move in and out of rent control and landlords are not required to “register” rent controlled units. This chart shows an estimate of housing stock built before and after 1980 by tenure. Rental units built before 1980 are highlighted below. While this number does not capture the actual units currently under rent control, it gives a general sense of the size of the rental market subject to rent control. Keep in mind, because the rent control ordinance only covers properties built before June 1979 and because it does not cover single family homes/condos where tenants moved in after 1996, or SRO units where tenants remain less than 28 consecutive days, the actual number of units is likely smaller. Also, please note the margins of error for each estimate.
