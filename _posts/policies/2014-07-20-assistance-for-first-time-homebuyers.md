@@ -1,12 +1,31 @@
 ---
 layout: policy
 summary: First time homebuyers that meet income thresholds or other criteria can receive loan or down payment assistance and counseling for buying their first home.
-data-category: Assistance-to-Homeowners
+"data-category": "Assistance-to-Homeowners"
+published: true
 ---
-Buyer assistance programs reduce the upfront and ongoing costs of buying a home, which increases the ability of buyers to afford a home. The goal of the program is to create more home owners.
 
-Loan programs vary in the specifics of how much money can be lent, terms of repayment and eligibility criteria. The government entity provides funds and loan terms that are managed by qualified lenders.
+Buyer assistance programs make homeownership possible for many families by reducing  the upfront and ongoing costs of buying a home. The goal of the program is to create more low to moderate income homeowners in San Francisco.
 
-In San Francisco, the Mayor’s Office of Housing and Community Development (MOHCD) manages this program, which includes a variety of targeted sub programs. For example, some programs target groups of individuals, such as police officers, while others target specific areas of the city (i.e. if you buy in a certain part of the city you can receive additional assistance).
+Loan programs vary in the specifics of how much money can be lent, terms of repayment and eligibility criteria. The government entity sets loan terms and provides funding, and qualified lenders provide homebuyers with their first mortgages.
 
-All of the sub programs have income and workshop requirements. In some cases, buyers are eligible to buy “Below Market Rate” (BMR) units under the Inclusionary Housing Program.
+The Mayor’s Office of Housing and Community Development (MOHCD) manages San Francisco’s buyer assistance programs, which include a variety of targeted subprograms. For example, some programs target groups of individuals, such as police officers, while others target households at very specific income levels.
+
+All of the subprograms have income and workshop requirements. In many cases, buyers are able to use down payment assistance when they purchase “Below Market Rate” (BMR) units under the Inclusionary Housing Program. This additional assistance allows MOHCD to serve an even lower income homebuyer by lowering the first mortgage and therefore reducing monthly payments.
+
+### Income levels served
+First-time homebuyer programs in San Francisco serve individuals and families ranging from 80% of Area Median Income to 200% of Area Median Income. The table shows income levels based on persons per household.
+
+AMI | One | Two | Three | Four
+----|-----|-----|-------|------
+80% AMI | $54,350| $62,150| $69,900| $77,700
+200% AMI| $135,900|$155,400|$174,800|$194,200
+
+## Organizations
+Organization | What it does
+-------------|--------------
+[Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the city’s loan assistance programs.
+[HomeownershipSF](http://www.homeownershipsf.org/) | HomeownershipSF provides first-time homebuyer counseling and education workshops required by the program.
+
+## Resources
+- [List of loan assistance programs at MOHCD](http://sf-moh.org/index.aspx?page=738)
