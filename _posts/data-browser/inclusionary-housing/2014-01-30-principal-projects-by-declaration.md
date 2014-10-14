@@ -5,9 +5,10 @@ title: Principal project locations
 category: "Inclusionary-Housing"
 data: inclusionary/principal_projects_by_declaration.csv
 type: "map-point"
-column: "Section 415 Declaration"
+column: "Category"
+legend-cats: On-site,Off-site,Fee,Combination,Land Dedication,Undeclared
 scale: "4"
-colors: Set3
+colors: Paired
 published: true
 source: "Mayor's Office of Housing and Community Development."
 notes: null
