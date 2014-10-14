@@ -20,7 +20,8 @@ var browserData =
   		"axis-type" : "{{post.axis-type}}",
       "groups" : "{{post.groups}}",
       "popup" : "{{post.popup}}",
-      "margin": "{{post.margin}}"
+      "margin": "{{post.margin}}",
+      "legendTitle": "{{post.legend-tite}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}

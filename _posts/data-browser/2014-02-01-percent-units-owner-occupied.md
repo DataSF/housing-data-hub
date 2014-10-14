@@ -6,6 +6,7 @@ data: DEC_10_DP_DPDP1.csv
 column: HD02_S181
 scale: "5"
 colors: YlGnBu
+legend-title: "Percent owner-occupied"
 type: map
 units: "%"
 published: true

@@ -7,6 +7,7 @@ data: DEC_10_DP_DPDP1.csv
 column: HD02_S184
 scale: "5"
 colors: YlGnBu
+legend-title: Percent renter-occupied
 type: map
 units: "%"
 published: true

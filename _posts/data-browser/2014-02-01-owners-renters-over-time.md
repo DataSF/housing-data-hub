@@ -10,3 +10,4 @@ type: line
 column: Year
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011. https://www.nhgis.org/"
 ---
+This chart shows the count of renter and owner-occupied units over time, starting with the Decennial census in 1970. The relative distribution of units has generally tracked around two-thirds renter-occupied, one-third owner.

@@ -73,7 +73,7 @@ var map;
 
 function generateMap(params) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
-  var geojson, json, column, d, container, units, mapType, margin, popup, desc, source, notes;
+  var geojson, json, column, d, container, units, mapType, margin, popup, desc, source, notes, legendTitle;
   var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
 
   if(params) {
@@ -84,6 +84,7 @@ function generateMap(params) {
     notes = params.notes;
     popup = params.popup;
     margin = params.margin;
+    legendTitle = params.legendTitle;
     d = params.data;
     if(params.colors != '') {
       colors = params.colors
@@ -101,6 +102,7 @@ function generateMap(params) {
     units = '{{page.units}}';
     margin = '{{page.margin}}';
     popup = '{{page.popup}}';
+    legendTitle = '{{page.legend-title}}';
     d = "{{page.data}}";
     {% if page.colors %}
     var colors = '{{page.colors}}';
@@ -217,14 +219,14 @@ function generateMap(params) {
       L.control.layers(baseLayers,null).addTo(map);
     }
     
-    //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+    //var legend = L.mapbox.legendControl().addLegend(()).addTo(map);
 
     var layerData;
 
     var csvLayer = omnivore.csv('{{site.baseurl}}/data/' + d, null, customLayer)
       .on('ready', function() {
         layerData = csvLayer.toGeoJSON();
-        legend = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
+        var legendCont = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
       })
       .addTo(map);
 
@@ -258,7 +260,7 @@ function generateMap(params) {
         style: getStyle,
         onEachFeature: onEachFeature
       }).addTo(map);
-      var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+      var legendCont = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
     });
     var autoPopup = new L.Popup({
       autoPan: false
@@ -426,21 +428,17 @@ function generateMap(params) {
     var legendColors = d3.scale.quantile()
       .domain(valuesOnlyArray)
       .range(colorbrewer[colors][scale]);
-
     var labels = [];
-
     for (var i = 0; i < scale; i++) {
       var range = legendColors.invertExtent(colorbrewer[colors][scale][i]);
       from = Math.round(range[0] * 10)/10;
       to = Math.round(range[1] * 10)/10;
-
       labels.push(
         '<i style="background:' + getColor(i + 1, scale) + '"></i> ' +
         from + (to ? '&ndash;' + to : '+') + units);
     }
-    //return '<span>hello</span>';
-
-    return '<span>Legend</span><br>' + labels.join('<br>');
+    legendTitle = (legendTitle == '' ? 'Legend' : legendTitle);
+    return '<span><b>' + legendTitle + '</b></span><br>' + labels.join('<br>');
   }
 
   function getPointLegendHTML(categories) {
