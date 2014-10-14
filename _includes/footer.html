@@ -384,8 +384,8 @@ function generateMap(params) {
         value = "No Data";
       }
       autoPopup.setLatLng(e.latlng);
-      autoPopup.setContent('<h2>' + layer.feature.properties.LABEL + '</h2>' +
-        value );
+      autoPopup.setContent('<h1 class="popup-title">' + layer.feature.properties.LABEL + '</h2>' +
+        "<p>" + value + "</p>" );
 
       if (!autoPopup._map) autoPopup.openOn(map);
       window.clearTimeout(closeTooltip);
