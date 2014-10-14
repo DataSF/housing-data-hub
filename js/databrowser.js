@@ -19,7 +19,8 @@ var browserData =
   		"y-format" : "{{post.y-format}}",
   		"axis-type" : "{{post.axis-type}}",
       "groups" : "{{post.groups}}",
-      "popup" : "{{post.popup}}"
+      "popup" : "{{post.popup}}",
+      "margin": "{{post.margin}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
