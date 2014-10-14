@@ -35,12 +35,12 @@
           <div id="chart"></div>
           <div class="row" style="margin-top: 20px;">
             <div class="{% if page.policy-link %} col-md-7 {% else %} col-md-12 {% endif %}">
-              {% if page.source %} <p>Source: {{page.source}}</p> {% endif %}
-              {% if page.notes %} <p>Notes: {{page.notes}}</p> {% endif %}
+              {% if page.source %} <p><b>Source:</b> {{page.source}}</p> {% endif %}
+              {% if page.notes %} <p><b>Notes:</b> {{page.notes}}</p> {% endif %}
             </div>
             {% if page.policy-link %}
             <div class="col-md-5">
-              <a href="{{ page.policy-link }}"><button type="button" style="width:100%" class="btn btn-primary btn-lg btn-block">Read more about this policy</button></a>
+              <a href="{{site.baseurl}}/{{ page.category | downcase }}"><button type="button" style="width:100%" class="btn btn-primary btn-lg btn-block">Read more about this policy</button></a>
             </div>
             {% endif %}
           </div>

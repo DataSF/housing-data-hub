@@ -13,7 +13,7 @@ units: "percent owners paying more than 35%+ of hh income"
 published: false
 "axis-type": category
 "y-format": "$,"
-source: Census Bureau, 2008-2012 American Community Survey 5-Year Estimates. Selected Housing Characteristics.
+source: Census Bureau, 2012 American Community Survey 5-Year Estimates. Selected Housing Characteristics.
 ---
 
 The map shows the percentage of owners that pay 35% or more of their household income on their home owner costs by census tract. Please note that these data are taken from the American Community Survey, so each estimate has a margin of error associated with it, meaning the actual values may fall within a range around the estimate. You can see that margin when you hover over each tract.

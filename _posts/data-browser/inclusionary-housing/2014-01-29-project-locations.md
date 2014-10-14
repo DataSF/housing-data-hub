@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Unit locations by development status
-"chart-title": "Residential sites that have inclusionary units on-site"
+"chart-title": "Residential sites with planned or constructed inclusionary units as of 2014 Q1"
 category: "Inclusionary-Housing"
 data: inclusionary/project_locations_with_units.csv
 type: "map-point"
