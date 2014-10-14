@@ -1,12 +1,12 @@
 ---
 layout: data
-title: Owners & renters
+title: Estimate of rent-controlled units
 category: "Occupancy-and-Tenure"
 data: tenure_by_decade.csv
 "y-format": ","
 published: true
-type: area
-"chart-title": "Number of owners and renters over time"
+type: line
+"chart-title": "Number of owner and renter-occupied units over time"
 column: Year
-source: Minnesota Population...
+source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011. https://www.nhgis.org/"
 ---

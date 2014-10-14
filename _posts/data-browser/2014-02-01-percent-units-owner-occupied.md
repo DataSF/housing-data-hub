@@ -5,9 +5,9 @@ category: "Occupancy-and-Tenure"
 data: DEC_10_DP_DPDP1.csv
 column: HD02_S181
 scale: "5"
-colors: Blues
+colors: YlGnBu
 type: map
-units: "percent owner-occupied units"
+units: "%"
 published: true
 "axis-type": category
 "y-format": "$,"

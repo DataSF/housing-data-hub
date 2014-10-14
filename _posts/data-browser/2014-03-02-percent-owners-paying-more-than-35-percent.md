@@ -10,7 +10,7 @@ scale: "6"
 colors: Blues
 type: map
 units: "percent owners paying more than 35%+ of hh income"
-published: true
+published: false
 "axis-type": category
 "y-format": "$,"
 source: Census Bureau, 2008-2012 American Community Survey 5-Year Estimates. Selected Housing Characteristics.

@@ -6,9 +6,9 @@ category: "Occupancy-and-Tenure"
 data: DEC_10_DP_DPDP1.csv
 column: HD02_S184
 scale: "5"
-colors: Blues
+colors: YlGnBu
 type: map
-units: "percent renter-occupied units"
+units: "%"
 published: true
 source: "U.S. Census Bureau, 2010 Census. Profile of General Population and Housing Characteristics."
 ---

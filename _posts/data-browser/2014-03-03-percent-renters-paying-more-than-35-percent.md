@@ -7,7 +7,7 @@ data: ACS_12_5YR_DP04.csv
 column: HC03_VC197
 margin: HC04_VC197
 scale: "6"
-published: true
+published: false
 colors: Blues
 type: map
 units: percent of renters paying 35%+ of hh income

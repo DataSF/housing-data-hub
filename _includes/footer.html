@@ -166,7 +166,6 @@ function generateMap(params) {
         if(markerCats.indexOf(feature.properties[column]) == -1) {
           markerCats.push(feature.properties[column]);
         }
-        console.log(markerCats.length);
         return new L.CircleMarker(latlng, {
           radius: 4,
           color: '#000',
@@ -211,7 +210,7 @@ function generateMap(params) {
         "Supervisor Districts": layers[0],
         "Neighborhoods": layers[1]
       }
-      L.control.layers(baseLayers,{},{autoZIndex: false}).addTo(map);
+      L.control.layers(baseLayers,null).addTo(map);
     }
     
     //var legend = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
@@ -267,12 +266,14 @@ function generateMap(params) {
       autoPan: false
     });
   }
-    
+  
+  var valuesOnlyArray; 
+
   function scaleData(data) {
     valuesOnlyArray = extractValuesFromObjectArray(data)
     quantizer = new Quantizer(valuesOnlyArray, scale)
     $.each(data, function(i, dataObject) {
-      dataObject.scaledValue = quantizer.quantizeNumber(parseFloat(dataObject[column]))
+      dataObject.scaledValue = quantizer.quantileNumber(parseFloat(dataObject[column]))
     })
     return data;
   }
@@ -316,6 +317,10 @@ function generateMap(params) {
     this.quantizeNumber = d3.scale.quantize()
       .domain([min, max])
       .range(d3.range(1, s + 1)) // Start with only mapping on 1-5 color scale
+
+    this.quantileNumber = d3.scale.quantile()
+      .domain(dataArray)
+      .range(d3.range(1, s + 1))
   }
 
   function getStyle(feature) {
@@ -364,10 +369,14 @@ function generateMap(params) {
 
   info.addTo(map);
 
+  map.on('baselayerchange', function(e) {
+    e.layer.bringToBack();
+  });
+
   function mousemove(e) {
     var layer = e.target;
     if(mapType != "map-point") {
-      var value = "<p>" + layer.feature.properties.value + " " + units + "</p>";
+      var value = "<p>" + layer.feature.properties.value + units + "</p>";
       if(layer.feature.properties.margin) {
         value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
       }
@@ -416,8 +425,8 @@ function generateMap(params) {
   }
 
   function getLegendHTML() {
-    var legendColors = d3.scale.quantize()
-      .domain([min,max])
+    var legendColors = d3.scale.quantile()
+      .domain(valuesOnlyArray)
       .range(colorbrewer[colors][scale]);
 
     var labels = [];
@@ -429,15 +438,14 @@ function generateMap(params) {
 
       labels.push(
         '<i style="background:' + getColor(i + 1, scale) + '"></i> ' +
-        from + (to ? '&ndash;' + to : '+'));
+        from + (to ? '&ndash;' + to : '+') + units);
     }
     //return '<span>hello</span>';
 
-    return '<span>'+ units + '</span><br>' + labels.join('<br>');
+    return '<span>Legend</span><br>' + labels.join('<br>');
   }
 
   function getPointLegendHTML(categories) {
-    console.log(categories);
     var labels = [];
     var container = $('<div>');
     var title = $('<span>');
@@ -489,6 +497,11 @@ function generateChart(params) {
   if (yFormat != '') {
     yFormat = d3.format(yFormat)
   }
+  if (axisType == 'timeseries') {
+    xFormat = '%m/%d/%Y';
+  } else {
+    xFormat = '';
+  }
 
   if(desc) {
       $('#' + container + '-wrapper .description').html(desc);
@@ -499,12 +512,6 @@ function generateChart(params) {
   var chart = c3.generate({
     data: {
       x: x,
-      /*
-      columns: [
-        ['Tenure','Units'],
-        ['Rental Units',632],
-        ['Ownership Units',500]
-      ],*/
       url: '{{site.baseurl}}/data/' + data,
       groups: [ groups ],
       type: type
@@ -517,7 +524,10 @@ function generateChart(params) {
     },
     axis: {
       x: {
-        type: axisType
+        type: axisType,
+        tick: {
+          format: xFormat
+        }
       },
       y: {
         min: 0,

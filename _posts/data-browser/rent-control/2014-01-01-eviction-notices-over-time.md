@@ -11,7 +11,7 @@ published: true
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": category
+"axis-type": ""
 "y-format": ","
 ---
-Under the Rent Ordinance and/or Rules, landlords seeking to evict a tenant must file all notices to vacate with the Rent Board except Three Day Notices to Pay Rent or Quit. These notices and a copy of any additional written documents informing the tenant of the grounds under which possession is sought must be filed within ten days following service of the notice. A notice of eviction does not necessarily indicate that the tenant was evicted.
+Under the Rent Ordinance, landlords must file a notice with the Rent Board if they intend to evict a tenant (unless it is due to a failure to pay rent). A notice of eviction does not necessarily indicate that the tenant was evicted, so the notices below may be an overestimate of actual evictions. Evictions can affect affordability in a variety of ways. The next charts explore how evictions can affect the supply of rent controlled units and the asking rent.
