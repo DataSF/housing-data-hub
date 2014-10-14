@@ -12,7 +12,7 @@ published: true
 type: area
 scale: "5"
 colors: Blues
-"axis-type": category
+"axis-type": ''
 "y-format": ","
 ---
 
