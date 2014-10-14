@@ -8,7 +8,7 @@ var browserData =
   		"category" : "{{post.category}}",
   		"data" : "{{post.data}}",
   		"column" : "{{post.column}}",
-  		"description" : '{{post.content | strip_newlines | strip_html }}',
+  		"description" : '{{post.content | strip_newlines | escape_once }}',
   		"source" : "{{post.source}}",
   		"notes" : "{{post.notes}}",
   		"chart-title" : "{{post.chart-title}}",
