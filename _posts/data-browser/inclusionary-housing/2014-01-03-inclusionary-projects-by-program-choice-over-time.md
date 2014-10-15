@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Developer choice over time (completed)
+title: Developer choice by year (completed)
 "chart-title": "Developer choice for completed projects by year of choice, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
