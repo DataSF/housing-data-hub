@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Estimated units subject to rent control
+title: Rent controlled units (estimate)
 category: "Rent-Control"
 data: "rent-control/rent_control_universe.csv"
 column: Year
