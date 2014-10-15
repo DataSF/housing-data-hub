@@ -1,6 +1,6 @@
 ---
 layout: data
-title: "Completed units by on/off site over time "
+title: Completed units by on/off site by year
 "chart-title": "Completed inclusionary units by on/off site by year, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
