@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Completed units over time
+title: Completed units by year
 "chart-title": "Completed inclusionary units by year, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
@@ -16,4 +16,4 @@ colors: Blues
 "y-format": ","
 ---
 
-The Inclusionary Housing program has been in place in various forms since 1992. Since the program is tied to new private housing developments, spikes in inclusionary units generally track periods of major building and development in the City.
+The chart below shows the number of completed inclusionary units (versus projects) by year. The Inclusionary Housing program has been in place in various forms since 1992. Since the program is tied to new private housing developments, spikes in inclusionary units generally track periods of major building and development in the City.
