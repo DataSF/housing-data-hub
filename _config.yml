@@ -20,7 +20,6 @@ navigation:
   actual: /about/index.html
 
 prose:
-  rooturl: '_posts'
   siteurl: 'http://jasonlally.com/housing-policy-hub'
   media: 'images'
   metadata:

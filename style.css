@@ -159,6 +159,17 @@ h1.top, h2:first {
 h3.panel-title {
   text-transform: capitalize;
 }
+
+h2.panel-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.panel {
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+
 .policy-preview .policy-summary {
   height: 100px;
   overflow: hidden;
@@ -170,7 +181,7 @@ h3.panel-title {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
 .navbar-inverse {
-  background-color: #326d89;
+  background-color: #245f7b;
 }
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
@@ -393,4 +404,47 @@ Charts
     display: -webkit-flex;
     display: flex;
     flex:1 1 auto;
+}
+
+.ami-container {
+  height: 30px;
+  border: thin solid #ddd;
+  margin-right: 30px;
+  position: relative;
+  width: 200px;
+  float: right;
+}
+
+.ami-overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.ami-overlay-element {
+  width: 20%;
+  border-right: thin solid #ddd;
+  position: relative;
+  float: right;
+  height: 29px;
+}
+
+.ami-fill {
+  width: 30%;
+  height: 29px;
+  position: relative;
+  z-index: 1;
+  background-color: #3e3
+}
+
+
+.panel-body {
+  margin-bottom: 50px;
+}
+
+.panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

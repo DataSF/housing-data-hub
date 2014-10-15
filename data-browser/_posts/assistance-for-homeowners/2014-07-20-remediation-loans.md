@@ -2,7 +2,7 @@
 layout: data
 title: Remediation loans
 "chart-title": Total value of loans for remediation over time
-category: "Assistance-to-Homeowners"
+category: "Assistance-for-Homeowners"
 "policy-link": "http://google.com"
 data: grant_loans_remediated.csv
 x: Year
