@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Units by on or off-site
-"chart-title": "Units directly resulting from inclusionary housing program: all completed projects, 1992-2014 Q1"
+title: Completed units by on/off site
+"chart-title": "Completed inclusionary units by on/off site, 1992-2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: inclusionary/units_by_dev_choice.csv
