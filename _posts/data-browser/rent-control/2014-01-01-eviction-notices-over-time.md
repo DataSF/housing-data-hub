@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Eviction notices by year
-"chart-title": "Total eviction notices over time, 1997-2014 Q2"
+"chart-title": "Total eviction notices by year, 1997-2014 Q2"
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: "rent-control/eviction_notices_over_time.csv"
