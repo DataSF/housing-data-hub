@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Eviction notices by fault type (percent)
-"chart-title": "Fault versus no fault eviction notices over time, 1997-2014 Q2"
+"chart-title": "Fault versus no fault eviction notices by year, 1997-2014 Q2"
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: "rent-control/eviction_notices_distribution.csv"
