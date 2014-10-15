@@ -16,4 +16,4 @@ notes: null
 popup: "Section 415 Declaration, Total inclusionary units off-site, Off-site address, Total inclusionary units at this location, Tenure, Entitlement year, Building completion year"
 ---
 
-The map below shows the location of principal projects that have triggered inclusionary requirements (those with 10 or greater units). They are categorized by which inclusionary program choice they made. Most projects have made a choice of either paying a fee, building units on-site or building units off-site. In recent years, projects are making combinations of those choices.
+Developers have a choice for how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on the main site, develop units off site, a combination of the prior three or on occasion, dedicate land. The map below shows the location of principal projects by choice for completed, planned or in progress projects.
