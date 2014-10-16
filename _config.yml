@@ -23,7 +23,7 @@ prose:
   siteurl: 'http://jasonlally.com/housing-policy-hub'
   media: 'images'
   metadata:
-    _posts/data-browser:
+    data-browser/_posts:
       - name: "layout"
         field:
           element: "hidden"
@@ -191,7 +191,7 @@ prose:
           element: "text"
           label: "Policy Link"
           help: "Provide a link to the relevant policy"
-    _posts/policies:
+    policies/_posts:
       - name: 'layout'
         field:
           element: 'hidden'
