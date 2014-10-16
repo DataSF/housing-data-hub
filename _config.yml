@@ -66,6 +66,8 @@ prose:
               value: 'bar'
             - name: 'Line Chart'
               value: 'line'
+            - name: 'Step Chart'
+              value: 'step'
             - name: 'Map: Choropleth'
               value: 'map'
       - name: "scale"
