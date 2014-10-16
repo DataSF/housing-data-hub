@@ -3,9 +3,9 @@ layout: policy
 summary: Inclusionary housing programs require new private housing developments to “include” affordable units or pay a fee.
 "data-category": "inclusionary-housing"
 published: true
-image: inclusionary.png
 ami: 100
 target: units
+image: inclusionary.png
 ---
 
 Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.

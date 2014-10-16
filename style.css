@@ -456,8 +456,8 @@ Charts
   border-radius: 0;
 }
 
-.panel-body {
-  margin-bottom: 60px;
+.panel-policies .panel-body {
+  margin-bottom: 50px;
 }
 
 .panel-footer {
