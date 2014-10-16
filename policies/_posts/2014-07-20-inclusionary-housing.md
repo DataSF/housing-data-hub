@@ -6,6 +6,7 @@ published: true
 ami: 100
 target: units
 image: inclusionary.png
+note: The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 55%.
 ---
 
 Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.

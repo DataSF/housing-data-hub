@@ -5,6 +5,7 @@ published: true
 image: preference.png
 ami: none
 target: people
+note: "However, while given preference for affordable housing through certificates of preference, certificate holders must meet the income eligibility for whichever other program in which they are seeking to participate."
 ---
 
 The goal of a local preference program is to ensure that certain disadvantaged and/or displaced groups have access to affordable programs. If an individual meets the criteria of a preference program they can obtain priority access to City sponsored affordable housing programs and opportunities, including down payment assistance programs.

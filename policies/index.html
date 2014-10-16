@@ -4,17 +4,16 @@ title: Policies & Programs
 ---
 <div class="row" style="margin-bottom: 50px;">
   <div class="col-sm-12">
-    <p>Housing policies and programs in San Francisco can be thought of in a few different ways:</p>
-    <ul>
-      <li>Whether they target people or housing units and</li>
-      <li>What income levels they address</li>
-    </ul>
+    <p>Housing policies and programs often focus on people or housing units as well as different income levels.</p>
+    <div class="col-sm-6">
     <h2>People or Housing Units</h2>
-    <p>When you design housing programs, you can try to help individuals directly or target housing units. Programs that assist individuals or families try to increase their ability to obtain or maintain housing (i.e. increase their ability to “demand” housing in the market). Programs that focus on housing units try to maintain or increase the “supply” of affordable housing units. The table below summarizes the two approaches.</p>
+    <p>Programs that assist individuals or families try to increase their ability to obtain or maintain housing (i.e. increase their ability to “demand” housing in the market). Programs that focus on units try to maintain or increase the “supply” of affordable housing. Look for the icons to see the focus of each policy.</p>
+  </div>
+  <div class="col-sm-6">
     <h2>Income Elibibility</h2>
-    <p>Another way to design housing programs is to ask - what income groups do we want to help with affordable housing? There is no set definition of what makes housing “affordable”, but generally, if you pay 30% or less of your gross income on housing, it’s considered “affordable”.</p>
-    <p>In San Francisco, depending on your income, 30% can get you a lot or it might get you very little. To adjust for local housing costs, housing programs use a concept called “Area Median Income” (AMI). The median income is simply the income level where 50% of people make more and 50% make less (think of median as being the middle). The area included in San Francisco’s AMI calculation includes Marin, San Francisco, and San Mateo counties.</p>
-    <p>Income eligibility is then usually defined as a percent of the AMI. So let’s say, the AMI is $100,000, then 50% of AMI is $50,000, while 150% is $150,000. <Read more about AMI></p>
+    <p>Housing programs use a tool called “Area Median Income” (AMI). Median income is the income level where 50% of people make more and 50% make less (think median = middle). Our area median includes Marin, San Francisco, and San Mateo counties.</p>
+    <p>Programs often define Income eligibility as a percent of AMI. So if the AMI is $100,000, 50% AMI is $50,000 and 150% is $150,000.</p>
+  </div>
   </div>
 </div>
 {% assign sorted_posts = (site.posts | sort: 'title') %}
@@ -41,7 +40,7 @@ title: Policies & Programs
           </div>
         </div>
         <div class="panel-footer clearfix">
-          <div class="ami-container ami-{{post.ami}}" aria-hidden="true" role="presentation">
+          <div class="ami-container ami-{{post.ami}} hover-tooltip" aria-hidden="true" role="presentation" title="{%if post.ami == 'none'%} This program/policy has no Area Median Income eligibility requirement {% else %} This program/policy covers people up to {{post.ami}}% of Area Median Income. {% endif %} {{post.note}}">
             <div class="ami-overlay">
               <div class="ami-overlay-element"></div>
               <div class="ami-overlay-element"></div>
