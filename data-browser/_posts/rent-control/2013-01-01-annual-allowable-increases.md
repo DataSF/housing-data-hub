@@ -8,9 +8,7 @@ data: "rent-control/annual_allowable_increase.csv"
 column: Effective Starting Date
 source: San Francisco Rent Board
 published: true
-type: 
-  - step
-  - area
+type: step
 "axis-type": timeseries
 "y-format": .2p
 scale: "5"
