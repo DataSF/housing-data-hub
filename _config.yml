@@ -20,7 +20,6 @@ navigation:
   actual: /about/index.html
 
 prose:
-  rooturl: '_posts'
   siteurl: 'http://jasonlally.com/housing-policy-hub'
   media: 'images'
   metadata:
@@ -155,14 +154,12 @@ prose:
           label: "Axis Type"
           help: 'The chart needs to know if your x-axis is a special type. In general, it is fine to keep the default.'
           options:
-            - name: 'Default'
+            - name: 'Automatic'
               value: ''
             - name: 'Category'
               value: 'category'
             - name: 'Time Series'
               value: 'timeseries'
-            - name: 'Continuous'
-              value: ''
       - name: "y-format"
         field:
           element: "select"

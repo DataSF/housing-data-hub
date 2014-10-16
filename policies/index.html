@@ -2,31 +2,74 @@
 layout: fixed
 title: Policies & Programs
 ---
-<div class="row">
+<div class="row" style="margin-bottom: 50px;">
   <div class="col-sm-12">
-    <p>Current policies related to affordable housing for the City of San Francisco</p>
+    <p>Housing policies and programs in San Francisco can be thought of in a few different ways:</p>
+    <ul>
+      <li>Whether they target people or housing units and</li>
+      <li>What income levels they address</li>
+    </ul>
+    <h2>People or Housing Units</h2>
+    <p>When you design housing programs, you can try to help individuals directly or target housing units. Programs that assist individuals or families try to increase their ability to obtain or maintain housing (i.e. increase their ability to “demand” housing in the market). Programs that focus on housing units try to maintain or increase the “supply” of affordable housing units. The table below summarizes the two approaches.</p>
+    <h2>Income Elibibility</h2>
+    <p>Another way to design housing programs is to ask - what income groups do we want to help with affordable housing? There is no set definition of what makes housing “affordable”, but generally, if you pay 30% or less of your gross income on housing, it’s considered “affordable”.</p>
+    <p>In San Francisco, depending on your income, 30% can get you a lot or it might get you very little. To adjust for local housing costs, housing programs use a concept called “Area Median Income” (AMI). The median income is simply the income level where 50% of people make more and 50% make less (think of median as being the middle). The area included in San Francisco’s AMI calculation includes Marin, San Francisco, and San Mateo counties.</p>
+    <p>Income eligibility is then usually defined as a percent of the AMI. So let’s say, the AMI is $100,000, then 50% of AMI is $50,000, while 150% is $150,000. <Read more about AMI></p>
   </div>
 </div>
-<div class="row" id="policies-listing">
-  <div class="col-sm-12">
-    {% assign sorted_posts = (site.posts | sort: 'title') %}
-    {% for post in sorted_posts %}
-    {% assign postdir = post.path | split:"/" %}
-    {% if postdir[1] == 'policies'%}
-    <a href="{{site.baseurl}}{{post.url}}">
-      <div class="col-sm-6 policy-preview">
-        <div class="row">
-          <div class="col-sm-2 thumbnail-holder" style="background-image: url()">
-            <img class="img-responsive" src="{{site.baseurl}}/images/home_icon.png" style="margin-top: 20px" />
-          </div>
-          <div class="col-sm-10 policy-summary">
-            <h4>{{post.title}}</h4>
-            <p>{{post.summary}}<p>
+{% assign sorted_posts = (site.posts | sort: 'title') %}
+{% assign i = 0 %}
+{% for post in sorted_posts %}
+{% assign postdir = post.path | split:"/" %}
+{% if postdir[0] == 'policies'%}
+{% assign i = i | plus:1 %}
+{% assign remainder = i | modulo:2 %}
+{% if remainder == 1 %}
+<div class="row equal">
+{% endif %}
+  <div class="col-sm-6">
+    <div class="panel panel-default panel-policies" style="position:relative;">
+        <div class="panel-body">
+         
+            <div class="col-xs-3">
+            <img src="{{site.baseurl}}/images/icons/{{post.image}}" alt="Icon representing {{post.title}}" class="img-responsive" style="width: 100px; height: auto; margin-right: 20px;"/>
+            </div>
+            <div class="col-xs-9">
+               <h2 class="panel-title">
+            <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
+            {{post.summary}}
           </div>
         </div>
-      </div>
-    </a>
-    {% endif %}
-    {% endfor %}
+        <div class="panel-footer clearfix">
+          <div class="ami-container ami-{{post.ami}}" aria-hidden="true" role="presentation">
+            <div class="ami-overlay">
+              <div class="ami-overlay-element"></div>
+              <div class="ami-overlay-element"></div>
+              <div class="ami-overlay-element"></div>
+              <div class="ami-overlay-element"></div>
+              <div class="ami-overlay-element"></div>
+            </div>
+            <div class="ami-fill ami-{{post.ami}}">
+              <div class="ami-label">{{post.ami}}%</div>
+              <div class="no-ami">No AMI Eligibility</div>
+            </div>
+            <div class="ami-lower">
+              0%
+            </div>
+            <div class="ami-upper">
+              200%
+            </div>
+          </div>
+          <!--
+          <div class="ami-lead">Area Median Income Eligibility</div>-->
+        </div>
+      <div class="target target-{{post.target}} hover-tooltip" data-toggle="tooltip" title="This policy focuses on {{post.target}} as the primary point of intervention."></div>
+    </div>
   </div>
+{% if remainder == 0 %}
 </div>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+

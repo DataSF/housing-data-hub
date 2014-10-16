@@ -1,7 +1,11 @@
 ---
 layout: policy
+title: "Affordable Housing Financing and Development"
 summary: "Housing developers use debt or equity to finance the construction or rehabilitation of housing.  But low-income rents and sales prices cannot cover the costs of repaying market-rate financing.   Below-market rate financing bridges the gap."
 published: true
+ami: 60
+image: development.png
+target: units
 ---
 
 The goal of below-market rate financing programs is to promote the development and preservation of affordable housing by reducing the costs of capital. Cost reductions can come from use of 0% loans with 55-year terms, rental subsidies, land donations, long-term ground leases and more. Local, state and federal agencies, as well as private parties and philanthropists, provide a variety of below-market financing options.

@@ -159,6 +159,17 @@ h1.top, h2:first {
 h3.panel-title {
   text-transform: capitalize;
 }
+
+h2.panel-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.panel-policies {
+  margin-bottom: 30px;
+  box-shadow: none;
+}
+
 .policy-preview .policy-summary {
   height: 100px;
   overflow: hidden;
@@ -170,7 +181,7 @@ h3.panel-title {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
 .navbar-inverse {
-  background-color: #326d89;
+  background-color: #245f7b;
 }
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
@@ -387,4 +398,168 @@ Charts
   position: absolute;
   width: 1px;
   z-index: -1000;
+}
+
+.equal, .equal > div[class*='col-'] {  
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+@media (max-width: 768px) {
+  .equal, .equal > div[class*='col-'] {  
+    display: block;
+  }
+}
+
+.ami-container {
+  height: 30px;
+  border: thin solid #ddd;
+  margin-right: 70px;
+  position: relative;
+  width: 200px;
+  float: right;
+}
+
+.ami-lead {
+  margin-right: 70px;
+  position: relative;
+  width: 200px;
+  float: right;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.ami-overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.ami-overlay-element {
+  width: 20%;
+  border-right: thin solid #ddd;
+  position: relative;
+  float: right;
+  height: 29px;
+}
+
+.ami-fill {
+  height: 29px;
+  position: relative;
+  z-index: 1;
+  background-color: #245f7b;
+}
+
+.panel, .panel-default, .panel-footer {
+  border-radius: 0;
+}
+
+.panel-policies .panel-body {
+  margin-bottom: 50px;
+}
+
+.panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ami-lower {
+  position: absolute;
+  height: 30px;
+  left: -20px;
+  top: 0;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ami-upper {
+  position: absolute;
+  height: 30px;
+  right: -35px;
+  top: 0;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ami-label {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+  padding: 5px 5px 0 0;
+}
+
+.ami-fill.ami-60 {
+  width: 30%;
+}
+
+.ami-fill.ami-200 {
+  width: 100%;
+}
+
+.ami-fill.ami-91 {
+  width: 45.5%;
+}
+
+.ami-fill.ami-80 {
+  width: 40%;
+}
+
+.ami-fill.ami-none {
+  width: 0;
+}
+
+.ami-fill.ami-100 {
+  width: 50%;
+}
+
+.target-people {
+
+}
+
+.ami-fill.ami-none {
+  width: 100%;
+  background: transparent;
+}
+
+.ami-none > .ami-overlay {
+  display: none;
+}
+
+.no-ami {
+  display: none;
+}
+
+.ami-fill.ami-none .no-ami{
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.ami-fill.ami-none .ami-label {
+  display: none;
+}
+
+.target {
+  border-radius: 50%;
+  border: thin solid #ddd;
+  position:absolute; 
+  bottom: -15px; 
+  right: -15px; 
+  width: 60px; 
+  height: 60px;
+}
+
+.target-people {
+  background: #fff url(images/icons/people.png) center no-repeat;
+}
+
+.target-units {
+  background: #fff url(images/icons/units.png) center no-repeat;
 }

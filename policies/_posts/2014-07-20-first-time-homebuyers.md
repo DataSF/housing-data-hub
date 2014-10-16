@@ -1,8 +1,12 @@
 ---
 layout: policy
+title: Assistance for First Time Homebuyers
 summary: First time homebuyers that meet income thresholds or other criteria can receive loan or down payment assistance and counseling for buying their first home.
-"data-category": "Assistance-for-Homeowners"
+"data-category": "Assistance-to-Homeowners"
 published: true
+ami: 200
+target: people
+image: homebuyers.png
 ---
 
 Buyer assistance programs make homeownership possible for many families by reducing  the upfront and ongoing costs of buying a home. The goal of the program is to create more low to moderate income homeowners in San Francisco.
