@@ -165,7 +165,7 @@ h2.panel-title {
   font-size: 20px;
 }
 
-.panel {
+.panel-policies {
   margin-bottom: 30px;
   box-shadow: none;
 }
@@ -406,6 +406,12 @@ Charts
     flex:1 1 auto;
 }
 
+@media (max-width: 768px) {
+  .equal, .equal > div[class*='col-'] {  
+    display: block;
+  }
+}
+
 .ami-container {
   height: 30px;
   border: thin solid #ddd;
@@ -413,6 +419,16 @@ Charts
   position: relative;
   width: 200px;
   float: right;
+}
+
+.ami-lead {
+  margin-right: 70px;
+  position: relative;
+  width: 200px;
+  float: right;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .ami-overlay {
@@ -441,7 +457,7 @@ Charts
 }
 
 .panel-body {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .panel-footer {
@@ -469,6 +485,14 @@ Charts
   padding-top: 5px;
   font-size: 12px;
   font-weight: bold;
+}
+
+.ami-label {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+  padding: 5px 5px 0 0;
 }
 
 .ami-fill.ami-60 {
@@ -512,10 +536,14 @@ Charts
   display: none;
 }
 
-.ami-fill.ami-none .no-ami {
+.ami-fill.ami-none .no-ami{
   display: block;
   text-align: center;
   margin-top: 2px;
+}
+
+.ami-fill.ami-none .ami-label {
+  display: none;
 }
 
 .target {
