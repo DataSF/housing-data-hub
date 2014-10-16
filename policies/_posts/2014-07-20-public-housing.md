@@ -2,6 +2,9 @@
 layout: policy
 summary: "Public housing provides rent-restricted housing to low-income families, the elderly, and people with disabilities. The rent amount is determined as a percentage of the household’s expected annual income (versus a fixed amount)."
 published: true
+image: publichousing.png
+ami: 80
+target: units
 ---
 
 The goal of public housing is to provide a source of affordable housing to very low-income individuals and families. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.

@@ -1,7 +1,7 @@
 ---
 layout: policy
 summary: First time homebuyers that meet income thresholds or other criteria can receive loan or down payment assistance and counseling for buying their first home.
-"data-category": "Assistance-to-Homeowners"
+"data-category": "Assistance-for-Homeowners"
 published: true
 ---
 

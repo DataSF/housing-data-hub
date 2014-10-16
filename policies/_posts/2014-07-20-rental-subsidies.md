@@ -1,7 +1,11 @@
 ---
 layout: policy
+title: Rental Subsidies
 summary: "Rental subsidies help low-income families and individuals, the elderly, and the disabled afford housing in the private market. The government entity providing the subsidy pays the difference between the actual rent and what the household can afford."
 published: true
+image: rentsubsidy.png
+ami: 80
+target: people
 ---
 
 The goal of rental subsidies (or vouchers) is to close the gap between market-rate rent and what a family can afford. It targets the family or individual versus trying to increase or maintain the supply of affordable units.

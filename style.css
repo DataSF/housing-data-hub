@@ -409,7 +409,7 @@ Charts
 .ami-container {
   height: 30px;
   border: thin solid #ddd;
-  margin-right: 30px;
+  margin-right: 70px;
   position: relative;
   width: 200px;
   float: right;
@@ -430,13 +430,15 @@ Charts
 }
 
 .ami-fill {
-  width: 30%;
   height: 29px;
   position: relative;
   z-index: 1;
-  background-color: #3e3
+  background-color: #245f7b;
 }
 
+.panel, .panel-default, .panel-footer {
+  border-radius: 0;
+}
 
 .panel-body {
   margin-bottom: 50px;
@@ -447,4 +449,89 @@ Charts
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.ami-lower {
+  position: absolute;
+  height: 30px;
+  left: -20px;
+  top: 0;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ami-upper {
+  position: absolute;
+  height: 30px;
+  right: -35px;
+  top: 0;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ami-fill.ami-60 {
+  width: 30%;
+}
+
+.ami-fill.ami-200 {
+  width: 100%;
+}
+
+.ami-fill.ami-91 {
+  width: 45.5%;
+}
+
+.ami-fill.ami-80 {
+  width: 40%;
+}
+
+.ami-fill.ami-none {
+  width: 0;
+}
+
+.ami-fill.ami-100 {
+  width: 50%;
+}
+
+.target-people {
+
+}
+
+.ami-fill.ami-none {
+  width: 100%;
+  background: transparent;
+}
+
+.ami-none > .ami-overlay {
+  display: none;
+}
+
+.no-ami {
+  display: none;
+}
+
+.ami-fill.ami-none .no-ami {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.target {
+  border-radius: 50%;
+  border: thin solid #ddd;
+  position:absolute; 
+  bottom: -15px; 
+  right: -15px; 
+  width: 60px; 
+  height: 60px;
+}
+
+.target-people {
+  background: #fff url(images/icons/people.png) center no-repeat;
+}
+
+.target-units {
+  background: #fff url(images/icons/units.png) center no-repeat;
 }

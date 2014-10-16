@@ -3,6 +3,10 @@ layout: policy
 summary: "Homeowners can receive a variety of assistance including education, grants, and loans to help them be successful homeowners. "
 published: true
 title: Education and Assistance for Homeowners
+data-category: "assistance-for-homeowners"
+image: ownership.png
+ami: 91
+target: people
 ---
 
 Ownership assistance programs provide education and resources, which help occupants stay in their homes. Programs offer various types of education using a standard curriculum. HUD approved housing counselors assist homeowners with (among other things) household budgeting, maintenance, and loan modification.

@@ -2,6 +2,9 @@
 layout: policy
 summary: Housing preference programs give target groups priority access to affordable housing programs.
 published: true
+image: preference.png
+ami: none
+target: people
 ---
 
 The goal of a local preference program is to ensure that certain disadvantaged and/or displaced groups have access to affordable programs. If an individual meets the criteria of a preference program they can obtain priority access to City sponsored affordable housing programs and opportunities, including down payment assistance programs.
