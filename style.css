@@ -421,6 +421,12 @@ Charts
   float: right;
 }
 
+.ami-container.ami-example {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .ami-lead {
   margin-right: 70px;
   position: relative;
@@ -449,7 +455,7 @@ Charts
   height: 29px;
   position: relative;
   z-index: 1;
-  background-color: #245f7b;
+  background-color: #5EAEDB;
 }
 
 .panel, .panel-default, .panel-footer {
@@ -488,7 +494,7 @@ Charts
 }
 
 .ami-label {
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 12px;
   text-align: right;
