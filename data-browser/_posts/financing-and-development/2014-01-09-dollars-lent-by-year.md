@@ -5,7 +5,7 @@ title: Dollars lent by year
 category: "Financing-and-Development"
 data: "financing-and-development/city_dollars_by_project_status.csv"
 type: bar
-"axis-type": category
+"axis-type": ""
 column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."
