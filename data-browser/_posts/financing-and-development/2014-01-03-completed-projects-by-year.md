@@ -1,14 +1,17 @@
 ---
 layout: data
-title: Projects by status
-chart-title: "Projects receiving City financing by project status"
+title: Completed projects by year
+"chart-title": Completed projects receiving City financing by year
 category: "Financing-and-Development"
-data: financing-and-development/project_status.csv
+data: "financing-and-development/projects_by_year_affordability_start.csv"
 type: bar
-axis-type: category
+"axis-type": category
 column: Status
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
+scale: "5"
+colors: YlGn
 ---
-The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing to support the development of low-income rental housing. City funds are usually combined with state and federal funds to extend the City’s contribution. The chart below shows the number of projects that have received City financing whether they are completed, under construction or in predevelopment, i.e. the planning phase before construction.
+
+The City has been providing financial assistance to support the development of affordable housing for decades. Trends in financing reflect the availability of both city and federal funds  as influenced by broader economic conditions. The year reflects the year that the affordability requirement started, or the year a project begins leasing under the affordability requirements.
