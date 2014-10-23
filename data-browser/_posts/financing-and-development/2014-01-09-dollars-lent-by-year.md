@@ -1,12 +1,12 @@
 ---
 layout: data
-title: Projects by status
-"chart-title": Projects receiving City financing by project status
+title: Dollars lent by year
+"chart-title": City total contribution in dollars ($) lent by project status by year
 category: "Financing-and-Development"
-data: "financing-and-development/project_status.csv"
+data: "financing-and-development/city_dollars_by_project_status.csv"
 type: bar
 "axis-type": category
-column: Status
+column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
@@ -14,4 +14,4 @@ scale: "5"
 colors: YlGn
 ---
 
-The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing to support the development of low-income rental housing. City funds are usually combined with state and federal funds to extend the City’s contribution. The chart below shows the number of projects that have received City financing whether they are completed, under construction or in predevelopment, i.e. the planning phase before construction.
+Since 1981, the City has loaned nearly $1 billion to finance the development of affordable rental units (note the dollar amounts are not adjusted for inflation). The chart below shows the total annual loan amounts by the project status. For example, dollars lent in 2009 went to a mix of projects - some of which are completed, some under construction and others under predevelopment.
