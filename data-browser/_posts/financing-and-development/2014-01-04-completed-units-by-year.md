@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Completed projects by year
+title: Completed units by year
 "chart-title": Completed units receiving City financing by year
 category: "Financing-and-Development"
 data: "financing-and-development/projects_units_beds_by_year.csv"
