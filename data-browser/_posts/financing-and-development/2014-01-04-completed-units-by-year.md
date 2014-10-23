@@ -1,9 +1,9 @@
 ---
 layout: data
 title: Completed projects by year
-"chart-title": Completed projects receiving City financing by year
+"chart-title": Completed units receiving City financing by year
 category: "Financing-and-Development"
-data: "financing-and-development/projects_by_year_affordability_start.csv"
+data: "financing-and-development/projects_units_beds_by_year.csv"
 type: bar
 "axis-type": ""
 column: Year
@@ -15,4 +15,4 @@ colors: YlGn
 "y-format": ","
 ---
 
-The City has been providing financial assistance to support the development of affordable housing for decades. Trends in financing reflect the availability of both city and federal funds  as influenced by broader economic conditions. The year reflects the year that the affordability requirement started, or the year a project begins leasing under the affordability requirements.
+While the previous chart shows the number of projects, the chart below shows the number of units available. Some of the projects express their units in terms of beds versus a standard unit. The year reflects the year that the affordability requirement started (when a project begins leasing units under the requirements).
