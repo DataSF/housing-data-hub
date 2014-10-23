@@ -569,3 +569,19 @@ Charts
 .target-units {
   background: #fff url(images/icons/units.png) center no-repeat;
 }
+
+.phase div.well {
+  padding: 10px;
+  text-align: center;
+}
+
+.phase h3 {
+  font-weight: 500;
+  color: #fff;
+}
+
+.phase p.large {
+  font-weight: 500;
+  color: #fff;
+  font-size: 50px;
+}
