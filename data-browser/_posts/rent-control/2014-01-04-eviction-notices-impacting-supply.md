@@ -15,4 +15,4 @@ scale: "5"
 colors: YlGn
 ---
 
-There are five "no-fault" eviction notices that can result in a long-term or permanent removal of rent controlled units from the market. For Owner Move Ins, Condo Conversions, and Ellis Act Withdrawals notices, the unit would still be subject to the rent control ordinance if it returned to the rental market. Units falling under Development Agreements are subject to the terms of the agreement, which may require replacing or offering rent controlled units. Note that an eviction notice is not the same as an actual eviction.
+There are five "no-fault" eviction notices that can result in a long-term or permanent removal of rent controlled units from the market. For Owner Move Ins and Ellis Act Withdrawal notices, the unit would still be subject to the rent control ordinance if it returned to the rental market. Units falling under Development Agreements are subject to the terms of the agreement, which may require replacing or offering rent controlled units. Note that an eviction notice is not the same as an actual eviction.
