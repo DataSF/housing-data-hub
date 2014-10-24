@@ -1,12 +1,12 @@
 ---
 layout: data
-title: Projects by status
-"chart-title": Projects receiving City financing by project status
+title: Number of bonds by year
+"chart-title": Number of city issued bonds by year
 category: "Financing-and-Development"
-data: "financing-and-development/project_status.csv"
+data: "financing-and-development/bonds_by_year.csv"
 type: bar
-"axis-type": category
-column: Status
+"axis-type": ""
+column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
@@ -14,4 +14,4 @@ scale: "5"
 colors: YlGn
 ---
 
-The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing to support the development of low-income rental housing. City funds are usually combined with state and federal funds to extend the City’s contribution. The chart below shows the number of projects that have received City financing whether they are completed, under construction or in predevelopment, i.e. the planning phase before construction.
+The chart below shows the number of bonds the city has issued by year. The money raised by the bonds is used to provide loans to developers of affordable housing.
