@@ -45,6 +45,7 @@ Alternative 3	| Combination	| Any combination of the above options
 
 ### Use of the Affordable Housing Fee
 The Affordable Housing Fees are used to:
+
 - Increase the supply of affordable housing, including minimum amounts allocated to acquiring or rehabilitating “Small Sites,” which are properties with up to 25 units
 - Provide assistance to low and moderate income homebuyers
 - Pay for studies to determine the affordable housing fee
