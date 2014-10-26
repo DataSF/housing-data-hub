@@ -64,6 +64,8 @@ prose:
               value: 'map-point'
             - name: 'Bar Chart'
               value: 'bar'
+            - name: 'Horizontal Bar Chart'
+              value: 'bar-horizontal'
             - name: 'Line Chart'
               value: 'line'
             - name: 'Step Chart'
