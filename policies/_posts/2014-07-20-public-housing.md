@@ -5,6 +5,7 @@ published: true
 ami: 80
 target: units
 image: publichousing.png
+data-category: "public-housing"
 ---
 
 The goal of public housing is to provide a source of affordable housing to very low-income individuals and families. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.

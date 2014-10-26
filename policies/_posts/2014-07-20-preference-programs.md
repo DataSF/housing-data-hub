@@ -3,6 +3,7 @@ layout: policy
 summary: Housing preference programs give target groups priority access to affordable housing programs.
 published: true
 image: preference.png
+data-category: "preference-programs"
 ami: none
 target: people
 note: "However, while given preference for affordable housing through certificates of preference, certificate holders must meet the income eligibility for whichever other program in which they are seeking to participate."
