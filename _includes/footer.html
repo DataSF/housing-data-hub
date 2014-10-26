@@ -484,6 +484,7 @@ function generateChart(params) {
         legend = 'bottom';
       }
   }
+  var rotated = false;
   if(groups != '') {
         groups = groups.split(',');
       } else {
@@ -491,6 +492,9 @@ function generateChart(params) {
       }
   if (type == '') {
     type = 'area';
+  } else if (type =='bar-horizontal') {
+    type = 'bar';
+    rotated = true;
   }
   if (yFormat != '') {
     yFormat = d3.format(yFormat)
@@ -528,6 +532,7 @@ function generateChart(params) {
       position: legend
     },
     axis: {
+      rotated: rotated,
       x: {
         type: axisType,
         tick: {
