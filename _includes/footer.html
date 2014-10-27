@@ -473,13 +473,13 @@ function generateMap(params) {
 
 function generateChart(params) {
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups;
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis;
     $('#chart-wrapper').show();
     $('#map-wrapper').hide();
     var container = 'chart';
   } else {
     var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}';
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}';
       if(legend == '') {
         legend = 'bottom';
       }
@@ -511,11 +511,12 @@ function generateChart(params) {
       $('#' + container + '-wrapper .notes').html(notes);
     }
 
-  var emphasis = '{{page.emphasis}}';
-
   emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
 
   var chart = c3.generate({
+    padding: {
+      bottom: 30
+    },
     data: {
       x: x,
       url: '{{site.baseurl}}/data/' + data,
@@ -537,7 +538,8 @@ function generateChart(params) {
       x: {
         type: axisType,
         tick: {
-          format: xFormat
+          format: xFormat,
+          width: 130
         }
       },
       y: {

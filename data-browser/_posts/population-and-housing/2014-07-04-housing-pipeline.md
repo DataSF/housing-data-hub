@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Residential units in progress
-chart-title: Number of new housing units in progress by status and project size, 2014 Q2
+title: Housing units in progress
+chart-title: New housing units in progress by status and project size, 2014 Q2
 category: Population-and-Housing
 source: SF Planning Department
 notes: The chart does not include very large projects over 800 units.
