@@ -3,7 +3,7 @@ layout: data
 title: Certificates by race / ethnicity
 "chart-title": Certificates of Preference issued by race / ethnicity
 category: "Preference-Programs"
-data: "preference-programs/"
+data: "preference-programs/certificates_by_race_ethnicity.csv"
 type: bar
 column: Race / Ethnicity
 published: true
