@@ -1,4 +1,2 @@
-Gender,Count
-Not available,4
-Female,2802
-Male,2969
+Gender,Female,Male,Not available
+Count,2802,2969,4
