@@ -523,7 +523,8 @@ function generateChart(params) {
       type: type,
       color: function(color, d) {
         return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#'+emphasis[2]) : color;
-      }
+      },
+      order: null
     },
     color: {
       pattern: ['#5a9bd4','#7ac36a','#faa75b','#9e67ab','#ce7058','#d77fb4','#f15a60','#737373']

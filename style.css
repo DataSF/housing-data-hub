@@ -384,7 +384,7 @@ Charts
 }
 
 .c3 .tick text {
-  stroke: #666666;
+  fill: #666666;
 }
 /*
  * a11y

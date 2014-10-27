@@ -1,11 +1,16 @@
 ---
 layout: data
-title: Housing pipeline
-chart-title: Number of housing units by permit status
+title: Residential units in progress
+chart-title: Number of new housing units in progress by status and project size, 2014 Q2
 category: Population-and-Housing
-policy-link: 'http://google.com'
 source: SF Planning Department
-published: false
+notes: The chart does not include very large projects over 800 units.
+published: true
+type: bar
+column: Status
+axis-type: category
+legend: right
+groups: "1-2 Units,3-10 Units,11-49 Units,50-250 Units,Above 250 Units"
+data: housing-overview/pipeline_by_status_size.csv
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mollis quam. Quisque laoreet pulvinar nibh, quis accumsan orci gravida tempus. Pellentesque iaculis at libero sit amet ornare. Sed fermentum cursus sagittis. Sed urna nunc, hendrerit in nulla congue, sagittis feugiat elit. In hac habitasse platea dictumst. Pellentesque eu erat aliquet, mollis metus id, mollis diam.
+Housing development in San Francisco, as in other cities, must move through a planning and permitting process leading to eventual construction. You can see below where projects are in the process as of the second quarter in 2014.
