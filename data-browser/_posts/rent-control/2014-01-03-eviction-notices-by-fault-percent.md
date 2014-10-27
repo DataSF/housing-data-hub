@@ -14,5 +14,7 @@ scale: "5"
 colors: Blues
 "axis-type": ""
 "y-format": "%"
+notes: Data is through Q2 (June) of calendar year 2014.
 ---
+
 The chart below shows the same data as the previous chart in percentage form. This emphasizes the relative distribution of "fault" and "no fault" eviction notices over time. Note that an eviction notice is not the same as an actual eviction.
