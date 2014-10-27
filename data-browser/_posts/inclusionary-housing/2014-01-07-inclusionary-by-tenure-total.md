@@ -6,7 +6,7 @@ category: "Inclusionary-Housing"
 data: inclusionary/units_by_tenure_total.csv
 column: Tenure
 published: true
-type: bar
+type: donut
 scale: "5"
 colors: Blues
 "axis-type": category
