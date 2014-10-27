@@ -5,7 +5,7 @@ title: Certificates by gender
 category: "Preference-Programs"
 data: "preference-programs/certificates_by_gender.csv"
 type: donut
-column: Gender
+column: Count
 published: true
 "axis-type": category
 source: "Mayor's Office of Housing and Community Development."
