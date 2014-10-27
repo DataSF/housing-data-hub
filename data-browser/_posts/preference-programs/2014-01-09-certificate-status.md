@@ -5,7 +5,7 @@ title: Certificate status
 category: "Preference-Programs"
 data: "preference-programs/certificates_by_status.csv"
 type: donut
-column: Count
+column: Status
 published: true
 "axis-type": category
 source: "Mayor's Office of Housing and Community Development."
