@@ -12,6 +12,7 @@ type: line
 "axis-type": ""
 scale: "5"
 colors: YlGn
+notes: Data is through Q2 (June) of calendar year 2014.
 ---
 
 Eviction notices fall into two broad categories, "fault" and "no fault." Fault eviction notices assert that the tenant has committed an act that justifies eviction. In contrast, “no fault” eviction notices indicate a temporary, long-term or permanent removal of the unit from the rent controlled market, e.g. by converting it to an ownership unit. The chart below distinguishes between no fault notices that could affect the supply of rent controlled units and those that do not.
