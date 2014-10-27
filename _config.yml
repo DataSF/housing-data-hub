@@ -60,8 +60,6 @@ prose:
           options:
             - name: 'Area Chart'
               value: 'area'
-            - name: 'Map: Point'
-              value: 'map-point'
             - name: 'Bar Chart'
               value: 'bar'
             - name: 'Horizontal Bar Chart'
@@ -70,8 +68,14 @@ prose:
               value: 'line'
             - name: 'Step Chart'
               value: 'step'
+            - name: 'Pie Chart'
+              value: 'pie'
+            - name: 'Donut Chart'
+              value: 'donut'
             - name: 'Map: Choropleth'
               value: 'map'
+            - name: 'Map: Point'
+              value: 'map-point'
       - name: "scale"
         field:
           element: "text"
