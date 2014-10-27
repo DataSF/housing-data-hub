@@ -339,6 +339,28 @@ h2:before {
   visibility: hidden; 
 }
 
+.home .row {
+  margin-bottom: 30px;
+}
+
+.home-buttons a.btn {
+  line-height: 55px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-darkblue {
+  background-color: #00607d;
+}
+
+.btn-blue {
+  background-color: #125b9a;
+}
+
+.btn-lightblue {
+  background-color: #317ab9;
+}
+
 button p {
   font-size: 18px;
 }
@@ -585,3 +607,42 @@ Charts
   color: #fff;
   font-size: 50px;
 }
+
+
+/* Ribbon 
+from: http://unindented.org/articles/github-ribbon-using-css-transforms/
+*/
+.ribbon {
+  z-index: 9999;
+  background-color: #a00;
+  overflow: hidden;
+  white-space: nowrap;
+  /* top left corner */
+  position: fixed;
+  left: -40px;
+  top: 20px;
+  width: 175px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+}
+.ribbon a {
+  border: 1px solid #faa;
+  color: #fff;
+  display: block;
+  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 1px 0;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  /* shadow */
+  text-shadow: 0 0 5px #444;
+}
+
