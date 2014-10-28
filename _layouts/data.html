@@ -35,7 +35,7 @@
           <div id="chart"></div>
           {% assign policy = page.category | downcase %}
           <div class="row" style="margin-top: 20px;">
-            <div class="{% if site.data.browser[1].categories contains policy %} col-md-7 {% else %} col-md-12 {% endif %}">
+            <div class="{% if site.data.browser[1].categories contains policy %} col-md-7 {% else %} col-md-12 {% endif %} footnote">
               {% if page.source %} <p><strong>Source:</strong> {{page.source}}</p> {% endif %}
               {% if page.notes %} <p><strong>Notes:</strong> {{page.notes}}</p> {% endif %}
             </div>

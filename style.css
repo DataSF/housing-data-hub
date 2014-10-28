@@ -702,3 +702,7 @@ from: http://unindented.org/articles/github-ribbon-using-css-transforms/
 a {
   color: #317ab9;
 }
+
+.footnote {
+  font-size: .85em;
+}

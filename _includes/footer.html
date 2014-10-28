@@ -153,8 +153,8 @@ function generateMap(params) {
     L.control.fullscreen().addTo(map);
 
   desc ? $('#' + container + '-wrapper .description').html(desc) : '';
-  source ? $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source) : '';
-  notes ? $('#' + container + '-wrapper .notes').html('<b>Notes:</b> ' + notes) : '';
+  source ? $('#' + container + '-wrapper .source').html('<strong>Source:</strong> ' + source) : '';
+  notes ? $('#' + container + '-wrapper .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
   if(mapType == "map-point") {
     var markerCats = [];
@@ -523,8 +523,8 @@ function generateChart(params) {
 
   if(desc) {
       $('#' + container + '-wrapper .description').html(desc);
-      $('#' + container + '-wrapper .source').html('<b>Source:</b> ' + source);
-      $('#' + container + '-wrapper .notes').html(notes);
+      $('#' + container + '-wrapper .source').html('<strong>Source:</strong> ' + source);
+      $('#' + container + '-wrapper .notes').html('<strong>Notes:</strong> ' + notes);
     }
 
   emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
