@@ -339,6 +339,23 @@ h2:before {
   visibility: hidden; 
 }
 
+.highlight {
+  border-left: 5px solid;
+  padding-left: 5px;
+}
+
+.highlight-discovery {
+  border-left-color: #7f00ff;
+}
+
+.highlight-visualization {
+  border-left-color: #ff0080;
+}
+
+.highlight-automation {
+  border-left-color: #00ad00;
+}
+
 .home .row {
   margin-bottom: 30px;
 }
@@ -381,8 +398,36 @@ a:hover button {
   text-decoration: none;
 }
 
+.right-border-dotted {
+  border-right: thin dotted #fff;
+}
+
+.brand {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  color: #fff;
+}
+
+.brand-highlight {
+  color: #6dbce2;
+}
+
+footer .made-in {
+  background-color: #245f7b;
+}
+
 footer {
   background-color: #222;
+  color: #fff;
+}
+
+.footer-blurb {
+  padding-right: 250px;
+}
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /*
 Popups
@@ -646,3 +691,6 @@ from: http://unindented.org/articles/github-ribbon-using-css-transforms/
   text-shadow: 0 0 5px #444;
 }
 
+a {
+  color: #317ab9;
+}
