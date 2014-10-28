@@ -50,9 +50,9 @@ window.onload = function() {
   {% endif %}
   hubOb();
   //todo: add custom styles to style.css
+  {% if page.layout == 'policy' %}
   $('table').addClass('table table-striped');
   $('#organizations').before($('#viz-wrapper'));
-  {% if page.layout == 'policy' %}
   buildTOC();
   $('.nav.toc').append('<li><a href="#">Back to Top</a></li>');
   var vizData = browserData[$('.data-browser-select').val()];
