@@ -2,8 +2,8 @@
 layout: policy
 summary: "Homeowners can receive a variety of assistance including education, grants, and loans to help them be successful homeowners. "
 published: true
-title: Education and Assistance for Homeowners
-data-category: "assistance-for-homeowners"
+title: Homeowner Assistance
+"data-category": "assistance-for-homeowners"
 image: ownership.png
 ami: 91
 target: people
