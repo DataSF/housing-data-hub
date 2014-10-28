@@ -36,8 +36,8 @@
           {% assign policy = page.category | downcase %}
           <div class="row" style="margin-top: 20px;">
             <div class="{% if site.data.browser[1].categories contains policy %} col-md-7 {% else %} col-md-12 {% endif %}">
-              {% if page.source %} <p><b>Source:</b> {{page.source}}</p> {% endif %}
-              {% if page.notes %} <p><b>Notes:</b> {{page.notes}}</p> {% endif %}
+              {% if page.source %} <p><strong>Source:</strong> {{page.source}}</p> {% endif %}
+              {% if page.notes %} <p><strong>Notes:</strong> {{page.notes}}</p> {% endif %}
             </div>
             {% if site.data.browser[1].categories contains policy %}
             <div class="col-md-5">

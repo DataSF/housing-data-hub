@@ -114,24 +114,32 @@ ul.nav-browser li.active {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 }
 .masthead {
   height: 200px;
   color: white;
   margin-bottom: 30px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .policies.masthead {
   background: #333 url({{site.baseurl}}/images/ggb_at_dusk.jpg) 50% 50% no-repeat;
 }
 .data-browser.masthead {
-  background: #333 url({{site.baseurl}}/images/san-francisco-city-night.jpg) 50% 50% no-repeat;
+  background: #333 url({{site.baseurl}}/images/timeless_books.jpg) 50% 50% no-repeat;
 }
 .home.masthead {
-  background: url({{site.baseurl}}/images/san-francisco-fly-to-barcelona.jpg) 50% 50% no-repeat;
+  background: url({{site.baseurl}}/images/sf_evening.jpg) 50% 50% no-repeat;
 }
 .about.masthead {
-   background: url({{site.baseurl}}/images/sf_chinatown.jpg) 50% 50% no-repeat;
+   background: url({{site.baseurl}}/images/haight.jpg) 50% 50% no-repeat;
+}
+.image-attribution p {
+  text-align: right;
+  font-size: .9em;
 }
 .container-fluid {
   position: relative;
