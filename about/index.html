@@ -2,6 +2,7 @@
 layout: fixed
 title: About
 attribution: "Header image by Ian Ransley (own work), [CC-BY-2.0](https://creativecommons.org/licenses/by/2.0/), via Flickr"
+embed: true
 published: true
 ---
 
@@ -14,10 +15,6 @@ published: true
     </ul>
     <p>While the City has a variety of affordable housing programs, they are implemented by several different departments or even governments groups outside of the City. By pulling all of these programs together in a single place, the Policy Hub allows you to develop an understanding of the portfolio of housing programs in San Francisco.</p>
     <p>Our hope is that this holistic perspective spurs new thinking and approaches to affordable housing in the City.</p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-9">
     <h2 id="our-process">A process of continuous improvement</h2>
     <p>Our philosophy is that it is better to release something sooner versus waiting for a perfect launch. That's what the "alpha" designation marked by a ribbon in the corner implies. We are releasing our datasets in phases. Below we outline the three data phases and the current status of each dataset. This dashboard was inspired by <a href="http://www.gov.uk/transformation">gov.uk/transformation</a>.</p>
     <p>Even after data automation, the final data phase, we will continuously improve and add new visuals based on user feedback and common questions.</p>
@@ -73,7 +70,7 @@ published: true
     <ul>
       <li>No datasets currently in automation
     </ul>
-    <h2>Acknowledgements</h2>
+    <h2 id="acknowledgements">Acknowledgements</h2>
     <p>This project is the result of the contribution of many individuals.</p>
     <h3>Volunteers</h3>
     <p>The first working version of this website came from the <a href="http://hackforchange.org/">National Day of Civic Hacking</a>. Thanks go to both the <a href="http://www.codeforsanfrancisco.org">San Francisco Brigade</a> and <a href="http://codeforamerica.org">Code for America</a> for hosting us during this 2 day event. Our hackathon team was amazing! <strong>Victoria Ngo</strong> and <strong>Manu Koenig</strong> took the initial concept, simple though it was, and came up with something beautiful. <strong>Debbie Lefkowitz</strong> and <strong>x</strong> helped structure and review the content. <strong>Raymond Lai</strong> was instrumental in hunting down various census datasets. Lastly, <strong>Nick Hong</strong> stitched together the pieces into a working backend and <strong>Kevin Lee</strong> helped create the initial visualizations.</p>
@@ -101,5 +98,8 @@ published: true
       <li><a href="https://github.com/Leaflet/Leaflet.fullscreen">Leaflet fullscreen</a> enables a map to go full screen so you can look at all that delicious data without distractions.</li>
       <li><a href="https://github.com/prose/prose">Prose</a> provides us with a nice framework for allowing humans to actually edit content and plays nicely with Jekyll.</li>
     </ul>
+  </div>
+  <div class="col-md-3">
+    {% include sidenav.html %}
   </div>
 </div>

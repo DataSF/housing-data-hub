@@ -675,7 +675,7 @@ from: http://unindented.org/articles/github-ribbon-using-css-transforms/
 */
 .ribbon {
   z-index: 9999;
-  background-color: #a00;
+  background-color: #ffa53e;
   overflow: hidden;
   white-space: nowrap;
   /* top left corner */
@@ -695,16 +695,16 @@ from: http://unindented.org/articles/github-ribbon-using-css-transforms/
           box-shadow: 0 0 10px #888;
 }
 .ribbon a {
-  border: 1px solid #faa;
-  color: #fff;
+  border: 1px solid orange;
+  color: #000;
   display: block;
-  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: bold 95.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 1px 0;
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
   /* shadow */
-  text-shadow: 0 0 5px #444;
+  text-shadow: 0 0 5px #eee;
 }
 
 a {
