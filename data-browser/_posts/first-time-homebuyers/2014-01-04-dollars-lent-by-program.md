@@ -6,7 +6,7 @@ category: "First-Time-Homebuyers"
 data: "first-time-homebuyers/dollars_lent_by_program.csv"
 type: bar
 "axis-type": ""
-column: Year
+column: Program
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
