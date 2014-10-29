@@ -125,6 +125,10 @@ ul.nav-browser li.active {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.overview.masthead {
+   background: #333 url({{site.baseurl}}/images/market_street.jpg) 50% 50% no-repeat;
+}
 .policies.masthead {
   background: #333 url({{site.baseurl}}/images/ggb_at_dusk.jpg) 50% 50% no-repeat;
 }
@@ -255,6 +259,10 @@ table {
   width: 100%;
 max-width: 100%;
 margin-bottom: 20px;
+}
+
+.legend-item {
+  cursor: pointer;
 }
 
 .map-legend i {

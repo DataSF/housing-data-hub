@@ -31,7 +31,7 @@
             <p class="lead">{{ page.summary }}</p>
             <h2 id="description">Description</h2>
             {{ content }}
-            <div id="viz-wrapper">
+            <div id="viz-wrapper" class="viz-wrapper">
               <h2 id="data">Data</h2>
               {% assign pageCat = page.data-category | downcase | replace: " ", "-" %}
               {% if pageCat == '' %}
@@ -44,17 +44,17 @@
                 {% endif %}
                 {% endfor %}
               </select>
-              <div id="chart-wrapper">
+              <div id="chart-wrapper" class="chart-wrapper">
                 <div class="description"></div>
-                <div id="chart"></div>
+                <div id="chart" class="chart"></div>
                 <div class="footnote">
                   <p class="source"></p>
                   <p class="notes"></p>
                 </div>
               </div>
-              <div id="map-wrapper">
+              <div id="map-wrapper" class="map-wrapper">
                 <div class="description"></div>
-                <div id="map" style="height: 500px;"></div>
+                <div id="map" style="height: 500px;" class="map"></div>
                 <div class="footnote">
                   <p class="source"></p>
                   <p class="notes"></p>
@@ -62,7 +62,6 @@
               </div>
               {% endif %}
             </div>
-
           </article>
           <div id="edit-links">
            <!-- Edit current page -->
@@ -73,10 +72,7 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <aside class="nav-toc" data-spy="affix" data-offset-top="200" role="complementary">
-          <ul class="nav toc">
-          </ul>
-          </aside>
+          {% include sidenav.html %}
         </div>
       </div>
       {% include attribution.html %}

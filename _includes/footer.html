@@ -50,26 +50,29 @@ window.onload = function() {
   {% endif %}
   hubOb();
   //todo: add custom styles to style.css
-  {% if page.layout == 'policy' %}
+  {% if page.layout == 'policy' or page.embed == true %}
   $('table').addClass('table table-striped');
   $('#organizations').before($('#viz-wrapper'));
   buildTOC();
+  var vizData = '';
   $('.nav.toc').append('<li><a href="#">Back to Top</a></li>');
-  var vizData = browserData[$('.data-browser-select').val()];
-  loadViz(vizData);
+  $(".viz-wrapper").each(function(index, val){
+    vizData = browserData[$('#' + val.id + ' .data-browser-select').val()];
+    loadViz(vizData,val.id);
+  });
   $('.data-browser-select').change(function(){
     vizData = browserData[$(this).val()];
-    loadViz(vizData);
+    loadViz(vizData,$(this).parent().attr('id'));
   });
   $('body').scrollspy({ target: '.nav-toc' })
   {% endif %}
 }
 
-function loadViz(params) {
+function loadViz(params,wrapper) {
   if (['map-point','map'].indexOf(params.type) != -1) {
-      generateMap(params);
+      generateMap(params,wrapper);
     } else {
-      generateChart(params);
+      generateChart(params,wrapper);
     }
 }
 
@@ -89,7 +92,7 @@ function init(layout) {
 
 var map;
 
-function generateMap(params) {
+function generateMap(params, wrapper) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
   var geojson, json, column, d, container, units, mapType, margin, popup, desc, source, notes, legendTitle;
   var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
@@ -110,10 +113,10 @@ function generateMap(params) {
     if(params.scale != '') {
       scale = parseInt(params.scale);
     }
-    container = 'map';
+    var container = $('#'+wrapper + ' .map').attr('id');
     units = params.units;
-    $('#chart-wrapper').hide();
-    $('#map-wrapper').show();
+    $('#'+ wrapper + ' .chart-wrapper').hide();
+    $('#' + wrapper + ' .map-wrapper').show();
   } else {
     mapType = '{{page.type}}';
     column = '{{page.column}}';
@@ -133,7 +136,7 @@ function generateMap(params) {
     {% else %}
     var scale = 5; 
     {% endif %}
-    container = 'chart';
+    var container = 'chart';
   }
 
   if (popup != '') {
@@ -146,15 +149,13 @@ function generateMap(params) {
     //Todo: find a way to keep the map from reseetting, wasteful to keep loading the same data on every switch
     map.remove();
   }
-    map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
-    /*map.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
-      keepOpen: false
-    }));*/
-    L.control.fullscreen().addTo(map);
 
-  desc ? $('#' + container + '-wrapper .description').html(desc) : '';
-  source ? $('#' + container + '-wrapper .source').html('<strong>Source:</strong> ' + source) : '';
-  notes ? $('#' + container + '-wrapper .notes').html('<strong>Notes:</strong> ' + notes) : '';
+  map = L.mapbox.map(container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
+  L.control.fullscreen().addTo(map);
+
+  desc ? $('#' + wrapper + ' .description').html(desc) : '';
+  source ? $('#' + wrapper + ' .source').html('<strong>Source:</strong> ' + source) : '';
+  notes ? $('#' + wrapper + ' .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
   if(mapType == "map-point") {
     var markerCats = [];
@@ -179,13 +180,6 @@ function generateMap(params) {
     }
 
     var customLayer = L.geoJson(null, {
-    // http://leafletjs.com/reference.html#geojson-style
-      /*style: function(feature) {
-          console.log(feature);
-          return {
-              color: '#f00'
-          };
-      },*/
       pointToLayer: function(feature, latlng) {
         if(markerCats.indexOf(feature.properties[column]) == -1) {
           markerCats.push(feature.properties[column]);
@@ -248,9 +242,9 @@ function generateMap(params) {
       })
       .addTo(map);
 
-    $('#' + container).on('click', 'i', function(e) {
-      $(this).next().prop('checked') ? $(this).next().prop('checked', false) : $(this).next().prop('checked', true);
-      $(this).toggleClass('off');
+    $('#' + container).on('click', '.legend-item', function(e) {
+      $(this).children('.legend-filter').prop('checked') ? $(this).children('.legend-filter').prop('checked', false) : $(this).children('.legend-filter').prop('checked', true);
+      $(this).children('i').toggleClass('off');
       var enabled = {};
       $('.legend-filter').each(function(i,el){
         if($(el).prop('checked')) enabled[$(el).val()] = true;
@@ -463,12 +457,11 @@ function generateMap(params) {
     var labels = [];
     var container = $('<div>');
     var title = $('<span>');
-    title.html('Legend');
+    title.html('Legend (click to filter)');
     container.append(title);
 
     for (var i=0; i < categories.length; i++) {
       var item = $('<div class="legend-item">');
-
       var symbol = $('<i>');
       symbol.css("background", getColor(i + 1, categories.length));
       item.append(symbol);
@@ -487,13 +480,15 @@ function generateMap(params) {
 }
 
 
-function generateChart(params) {
+function generateChart(params, wrapper) {
   if (params) {
     var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis;
-    $('#chart-wrapper').show();
-    $('#map-wrapper').hide();
+    $('#'+ wrapper + ' .chart-wrapper').show();
+    $('#' + wrapper + ' .map-wrapper').hide();
     var container = 'chart';
+    var chartcontainer = '#' + wrapper + ' .chart';
   } else {
+    var chartcontainer = '#chart';
     var data = '{{page.data}}', type = '{{page.type}}', 
       axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}';
       if(legend == '') {
@@ -521,15 +516,14 @@ function generateChart(params) {
     xFormat = '';
   }
 
-  if(desc) {
-      $('#' + container + '-wrapper .description').html(desc);
-      $('#' + container + '-wrapper .source').html('<strong>Source:</strong> ' + source);
-      $('#' + container + '-wrapper .notes').html('<strong>Notes:</strong> ' + notes);
-    }
+  desc ? $('#' + wrapper + ' .description').html(desc) : '';
+  source ? $('#' + wrapper + ' .source').html('<strong>Source:</strong> ' + source) : '';
+  notes ? $('#' + wrapper + ' .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
   emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
 
   var chart = c3.generate({
+    bindto: chartcontainer,
     padding: {
       bottom: 30
     },
