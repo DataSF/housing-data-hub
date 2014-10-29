@@ -1,9 +1,9 @@
 ---
 layout: data
-title: Dollars lent by program
-"chart-title": City total contribution in dollars ($) lent by project status by year
+title: Households receiving loans
+"chart-title": Households receiving loans by year
 category: "First-Time-Homebuyers"
-data: "financing-and-development/city_dollars_by_project_status.csv"
+data: "first-time-homebuyers/households_rcvg_loans_by_year.csv"
 type: bar
 "axis-type": ""
 column: Year
@@ -12,7 +12,7 @@ source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-"y-format": "$,"
+"y-format": ","
 ---
 
-Since 1981, the City has loaned nearly $1 billion to finance the development of affordable rental units (note the dollar amounts are not adjusted for inflation). The chart below shows the total annual loan amounts by the project status. For example, dollars lent in 2009 went to a mix of projects - some of which are completed, some under construction and others under predevelopment.
+The Mayor’s Office of Housing and Community Development (MOHCD) offers loan assistance to first time homebuyers. The chart below shows the number of homebuyers who have received down payment assistance loans in recent years. Some homebuyers take advantage of multiple loan types.
