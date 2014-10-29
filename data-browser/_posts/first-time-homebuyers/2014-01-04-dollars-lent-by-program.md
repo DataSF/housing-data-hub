@@ -4,8 +4,8 @@ title: Value of loans
 "chart-title": Value of loans by program
 category: "First-Time-Homebuyers"
 data: "first-time-homebuyers/dollars_lent_by_program.csv"
-type: bar
-"axis-type": ""
+type: "bar-horizontal"
+"axis-type": category
 column: Program
 published: true
 source: "Mayor's Office of Housing and Community Development."
