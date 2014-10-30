@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Lead remediation grants (value)
+title: Lead remediation grants (dollars)
 "chart-title": "Value of lead remediation grants disbursed by year, 2004-2014 Q2"
 category: "Assistance-for-Homeowners"
 data: "assistance-for-homeowners/grants_by_year.csv"
