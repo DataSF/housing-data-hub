@@ -396,7 +396,7 @@ h2:before, #maincontent:before {
 
 @media (max-width: 1200px) {
   .home-buttons h2 {
-  min-height: 132px;
+  min-height: 222px;
   }
 }
 
