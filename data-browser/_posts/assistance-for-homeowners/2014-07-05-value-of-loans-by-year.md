@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Loans for remediation / rehabilitation (dollars)
+title: Remediation / rehabilitation loans (dollars)
 "chart-title": "Value of City-administered remediation and rehabilitation loans by year, 2004-2014 Q2"
 category: "Assistance-for-Homeowners"
 data: "assistance-for-homeowners/loans_by_year.csv"
