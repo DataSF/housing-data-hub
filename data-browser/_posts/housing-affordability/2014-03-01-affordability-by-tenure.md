@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Affordability by tenure
-"chart-title": "Percent paying 35% or more by tenure (2012)"
+"chart-title": "Percent of households paying 35% or more by tenure (2012)"
 category: "Housing-Affordability"
 data: ACS_12_1YR_affordability_by_tenure.csv
 type: bar

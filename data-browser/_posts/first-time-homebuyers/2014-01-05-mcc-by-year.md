@@ -1,9 +1,9 @@
 ---
 layout: data
-title: Dollars lent by program
-"chart-title": City total contribution in dollars ($) lent by project status by year
+title: Mortgage credit certificates
+"chart-title": Mortgage Credit Certificates issued by year
 category: "First-Time-Homebuyers"
-data: "financing-and-development/city_dollars_by_project_status.csv"
+data: "first-time-homebuyers/mcc_by_year.csv"
 type: bar
 "axis-type": ""
 column: Year
@@ -12,7 +12,8 @@ source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-"y-format": "$,"
+"y-format": ","
+notes: "Data as of October 15, 2014."
 ---
 
-Since 1981, the City has loaned nearly $1 billion to finance the development of affordable rental units (note the dollar amounts are not adjusted for inflation). The chart below shows the total annual loan amounts by the project status. For example, dollars lent in 2009 went to a mix of projects - some of which are completed, some under construction and others under predevelopment.
+In addition to loans, the City administers a mortgage credit program. Qualifying homebuyers can receive a certificate that allows them to claim their interest payments as a tax credit. This in turn reduces their federal income taxes, lowering the cost of homeownership.
