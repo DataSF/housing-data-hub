@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Grants and loans (units helped)
+title: Grants and loans (units)
 "chart-title": "Total units receiving City-administered grants and loans for homeowners, 2004-2014 Q2"
 category: "Assistance-for-Homeowners"
 data: "assistance-for-homeowners/units_by_grants_loans.csv"
