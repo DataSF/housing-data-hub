@@ -14,4 +14,4 @@ scale: "5"
 colors: YlGn
 ---
 
-Since 1940, the average number of people per housing unit has decreased, hovering at just over two people per housing unit for the last few decades. This number may influneced by demographic shifts such as empty-nesters, singles and couples without children.
+Since 1940, the average number of people per housing unit has decreased, hovering at just over two people per housing unit for the last few decades. Demographic shifts such as empty-nesters, singles and couples without children may influence this number.
