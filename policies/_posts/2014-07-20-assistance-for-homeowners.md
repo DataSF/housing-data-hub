@@ -9,9 +9,9 @@ ami: 91
 target: people
 ---
 
-Ownership assistance programs provide education and resources, which help occupants stay in their homes. Programs offer various types of education using a standard curriculum. HUD approved housing counselors assist homeowners with (among other things) household budgeting, maintenance, and loan modification.
+Ownership assistance programs provide education and resources, which help occupants stay in their homes. Programs can also offer loans or other forms of financial assistance.
 
-In San Francisco, the Mayor’s Office of Housing and Community Development (MOHCD) funds ownership assistance programs. MOHCD provides direct assistance to single-family homeowners to rehabilitate property in need of repair and/or lead remediation. Assistance can address code deficiencies as well as remove lead paint and other hazards. Property owners can also receive assistance if renting to low-income tenants in single-family homes or multi-unit properties.
+In San Francisco, the Mayor’s Office of Housing and Community Development (MOHCD) funds ownership assistance programs. MOHCD provides direct financial assistance to single-family homeowners to rehabilitate property in need of repair and/or lead remediation. Assistance can address code deficiencies as well as remove lead paint and other hazards. Property owners can also receive financial assistance if renting to low-income tenants in single-family homes or multi-unit properties.
 
 Homeownership SF (a collaboration of certified housing counseling agencies) provides post-purchase counseling services including foreclosure intervention, home maintenance, and refinancing and loan modification services.
 
