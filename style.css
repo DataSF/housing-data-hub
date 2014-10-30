@@ -383,13 +383,21 @@ h2 {
   color: #326d89;
 }
 
+/*
 h2:before { 
   display: block; 
   content: " "; 
   margin-top: -90px; 
   height: 90px; 
   visibility: hidden; 
+}*/
+
+@media (max-width: 1200px) {
+  .home-buttons h2 {
+  min-height: 132px;
+  }
 }
+
 
 .highlight {
   border-left: 5px solid;
@@ -596,6 +604,16 @@ Charts
   margin-bottom: 50px;
 }
 
+a.definition {
+  border-bottom: dotted thin black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.definition:hover, a.definition:focus {
+  text-decoration: none;
+}
+
 .panel-footer {
   position: absolute;
   bottom: 0;
@@ -753,3 +771,19 @@ a {
 .footnote {
   font-size: .85em;
 }
+
+#skiptocontent a {
+  padding: 6px;
+position: absolute;
+top: -40px;
+left: 0px;
+color: white;
+border-right: 1px solid white;
+border-bottom: 1px solid white;
+border-bottom-right-radius: 8px;
+background: transparent;
+-webkit-transition: top 1s ease-out, background 1s linear;
+transition: top 1s ease-out, background 1s linear;
+z-index: 100;
+}
+
