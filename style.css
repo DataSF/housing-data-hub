@@ -383,19 +383,23 @@ h2 {
   color: #326d89;
 }
 
-/*
+/* set offset for top of h2 so that the nav doesn't cover the auto scroll */
 h2:before { 
   display: block; 
   content: " "; 
   margin-top: -90px; 
   height: 90px; 
   visibility: hidden; 
-}*/
+}
 
 @media (max-width: 1200px) {
   .home-buttons h2 {
   min-height: 132px;
   }
+}
+
+.home-buttons {
+  margin-bottom: 50px;
 }
 
 
@@ -785,5 +789,69 @@ background: transparent;
 -webkit-transition: top 1s ease-out, background 1s linear;
 transition: top 1s ease-out, background 1s linear;
 z-index: 100;
+}
+
+ul.list-logos
+{
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.list-logos li { width: 25% }
+
+@media (max-width: 900px)
+{
+    ul.list-logos { width: 100% }
+    ul.list-logos li { width: 140px }
+}
+
+
+[class*="list-logos"] {
+    margin: 0;
+    text-align: center;
+}
+
+[class*="list-logos"] a {
+    border: none;
+}
+
+[class*="list-logos"] li {
+    background-image: none;
+    display: inline-block;
+    margin: 9px 1.5%;
+    padding: 0;
+    vertical-align: middle;
+    width: 41%;
+}
+
+[class*="list-logos"] li a {
+    display: inline-block;
+}
+
+[class*="list-logos"] li a img {
+    width: 100%;
+}
+
+.list-logos-primary li {
+    margin: 9px 3.5%;
+    width: 225px;
+}
+
+.list-logos-secondary li {
+    margin: 17px 2%;
+    width: 125px;
+}
+
+.list-logos-tertiary li {
+    margin: 17px 1.5%;
+    width: 75px;
+}
+
+.made-possible h2 {
+  font-size: 85%;
+}
+
+.text-mute {
+  color: #6d6e71;
 }
 
