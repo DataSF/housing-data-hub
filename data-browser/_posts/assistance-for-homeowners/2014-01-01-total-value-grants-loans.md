@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Total value of grants and loans
-"chart-title": "Total value of City-administered grants and loans for homeowners, 2004-2014 Q2"
+title: Value of grants and loans
+"chart-title": "Value in dollars ($) of City-administered grants and loans for homeowners, 2004-2014 Q2"
 category: "Assistance-for-Homeowners"
 "policy-link": "http://google.com"
 data: "assistance-for-homeowners/total_grants_loans.csv"
