@@ -49,7 +49,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
   }
-
+  .intro h2 {
+    text-align: right;
+  }
   
 }
 
@@ -590,8 +592,7 @@ Charts
 
 .intro h2 {
   font-size: 20px;
-  text-align: right;
-  margin: 0;
+  margin-bottom: .75em;
 }
 
 .intro {
