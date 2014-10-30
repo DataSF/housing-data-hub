@@ -386,7 +386,7 @@ h2 {
 }
 
 /* set offset for top of h2 so that the nav doesn't cover the auto scroll */
-h2:before { 
+h2:before, #maincontent:before { 
   display: block; 
   content: " "; 
   margin-top: -90px; 
