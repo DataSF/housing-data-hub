@@ -5,48 +5,45 @@ attribution: Header image by Daniel Schwen (Own work) [GFDL](http://www.gnu.org/
 ---
 <div class="row" style="margin-bottom: 50px;">
   <div class="col-sm-12">
-    <p class="lead">Housing policies and programs can be constrained to individual or family income levels and are focused on either helping people increase access to housing or building and maintaining housing units. Those policy frames are represented below in the list of policies and programs.</p>
-    <div class="row">
-    <div class="col-sm-6">
-    <h2>Income Elibibility</h2>
-    <p>Housing programs use a tool called “Area Median Income” (AMI). Median income is the income level where 50% of people make more and 50% make less (think median = middle). Our area median includes Marin, San Francisco, and San Mateo counties.</p>
-    <p>Programs often define Income eligibility as a percent of AMI. So, for example, if the AMI is $100,000, 50% AMI is $50,000 and 150% is $150,000. The AMI will vary by household size.</p>
-    <p>Look for the visual indicating the maximum AMI eligibility for each particular program or policy.</p>
-    <div style="text-align: center">
-      <div class="ami-container ami-60 ami-example" aria-hidden="true" role="presentation">
-        <div class="ami-overlay">
-          <div class="ami-overlay-element"></div>
-          <div class="ami-overlay-element"></div>
-          <div class="ami-overlay-element"></div>
-          <div class="ami-overlay-element"></div>
-          <div class="ami-overlay-element"></div>
+    <div class="intro">
+      <p class="lead">Housing policies and programs can have different income requirements and focus areas. The two frames below provide ways to group housing programs.</p>
+      <div class="row">
+        <div class="col-sm-3">
+          <h2>Income Eligibility</h2>
         </div>
-        <div class="ami-fill ami-60">
-          <div class="ami-label">60%</div>
-          <div class="no-ami">No AMI Eligibility</div>
+        <div class="col-sm-9">
+          <div class="ami-container ami-60 ami-example" aria-hidden="true" role="presentation">
+              <div class="ami-overlay">
+                <div class="ami-overlay-element"></div>
+                <div class="ami-overlay-element"></div>
+                <div class="ami-overlay-element"></div>
+                <div class="ami-overlay-element"></div>
+                <div class="ami-overlay-element"></div>
+              </div>
+              <div class="ami-fill ami-60">
+                <div class="ami-label">60%</div>
+                <div class="no-ami">No AMI Eligibility</div>
+              </div>
+              <div class="ami-lower">
+                0%
+              </div>
+              <div class="ami-upper">
+                200%
+              </div>
+            </div>
+            <p>Housing programs often use percent of “Area Median Income” (AMI) to determine eligibility. <span class="definition" data-placement="bottom" data-content="Median income is the income level where 50% of people make more and 50% make less (think median = middle). Our area median includes Marin, San Francisco, and San Mateo counties. For example, if the AMI is $100,000, 50% AMI is $50,000 and 150% is $150,000. The AMI will vary by household size.">What is AMI?</span></p>
         </div>
-        <div class="ami-lower">
-          0%
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h2>People or Housing Units</h2>
         </div>
-        <div class="ami-upper">
-          200%
+        <div class="col-sm-9">
+          <img src="{{site.baseurl}}/images/icons/units.png" alt="Icon representing policies and programs that target housing units" class="policy-icon"/><img src="{{site.baseurl}}/images/icons/people.png" alt="Icon representing policies and programs that target people" class="policy-icon"/>
+          <p>Programs that assist individuals or families try to increase their ability to obtain or maintain housing. Programs that focus on units try to maintain or increase the “supply” of affordable housing.</p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <h2>People or Housing Units</h2>
-    <p>Programs that assist individuals or families try to increase their ability to obtain or maintain housing (i.e. increase their ability to “demand” housing in the market). Programs that focus on units try to maintain or increase the “supply” of affordable housing. </p>
-      <p>Look for the icons to see the focus of each policy.</p>
-    <div class="center-block">
-      <span style="margin-right: 20px;"><img src="{{site.baseurl}}/images/icons/units.png" alt="Icon representing policies and programs that target housing units"/> Unit focused policy</span>
-    <img src="{{site.baseurl}}/images/icons/people.png" alt="Icon representing policies and programs that target people"/> People focused policy
-    </div>
-    
-  </div>
-</div>
-  </div>
-</div>
 {% assign sorted_posts = (site.posts | sort: 'title') %}
 {% assign i = 0 %}
 {% for post in sorted_posts %}

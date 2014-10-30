@@ -45,6 +45,7 @@
 window.onload = function() {
 
   $('.hover-tooltip').tooltip();
+  $('.definition').popover();
   {% if page.layout == 'data' %}
   init()
   {% endif %}
