@@ -15,4 +15,4 @@ scale: "5"
 colors: YlGn
 ---
 
-The Mayor’s Office of Housing and Community Development administers loans and grants to help low income homeowners rehabilitate their properties, bringing them up to code and reducing hazards. This chart shows the total value of grants and loans disbursed from 2004 through end of June 2014.
+The Mayor’s Office of Housing and Community Development administers loans and grants to help low income homeowners rehabilitate their properties, bring them up to code and reduce hazards. This chart shows the total value of grants and loans disbursed from 2004 through end of June 2014.
