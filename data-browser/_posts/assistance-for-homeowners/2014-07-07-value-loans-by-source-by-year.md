@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Loan value by source by year
+title: Remediation / rehabilitation loan value by source
 "chart-title": "Value of City-administered remediation and rehabilitation loans by source by year, 2004-2014 Q2"
 category: "Assistance-for-Homeowners"
 data: "assistance-for-homeowners/loans_by_type_by_year.csv"
