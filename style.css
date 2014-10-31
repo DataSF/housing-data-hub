@@ -583,13 +583,6 @@ Charts
   height: 29px;
 }
 
-.ami-fill {
-  height: 29px;
-  position: relative;
-  z-index: 1;
-  background-color: #CDD3DC;
-}
-
 .intro h2 {
   font-size: 20px;
   margin-bottom: .75em;
@@ -715,12 +708,21 @@ a.definition:hover, a.definition:focus {
   height: 60px;
 }
 
+/*a5b3c3 or cdd3dc */
+
+.ami-fill {
+  height: 29px;
+  position: relative;
+  z-index: 1;
+  background-color: #a5b3c3;
+}
+
 .target-people {
-  background: #CDD3DC url(images/icons/people-cutout.png) center no-repeat;
+  background: #a5b3c3 url(images/icons/people-cutout.png) center no-repeat;
 }
 
 .target-units {
-  background: #CDD3DC url(images/icons/units-cutout.png) center no-repeat;
+  background: #a5b3c3 url(images/icons/units-cutout.png) center no-repeat;
 }
 
 .phase div.well {
