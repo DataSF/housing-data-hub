@@ -587,7 +587,7 @@ Charts
   height: 29px;
   position: relative;
   z-index: 1;
-  background-color: #5EAEDB;
+  background-color: #CDD3DC;
 }
 
 .intro h2 {
@@ -716,11 +716,11 @@ a.definition:hover, a.definition:focus {
 }
 
 .target-people {
-  background: #fff url(images/icons/people.png) center no-repeat;
+  background: #CDD3DC url(images/icons/people-cutout.png) center no-repeat;
 }
 
 .target-units {
-  background: #fff url(images/icons/units.png) center no-repeat;
+  background: #CDD3DC url(images/icons/units-cutout.png) center no-repeat;
 }
 
 .phase div.well {
