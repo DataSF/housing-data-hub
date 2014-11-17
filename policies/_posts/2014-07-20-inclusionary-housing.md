@@ -20,28 +20,22 @@ The San Francisco inclusionary housing program was created in 1992 and is now ca
 
 Inclusionary rules require that new private housing developments with 10 or more units must either pay a fee or include in the project a subset of units that are affordable (for rent or ownership). Developers also have the option of building affordable units off-site. Collectively, these units are called “Below Market Rate” (BMR) units.
 
-<aside role="complementary" class="well">
-<h1>Income levels served</h1>
-<p>Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income.
-The table shows income levels based on persons per household.</p>
-
-AMI | One | Two | Three | Four
-----|-----|-----|-------|------
-55% AMI | $37,350| $42,750| $48,050| $53,400
-120% AMI| $81,550| $93,250| $104,900| $116,500
-
-</aside>
-
-The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
-
-In its current form, this program emphasizes the “Affordable Housing Fee.” Developers may apply for an alternative to the fee. Below is a brief summary of each option.
-
 Alternatives | Name | What is it
 -------------|------|------------
 Default			 |Affordable Housing Fee | A fee assessed based on the number of units in the project and the estimated difference in cost between what people can afford and cost of construction
 Alternative 1	| On-site units	| Requirement that 12% of the total units on-site must be affordable (e.g. a 100 unit building will include 12 affordable units)
 Alternative 2 |	Off-site units | Requirement to build off-site units at a rate of 20% of the total principal project (e.g. a 100 unit building will build an off-site project that equals 20% of the principal project)
 Alternative 3	| Combination	| Any combination of the above options
+
+The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
+
+### Income levels served
+Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income. The table shows income levels based on persons per household.
+
+AMI | One | Two | Three | Four
+----|-----|-----|-------|------
+55% AMI | $37,350| $42,750| $48,050| $53,400
+120% AMI| $81,550| $93,250| $104,900| $116,500
 
 ### Use of the Affordable Housing Fee
 The Affordable Housing Fees are used to:
