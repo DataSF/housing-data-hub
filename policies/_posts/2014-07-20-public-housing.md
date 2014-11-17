@@ -7,7 +7,7 @@ target: units
 image: publichousing.png
 ---
 
-The goal of public housing is to provide a source of affordable housing to very low-income individuals and families. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.
+Public housing offers affordable rental units to low to extremely low-income households. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.
 
 The San Francisco Housing Authority (SFHA) manages public housing units in San Francisco. SFHA began operations in 1938 as part of a national effort to alleviate the country’s Depression-era housing crisis. Today (2014), it owns and manages over 5,000 units of public housing. To qualify for public housing, tenants’ incomes must not exceed certain levels ([view the income levels in San Francisco at SFHA’s website)](http://www.sfha.org/Public-Housing-Information.html). In 2014, the public housing wait list was over 7,500 households long.
 
