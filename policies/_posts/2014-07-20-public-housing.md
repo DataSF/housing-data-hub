@@ -14,7 +14,7 @@ The San Francisco Housing Authority (SFHA) manages public housing units in San F
 Funding for SFHA operations comes strictly from the US Department of Housing and Urban Development (HUD) and tenant-paid rents.  HUD-provided assistance has not kept pace with either operating expenses or building maintenance needs since the 1980s.
 
 ### HOPE SF - Rehabilitation of Public Housing
-In the early 1990’s a national report drew attention to the need to rehabilitate distressed public housing across the United States. Congress created a program called HOPE VI, managed by HUD, that provided funding to rehabilitate public housing. [Read more about HOPE VI](http://portal.hud.gov/hudportal/HUD?src=/program_offices/public_indian_housing/programs/ph/hope6/about).
+In the early 1990s a national report drew attention to the need to rehabilitate distressed public housing across the United States. Congress created a program called HOPE VI, managed by HUD, that provided funding to rehabilitate public housing. [Read more about HOPE VI](http://portal.hud.gov/hudportal/HUD?src=/program_offices/public_indian_housing/programs/ph/hope6/about).
 
 Over time, however, funding from HOPE VI decreased. Faced with decreasing federal dollars and distressed public housing properties, San Francisco created a program to rebuild four of the most distressed public housing properties. This program is called HOPE SF and it is in progress. You can read more at [HOPE SF’s website](http://hope-sf.org/).
 
