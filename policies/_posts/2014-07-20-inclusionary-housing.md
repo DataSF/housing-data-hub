@@ -6,7 +6,7 @@ published: true
 ami: 100
 target: units
 image: inclusionary.png
-note: The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 60%.
+note: "The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 60%."
 ---
 
 Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.
@@ -60,8 +60,6 @@ Organization | What it does
 ## Resources
 - [Inclusionary Housing Program Overview](http://sf-moh.org/index.aspx?page=263)
 - [Inclusionary Affordable Housing Program Monitoring and Procedures Manual](http://sf-moh.org/modules/showdocument.aspx?documentid=6983)
-- [Documents and reports regarding the Inclusionary Housing Program](http://sf-moh.org/index.aspx?page=295), including:
-	- [Fiscal analysis used to determine housing affordability fee amount](http://sf-moh.org/modules/showdocument.aspx?documentid=6976)
-	- [Overview of alternatives under the program](http://sf-moh.org/modules/showdocument.aspx?documentid=7253)
+- [Documents and reports regarding the Inclusionary Housing Program](http://sf-moh.org/index.aspx?page=295)
 - [Report on San Francisco’s Affordable Housing: Affordability Gap](http://sf-moh.org/modules/showdocument.aspx?documentid=7734)
 - [Briefing Book: State of the Housing Market Study, April 2012](http://sf-moh.org/modules/showdocument.aspx?documentid=5818)
