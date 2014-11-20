@@ -11,7 +11,7 @@ units: "%"
 published: true
 "axis-type": category
 "y-format": ","
-legend: none
+legend: bottom
 emphasis: "Rental,0,185aa9"
 source: "U.S. Census Bureau, 2012 American Community Survey 5-Year Estimates. Tenure by Year Built."
 "chart-title": Estimated number of units built before/after 1980 by tenure

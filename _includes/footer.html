@@ -1,10 +1,10 @@
 <footer>
     <div class="container footer">
       <div class="row">
-        <div class="col-sm-4 right-border-dotted">
+        <div class="col-sm-4">
           <p>The San Francisco Housing Policy Hub is your go to resource for learning about policies and programs that affect housing affordability in San Francisco. We provide an overview of each of the major programs - what is it, its purpose, and related data.</p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 left-border-dotted">
           <ul class="list-unstyled">
           {% for link in site.navigation %}
           <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
@@ -18,6 +18,11 @@
           <p>The Official Open Data Program of the City and County of San Francisco</p>
         </div>
       </div>
+      <div class="row license">
+      <div class="col-md-12">
+        Data contained herein licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a>
+      </div>
+    </div>
     </div>
     <div class="text-center made-in">
       Made with <i class="fa fa-heart"><span class="sr-only">heart</span></i> in San Francisco
@@ -496,7 +501,8 @@ function generateChart(params, wrapper) {
 
   if(legend == '') {
         legend = 'bottom';
-      } else if(legend == 'none') {
+      } 
+      else if(legend == 'none') {
         show = false;
         legend = 'bottom';
       }
@@ -573,7 +579,8 @@ function generateChart(params, wrapper) {
       color: function(color, d) {
         return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#'+emphasis[2]) : color;
       },
-      order: null
+      order: null,
+      hide: ["MOE","MOE_Renter","MOE_Owner"]
     },
     tooltip: {
       contents: tooltip_contents
@@ -583,7 +590,8 @@ function generateChart(params, wrapper) {
     },
     legend: {
       position: legend,
-      show: show
+      show: show,
+      hide: ["MOE","MOE_Renter","MOE_Owner"]
     },
     axis: {
       rotated: rotated,
@@ -604,7 +612,7 @@ function generateChart(params, wrapper) {
     }
   });
 
-  chart.hide(['MOE','MOE_Renter','MOE_Owner'],{withLegend: true});
+  /*chart.hide(['MOE','MOE_Renter','MOE_Owner'],{withLegend: true});*/
 }
 </script>
 <script> 

@@ -158,6 +158,10 @@ ul.nav-browser li.active {
   background-size: cover;
 }
 
+.row.license {
+  margin-top: 20px;
+}
+
 .overview.masthead {
    background: #333 url({{site.baseurl}}/images/market_street.jpg) 50% 50% no-repeat;
 }
@@ -202,6 +206,10 @@ h1.top, h2:first {
 
 h3.panel-title {
   text-transform: capitalize;
+}
+
+.panel-default>.panel-heading {
+  background-color: #fefefe;
 }
 
 h2.panel-title {
@@ -468,6 +476,10 @@ a:hover button {
   border-right: thin dotted #fff;
 }
 
+.left-border-dotted {
+  border-left: thin dotted #fff;
+}
+
 .brand {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
   font-size: 35px;
@@ -478,6 +490,14 @@ a:hover button {
   color: #6dbce2;
 }
 
+footer {
+  font-size: .9em;
+}
+
+footer ul.list-unstyled li {
+  margin-bottom: 5px;
+}
+
 footer .made-in {
   background-color: #245f7b;
 }
@@ -485,6 +505,14 @@ footer .made-in {
 footer {
   background-color: #222;
   color: #fff;
+}
+
+footer a {
+  color: #6dbce2;
+}
+
+footer a:hover, footer a:focus {
+  color: #55A5C9;
 }
 
 .footer-blurb {
