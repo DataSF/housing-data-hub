@@ -483,7 +483,7 @@ function generateMap(params, wrapper) {
 
 function generateChart(params, wrapper) {
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis;
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend;
     $('#'+ wrapper + ' .chart-wrapper').show();
     $('#' + wrapper + ' .map-wrapper').hide();
     var container = 'chart';
@@ -491,11 +491,15 @@ function generateChart(params, wrapper) {
   } else {
     var chartcontainer = '#chart';
     var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}';
-      if(legend == '') {
+      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}', show = true;
+  }
+
+  if(legend == '') {
+        legend = 'bottom';
+      } else if(legend == 'none') {
+        show = false;
         legend = 'bottom';
       }
-  }
   var rotated = false;
   if(groups != '') {
         groups = groups.split(',');
@@ -523,6 +527,39 @@ function generateChart(params, wrapper) {
 
   emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
 
+  function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
+    var $$ = this, config = $$.config, CLASS = $$.CLASS,
+        titleFormat = config.tooltip_format_title || defaultTitleFormat,
+        nameFormat = config.tooltip_format_name || function (name) { return name; },
+        valueFormat = config.tooltip_format_value || defaultValueFormat,
+        text, i, title, value, name, bgcolor;
+    
+    // You can access all of data like this:
+    var allData = $$.data.targets;
+
+    for (i = 0; i < d.length; i++) {
+        if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+        
+        if (! text) {
+          title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+            text = "<table class='" + CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+        }
+
+        name = nameFormat(d[i].name);
+        value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+        if((typeof allData[i+i+1] != "undefined") && allData[i+i+1].id.indexOf("MOE") > -1) {
+          value += " +/-" + valueFormat(allData[i+i+1].values[d[i].index].value);
+        }
+        bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+        text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
+        text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
+        text += "<td class='value'>" + value + "</td>";
+        text += "</tr>";
+    }
+    return text + "</table>";   
+  }
+
   var chart = c3.generate({
     bindto: chartcontainer,
     padding: {
@@ -538,11 +575,15 @@ function generateChart(params, wrapper) {
       },
       order: null
     },
+    tooltip: {
+      contents: tooltip_contents
+    },
     color: {
       pattern: ['#5a9bd4','#7ac36a','#faa75b','#9e67ab','#ce7058','#d77fb4','#f15a60','#737373']
     },
     legend: {
-      position: legend
+      position: legend,
+      show: show
     },
     axis: {
       rotated: rotated,
@@ -562,6 +603,8 @@ function generateChart(params, wrapper) {
       }
     }
   });
+
+  chart.hide(['MOE','MOE_Renter','MOE_Owner'],{withLegend: true});
 }
 </script>
 <script> 

@@ -22,7 +22,8 @@ var browserData =
       "popup" : "{{post.popup}}",
       "margin": "{{post.margin}}",
       "legendTitle": "{{post.legend-title}}",
-      "emphasis": "{{post.emphasis}}"
+      "emphasis": "{{post.emphasis}}",
+      "legend": "{{post.legend}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
