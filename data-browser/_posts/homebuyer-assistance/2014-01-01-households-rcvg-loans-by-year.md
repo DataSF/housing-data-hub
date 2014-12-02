@@ -2,7 +2,7 @@
 layout: data
 title: Households and loans
 "chart-title": Households receiving loans and loans issued by year
-category: "First-Time-Homebuyers"
+category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/households_rcvg_loans_by_year.csv"
 type: bar
 "axis-type": ""

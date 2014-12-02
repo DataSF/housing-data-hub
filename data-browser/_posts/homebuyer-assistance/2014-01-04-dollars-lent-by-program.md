@@ -2,7 +2,7 @@
 layout: data
 title: Value of loans
 "chart-title": Value of loans by program
-category: "First-Time-Homebuyers"
+category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/dollars_lent_by_program.csv"
 type: "bar-horizontal"
 "axis-type": category

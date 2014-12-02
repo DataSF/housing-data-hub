@@ -2,7 +2,7 @@
 layout: data
 title: Loans by program
 "chart-title": Loans issued by program by year
-category: "First-Time-Homebuyers"
+category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/loans_by_type_by_year.csv"
 type: bar
 "axis-type": ""

@@ -2,7 +2,7 @@
 layout: data
 title: Mortgage credit certificates
 "chart-title": Mortgage Credit Certificates issued by year
-category: "First-Time-Homebuyers"
+category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/mcc_by_year.csv"
 type: bar
 "axis-type": ""

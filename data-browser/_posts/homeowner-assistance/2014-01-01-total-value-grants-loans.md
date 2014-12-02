@@ -2,7 +2,7 @@
 layout: data
 title: Grants and loans (dollars)
 "chart-title": "Value in dollars ($) of City-administered grants and loans for homeowners, 2004-2014 Q2"
-category: "Assistance-for-Homeowners"
+category: "homeowner-assistance"
 "policy-link": "http://google.com"
 data: "assistance-for-homeowners/total_grants_loans.csv"
 column: Label

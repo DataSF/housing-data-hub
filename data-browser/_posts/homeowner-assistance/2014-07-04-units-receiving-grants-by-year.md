@@ -2,7 +2,7 @@
 layout: data
 title: Lead grants (units)
 "chart-title": "Units receiving lead remediation grants by year, 2004-2014 Q2"
-category: "Assistance-for-Homeowners"
+category: "homeowner-assistance"
 data: "assistance-for-homeowners/units_served_grants_by_year.csv"
 column: Year
 type: bar

@@ -402,10 +402,24 @@ h2:before, #maincontent:before {
   visibility: hidden; 
 }
 
+.no-scroll-fix h2:before {
+  content: none;
+  margin-top: 0;
+  height: 0;
+}
+
 @media (max-width: 1200px) {
   .home-buttons h2 {
-  min-height: 222px;
+  min-height: 132px;
   }
+}
+
+.acknowledge {
+  margin-bottom: 50px;
+}
+
+#maincontent {
+  margin-bottom: 20px;
 }
 
 .home-buttons {

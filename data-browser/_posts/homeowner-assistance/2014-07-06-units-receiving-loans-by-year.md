@@ -2,7 +2,7 @@
 layout: data
 title: Remediation / rehabilitation loans (units)
 "chart-title": "Number of units receiving remediation and rehabilitation loans by year, 2004-2014 Q2"
-category: "Assistance-for-Homeowners"
+category: "homeowner-assistance"
 "policy-link": "http://google.com"
 data: "assistance-for-homeowners/units_served_loans_by_year.csv"
 x: Year
