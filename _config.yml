@@ -1,4 +1,4 @@
-baseurl: /housing-policy-hub
+baseurl: '/'
 permalink:	/:categories/:title
 markdown: redcarpet
 redcarpet:
