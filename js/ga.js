@@ -1,1 +1,11 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('T B=A(){e(f.k("m-6-7-8")!="9"){$("p").0("b c d 1 2, g h i. j 4 l 5. Y 14, 5 t u v, w x y z, 4 n s C D E. F G H I, o J K. L M N 1 2 O P, o n Q R.");$("S:q(.U-V)").0("W 3");$("X:q(.r,.r-Z) > 10").0("b c d 1 2, g h i.");$("11").0("j 4 l 5.");$(\'#12-13\').a()}15 e(f.k("m-6-7-8")=="9"){$(\'#16-17\').a()}};',62,70,'html|sit|amet||eget|metus|hub|logged|in|true|remove|Lorem|ipsum|dolor|if|Cookies|consectetur|adipiscing|elit|Nullam|get|lacinia|housing|commodo|id||not|nav|ligula|vel|molestie|dignissim|purus|ex|auctor|arcu|function|hubOb|massa|sed|dui|Cras|eu|consequat|lectus|convallis|lorem|Proin|pulvinar|nulla|tellus|blandit|nisl|volutpat|h3|var|panel|title|Header|ul|Praesent|browser|li|td|edit|links|sollicitudin|else|alert|msg'.split('|'),0,{}))
+var hubOb = function() {
+    if (Cookies.get("housing-hub-logged-in") != "true") {
+        /*$("p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacinia metus. Praesent sollicitudin, metus vel molestie dignissim, purus ex auctor arcu, eget commodo ligula massa sed dui. Cras eu consequat lectus, id convallis lorem. Proin pulvinar nulla sit amet tellus blandit, id commodo nisl volutpat.");
+        $("h3:not(.panel-title)").html("Header 3");
+        $("ul:not(.nav,.nav-browser) > li").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        $("td").html("Nullam eget lacinia metus.");*/
+
+        $('#edit-links').remove();
+        $('#alert-msg').remove();
+    }
+}

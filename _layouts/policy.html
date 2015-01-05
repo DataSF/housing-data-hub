@@ -21,11 +21,9 @@
       </div>
     </div>
     <div class="container">
-      <div id="alert-msg" class="alert alert-warning" role="alert">
-      The Housing Policy Hub is in <a href="{{site.baseurl}}/about#our-process" title="Read more about what we mean by beta">beta testing</a>. We welcome your feedback as we continue to develop this information resource.
-      </div>
       <div class="row">
         <div class="col-sm-9">
+          {% include alert.html %}
           <article role="article" id="maincontent">
             <!-- <h2 id="summary" class="sr-only">Summary</h2> -->
             <p class="lead">{{ page.summary }}</p>
@@ -71,7 +69,7 @@
           <a href="//prose.io/#jasonlally/housing-policy-hub/tree/gh-pages/policies/_posts" target="_blank">Add a post with Prose.io</a>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3" role="complementary">
           {% include sidenav.html %}
         </div>
       </div>
