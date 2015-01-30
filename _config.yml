@@ -23,7 +23,7 @@ navigation:
   actual: /about/index.html
 
 prose:
-  siteurl: 'http://jasonlally.com/housing-policy-hub'
+  siteurl: 'http://housing.datasf.org'
   media: 'images'
   metadata:
     data-browser/_posts:
