@@ -20,7 +20,7 @@
       </div>
       <div class="row license">
       <div class="col-md-12">
-        Data contained herein licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a> unless otherwise noted
+        Data released by the City and County of San Francisco is licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a>. For other sources, such as State or Federal, please refer to the relevant terms and conditions.
       </div>
     </div>
     </div>
@@ -486,8 +486,9 @@ function generateMap(params, wrapper) {
 
 
 function generateChart(params, wrapper) {
+  var max = null;
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend;
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend, max = params.max;
     $('#'+ wrapper + ' .chart-wrapper').show();
     $('#' + wrapper + ' .map-wrapper').hide();
     var container = 'chart';
@@ -496,6 +497,9 @@ function generateChart(params, wrapper) {
     var chartcontainer = '#chart';
     var data = '{{page.data}}', type = '{{page.type}}', 
       axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}', show = true;
+    {% if page.max %}
+    max = {{page.max}};
+    {% endif %}
   }
 
   if(legend == '') {
@@ -603,7 +607,8 @@ function generateChart(params, wrapper) {
       },
       y: {
         min: 0,
-        padding: {bottom:0},
+        max: max,
+        padding: {bottom:0, top:0},
         tick: {
           format: yFormat
         }
