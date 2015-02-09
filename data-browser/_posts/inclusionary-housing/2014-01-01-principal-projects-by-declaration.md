@@ -12,7 +12,6 @@ colors: Paired
 published: true
 source: "Mayor's Office of Housing and Community Development."
 notes: null
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 popup: "Section 415 Declaration, Total inclusionary units off-site, Off-site address, Total inclusionary units at this location, Tenure, Entitlement year, Building completion year"
 ---
 

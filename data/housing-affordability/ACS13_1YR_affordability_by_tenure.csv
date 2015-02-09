@@ -1,1 +1,1 @@
-Tenure,Percent,MOERenter,.447,.02163330765Owner with mortgage,.414,.03138470965Owner without mortgage,.159,.02594224354
+Tenure,Paying 30% or More of Household Income,MOE_More,Paying Less than 30% of Household Income,MOE_LessRenter,0.447,0.021633308,0.553,0.025Owner with mortgage,0.414,0.03138471,0.586,0.036Owner without mortgage,0.159,0.025942244,0.817,0.0505

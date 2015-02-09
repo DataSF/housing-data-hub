@@ -583,7 +583,7 @@ function generateChart(params, wrapper) {
         return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#'+emphasis[2]) : color;
       },
       order: null,
-      hide: ["MOE","MOE_Renter","MOE_Owner"]
+      hide: ["MOE","MOE_Renter","MOE_Owner","MOE_More","MOE_Less"]
     },
     tooltip: {
       contents: tooltip_contents
@@ -594,7 +594,7 @@ function generateChart(params, wrapper) {
     legend: {
       position: legend,
       show: show,
-      hide: ["MOE","MOE_Renter","MOE_Owner"]
+      hide: ["MOE","MOE_Renter","MOE_Owner","MOE_More","MOE_Less"]
     },
     axis: {
       rotated: rotated,
