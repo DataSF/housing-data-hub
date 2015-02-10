@@ -1,0 +1,42 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01
+Id,Id2,Geography,Estimate; Median gross rent,Margin of Error; Median gross rent
+0500000US06001,06001,"Alameda County, California",1244,20
+0500000US06007,06007,"Butte County, California",827,43
+0500000US06013,06013,"Contra Costa County, California",1279,40
+0500000US06017,06017,"El Dorado County, California",993,84
+0500000US06019,06019,"Fresno County, California",857,16
+0500000US06023,06023,"Humboldt County, California",876,49
+0500000US06025,06025,"Imperial County, California",713,53
+0500000US06029,06029,"Kern County, California",839,26
+0500000US06031,06031,"Kings County, California",916,49
+0500000US06033,06033,"Lake County, California",945,135
+0500000US06037,06037,"Los Angeles County, California",1161,7
+0500000US06039,06039,"Madera County, California",787,45
+0500000US06041,06041,"Marin County, California",1480,78
+0500000US06045,06045,"Mendocino County, California",1019,85
+0500000US06047,06047,"Merced County, California",814,36
+0500000US06053,06053,"Monterey County, California",1164,34
+0500000US06055,06055,"Napa County, California",1316,89
+0500000US06057,06057,"Nevada County, California",1095,134
+0500000US06059,06059,"Orange County, California",1430,14
+0500000US06061,06061,"Placer County, California",1180,64
+0500000US06065,06065,"Riverside County, California",1101,23
+0500000US06067,06067,"Sacramento County, California",986,16
+0500000US06071,06071,"San Bernardino County, California",1056,23
+0500000US06073,06073,"San Diego County, California",1237,16
+0500000US06075,06075,"San Francisco County, California",1407,36
+0500000US06077,06077,"San Joaquin County, California",964,28
+0500000US06079,06079,"San Luis Obispo County, California",1206,44
+0500000US06081,06081,"San Mateo County, California",1549,42
+0500000US06083,06083,"Santa Barbara County, California",1265,54
+0500000US06085,06085,"Santa Clara County, California",1462,21
+0500000US06087,06087,"Santa Cruz County, California",1358,70
+0500000US06089,06089,"Shasta County, California",877,48
+0500000US06095,06095,"Solano County, California",1188,53
+0500000US06097,06097,"Sonoma County, California",1189,29
+0500000US06099,06099,"Stanislaus County, California",939,29
+0500000US06101,06101,"Sutter County, California",837,98
+0500000US06107,06107,"Tulare County, California",762,28
+0500000US06111,06111,"Ventura County, California",1382,35
+0500000US06113,06113,"Yolo County, California",987,43
+0500000US06115,06115,"Yuba County, California",770,76

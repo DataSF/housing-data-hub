@@ -486,9 +486,9 @@ function generateMap(params, wrapper) {
 
 
 function generateChart(params, wrapper) {
-  var max = null;
+  var max = null, pleft = null;
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend, max = params.max;
+    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend, max = parseInt(params.max), pleft = parseInt(params.pleft);
     $('#'+ wrapper + ' .chart-wrapper').show();
     $('#' + wrapper + ' .map-wrapper').hide();
     var container = 'chart';
@@ -499,6 +499,9 @@ function generateChart(params, wrapper) {
       axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}', show = true;
     {% if page.max %}
     max = {{page.max}};
+    {% endif %}
+    {% if page.pleft %}
+    pleft = {{page.pleft}};
     {% endif %}
   }
 
@@ -572,7 +575,8 @@ function generateChart(params, wrapper) {
   var chart = c3.generate({
     bindto: chartcontainer,
     padding: {
-      bottom: 30
+      bottom: 30,
+      left: pleft
     },
     data: {
       x: x,
@@ -602,13 +606,13 @@ function generateChart(params, wrapper) {
         type: axisType,
         tick: {
           format: xFormat,
-          width: 130
+          width: 150
         }
       },
       y: {
         min: 0,
         max: max,
-        padding: {bottom:0, top:0},
+        padding: {bottom:0, top:3 },
         tick: {
           format: yFormat
         }

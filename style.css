@@ -299,7 +299,7 @@ h2.panel-title {
     margin-top: 55px;
   }
 }
-#chart {
+#chart, #chart-1, #chart-2, #chart-3 {
   height: 450px;
 }
 

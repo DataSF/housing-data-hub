@@ -1,0 +1,45 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Owner occupied:
+HD02_VD02,Margin of Error; Owner occupied:
+HD01_VD03,Estimate; Owner occupied: - Built 2010 or later
+HD02_VD03,Margin of Error; Owner occupied: - Built 2010 or later
+HD01_VD04,Estimate; Owner occupied: - Built 2000 to 2009
+HD02_VD04,Margin of Error; Owner occupied: - Built 2000 to 2009
+HD01_VD05,Estimate; Owner occupied: - Built 1990 to 1999
+HD02_VD05,Margin of Error; Owner occupied: - Built 1990 to 1999
+HD01_VD06,Estimate; Owner occupied: - Built 1980 to 1989
+HD02_VD06,Margin of Error; Owner occupied: - Built 1980 to 1989
+HD01_VD07,Estimate; Owner occupied: - Built 1970 to 1979
+HD02_VD07,Margin of Error; Owner occupied: - Built 1970 to 1979
+HD01_VD08,Estimate; Owner occupied: - Built 1960 to 1969
+HD02_VD08,Margin of Error; Owner occupied: - Built 1960 to 1969
+HD01_VD09,Estimate; Owner occupied: - Built 1950 to 1959
+HD02_VD09,Margin of Error; Owner occupied: - Built 1950 to 1959
+HD01_VD10,Estimate; Owner occupied: - Built 1940 to 1949
+HD02_VD10,Margin of Error; Owner occupied: - Built 1940 to 1949
+HD01_VD11,Estimate; Owner occupied: - Built 1939 or earlier
+HD02_VD11,Margin of Error; Owner occupied: - Built 1939 or earlier
+HD01_VD12,Estimate; Renter occupied:
+HD02_VD12,Margin of Error; Renter occupied:
+HD01_VD13,Estimate; Renter occupied: - Built 2010 or later
+HD02_VD13,Margin of Error; Renter occupied: - Built 2010 or later
+HD01_VD14,Estimate; Renter occupied: - Built 2000 to 2009
+HD02_VD14,Margin of Error; Renter occupied: - Built 2000 to 2009
+HD01_VD15,Estimate; Renter occupied: - Built 1990 to 1999
+HD02_VD15,Margin of Error; Renter occupied: - Built 1990 to 1999
+HD01_VD16,Estimate; Renter occupied: - Built 1980 to 1989
+HD02_VD16,Margin of Error; Renter occupied: - Built 1980 to 1989
+HD01_VD17,Estimate; Renter occupied: - Built 1970 to 1979
+HD02_VD17,Margin of Error; Renter occupied: - Built 1970 to 1979
+HD01_VD18,Estimate; Renter occupied: - Built 1960 to 1969
+HD02_VD18,Margin of Error; Renter occupied: - Built 1960 to 1969
+HD01_VD19,Estimate; Renter occupied: - Built 1950 to 1959
+HD02_VD19,Margin of Error; Renter occupied: - Built 1950 to 1959
+HD01_VD20,Estimate; Renter occupied: - Built 1940 to 1949
+HD02_VD20,Margin of Error; Renter occupied: - Built 1940 to 1949
+HD01_VD21,Estimate; Renter occupied: - Built 1939 or earlier
+HD02_VD21,Margin of Error; Renter occupied: - Built 1939 or earlier

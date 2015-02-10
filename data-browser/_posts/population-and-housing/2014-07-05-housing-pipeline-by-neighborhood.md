@@ -3,12 +3,13 @@ layout: data
 title: Housing units by neighborhood
 chart-title: "Housing units in progress by project size and neighborhood, 2014 Q2"
 category: Population-and-Housing
-source: SF Planning Department
+source: SF Planning Department, Pipeline Report Q3 2014
 notes: The chart does not include very large projects over 800 units.
 published: true
 type: bar-horizontal
 column: Neighborhood
 axis-type: category
+pleft: 150
 groups: "1-2 Units,3-10 Units,11-49 Units,50-250 Units,Above 250 Units"
 data: "housing-overview/pipeline_by_neighborhood.csv"
 ---

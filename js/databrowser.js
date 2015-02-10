@@ -23,7 +23,9 @@ var browserData =
       "margin": "{{post.margin}}",
       "legendTitle": "{{post.legend-title}}",
       "emphasis": "{{post.emphasis}}",
-      "legend": "{{post.legend}}"
+      "legend": "{{post.legend}}",
+      "max": "{{post.max}}",
+      "pleft": "{{post.pleft}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}
