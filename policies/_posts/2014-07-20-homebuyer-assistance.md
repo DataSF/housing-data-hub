@@ -3,7 +3,7 @@ layout: policy
 title: Homebuyer Assistance
 summary: First time homebuyers that meet income thresholds or other criteria can receive loan or down payment assistance and counseling for buying their first home.
 published: true
-ami: 200
+ami: 120
 target: people
 image: homebuyers.png
 "data-category": "homebuyer-assistance"
@@ -15,15 +15,15 @@ Loan programs vary in the specifics of how much money can be lent, terms of repa
 
 The Mayor’s Office of Housing and Community Development (MOHCD) manages San Francisco’s buyer assistance programs, which include a variety of targeted subprograms. For example, one program is offered to San Francisco police officers who want to buy a home in the City.
 
-All of the programs have income and workshop requirements. In many cases, buyers are able to use down payment assistance when they purchase “Below Market Rate” (BMR) units under the [Inclusionary Housing Program](http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/). This additional assistance allows MOHCD to serve an even lower income homebuyer by lowering the first mortgage and therefore reducing monthly payments.
+All of the programs have income and workshop requirements. In many cases, buyers are able to use down payment assistance when they purchase “Below Market Rate” (BMR) units under the [Inclusionary Housing Program](/policies/inclusionary-housing/). This additional assistance allows MOHCD to serve an even lower income homebuyer by lowering the first mortgage and therefore reducing monthly payments.
 
 ### Income levels served
-First-time homebuyer programs in San Francisco serve individuals and families ranging from 80% of Area Median Income to 200% of Area Median Income. (Area Median Income is the middle income in an area where 50% of households make more and 50% make less.) The table shows income levels based on persons per household.
+First-time homebuyer programs in San Francisco serve individuals and families ranging from 80% of Area Median Income to 120% of Area Median Income. (Area Median Income is the middle income in an area where 50% of households make more and 50% make less.  There are also special programs designed for City-employed first responders and teachers that serve families up to 200% AMI) The table shows income levels based on persons per household for 2014. [Click here](http://sf-moh.org/index.aspx?page=22) for more information on income limits from MOHCD.
 
 AMI | One | Two | Three | Four
 ----|-----|-----|-------|------
 80% AMI | $54,350| $62,150| $69,900| $77,700
-200% AMI| $135,900|$155,400|$174,800|$194,200
+120% AMI| $81,550|$93,250|$104,900|$116,500
 
 ## Organizations
 Organization | What it does
