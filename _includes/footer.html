@@ -1,32 +1,32 @@
 <footer>
-    <div class="container footer">
-      <div class="row">
-        <div class="col-sm-4">
-          <p>The San Francisco Housing Data Hub is your go to resource for learning about policies and programs that affect housing affordability in San Francisco. We provide an overview of each of the major programs - what is it, its purpose, and related data.</p>
-        </div>
-        <div class="col-sm-4 left-border-dotted">
-          <ul class="list-unstyled">
+  <div class="container footer">
+    <div class="row">
+      <div class="col-sm-4">
+        <p>The San Francisco Housing Data Hub is your go to resource for learning about policies and programs that affect housing affordability in San Francisco. We provide an overview of each of the major programs - what is it, its purpose, and related data.</p>
+      </div>
+      <div class="col-sm-4 left-border-dotted">
+        <ul class="list-unstyled">
           {% for link in site.navigation %}
           <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
             <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
           </li>
           {% endfor %}
         </ul>
-        </div>
-        <div class="col-sm-4">
-          <span class="brand"><span class="brand-highlight">Data</span>SF</span>
-          <p>The Official Open Data Program of the City and County of San Francisco</p>
-        </div>
       </div>
-      <div class="row license">
+      <div class="col-sm-4">
+        <span class="brand"><span class="brand-highlight">Data</span>SF</span>
+        <p>The Official Open Data Program of the City and County of San Francisco</p>
+      </div>
+    </div>
+    <div class="row license">
       <div class="col-md-12">
         Data released by the City and County of San Francisco is licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a>. For other sources, such as State or Federal, please refer to the relevant terms and conditions.
       </div>
     </div>
-    </div>
-    <div class="text-center made-in">
-      Made with <i class="fa fa-heart"><span class="sr-only">heart</span></i> in San Francisco
-    </div>
+  </div>
+  <div class="text-center made-in">
+    Made with <i class="fa fa-heart"><span class="sr-only">heart</span></i> in San Francisco
+  </div>
 </footer>
 
 
@@ -49,46 +49,47 @@
 window.onload = function() {
 
   $('.hover-tooltip').tooltip();
-  $('.definition').popover();
+  $('.definition').popover(); 
   {% if page.layout == 'data' %}
-  init()
+  init() 
   {% endif %}
-  //hubOb();
-  //todo: add custom styles to style.css
+    //hubOb();
+    //todo: add custom styles to style.css
   {% if page.layout == 'policy' or page.embed == true %}
   $('table').addClass('table table-striped');
   $('#organizations').before($('#viz-wrapper'));
   buildTOC();
   var vizData = '';
   $('.nav.toc').append('<li><a href="#">Back to Top</a></li>');
-  $(".viz-wrapper").each(function(index, val){
+  $(".viz-wrapper").each(function(index, val) {
     vizData = browserData[$('#' + val.id + ' .data-browser-select').val()];
-    loadViz(vizData,val.id);
+    loadViz(vizData, val.id);
   });
-  $('.data-browser-select').change(function(){
+  $('.data-browser-select').change(function() {
     vizData = browserData[$(this).val()];
-    loadViz(vizData,$(this).parent().attr('id'));
+    loadViz(vizData, $(this).parent().attr('id'));
   });
-  $('body').scrollspy({ target: '.nav-toc' })
-  {% endif %}
+  $('body').scrollspy({
+    target: '.nav-toc'
+  }) {% endif %}
 }
 
-function loadViz(params,wrapper) {
-  if (['map-point','map'].indexOf(params.type) != -1) {
-      generateMap(params,wrapper);
-    } else {
-      generateChart(params,wrapper);
-    }
+function loadViz(params, wrapper) {
+  if (['map-point', 'map'].indexOf(params.type) != -1) {
+    generateMap(params, wrapper);
+  } else {
+    generateChart(params, wrapper);
+  }
 }
 
 function buildTOC() {
-  $('h2').each(function(i,el){
+  $('h2').each(function(i, el) {
     $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a></li>');
   })
 }
 
 function init(layout) {
-  if (['map-point','map'].indexOf("{{page.type}}") != -1) {
+  if (['map-point', 'map'].indexOf("{{page.type}}") != -1) {
     generateMap();
   } else {
     generateChart();
@@ -98,11 +99,13 @@ function init(layout) {
 var map;
 
 function generateMap(params, wrapper) {
-  var geofile = '{{site.baseurl}}/data/sf_census_tracts.json', colors = 'Blues', scale = 5;
+  var geofile = '{{site.baseurl}}/data/sf_census_tracts.json',
+    colors = 'Blues',
+    scale = 5;
   var geojson, json, column, d, container, units, mapType, margin, popup, desc, source, notes, legendTitle;
-  var overlays = ['{{site.baseurl}}/data/sup_districts.json','{{site.baseurl}}/data/neighborhoods.json'];
+  var overlays = ['{{site.baseurl}}/data/sup_districts.json', '{{site.baseurl}}/data/neighborhoods.json'];
 
-  if(params) {
+  if (params) {
     mapType = params.type;
     column = params.column;
     desc = params.description;
@@ -112,15 +115,15 @@ function generateMap(params, wrapper) {
     margin = params.margin;
     legendTitle = params.legendTitle;
     d = params.data;
-    if(params.colors != '') {
+    if (params.colors != '') {
       colors = params.colors
     }
-    if(params.scale != '') {
+    if (params.scale != '') {
       scale = parseInt(params.scale);
     }
-    var container = $('#'+wrapper + ' .map').attr('id');
+    var container = $('#' + wrapper + ' .map').attr('id');
     units = params.units;
-    $('#'+ wrapper + ' .chart-wrapper').hide();
+    $('#' + wrapper + ' .chart-wrapper').hide();
     $('#' + wrapper + ' .map-wrapper').show();
   } else {
     mapType = '{{page.type}}';
@@ -129,13 +132,12 @@ function generateMap(params, wrapper) {
     margin = '{{page.margin}}';
     popup = '{{page.popup}}';
     legendTitle = '{{page.legend-title}}';
-    d = "{{page.data}}";
+    d = "{{page.data}}"; 
     {% if page.colors %}
-    var colors = '{{page.colors}}';
+    var colors = '{{page.colors}}'; 
     {% else %}
-    var colors = 'Blues';
+    var colors = 'Blues'; 
     {% endif %}
-
     {% if page.scale %}
     var scale = {{page.scale}}; 
     {% else %}
@@ -150,7 +152,7 @@ function generateMap(params, wrapper) {
 
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
 
-  if(map) {
+  if (map) {
     //Todo: find a way to keep the map from reseetting, wasteful to keep loading the same data on every switch
     map.remove();
   }
@@ -162,19 +164,19 @@ function generateMap(params, wrapper) {
   source ? $('#' + wrapper + ' .source').html('<strong>Source:</strong> ' + source) : '';
   notes ? $('#' + wrapper + ' .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
-  if(mapType == "map-point") {
-    var markerCats = [];
-    {% if page.legend-cats %}
+  if (mapType == "map-point") {
+    var markerCats = []; 
+    {% if page.legend - cats %}
     legendCats = '{{page.legend-cats}}';
-    markerCats = legendCats.split(",");
+    markerCats = legendCats.split(","); 
     {% endif %}
 
     function bindPointPopup(feature, layer) {
       var popupContent = "<h1 class='popup-title'>" + feature.properties.label + "</h1>";
       popupContent += "<p>" + feature.properties.description + "</p>";
-      if(Array.isArray(popup)) {
+      if (Array.isArray(popup)) {
         popupContent += "<p>";
-        for(var i = 0; i < popup.length; i++) {
+        for (var i = 0; i < popup.length; i++) {
           if (feature.properties[popup[i].trim()] != '') {
             popupContent += "<b>" + popup[i].trim() + "</b>: " + feature.properties[popup[i].trim()] + "</br>";
           }
@@ -186,7 +188,7 @@ function generateMap(params, wrapper) {
 
     var customLayer = L.geoJson(null, {
       pointToLayer: function(feature, latlng) {
-        if(markerCats.indexOf(feature.properties[column]) == -1) {
+        if (markerCats.indexOf(feature.properties[column]) == -1) {
           markerCats.push(feature.properties[column]);
         }
         return new L.CircleMarker(latlng, {
@@ -207,25 +209,25 @@ function generateMap(params, wrapper) {
     for (var i = 0; i < overlays.length; i++) {
       (function(i) {
         $.getJSON(overlays[i], function(geodata) {
-          geojson = L.geoJson(geodata, {
-            style: {
-              weight: 2,
-              opacity: 0.4,
-              color: '#808080',
-              fillOpacity: 0
-            },
-            onEachFeature: onEachFeature
+            geojson = L.geoJson(geodata, {
+              style: {
+                weight: 2,
+                opacity: 0.4,
+                color: '#808080',
+                fillOpacity: 0
+              },
+              onEachFeature: onEachFeature
+            });
+            overlayLayers[i] = geojson;
+          })
+          .done(function() {
+            if (i = overlays.length - 1) {
+              setLayers(overlayLayers);
+            }
           });
-          overlayLayers[i] = geojson;
-        })
-        .done(function(){
-          if(i = overlays.length - 1) {
-            setLayers(overlayLayers);
-          }
-        });
       })(i);
     };
-    
+
     function setLayers(layers) {
       //Todo: abstract this so that I can pass in names of layers earlier on, for now, these are hard coded
       var baseLayers = {
@@ -233,9 +235,9 @@ function generateMap(params, wrapper) {
         "Supervisor Districts": layers[0],
         "Neighborhoods": layers[1]
       }
-      L.control.layers(baseLayers,null).addTo(map);
+      L.control.layers(baseLayers, null).addTo(map);
     }
-    
+
     //var legend = L.mapbox.legendControl().addLegend(()).addTo(map);
 
     var layerData;
@@ -251,8 +253,8 @@ function generateMap(params, wrapper) {
       $(this).children('.legend-filter').prop('checked') ? $(this).children('.legend-filter').prop('checked', false) : $(this).children('.legend-filter').prop('checked', true);
       $(this).children('i').toggleClass('off');
       var enabled = {};
-      $('.legend-filter').each(function(i,el){
-        if($(el).prop('checked')) enabled[$(el).val()] = true;
+      $('.legend-filter').each(function(i, el) {
+        if ($(el).prop('checked')) enabled[$(el).val()] = true;
       });
       csvLayer.clearLayers();
       csvLayer.options.filter = function(feature, layer) {
@@ -262,29 +264,28 @@ function generateMap(params, wrapper) {
     });
 
   } else {
+    var autoPopup = new L.Popup({
+      autoPan: false
+    });
     $.ajax({
       type: "GET",
       url: "{{site.baseurl}}/data/" + d,
       dataType: "text",
       success: function(data) {
         json = scaleData(d3.csv.parse(data));
+        $.getJSON(geofile, function(geodata) {
+          geodata = addDataToGeoJson(json, geodata)
+          geojson = L.geoJson(geodata, {
+            style: getStyle,
+            onEachFeature: onEachFeature
+          }).addTo(map);
+          var legendCont = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
+        });
       }
     });
-
-    $.getJSON(geofile, function(geodata) {
-      geodata = addDataToGeoJson(json, geodata)
-      geojson = L.geoJson(geodata, {
-        style: getStyle,
-        onEachFeature: onEachFeature
-      }).addTo(map);
-      var legendCont = L.mapbox.legendControl().addLegend(getLegendHTML()).addTo(map);
-    });
-    var autoPopup = new L.Popup({
-      autoPan: false
-    });
   }
-  
-  var valuesOnlyArray; 
+
+  var valuesOnlyArray;
 
   function scaleData(data) {
     valuesOnlyArray = extractValuesFromObjectArray(data)
@@ -308,7 +309,7 @@ function generateMap(params, wrapper) {
       if (dataObject && !(isNaN(parseFloat(dataObject[column])))) {
         feature.properties.scaledValue = dataObject.scaledValue;
         feature.properties.value = parseFloat(dataObject[column]);
-        if(margin != "") {
+        if (margin != "") {
           feature.properties.margin = parseFloat(dataObject[margin]);
         }
       } else {
@@ -353,7 +354,7 @@ function generateMap(params, wrapper) {
 
   // get color depending on population density value
   function getColor(num, s) {
-    if(num === -1) {
+    if (num === -1) {
       return "transparent";
     }
     return colorbrewer[colors][s][num - 1];
@@ -370,18 +371,19 @@ function generateMap(params, wrapper) {
   var closeTooltip;
 
   // control that shows state info on hover
-  var info = L.control({position: 'bottomleft'});
+  var info = L.control({
+    position: 'bottomleft'
+  });
 
-  info.onAdd = function (map) {
+  info.onAdd = function(map) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
   };
 
-  info.update = function (props) {
+  info.update = function(props) {
     this._div.innerHTML = (props ?
-      '<b>' + props.label + '</b>'
-      : '');
+      '<b>' + props.label + '</b>' : '');
   };
 
   info.addTo(map);
@@ -392,49 +394,49 @@ function generateMap(params, wrapper) {
 
   function mousemove(e) {
     var layer = e.target;
-    if(mapType != "map-point") {
+    if (mapType != "map-point") {
       var value = "<p>" + layer.feature.properties.value + units + "</p>";
-      if(layer.feature.properties.margin) {
+      if (layer.feature.properties.margin) {
         value += "<p>Margin of error: +/-" + layer.feature.properties.margin + "%</p>";
       }
-      if(layer.feature.properties.value == -1) {
+      if (layer.feature.properties.value == -1) {
         value = "No Data";
       }
       autoPopup.setLatLng(e.latlng);
       autoPopup.setContent('<h1 class="popup-title">' + layer.feature.properties.LABEL + '</h2>' +
-        "<p>" + value + "</p>" );
+        "<p>" + value + "</p>");
 
       if (!autoPopup._map) autoPopup.openOn(map);
       window.clearTimeout(closeTooltip);
     }
-    
-      // highlight feature
-      layer.setStyle({
-        weight: 3,
-        opacity: 0.4,
-        color: d3.rgb('#808080').darker()
-      });
 
-      if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToBack();
-      }
+    // highlight feature
+    layer.setStyle({
+      weight: 3,
+      opacity: 0.4,
+      color: d3.rgb('#808080').darker()
+    });
 
-      info.update(layer.feature.properties);
+    if (!L.Browser.ie && !L.Browser.opera) {
+      layer.bringToBack();
+    }
+
+    info.update(layer.feature.properties);
   }
 
   function mouseout(e) {
     var to = e.originalEvent.toElement
     geojson.resetStyle(e.target);
-    if(mapType == 'map') {
+    if (mapType == 'map') {
       closeTooltip = window.setTimeout(function() {
-      map.closePopup();
-    }, 100);
+        map.closePopup();
+      }, 100);
     }
     info.update();
   }
 
   function zoomToFeature(e) {
-    if(map.getZoom() >= 12) {
+    if (map.getZoom() >= 12) {
       map.setView(e.latlng, map.getZoom() + 1);
     } else {
       map.fitBounds(e.target.getBounds());
@@ -448,8 +450,8 @@ function generateMap(params, wrapper) {
     var labels = [];
     for (var i = 0; i < scale; i++) {
       var range = legendColors.invertExtent(colorbrewer[colors][scale][i]);
-      from = Math.round(range[0] * 10)/10;
-      to = Math.round(range[1] * 10)/10;
+      from = Math.round(range[0] * 10) / 10;
+      to = Math.round(range[1] * 10) / 10;
       labels.push(
         '<i style="background:' + getColor(i + 1, scale) + '"></i> ' +
         from + (to ? '&ndash;' + to : '+') + units);
@@ -465,13 +467,13 @@ function generateMap(params, wrapper) {
     title.html('Legend (click to filter)');
     container.append(title);
 
-    for (var i=0; i < categories.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
       var item = $('<div class="legend-item">');
       var symbol = $('<i>');
       symbol.css("background", getColor(i + 1, categories.length));
       item.append(symbol);
 
-      var checkbox = $('<input class="legend-filter" type="checkbox" id="' + i + '" checked="true" style="display:none;" value="'+ categories[i] + '" />');
+      var checkbox = $('<input class="legend-filter" type="checkbox" id="' + i + '" checked="true" style="display:none;" value="' + categories[i] + '" />');
       item.append(checkbox);
 
       var label = $('<span>').html(categories[i]);
@@ -486,41 +488,60 @@ function generateMap(params, wrapper) {
 
 
 function generateChart(params, wrapper) {
-  var max = null, pleft = null;
+  var max = null,
+    pleft = null;
   if (params) {
-    var data = params.data, type = params.type, axisType = params["axis-type"], yFormat = params["y-format"], x = params.column, desc = params.description, source = params.source, notes = params.notes, groups = params.groups, emphasis = params.emphasis, legend = params.legend, max = parseInt(params.max), pleft = parseInt(params.pleft);
-    $('#'+ wrapper + ' .chart-wrapper').show();
+    var data = params.data,
+      type = params.type,
+      axisType = params["axis-type"],
+      yFormat = params["y-format"],
+      x = params.column,
+      desc = params.description,
+      source = params.source,
+      notes = params.notes,
+      groups = params.groups,
+      emphasis = params.emphasis,
+      legend = params.legend,
+      max = parseInt(params.max),
+      pleft = parseInt(params.pleft);
+    $('#' + wrapper + ' .chart-wrapper').show();
     $('#' + wrapper + ' .map-wrapper').hide();
     var container = 'chart';
     var chartcontainer = '#' + wrapper + ' .chart';
   } else {
     var chartcontainer = '#chart';
-    var data = '{{page.data}}', type = '{{page.type}}', 
-      axisType = '{{page.axis-type}}', yFormat = '{{page.y-format}}', x = '{{page.column}}', legend = '{{page.legend}}', groups = '{{page.groups}}', emphasis = '{{page.emphasis}}', show = true;
-    {% if page.max %}
-    max = {{page.max}};
-    {% endif %}
-    {% if page.pleft %}
-    pleft = {{page.pleft}};
-    {% endif %}
+    var data = '{{page.data}}',
+      type = '{{page.type}}',
+      axisType = '{{page.axis-type}}',
+      yFormat = '{{page.y-format}}',
+      x = '{{page.column}}',
+      legend = '{{page.legend}}',
+      groups = '{{page.groups}}',
+      emphasis = '{{page.emphasis}}',
+      show = true; 
+      {% if page.max %}
+      max = {{page.max}}; 
+      {% endif %} 
+      {% if page.pleft %}
+      pleft = {{page.pleft}}; 
+      {% endif %}
   }
 
-  if(legend == '') {
-        legend = 'bottom';
-      } 
-      else if(legend == 'none') {
-        show = false;
-        legend = 'bottom';
-      }
+  if (legend == '') {
+    legend = 'bottom';
+  } else if (legend == 'none') {
+    show = false;
+    legend = 'bottom';
+  }
   var rotated = false;
-  if(groups != '') {
-        groups = groups.split(',');
-      } else {
-        groups = [];
-      }
+  if (groups != '') {
+    groups = groups.split(',');
+  } else {
+    groups = [];
+  }
   if (type == '') {
     type = 'area';
-  } else if (type =='bar-horizontal') {
+  } else if (type == 'bar-horizontal') {
     type = 'bar';
     rotated = true;
   }
@@ -537,39 +558,45 @@ function generateChart(params, wrapper) {
   source ? $('#' + wrapper + ' .source').html('<strong>Source:</strong> ' + source) : '';
   notes ? $('#' + wrapper + ' .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
-  emphasis = (emphasis != '' ? emphasis.split(",") : [null,null,null]);
+  emphasis = (emphasis != '' ? emphasis.split(",") : [null, null, null]);
 
   function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
-    var $$ = this, config = $$.config, CLASS = $$.CLASS,
-        titleFormat = config.tooltip_format_title || defaultTitleFormat,
-        nameFormat = config.tooltip_format_name || function (name) { return name; },
-        valueFormat = config.tooltip_format_value || defaultValueFormat,
-        text, i, title, value, name, bgcolor;
-    
+    var $$ = this,
+      config = $$.config,
+      CLASS = $$.CLASS,
+      titleFormat = config.tooltip_format_title || defaultTitleFormat,
+      nameFormat = config.tooltip_format_name || function(name) {
+        return name;
+      },
+      valueFormat = config.tooltip_format_value || defaultValueFormat,
+      text, i, title, value, name, bgcolor;
+
     // You can access all of data like this:
     var allData = $$.data.targets;
 
     for (i = 0; i < d.length; i++) {
-        if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
-        
-        if (! text) {
-          title = titleFormat ? titleFormat(d[i].x) : d[i].x;
-            text = "<table class='" + CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
-        }
+      if (!(d[i] && (d[i].value || d[i].value === 0))) {
+        continue;
+      }
 
-        name = nameFormat(d[i].name);
-        value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
-        if((typeof allData[i+i+1] != "undefined") && allData[i+i+1].id.indexOf("MOE") > -1) {
-          value += " +/-" + valueFormat(allData[i+i+1].values[d[i].index].value);
-        }
-        bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+      if (!text) {
+        title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+        text = "<table class='" + CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+      }
 
-        text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
-        text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
-        text += "<td class='value'>" + value + "</td>";
-        text += "</tr>";
+      name = nameFormat(d[i].name);
+      value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+      if ((typeof allData[i + i + 1] != "undefined") && allData[i + i + 1].id.indexOf("MOE") > -1) {
+        value += " +/-" + valueFormat(allData[i + i + 1].values[d[i].index].value);
+      }
+      bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+      text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
+      text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
+      text += "<td class='value'>" + value + "</td>";
+      text += "</tr>";
     }
-    return text + "</table>";   
+    return text + "</table>";
   }
 
   var chart = c3.generate({
@@ -581,24 +608,24 @@ function generateChart(params, wrapper) {
     data: {
       x: x,
       url: '{{site.baseurl}}/data/' + data,
-      groups: [ groups ],
+      groups: [groups],
       type: type,
       color: function(color, d) {
-        return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#'+emphasis[2]) : color;
+        return d.id && d.index == emphasis[1] && d.id == emphasis[0] ? d3.rgb('#' + emphasis[2]) : color;
       },
       order: null,
-      hide: ["MOE","MOE_Renter","MOE_Owner","MOE_More","MOE_Less"]
+      hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
     },
     tooltip: {
       contents: tooltip_contents
     },
     color: {
-      pattern: ['#5a9bd4','#7ac36a','#faa75b','#9e67ab','#ce7058','#d77fb4','#f15a60','#737373']
+      pattern: ['#5a9bd4', '#7ac36a', '#faa75b', '#9e67ab', '#ce7058', '#d77fb4', '#f15a60', '#737373']
     },
     legend: {
       position: legend,
       show: show,
-      hide: ["MOE","MOE_Renter","MOE_Owner","MOE_More","MOE_Less"]
+      hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
     },
     axis: {
       rotated: rotated,
@@ -612,7 +639,10 @@ function generateChart(params, wrapper) {
       y: {
         min: 0,
         max: max,
-        padding: {bottom:0, top:3 },
+        padding: {
+          bottom: 0,
+          top: 3
+        },
         tick: {
           format: yFormat
         }
@@ -623,14 +653,19 @@ function generateChart(params, wrapper) {
   /*chart.hide(['MOE','MOE_Renter','MOE_Owner'],{withLegend: true});*/
 }
 </script>
-<script> 
-var $buoop = {c:2}; 
-function $buo_f(){ 
- var e = document.createElement("script"); 
- e.src = "//browser-update.org/update.js"; 
- document.body.appendChild(e);
+<script>
+var $buoop = {
+  c: 2
 };
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-catch(e){window.attachEvent("onload", $buo_f)}
+
+function $buo_f() {
+  var e = document.createElement("script");
+  e.src = "//browser-update.org/update.js";
+  document.body.appendChild(e);
+};
+try {
+  document.addEventListener("DOMContentLoaded", $buo_f, false)
+} catch (e) {
+  window.attachEvent("onload", $buo_f)
+}
 </script>
-  
