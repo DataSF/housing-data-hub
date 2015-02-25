@@ -1,7 +1,8 @@
 - supergroup: "Housing Overview"
   categories:
-  - population-and-housing
-  - occupancy-and-tenure
+  - population-and-households
+  - housing-stock-and-occupancy
+  - renters-and-owners
   - housing-affordability
 - supergroup: "Policies and Programs"
   categories:
