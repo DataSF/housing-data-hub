@@ -1,7 +1,7 @@
 ---
 layout: data
 title: "Owner-occupied units"
-category: "Occupancy-and-Tenure"
+category: "renters-and-owners"
 data: DEC_10_DP_DPDP1.csv
 column: HD02_S181
 scale: "5"
