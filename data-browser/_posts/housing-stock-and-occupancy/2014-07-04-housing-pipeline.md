@@ -2,7 +2,7 @@
 layout: data
 title: Housing units in progress
 chart-title: New housing units in progress by status and building size, 2014 Q3
-category: Population-and-Housing
+category: housing-stock-and-occupancy
 source: SF Planning Department, Pipeline Report Q3 2014
 notes: The chart does not include very large projects over 800 units.
 published: true
