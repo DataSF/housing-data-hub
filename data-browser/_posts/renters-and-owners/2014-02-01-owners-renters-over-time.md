@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Tenure over time
-category: "Occupancy-and-Tenure"
+category: "renters-and-owners"
 data: tenure_by_decade.csv
 "y-format": ","
 published: true
