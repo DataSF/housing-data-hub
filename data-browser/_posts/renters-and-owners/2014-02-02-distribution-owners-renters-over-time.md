@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Tenure distribution over time
-category: "Occupancy-and-Tenure"
+category: "renters-and-owners"
 data: housing-overview/tenure_distribution_over_time.csv
 "y-format": ","
 published: true
