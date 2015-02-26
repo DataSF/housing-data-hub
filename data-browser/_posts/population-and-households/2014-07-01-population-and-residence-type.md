@@ -1,10 +1,10 @@
 ---
 layout: data
-title: Housing age
-"chart-title": Estimated number of housing units by year built
-category: "Population-and-Housing"
-data: housing-overview/ACS13_5YR_housing_age.csv
-column: Decades
+title: Population and resident types
+"chart-title": Total population and type of residence by decade
+category: "population-and-households"
+data: "housing-overview/ACS13_5YR_housing_age.csv"
+column: Year
 "axis-type": category
 type: bar
 published: true
