@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Housing units over time
-"chart-title": Housing units by year built
+"chart-title": Total housing units by year
 category: "housing-stock-and-occupancy"
 data: "decennial-census/housing_units.csv"
 column: Year
@@ -15,4 +15,4 @@ colors: YlGn
 notes: ""
 ---
 
-Nearly half of San Francisco's housing units were built before 1940 (48.6% +/- .5%). A majority of units were constructed before 1980 (83.5% +/- .8%)
+The chart below shows the number of housing units in San Francisco per the Decennial Census. Each decade shows in an increase in the total number of housing units, with the rate of new units increasing 2%, 4%, 5%, and 9% between each decade respectively. 
