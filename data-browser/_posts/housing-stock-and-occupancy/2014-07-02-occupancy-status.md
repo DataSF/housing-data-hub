@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Housing age
-"chart-title": Housing units by occupancy status by decade
+title: Occupied and vacant housing units
+"chart-title": Occupied and vacant housing units by decade
 category: "housing-stock-and-occupancy"
 data: "decennial-census/housing_units_occ_status.csv"
 column: Year
