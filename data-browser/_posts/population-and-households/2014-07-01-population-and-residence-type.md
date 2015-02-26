@@ -12,7 +12,7 @@ source: "Minnesota Population Center. National Historical Geographic Information
 scale: "5"
 colors: YlGn
 "y-format": ","
-notes: ""
+notes: "According to the Census \"group quarters are places where people live or stay, in a group living arrangement, which is owned or managed by an entity or organization providing housing and/or services for the residents. This is not a typical household-type living arrangement. These services  may  include custodial or medical care as well as other types of assistance, and residency is commonly restricted to those receiving these services. People living in group quarters are usually not related to each other.\""
 ---
 
-INSERT
+The chart below shows the total population by decade, which consists of the population living in households and group quarters. The household population living in households is the relevant 
