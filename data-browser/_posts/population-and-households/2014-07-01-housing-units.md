@@ -2,7 +2,7 @@
 layout: data
 title: Pp bytype
 "chart-title": Total population and type of residence by decade
-category: "Population-and-Housing"
+category: "population-and-households"
 data: "decennial-census/population_and_resident_type.csv"
 column: Year
 "axis-type": category
