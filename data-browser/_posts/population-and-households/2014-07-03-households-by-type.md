@@ -6,7 +6,7 @@ category: "population-and-households"
 data: "decennial-census/households_by_type.csv"
 column: Year
 "axis-type": category
-type: bar
+type: line
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
