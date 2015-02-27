@@ -2,7 +2,7 @@
 layout: data
 title: Housing age
 "chart-title": Estimated number of housing units by year built
-category: "Population-and-Housing"
+category: "population-and-households"
 data: housing-overview/ACS13_5YR_housing_age.csv
 column: Decades
 "axis-type": category
