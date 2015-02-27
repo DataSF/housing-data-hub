@@ -4,7 +4,7 @@ title: Average household size
 "chart-title": Average household size by decade
 category: "population-and-households"
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
-notes: Average households size was calculated by dividing the household population by the number of households.
+notes: Average household size was calculated by dividing the household population by the number of households.
 published: true
 type: bar
 column: Year
