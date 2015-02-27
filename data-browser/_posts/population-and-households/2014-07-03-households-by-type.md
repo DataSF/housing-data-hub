@@ -1,18 +1,18 @@
 ---
 layout: data
-title: Housing age
-"chart-title": Estimated number of housing units by year built
-category: "Population-and-Housing"
-data: housing-overview/ACS13_5YR_housing_age.csv
-column: Decades
+title: Family and nonfamily households
+"chart-title": "Family and non-family households by decade"
+category: "population-and-households"
+data: "decennial-census/households_by_type.csv"
+column: Year
 "axis-type": category
 type: bar
 published: true
-source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
+source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
 colors: YlGn
 "y-format": ","
-notes: "This data is based on a sample survey conducted between 2008 and 2012. As a result, it does not fully capture units created since 2010."
+notes: ""
 ---
 
-Nearly half of San Francisco's housing units were built before 1940 (48.6% +/- .5%). A majority of units were constructed before 1980 (83.5% +/- .8%)
+The chart below shows both family and nonfamily households over time. A family consists of two or more people (one of whom is the householder) related by birth, marriage, or adoption residing in the same housing unit. A household consists of all people who occupy a housing unit regardless of relationship. A household may consist of a person living alone or multiple unrelated individuals or families living together.
