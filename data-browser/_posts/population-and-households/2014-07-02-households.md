@@ -15,4 +15,4 @@ colors: YlGn
 notes: ""
 ---
 
-Nearly half of San Francisco's housing units were built before 1940 (48.6% +/- .5%). A majority of units were constructed before 1980 (83.5% +/- .8%)
+A household consists of one or more people leaving together within a single housing unit. The chart below shows the total number of households over time, including both family and nonfamily households.
