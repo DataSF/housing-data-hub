@@ -10,7 +10,7 @@ var browserData =
   		"column" : "{{post.column}}",
   		"description" : '{{post.content | strip_newlines | escape_once }}',
   		"source" : "{{post.source}}",
-  		"notes" : "{{post.notes}}",
+  		"notes" : "{{post.notes | escape }}",
   		"chart-title" : "{{post.chart-title}}",
   		"scale" : "{{post.scale}}",
   		"colors" : "{{post.colors}}",

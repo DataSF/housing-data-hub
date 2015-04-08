@@ -1,18 +1,18 @@
 ---
 layout: data
-title: Housing age
-"chart-title": Estimated number of housing units by year built
-category: "Population-and-Housing"
-data: housing-overview/ACS13_5YR_housing_age.csv
-column: Decades
+title: Population and resident types
+"chart-title": Total population and type of residence by decade
+category: "population-and-households"
+data: "decennial-census/population_and_resident_type.csv"
+column: Year
 "axis-type": category
-type: bar
+type: line
 published: true
-source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
+source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
 colors: YlGn
 "y-format": ","
-notes: "This data is based on a sample survey conducted between 2008 and 2012. As a result, it does not fully capture units created since 2010."
+notes: "According to the Census \"group quarters are places where people live or stay, in a group living arrangement, which is owned or managed by an entity or organization providing housing and/or services for the residents. This is not a typical household-type living arrangement. These services  may  include custodial or medical care as well as other types of assistance, and residency is commonly restricted to those receiving these services. People living in group quarters are usually not related to each other.\""
 ---
 
-Nearly half of San Francisco's housing units were built before 1940 (48.6% +/- .5%). A majority of units were constructed before 1980 (83.5% +/- .8%)
+The chart below shows the total population by decade, which consists of the population living in households and group quarters. The household population lives in private housing units while people in group quarters live in group living facilities such as correctional institutions, juvenile facilities, skilled nursing facilities, college residence halls, military barracks, group homes, and workers' dormitories.

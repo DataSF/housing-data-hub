@@ -18,6 +18,9 @@ navigation:
   url: /data-browser/
   actual: /data-browser/index.html
   layout: data
+- text: Resources
+  url: /resources/
+  actual: /resources/index.html
 - text: About
   url: /about/
   actual: /about/index.html

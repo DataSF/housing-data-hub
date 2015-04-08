@@ -1,18 +1,18 @@
 ---
 layout: data
-title: Housing age
-"chart-title": Estimated number of housing units by year built
-category: "Population-and-Housing"
-data: housing-overview/ACS13_5YR_housing_age.csv
-column: Decades
+title: Households by decade
+"chart-title": Total households by decade
+category: "population-and-households"
+data: "decennial-census/households.csv"
+column: Year
 "axis-type": category
-type: bar
+type: line
 published: true
-source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
+source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
 colors: YlGn
 "y-format": ","
-notes: "This data is based on a sample survey conducted between 2008 and 2012. As a result, it does not fully capture units created since 2010."
+notes: ""
 ---
 
-Nearly half of San Francisco's housing units were built before 1940 (48.6% +/- .5%). A majority of units were constructed before 1980 (83.5% +/- .8%)
+A household consists of one or more people leaving together within a single housing unit. The chart below shows the total number of households over time, including both family and nonfamily households.
