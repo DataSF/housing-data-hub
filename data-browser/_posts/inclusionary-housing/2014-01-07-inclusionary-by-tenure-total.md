@@ -12,6 +12,7 @@ colors: Blues
 "axis-type": category
 "y-format": ","
 source: "Mayor's Office of Housing and Community Development."
+portalID: "f2n6-ybnq"
 notes: null
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 ---

@@ -165,8 +165,9 @@ function generateMap(params, wrapper) {
   notes ? $('#' + wrapper + ' .notes').html('<strong>Notes:</strong> ' + notes) : '';
 
   if (mapType == "map-point") {
+    console.log("hello");
     var markerCats = []; 
-    {% if page.legend - cats %}
+    {% if page["legend-cats"] %}
     legendCats = '{{page.legend-cats}}';
     markerCats = legendCats.split(","); 
     {% endif %}
@@ -204,30 +205,6 @@ function generateMap(params, wrapper) {
       onEachFeature: bindPointPopup
     });
 
-    var overlayLayer;
-    var overlayLayers = [];
-    for (var i = 0; i < overlays.length; i++) {
-      (function(i) {
-        $.getJSON(overlays[i], function(geodata) {
-            geojson = L.geoJson(geodata, {
-              style: {
-                weight: 2,
-                opacity: 0.4,
-                color: '#808080',
-                fillOpacity: 0
-              },
-              onEachFeature: onEachFeature
-            });
-            overlayLayers[i] = geojson;
-          })
-          .done(function() {
-            if (i = overlays.length - 1) {
-              setLayers(overlayLayers);
-            }
-          });
-      })(i);
-    };
-
     function setLayers(layers) {
       //Todo: abstract this so that I can pass in names of layers earlier on, for now, these are hard coded
       var baseLayers = {
@@ -243,11 +220,37 @@ function generateMap(params, wrapper) {
     var layerData;
     
     var csvLocation = (/^https?:\/\//.test(d)) ? d : '{{site.baseurl}}/data/' + d;
+    
+    console.log(csvLocation);
 
     var csvLayer = omnivore.csv(csvLocation, null, customLayer)
       .on('ready', function() {
+        console.log(csvLayer);
         layerData = csvLayer.toGeoJSON();
         var legendCont = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
+        var overlayLayer;
+        var overlayLayers = [];
+        for (var i = 0; i < overlays.length; i++) {
+          (function(i) {
+            $.getJSON(overlays[i], function(geodata) {
+                geojson = L.geoJson(geodata, {
+                  style: {
+                    weight: 2,
+                    opacity: 0.4,
+                    color: '#808080',
+                    fillOpacity: 0
+                  },
+                  onEachFeature: onEachFeature
+                });
+                overlayLayers[i] = geojson;
+              })
+              .done(function() {
+                if (i = overlays.length - 1) {
+                  setLayers(overlayLayers);
+                }
+              });
+          })(i);
+        };
       })
       .addTo(map);
 
@@ -498,6 +501,7 @@ function generateChart(params, wrapper) {
       axisType = params["axis-type"],
       yFormat = params["y-format"],
       x = params.column,
+      xInputFormat = params.xInputFormat,
       desc = params.description,
       source = params.source,
       notes = params.notes,
@@ -517,6 +521,7 @@ function generateChart(params, wrapper) {
       axisType = '{{page.axis-type}}',
       yFormat = '{{page.y-format}}',
       x = '{{page.column}}',
+      xInputFormat = '{{page.xInputFormat}}',
       legend = '{{page.legend}}',
       groups = '{{page.groups}}',
       emphasis = '{{page.emphasis}}',
@@ -554,6 +559,10 @@ function generateChart(params, wrapper) {
     xFormat = '%m/%d/%Y';
   } else {
     xFormat = '';
+  }
+  
+  if(xInputFormat == '') {
+    xInputFormat = "%Y-%m-%d";
   }
 
   desc ? $('#' + wrapper + ' .description').html(desc) : '';
@@ -603,7 +612,7 @@ function generateChart(params, wrapper) {
   
   //todo: abstract the data call across charts/maps
   var url = (/^https?:\/\//.test(data)) ? data : '{{site.baseurl}}/data/' + data;
-
+  console.log(xInputFormat);
   var chart = c3.generate({
     bindto: chartcontainer,
     padding: {
@@ -612,7 +621,15 @@ function generateChart(params, wrapper) {
     },
     data: {
       x: x,
+      xFormat: xInputFormat,
       url: url,
+      /*
+      rows: [
+        ["Year","On","Off","Combination"],
+        [1989,2,3,4],
+        [1990,4,0,2],
+        [1991,3,5,2],
+      ],*/
       groups: [groups],
       type: type,
       color: function(color, d) {

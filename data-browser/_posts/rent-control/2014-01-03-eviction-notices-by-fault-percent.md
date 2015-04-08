@@ -7,6 +7,7 @@ category: "Rent-Control"
 data: "rent-control/eviction_notices_distribution.csv"
 column: Year
 source: San Francisco Rent Board
+portalID: "5cei-gny5"
 published: true
 groups: "Fault Eviction Notices,No Fault Eviction Notices"
 type: bar

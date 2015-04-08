@@ -4,13 +4,14 @@ title: Units in process
 "chart-title": "Inclusionary units in the planning, permitting and development process as of 2014 Q1"
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: bmr_pipeline.csv
+data: inclusionary/bmr_pipeline.csv
 x: Status
 column: Status
 type: bar
 "axis-type": category
 source: "Mayor's Office of Housing and Community Development"
-published: true
+portalID: "f2n6-ybnq"
+published: false
 scale: "5"
 colors: Blues
 "y-format": ","

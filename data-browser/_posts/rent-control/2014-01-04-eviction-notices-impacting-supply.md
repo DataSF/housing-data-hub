@@ -7,6 +7,7 @@ category: "Rent-Control"
 data: "rent-control/eviction_notices_affecting_supply.csv"
 column: Year
 source: San Francisco Rent Board
+portalID: "5cei-gny5"
 published: true
 type: line
 "axis-type": ""

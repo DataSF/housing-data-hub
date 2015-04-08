@@ -6,6 +6,7 @@ category: "Rent-Control"
 data: "https://cdn.rawgit.com/DataSF/summary-data/86bde22c67b91ac519c760b2a16549935ac58816/eviction_notices_over_time.csv"
 column: Year
 source: San Francisco Rent Board
+portalID: "5cei-gny5"
 published: true
 type: bar
 scale: "5"

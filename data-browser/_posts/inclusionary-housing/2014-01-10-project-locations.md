@@ -3,17 +3,17 @@ layout: data
 title: Unit locations by construction status
 "chart-title": Projects with planned or constructed inclusionary units as of 2014 Q1
 category: "Inclusionary-Housing"
-data: inclusionary/project_locations_with_units.csv
+data: inclusionary/inclusionary_locations.csv
 type: "map-point"
-column: Status
+column: status_of_project
 scale: "4"
 colors: Set2
 published: true
 "axis-type": category
 "y-format": "$,"
 source: "Mayor's Office of Housing and Community Development."
+portalID: "f2n6-ybnq"
 notes: null
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 "legend-cats": "Entitled,BP Issued,First Const Doc Issued,Completed"
 popup: "Total inclusionary units at this location, Tenure, Principal project triggering inclusionary requirement, Entitlement year, Building completion year"
 ---

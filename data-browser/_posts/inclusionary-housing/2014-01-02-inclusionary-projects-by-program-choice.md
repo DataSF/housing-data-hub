@@ -5,8 +5,9 @@ title: Developer choice (completed)
 category: "Inclusionary-Housing"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: inclusionary/projects_by_dev_choice.csv
-column: BMR Project Type
+column: Project Type
 source: "Mayor's Office of Housing and Community Development"
+portalID: "f2n6-ybnq"
 published: true
 type: bar
 scale: "5"
