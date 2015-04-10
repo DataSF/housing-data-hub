@@ -491,6 +491,12 @@ function generateMap(params, wrapper) {
   }
 }
 
+function isFunction(functionToCheck) {
+  var getType = {};
+  return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+}
+
+
 
 function generateChart(params, wrapper) {
   var max = null,
@@ -518,8 +524,13 @@ function generateChart(params, wrapper) {
     var chartcontainer = '#chart';
     var data = '{{page.data}}',
       type = '{{page.type}}',
+      mimeType = '{{page.datatype}}',
       axisType = '{{page.axis-type}}',
+      {% if page.y-format contains 'function' %}
+      yFormat = {{page.y-format}},
+      {% else %}
       yFormat = '{{page.y-format}}',
+      {% endif %}
       x = '{{page.column}}',
       xInputFormat = '{{page.xInputFormat}}',
       legend = '{{page.legend}}',
@@ -533,7 +544,7 @@ function generateChart(params, wrapper) {
       pleft = {{page.pleft}}; 
       {% endif %}
   }
-
+  
   if (legend == '') {
     legend = 'bottom';
   } else if (legend == 'none') {
@@ -552,9 +563,17 @@ function generateChart(params, wrapper) {
     type = 'bar';
     rotated = true;
   }
-  if (yFormat != '') {
-    yFormat = d3.format(yFormat)
+  if (mimeType == ''){
+    mimeType = 'csv';
   }
+  
+  console.log(isFunction(yFormat));
+  
+  if (yFormat != '' && !isFunction(yFormat)) {
+    yFormat = d3.format(yFormat);
+  }
+
+  
   if (axisType == 'timeseries') {
     xFormat = '%m/%d/%Y';
   } else {
@@ -611,8 +630,9 @@ function generateChart(params, wrapper) {
   }
   
   //todo: abstract the data call across charts/maps
+  //"https://data.sfgov.org/resource/f2n6-ybnq.json?$select=building_completion_calendar_year%20as%20%22year%22,sum(total_bmr_s_in_this_building_or_phase)%20as%20%22total%20units%22&$group=building_completion_calendar_year&$order=building_completion_calendar_year"
   var url = (/^https?:\/\//.test(data)) ? data : '{{site.baseurl}}/data/' + data;
-  console.log(xInputFormat);
+  
   var chart = c3.generate({
     bindto: chartcontainer,
     padding: {
@@ -620,16 +640,14 @@ function generateChart(params, wrapper) {
       left: pleft
     },
     data: {
+      url: url,
       x: x,
       xFormat: xInputFormat,
-      url: url,
-      /*
-      rows: [
-        ["Year","On","Off","Combination"],
-        [1989,2,3,4],
-        [1990,4,0,2],
-        [1991,3,5,2],
-      ],*/
+      mimeType: mimeType,
+      keys: {
+        x: x,
+        value: {{page.chartvalues | jsonify }}
+      },
       groups: [groups],
       type: type,
       color: function(color, d) {
