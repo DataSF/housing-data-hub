@@ -1,10 +1,11 @@
 ---
 layout: data
 title: Fault notices by type by year
-"chart-title": "Fault eviction notices by type by year, 1997-2014 Q2"
+"chart-title": "Fault eviction notices by type by year since 1997"
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: "rent-control/fault_reasons_given.csv"
+#data: "rent-control/fault_reasons_given.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/f1c15b6e8b953a4e43fd6117dc92ba51dd4706c9/fault_reasons_given.csv"
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"

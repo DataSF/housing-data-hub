@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Annual allowable increase
-"chart-title": "Annual allowable rent increase over time, 1982-2015"
+"chart-title": "Annual allowable rent increase over time since 1982"
 category: "Rent-Control"
 data: "https://data.sfgov.org/resource/hsxb-ci7b.json"
 datatype: json

@@ -4,6 +4,7 @@ title: Housing units by neighborhood
 chart-title: "Housing units in progress by project size and neighborhood, 2014 Q2"
 category: housing-stock-and-occupancy
 source: SF Planning Department, Pipeline Report Q3 2014
+portalID: n5ik-nmm3
 notes: The chart does not include very large projects over 800 units.
 published: true
 type: bar-horizontal
