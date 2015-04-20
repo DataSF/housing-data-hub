@@ -2,7 +2,7 @@
   <div class="container footer">
     <div class="row">
       <div class="col-sm-4">
-        <p>The San Francisco Housing Data Hub is your go to resource for learning about policies and programs that affect housing affordability in San Francisco. We provide an overview of each of the major programs - what is it, its purpose, and related data.</p>
+        <p>The San Francisco Housing Data Hub is your go-to resource for learning about policies and programs that affect housing affordability and are administered by local government agencies in San Francisco. We provide an overview of each of the major programs - what it is, its purpose, and related data.</p>
       </div>
       <div class="col-sm-4 left-border-dotted">
         <ul class="list-unstyled">
@@ -41,13 +41,14 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
 <script src="{{site.baseurl}}/js/colorbrewer.js"></script>
 <script src="{{site.baseurl}}/js/databrowser.js"></script>
+<script src="{{site.baseurl}}/js/toTitleCase.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <script src="{{site.baseurl}}/js/cookies.min.js"></script>
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
 
 <script>
+var map = null;
 window.onload = function() {
-
   $('.hover-tooltip').tooltip();
   $('.definition').popover(); 
   {% if page.layout == 'data' %}
@@ -72,6 +73,10 @@ window.onload = function() {
   $('body').scrollspy({
     target: '.nav-toc'
   }) {% endif %}
+  
+  $('.action-links-source').on('click', function(e) {
+    ga('send', 'event', 'Source', 'Click', '{{page.portalID}}:{{page.chart-title}}');
+  });
 }
 
 function loadViz(params, wrapper) {
@@ -95,8 +100,6 @@ function init(layout) {
     generateChart();
   }
 }
-
-var map;
 
 function generateMap(params, wrapper) {
   var geofile = '{{site.baseurl}}/data/sf_census_tracts.json',
@@ -130,7 +133,7 @@ function generateMap(params, wrapper) {
     column = '{{page.column}}';
     units = '{{page.units}}';
     margin = '{{page.margin}}';
-    popup = '{{page.popup}}';
+    popup = {{page.popup | jsonify }};
     legendTitle = '{{page.legend-title}}';
     d = "{{page.data}}"; 
     {% if page.colors %}
@@ -146,12 +149,8 @@ function generateMap(params, wrapper) {
     var container = 'chart';
   }
 
-  if (popup != '') {
-    popup = popup.split(',')
-  }
-
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
-
+  
   if (map) {
     //Todo: find a way to keep the map from reseetting, wasteful to keep loading the same data on every switch
     map.remove();
@@ -166,19 +165,20 @@ function generateMap(params, wrapper) {
 
   if (mapType == "map-point") {
     var markerCats = []; 
-    {% if page.legend - cats %}
+    {% if page["legend-cats"] %}
     legendCats = '{{page.legend-cats}}';
     markerCats = legendCats.split(","); 
     {% endif %}
 
     function bindPointPopup(feature, layer) {
-      var popupContent = "<h1 class='popup-title'>" + feature.properties.label + "</h1>";
-      popupContent += "<p>" + feature.properties.description + "</p>";
-      if (Array.isArray(popup)) {
+      var popupContent = "<h1 class='popup-title'>" + feature.properties[popup.title] + "</h1>";
+      popupContent += "<p>" + feature.properties[popup.subtitle] + "</p>";
+      if (Array.isArray(popup.info)) {
         popupContent += "<p>";
-        for (var i = 0; i < popup.length; i++) {
-          if (feature.properties[popup[i].trim()] != '') {
-            popupContent += "<b>" + popup[i].trim() + "</b>: " + feature.properties[popup[i].trim()] + "</br>";
+        var info = popup.info;
+        for (var i = 0; i < info.length; i++) {
+          if (feature.properties[info[i]]) {
+            popupContent += "<b>" + info[i].replace(/_/g," ").toTitleCase() + "</b>: " + feature.properties[info[i]] + "</br>";
           }
         }
         popupContent += "</p>";
@@ -186,7 +186,11 @@ function generateMap(params, wrapper) {
       layer.bindPopup(popupContent);
     }
 
-    var customLayer = L.geoJson(null, {
+    var customLayer = function(data) {
+      if(!data) {
+        data = null;
+      }
+      return L.geoJson(data, {
       pointToLayer: function(feature, latlng) {
         if (markerCats.indexOf(feature.properties[column]) == -1) {
           markerCats.push(feature.properties[column]);
@@ -203,30 +207,7 @@ function generateMap(params, wrapper) {
       },
       onEachFeature: bindPointPopup
     });
-
-    var overlayLayer;
-    var overlayLayers = [];
-    for (var i = 0; i < overlays.length; i++) {
-      (function(i) {
-        $.getJSON(overlays[i], function(geodata) {
-            geojson = L.geoJson(geodata, {
-              style: {
-                weight: 2,
-                opacity: 0.4,
-                color: '#808080',
-                fillOpacity: 0
-              },
-              onEachFeature: onEachFeature
-            });
-            overlayLayers[i] = geojson;
-          })
-          .done(function() {
-            if (i = overlays.length - 1) {
-              setLayers(overlayLayers);
-            }
-          });
-      })(i);
-    };
+    }
 
     function setLayers(layers) {
       //Todo: abstract this so that I can pass in names of layers earlier on, for now, these are hard coded
@@ -243,13 +224,73 @@ function generateMap(params, wrapper) {
     var layerData;
     
     var csvLocation = (/^https?:\/\//.test(d)) ? d : '{{site.baseurl}}/data/' + d;
-
-    var csvLayer = omnivore.csv(csvLocation, null, customLayer)
+    
+    var csvLayer;
+    
+    if(csvLocation.indexOf("json") > -1) {
+      $.getJSON(csvLocation, function(json) {
+        layerData = toGeojson(json,'location');
+        csvLayer = customLayer(layerData).addTo(map);
+        var legendCont = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
+        var overlayLayer;
+        var overlayLayers = [];
+        for (var i = 0; i < overlays.length; i++) {
+          (function(i) {
+            $.getJSON(overlays[i], function(geodata) {
+                geojson = L.geoJson(geodata, {
+                  style: {
+                    weight: 2,
+                    opacity: 0.4,
+                    color: '#808080',
+                    fillOpacity: 0
+                  },
+                  onEachFeature: onEachFeature
+                });
+                overlayLayers[i] = geojson;
+              })
+              .done(function() {
+                if (i = overlays.length - 1) {
+                  setLayers(overlayLayers);
+                }
+              });
+          })(i);
+        };
+      });
+    } else {
+      //todo: refactor map creation, simplify data processing
+    // detect data type, pass data to custom layer and add to map, add legends and bind points (change the way legends are defined), add overlays
+  
+    var csvLayer = omnivore.csv(csvLocation, null, customLayer())
       .on('ready', function() {
         layerData = csvLayer.toGeoJSON();
         var legendCont = L.mapbox.legendControl().addLegend(getPointLegendHTML(markerCats)).addTo(map);
+        var overlayLayer;
+        var overlayLayers = [];
+        for (var i = 0; i < overlays.length; i++) {
+          (function(i) {
+            $.getJSON(overlays[i], function(geodata) {
+                geojson = L.geoJson(geodata, {
+                  style: {
+                    weight: 2,
+                    opacity: 0.4,
+                    color: '#808080',
+                    fillOpacity: 0
+                  },
+                  onEachFeature: onEachFeature
+                });
+                overlayLayers[i] = geojson;
+              })
+              .done(function() {
+                if (i = overlays.length - 1) {
+                  setLayers(overlayLayers);
+                }
+              });
+          })(i);
+        };
       })
       .addTo(map);
+    }
+    
 
     $('#' + container).on('click', '.legend-item', function(e) {
       $(this).children('.legend-filter').prop('checked') ? $(this).children('.legend-filter').prop('checked', false) : $(this).children('.legend-filter').prop('checked', true);
@@ -488,16 +529,26 @@ function generateMap(params, wrapper) {
   }
 }
 
+function isFunction(functionToCheck) {
+  var getType = {};
+  return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+}
+
+
 
 function generateChart(params, wrapper) {
   var max = null,
     pleft = null;
+    value = [];
   if (params) {
     var data = params.data,
+      value = params.chartvalues,
       type = params.type,
       axisType = params["axis-type"],
       yFormat = params["y-format"],
       x = params.column,
+      xInputFormat = params.xInputFormat,
+      mimeType = params.datatype,
       desc = params.description,
       source = params.source,
       notes = params.notes,
@@ -513,10 +564,17 @@ function generateChart(params, wrapper) {
   } else {
     var chartcontainer = '#chart';
     var data = '{{page.data}}',
+      value = {{ page.chartvalues | jsonify }},
       type = '{{page.type}}',
+      mimeType = '{{page.datatype}}',
       axisType = '{{page.axis-type}}',
+      {% if page.y-format contains 'function' %}
+      yFormat = {{page.y-format}},
+      {% else %}
       yFormat = '{{page.y-format}}',
+      {% endif %}
       x = '{{page.column}}',
+      xInputFormat = '{{page.xInputFormat}}',
       legend = '{{page.legend}}',
       groups = '{{page.groups}}',
       emphasis = '{{page.emphasis}}',
@@ -528,7 +586,7 @@ function generateChart(params, wrapper) {
       pleft = {{page.pleft}}; 
       {% endif %}
   }
-
+  
   if (legend == '') {
     legend = 'bottom';
   } else if (legend == 'none') {
@@ -547,13 +605,23 @@ function generateChart(params, wrapper) {
     type = 'bar';
     rotated = true;
   }
-  if (yFormat != '') {
-    yFormat = d3.format(yFormat)
+  if (mimeType == ''){
+    mimeType = 'csv';
   }
+  
+  if (yFormat != '' && !isFunction(yFormat)) {
+    yFormat = d3.format(yFormat);
+  }
+
+  
   if (axisType == 'timeseries') {
     xFormat = '%m/%d/%Y';
   } else {
     xFormat = '';
+  }
+  
+  if(xInputFormat == '') {
+    xInputFormat = "%Y-%m-%d";
   }
 
   desc ? $('#' + wrapper + ' .description').html(desc) : '';
@@ -603,7 +671,14 @@ function generateChart(params, wrapper) {
   
   //todo: abstract the data call across charts/maps
   var url = (/^https?:\/\//.test(data)) ? data : '{{site.baseurl}}/data/' + data;
-
+  var names = {};
+  if (value) {
+    value.forEach(function(v) {
+      name = v.replace(/_/g," ");
+      names[v] = name.toTitleCase();
+    })
+  }
+  
   var chart = c3.generate({
     bindto: chartcontainer,
     padding: {
@@ -611,8 +686,15 @@ function generateChart(params, wrapper) {
       left: pleft
     },
     data: {
-      x: x,
       url: url,
+      x: x,
+      xFormat: xInputFormat,
+      mimeType: mimeType,
+      keys: {
+        x: x,
+        value: value
+      },
+      names: names,
       groups: [groups],
       type: type,
       color: function(color, d) {
@@ -657,6 +739,48 @@ function generateChart(params, wrapper) {
 
   /*chart.hide(['MOE','MOE_Renter','MOE_Owner'],{withLegend: true});*/
 }
+
+function toGeojson(json, locationField) {
+  if (!json || !json.length) {
+    console.log('Failed to get data');
+  }
+  else {
+    var geojson = {
+      type: 'FeatureCollection',
+      features: []
+    };
+    var geojsonFeature;
+    json.forEach(function(feature, i) {
+      geojsonFeature = {
+        type: 'Feature',
+        geometry: {},
+        id: i + 1
+      };
+      if (feature && locationField) {
+        if (feature[locationField] && feature[locationField].latitude && feature[locationField].longitude) {
+          geojsonFeature.geometry.coordinates = [parseFloat(feature[locationField].longitude), parseFloat(feature[locationField].latitude)];
+          geojsonFeature.geometry.type = 'Point';
+          delete feature.location;
+          geojsonFeature.properties = feature;
+          geojson.features.push(geojsonFeature);
+        }
+      }
+      else if (feature && feature.latitude && feature.longitude) {
+        geojsonFeature.geometry.coordinates = [parseFloat(feature.longitude), parseFloat(feature.latitude)];
+        geojsonFeature.geometry.type = 'Point';
+        geojsonFeature.properties = feature;
+        geojson.features.push(geojsonFeature);
+      }
+      else {
+        geojsonFeature.geometry = null;
+        geojsonFeature.properties = feature;
+        geojson.features.push(geojsonFeature);
+      }
+    });
+    return geojson;
+  }
+};
+
 </script>
 <script>
 var $buoop = {

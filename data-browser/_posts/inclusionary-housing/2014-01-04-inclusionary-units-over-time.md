@@ -1,13 +1,16 @@
 ---
 layout: data
 title: Completed units by year
-"chart-title": "Completed inclusionary units by year, 1992-2014 Q1"
+"chart-title": "Completed inclusionary units by year since 1992"
 category: "Inclusionary-Housing"
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: bmr_completed_over_time.csv
-x: Year
-column: Year
+#data: inclusionary/bmr_completed_over_time.csv
+data: "https://data.sfgov.org/resource/f2n6-ybnq.json?$select=building_completion_calendar_year%20as%20%22year%22,sum(total_bmr_s_in_this_building_or_phase)%20as%20%22total_units%22&$group=building_completion_calendar_year&$where=building_completion_calendar_year%3C2015&$order=building_completion_calendar_year"
+chartvalues:
+  - "total_units"
+datatype: json
+column: year
 source: "Mayor's Office of Housing and Community Development"
+portalID: "f2n6-ybnq"
 published: true
 type: area
 scale: "5"

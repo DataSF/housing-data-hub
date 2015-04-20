@@ -1,16 +1,21 @@
 ---
 layout: data
 title: Annual allowable increase
-"chart-title": "Annual allowable rent increase over time, 1982-2014"
+"chart-title": "Annual allowable rent increase over time since 1982"
 category: "Rent-Control"
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: "rent-control/annual_allowable_increase.csv"
-column: Effective Starting Date
+data: "https://data.sfgov.org/resource/hsxb-ci7b.json"
+datatype: json
+chartvalues:
+  - annual_allowable_increase
+#data: "rent-control/annual_allowable_increase.csv"
+column: effective_starting_date
 source: San Francisco Rent Board
+portalID: "hsxb-ci7b"
 published: true
 type: step
 "axis-type": timeseries
-"y-format": .2p
+"y-format": 'function(value) { return value + "%"}'
+xInputFormat: '%Y-%m-%dT%H:%M:%S'
 scale: "5"
 colors: YlGn
 ---

@@ -1,14 +1,14 @@
 ---
 layout: data
 title: Completed units by on/off site by year
-"chart-title": "Completed inclusionary units by on/off site by year, 1992-2014 Q1"
+"chart-title": "Completed inclusionary units by on/off site by year since 1992"
 category: "Inclusionary-Housing"
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: bmr_on_off_site.csv
+data: inclusionary/bmr_on_off_site.csv
 x: Year
 column: Year
 type: bar
 source: "Mayor's Office of Housing and Community Development."
+portalID: "f2n6-ybnq"
 published: true
 scale: "5"
 colors: Blues

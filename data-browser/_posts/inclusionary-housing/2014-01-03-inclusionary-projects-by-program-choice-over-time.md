@@ -1,12 +1,13 @@
 ---
 layout: data
 title: Developer choice by year (completed)
-"chart-title": "Developer choice for completed projects by year of project approval, 1992-2014 Q1"
+"chart-title": "Developer choice for completed projects by year of project approval since 1992"
 category: "Inclusionary-Housing"
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
+#data: "https://data.sfgov.org/resource/f2n6-ybnq.json?$select=entitlement_yr,section_415_declaration_label,count(section_415_declaration_label)&$group=entitlement_yr,section_415_declaration_label"
 data: inclusionary/project_choices_over_time.csv
 column: Year
 source: "Mayor's Office of Housing and Community Development"
+portalID: "f2n6-ybnq"
 published: true
 type: bar
 scale: "5"

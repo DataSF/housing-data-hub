@@ -1,6 +1,7 @@
 ---
 layout: data
 title: Rent controlled units (estimate)
+"chart-title": Estimated number of units built before/after 1980 by tenure
 category: "Rent-Control"
 data: "rent-control/rent_control_universe.csv"
 column: Decades
@@ -14,7 +15,6 @@ published: true
 legend: bottom
 emphasis: "Rental,0,185aa9"
 source: "U.S. Census Bureau, 2013 American Community Survey 5-Year Estimates. Tenure by Year Built."
-"chart-title": Estimated number of units built before/after 1980 by tenure
 notes: "The actual number of rent controlled units cannot be determined because the rent control ordinance only covers properties built before June 13, 1979 and because there is an exemption from price controls in single family homes/condos where tenants moved in after 1995. In addition, an unknown number of rental units are covered by rent control but are unpermitted. Also, please note the margins of error for each estimate (visible when hovering over the chart)."
 ---
 

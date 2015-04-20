@@ -460,6 +460,15 @@ h2:before, #maincontent:before {
   text-decoration: none;
 }
 
+.action-links a:hover {
+ text-decoration: none; 
+}
+
+.action-links button {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
 .btn-darkblue {
   background-color: #00607d;
 }
