@@ -501,13 +501,15 @@ a:hover button {
   text-decoration: none;
 }
 
-.right-border-dotted {
-  border-right: thin dotted #fff;
+@media (min-width: 768px) {
+  .right-border-dotted {
+    border-right: thin dotted #fff;
+  }
+  .left-border-dotted {
+    border-left: thin dotted #fff;
+  }
 }
 
-.left-border-dotted {
-  border-left: thin dotted #fff;
-}
 
 .brand {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;

@@ -1,7 +1,7 @@
 ---
 layout: policy
 title: Rental Subsidies
-summary: "Rental subsidies help low-income families and individuals, the elderly, and the disabled afford housing in the private market. The government that funds the subsidy pays the difference between what the household can afford and what the landlord charges for rent."
+summary: "Rental subsidies help low-income families and individuals, the elderly, and the disabled afford housing in the private market..."
 published: true
 image: rentsubsidy.png
 ami: 80

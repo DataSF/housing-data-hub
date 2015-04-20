@@ -1,6 +1,6 @@
 ---
 layout: policy
-summary: "Public housing provides rent-restricted housing to low-income families, the elderly, and people with disabilities. The rent amount is determined as a percentage of the household’s expected annual income (versus a fixed amount)."
+summary: "Public housing provides rent-restricted housing to low-income families, the elderly, and people with disabilities..."
 published: true
 ami: 80
 target: units
