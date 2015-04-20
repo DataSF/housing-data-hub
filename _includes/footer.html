@@ -45,10 +45,12 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <script src="{{site.baseurl}}/js/cookies.min.js"></script>
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+<script src="{{site.baseurl}}/js/jquery.easing.min.js"></script>
 
 <script>
 var map = null;
 window.onload = function() {
+  
   $('.hover-tooltip').tooltip();
   $('.definition').popover(); 
   {% if page.layout == 'data' %}
@@ -77,6 +79,15 @@ window.onload = function() {
   $('.action-links-source').on('click', function(e) {
     ga('send', 'event', 'Source', 'Click', '{{page.portalID}}:{{page.chart-title}}');
   });
+  
+  $('a.page-scroll').bind('click', function(event) {
+    var $anchor = $(this);
+    var $bodyMargin = $('body').css('margin-top').split("px")[0];
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top - (+$bodyMargin + 10)
+    }, 1000, 'easeInOutExpo');
+    event.preventDefault();
+  });
 }
 
 function loadViz(params, wrapper) {
@@ -89,7 +100,7 @@ function loadViz(params, wrapper) {
 
 function buildTOC() {
   $('h2').each(function(i, el) {
-    $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '">' + $(el).html() + '</a></li>');
+    $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '" class="page-scroll">' + $(el).html() + '</a></li>');
   })
 }
 
