@@ -14,6 +14,7 @@ scale: "5"
 colors: Blues
 "axis-type": ""
 "y-format": "%"
+notes: In certain cases, landlords may have checked multiple grounds that indicated both fault and no fault. In these limited cases, the no fault category is assumed.
 ---
 
 The chart below shows the same data as the previous chart in percentage form. This emphasizes the relative distribution of "fault" and "no fault" eviction notices over time. Note that an eviction notice is not the same as an actual eviction.
