@@ -210,10 +210,6 @@ h1.top, h2:first {
   padding-bottom: 10px;
 }
 
-h3.panel-title {
-  text-transform: capitalize;
-}
-
 .panel-default>.panel-heading {
   background-color: #fefefe;
 }
@@ -544,6 +540,10 @@ footer a {
 
 footer a:hover, footer a:focus {
   color: #55A5C9;
+}
+
+a.no-underline, a:hover.no-underline {
+  text-decoration: none;
 }
 
 .footer-blurb {

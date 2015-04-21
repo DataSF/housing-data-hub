@@ -36,15 +36,15 @@
           <div class="row" style="margin-top: 20px;">
             <div class="{% if site.data.browser[1].categories contains policy or page.portalID %} col-md-7 {% else %} col-md-12 {% endif %} footnote">
               {% if page.source %} <p><strong>Source:</strong> {{page.source}}</p> {% endif %}
-              {% if page.portalID %} {% assign addendum = "Data are not all updated in real time, please check the source data to verify its recency." %} {% endif %}
+              {% if page.portalID %} {% assign addendum = "Please check the source data to verify its recency and frequency of publishing." %} {% endif %}
               {% if page.notes or page.portalID %} <p><strong>Notes:</strong> {{page.notes}} {{addendum}}</p> {% endif %}
             </div>
             <div class="col-md-5 action-links">
               {% if site.data.browser[1].categories contains policy %}
-              <a href="{{site.baseurl}}/policies/{{ page.category | downcase }}" title="Read more about this policy"><button type="button" style="width:100%" class="btn btn-primary btn-lg btn-block action-links-read-more">Read more about this policy</button></a>
+              <a href="{{site.baseurl}}/policies/{{ page.category | downcase }}" title="Read more about this policy"><button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-read-more">Read more about this policy</button></a>
               {% endif %}
               {% if page.portalID %}
-              <a href="http://data.sfgov.org/d/{{page.portalID}}" title="Get the source dataset"><button type="button" style="width:100%" class="btn btn-primary btn-lg btn-block action-links-source">Get the source dataset</button></a>
+              <a href="http://data.sfgov.org/d/{{page.portalID}}" title="Get the source dataset"><button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-source">Get the source dataset</button></a>
               {% endif %}
             </div>
           </div>

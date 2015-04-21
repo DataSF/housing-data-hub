@@ -9,7 +9,7 @@ data: "https://cdn.rawgit.com/DataSF/summary-data/f1c15b6e8b953a4e43fd6117dc92ba
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
-notes: "Landlords will sometimes cite just causes when evicting a roommate living with them in the same unit. Under the law, the landlord does not have to cite these causes. They've been removed from the counts to avoid overrepresentation of just causes. Data is through Q2 (June) of calendar year 2014."
+notes: "Landlords will sometimes cite just causes when evicting a roommate living with them in the same unit. Under the law, the landlord does not have to cite these causes. They've been removed from the counts to avoid overrepresentation of just causes."
 published: true
 type: line
 "axis-type": ""

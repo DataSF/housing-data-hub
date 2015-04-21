@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Completed units by tenure
-"chart-title": "Completed inclusionary units by tenure, 1992-2014 Q1"
+"chart-title": "Completed inclusionary units by tenure since 1992"
 category: "Inclusionary-Housing"
 data: inclusionary/units_by_tenure_total.csv
 column: Tenure
