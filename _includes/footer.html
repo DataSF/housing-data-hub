@@ -77,7 +77,7 @@ window.onload = function() {
   }) {% endif %}
   
   $('.action-links-source').on('click', function(e) {
-    ga('send', 'event', 'Source', 'Click', '{{page.portalID}}:{{page.chart-title}}');
+    ga('send', 'event', 'Action Links', 'Get Source', '{{page.portalID}}: {{page.chart-title}}');
   });
   
   $('a.page-scroll').bind('click', function(event) {
