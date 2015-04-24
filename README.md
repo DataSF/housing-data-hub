@@ -14,12 +14,12 @@ There are two streams of activity left to complete:
 
 In May, we should have a blog post up describing how we used the technology to support our approach to co-creating the housing data hub with partners across the City.
 
-#Contributing
+##Contributing
 We are catching up with ourselves now and working on documenting some outstanding issues. Those should all be up soon. In the meantime, feel free to fork the code and poke around. Collaboration is welcome, but we recommend reaching out through the issues first before working on anything and submitting any pull requests. PRs will be reviewed, but there's no guarantee that we can accept them.
 
 Contributions around structural and code improvements are the highest priority. We also welcome fixing typos if you find them.
 
-##Getting started
+###Getting started
 If you want to take a look on your own machine, here's how you can get up and running:
 
 Do this the first time:
