@@ -4,7 +4,7 @@ title: No fault and rent control supply
 "chart-title": "Eviction notices that affect supply of rent controlled units since 1997"
 category: "Rent-Control"
 #data: "rent-control/eviction_notices_affecting_supply.csv"
-data: "https://cdn.rawgit.com/DataSF/summary-data/f1c15b6e8b953a4e43fd6117dc92ba51dd4706c9/eviction_notices_affecting_supply.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/f9f9e083c0d3029cd0c22017b840482f2e2ef796/eviction_notices_affecting_supply.csv"
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
