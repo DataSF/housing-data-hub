@@ -1,6 +1,6 @@
 ---
 layout: policy
-summary: Inclusionary housing programs require new private housing developments to “include” affordable units or pay a fee.
+summary: Programs that require new housing to “include” affordable units (or pay a fee) are called inclusionary.
 "data-category": "inclusionary-housing"
 published: true
 ami: 100
@@ -9,7 +9,7 @@ image: inclusionary.png
 note: "The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 60%."
 ---
 
-Inclusionary housing programs try to increase the supply of affordable units at a rate that keeps pace with the creation of market rate units. Typically, the government entity establishes the rules for inclusionary housing and then regulates and monitors implementation.
+The price of new housing is based on what people are willing to pay. But market rates are usually not affordable to people with lower incomes. This program requires new housing to "include" affordable units. This helps create new affordable housing at the same rate as market housing.
 
 <aside role="complementary" class="well">
 <h1>Other sources of inclusionary units</h1>
