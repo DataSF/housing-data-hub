@@ -3,7 +3,7 @@ layout: data
 title: Eviction notices by year
 "chart-title": "Total eviction notices by year since 1997"
 category: "Rent-Control"
-data: "https://cdn.rawgit.com/DataSF/summary-data/6516775883c2b6d6738b48c9dd7415bf64ae6637/eviction_notices_over_time.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/24e23d1d7df7bb243585c2ab15193d2315bec690/eviction_notices_over_time.csv"
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"

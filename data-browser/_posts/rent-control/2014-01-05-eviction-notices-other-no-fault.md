@@ -5,7 +5,7 @@ title: Other no fault notices
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 #data: "rent-control/eviction_notices_no_fault_other.csv"
-data: "https://cdn.rawgit.com/DataSF/summary-data/6516775883c2b6d6738b48c9dd7415bf64ae6637/eviction_notices_no_fault_other.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/24e23d1d7df7bb243585c2ab15193d2315bec690/eviction_notices_no_fault_other.csv"
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
