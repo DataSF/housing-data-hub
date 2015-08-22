@@ -30,7 +30,7 @@ navigation:
 
 prose:
   siteurl: 'http://housing.datasf.org'
-  media: 'images'
+  media: 'assets/images'
   metadata:
     data-browser/_posts:
       - name: "layout"

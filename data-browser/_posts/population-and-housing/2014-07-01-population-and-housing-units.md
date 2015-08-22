@@ -2,7 +2,7 @@
 layout: data
 title: Population and housing units
 category: "Population-and-Housing"
-data: pop_housing_units_by_decade.csv
+data: population-and-housing/pop_housing_units_by_decade.csv
 x: Decade
 "y-format": ","
 published: true

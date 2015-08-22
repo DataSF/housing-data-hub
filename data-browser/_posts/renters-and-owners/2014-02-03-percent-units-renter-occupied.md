@@ -3,7 +3,7 @@ layout: data
 title: "Renter-occupied units"
 "chart-title": "Percent of units that are renter-occupied"
 category: "renters-and-owners"
-data: DEC_10_DP_DPDP1.csv
+data: renters-and-owners/DEC_10_DP_DPDP1.csv
 column: HD02_S184
 scale: "5"
 colors: PuBu

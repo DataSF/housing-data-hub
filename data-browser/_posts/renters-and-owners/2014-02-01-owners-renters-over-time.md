@@ -2,7 +2,7 @@
 layout: data
 title: Tenure over time
 category: "renters-and-owners"
-data: tenure_by_decade.csv
+data: renters-and-owners/tenure_by_decade.csv
 "y-format": ","
 published: true
 type: line

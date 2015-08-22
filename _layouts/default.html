@@ -1,59 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Housing Policy Guide">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-  <title>SF Housing Data Hub | {{page.title}}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="{{site.baseurl}}/style.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/styles/c3.css" rel="stylesheet">
-
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+{% include head.html %}
 
 <body>
-  {% include header.html %}
-  <main role="main" class="content">
-    <div class="container-fluid masthead data-browser">
-      <div class="darkener"></div>
-      <div class="container">
-        <h2>Data Browser</h2>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        {% include alert.html %}
-        <div class="col-sm-5 col-md-4">
-          <div class="panel-group" id="accordion">
-            {% include browser.html %}
-          </div>
+    <!--<![endif]-->
+    {% include header.html %}
+    <main role="main" id="maincontent">
+        <div class="{% if page.fluid %} container-fluid {% else %} container {% endif %}">
+            {{ content }}
         </div>
-        <div class="col-sm-7 col-md-8">
-          <h1 class="top">{{ page.title }}</h1>
-          <div id="chart"></div>
-          {{content}}
-          <a href="{{ page.policy-link }}">More on this policy</a>
-        </div>
-      </div>
-    </div>
-  </main>
-  {% include footer.html %}
+    </main>
+    {% include footer.html %} 
+    {% include js.html %}
 </body>
 
 </html>
