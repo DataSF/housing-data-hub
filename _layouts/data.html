@@ -6,7 +6,7 @@ layout: default
     {% include browser.html %}
   </div>
   <div class="col-sm-7 col-md-8">
-    <article id="maincontent" role="article">
+    <article role="article">
       <h1 class="chart-title top">{{ page.chart-title }}</h1> {{content}}
       <div id="chart"></div>
       {% assign policy = page.category | downcase %}
