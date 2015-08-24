@@ -39,7 +39,7 @@ function generateChart(params, container) {
     })
   }
   
-  /* override tooltips for Margins of Error*/
+  /* override tooltips to include Margins of Error where applicable*/
   var tooltip_contents = function (d, defaultTitleFormat, defaultValueFormat, color) {
     var $$ = this,
       config = $$.config,
@@ -136,4 +136,6 @@ function generateChart(params, container) {
       }
     }
   });
+  
+  return chart;
 }

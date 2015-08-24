@@ -6,6 +6,9 @@ redcarpet:
 gems:
 - jekyll-sitemap
 
+sass:
+  style: :compressed
+
 navigation:
 - text: Home
   url: /?ref=home
