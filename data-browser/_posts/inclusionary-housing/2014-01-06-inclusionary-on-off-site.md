@@ -12,8 +12,8 @@ portalID: "f2n6-ybnq"
 published: true
 scale: "5"
 colors: Blues
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 notes: null
 ---
 

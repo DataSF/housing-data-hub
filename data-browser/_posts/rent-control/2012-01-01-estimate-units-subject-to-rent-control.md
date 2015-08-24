@@ -10,8 +10,8 @@ colors: YlGnBu
 type: bar
 units: "%"
 published: true
-"axis-type": category
-"y-format": ","
+"axisType": category
+"yFormat": ","
 legend: bottom
 emphasis: "Renter,0,185aa9"
 source: "U.S. Census Bureau, 2013 American Community Survey 5-Year Estimates. Tenure by Year Built."

@@ -5,7 +5,7 @@ chart-title: "Projects receiving City financing by project status"
 category: "Financing-and-Development"
 data: financing-and-development/project_status.csv
 type: bar
-axis-type: category
+axisType: category
 column: Status
 published: true
 source: "Mayor's Office of Housing and Community Development."

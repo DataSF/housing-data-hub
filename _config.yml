@@ -165,7 +165,7 @@ prose:
               value: 'Set2'
             - name: 'Qualitative: Set3'
               value: 'Set3'
-      - name: "axis-type"
+      - name: "axisType"
         field:
           element: "select"
           label: "Axis Type"
@@ -177,7 +177,7 @@ prose:
               value: 'category'
             - name: 'Time Series'
               value: 'timeseries'
-      - name: "y-format"
+      - name: "yFormat"
         field:
           element: "select"
           label: "Y Format"

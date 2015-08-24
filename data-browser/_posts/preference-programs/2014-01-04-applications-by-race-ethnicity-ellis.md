@@ -5,7 +5,7 @@ title: Applications by race / ethnicity (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_race_ethnicity.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Race / Ethnicity
 published: true
 source: "Mayor's Office of Housing and Community Development."

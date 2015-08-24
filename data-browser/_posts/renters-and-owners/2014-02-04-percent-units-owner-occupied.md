@@ -10,8 +10,8 @@ legend-title: "Percent owner-occupied"
 type: map
 units: "%"
 published: true
-"axis-type": category
-"y-format": "$,"
+"axisType": category
+"yFormat": "$,"
 source: "U.S. Census Bureau, 2010 Census. Profile of General Population and Housing Characteristics."
 notes: null
 "chart-title": "Percent of units that are owner-occupied"

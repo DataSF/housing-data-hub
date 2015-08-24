@@ -8,12 +8,14 @@ column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: false
-groups: "Fault Eviction Notices,No Fault Eviction Notices"
+groups:
+  - Fault Eviction Notices
+  - No Fault Eviction Notices
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": ""
-"y-format": "%"
+"axisType": ""
+"yFormat": "%"
 notes: In certain cases, landlords may have checked multiple grounds that indicated both fault and no fault. In these limited cases, the no fault category is assumed.
 ---
 

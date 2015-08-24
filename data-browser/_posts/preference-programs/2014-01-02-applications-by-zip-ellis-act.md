@@ -5,7 +5,7 @@ title: Applications by zip code (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_zip_code.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Zip Code
 published: true
 source: "Mayor's Office of Housing and Community Development."

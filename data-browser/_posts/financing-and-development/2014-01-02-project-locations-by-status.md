@@ -6,7 +6,7 @@ category: "Financing-and-Development"
 data: "financing-and-development/project_locations.csv"
 type: map-point
 popup: "Sponsor,Affordable Units,Beds,Target Population,Status,Affordability Requirement Year"
-"axis-type": category
+"axisType": category
 column: Status
 published: true
 source: "Mayor's Office of Housing and Community Development."

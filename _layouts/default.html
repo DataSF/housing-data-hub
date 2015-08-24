@@ -4,14 +4,23 @@
 {% include head.html %}
 
 <body>
-    <!--<![endif]-->
-    {% include header.html %}
-    <main role="main" id="maincontent">
-        <div class="{% if page.fluid %} container-fluid {% else %} container {% endif %}">
-            {{ content }}
-        </div>
-    </main>
-    {% include footer.html %} 
-    {% include js.html %}
+  <!--<![endif]-->
+  {% include header.html %}
+  <main role="main" id="maincontent">
+    <div class="{% if page.fluid %} container-fluid {% else %} container {% endif %}">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %} {% include js.html %}
+  
+  {% if page.data %}
+  <script>
+    $(function() {
+      generateChart(browserData['{{page.id}}'],'chart');
+    });
+  </script>
+  <!-- {% include mainjs.html %} -->
+  {% endif %}
 </body>
+
 </html>

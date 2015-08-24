@@ -507,8 +507,8 @@ function generateChart(params, wrapper) {
     var data = params.data,
       value = params.chartvalues,
       type = params.type,
-      axisType = params["axis-type"],
-      yFormat = params["y-format"],
+      axisType = params["axisType"],
+      yFormat = params["yFormat"],
       x = params.column,
       xInputFormat = params.xInputFormat,
       mimeType = params.datatype,
@@ -530,11 +530,11 @@ function generateChart(params, wrapper) {
       value = {{ page.chartvalues | jsonify }},
       type = '{{page.type}}',
       mimeType = '{{page.datatype}}',
-      axisType = '{{page.axis-type}}',
-      {% if page.y-format contains 'function' %}
-      yFormat = {{page.y-format}},
+      axisType = '{{page.axisType}}',
+      {% if page.yFormat contains 'function' %}
+      yFormat = {{page.yFormat}},
       {% else %}
-      yFormat = '{{page.y-format}}',
+      yFormat = '{{page.yFormat}}',
       {% endif %}
       x = '{{page.column}}',
       xInputFormat = '{{page.xInputFormat}}',

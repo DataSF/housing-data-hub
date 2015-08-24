@@ -12,8 +12,8 @@ published: true
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 ---
 
 Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. You can see below how developer choices have varied over time. The chart below shows the choice at the time of entitlement (meaning when the project received the right to build from the City), not when the projects were built.

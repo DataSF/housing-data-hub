@@ -11,8 +11,8 @@ source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: true
 type: line
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 scale: "5"
 colors: YlGn
 ---

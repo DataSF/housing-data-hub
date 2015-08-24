@@ -9,8 +9,8 @@ published: true
 type: donut
 scale: "5"
 colors: Blues
-"axis-type": category
-"y-format": ","
+"axisType": category
+"yFormat": ","
 source: "Mayor's Office of Housing and Community Development."
 portalID: "f2n6-ybnq"
 notes: null

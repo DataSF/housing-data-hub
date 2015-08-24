@@ -7,7 +7,7 @@ data: "preference-programs/certificates_by_race_ethnicity.csv"
 type: bar
 column: Race / Ethnicity
 published: true
-"axis-type": category
+"axisType": category
 source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn

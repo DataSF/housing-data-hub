@@ -7,7 +7,7 @@ data: "preference-programs/certificates_by_gender.csv"
 type: donut
 column: Gender
 published: true
-"axis-type": category
+"axisType": category
 source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn

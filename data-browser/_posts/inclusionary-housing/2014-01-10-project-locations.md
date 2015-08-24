@@ -10,8 +10,8 @@ column: status_of_project
 scale: "4"
 colors: Set2
 published: true
-"axis-type": category
-"y-format": "$,"
+"axisType": category
+"yFormat": "$,"
 source: "Mayor's Office of Housing and Community Development."
 portalID: "f2n6-ybnq"
 notes: null

@@ -10,8 +10,8 @@ published: true
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 source: "Mayor's Office of Housing and Community Development."
 portalID: "f2n6-ybnq"
 notes: null

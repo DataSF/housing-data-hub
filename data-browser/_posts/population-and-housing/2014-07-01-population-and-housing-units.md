@@ -4,7 +4,7 @@ title: Population and housing units
 category: "Population-and-Housing"
 data: population-and-housing/pop_housing_units_by_decade.csv
 x: Decade
-"y-format": ","
+"yFormat": ","
 published: true
 type: area
 scale: "5"

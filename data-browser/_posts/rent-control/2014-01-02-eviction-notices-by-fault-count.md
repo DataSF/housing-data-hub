@@ -11,7 +11,7 @@ source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: true
 type: line
-"axis-type": ""
+"axisType": ""
 scale: "5"
 colors: YlGn
 notes: In certain cases, landlords may have checked multiple grounds that indicated both fault and no fault. In these limited cases, the no fault category is assumed.

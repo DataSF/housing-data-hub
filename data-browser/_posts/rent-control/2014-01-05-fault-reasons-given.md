@@ -12,8 +12,8 @@ portalID: "5cei-gny5"
 notes: "Landlords will sometimes cite just causes when evicting a roommate living with them in the same unit. Under the law, the landlord does not have to cite these causes. They've been removed from the counts to avoid overrepresentation of just causes."
 published: true
 type: line
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 scale: "5"
 colors: YlGn
 ---
