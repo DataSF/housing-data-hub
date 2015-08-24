@@ -15,7 +15,7 @@ var browserData =
   		"description" : '{{post.content | strip_newlines | escape_once }}',
   		"source" : "{{post.source}}",
   		"notes" : "{{post.notes | escape }}",
-  		"chart-title" : "{{post.chart-title}}",
+  		"chartTitle" : "{{post.chart-title}}",
   		"scale" : "{{post.scale}}",
   		"colors" : "{{post.colors}}",
   		"type" : "{{post.type}}",
@@ -26,7 +26,7 @@ var browserData =
       "popup" : {{post.popup | jsonify }},
       "margin": "{{post.margin}}",
       "legendTitle": "{{post.legend-title}}",
-      "emphasis": "{{post.emphasis}}",
+      "emphasis": {{post.emphasis | jsonify}},
       "legend": "{{post.legend}}",
       "max": "{{post.max}}",
       "pleft": "{{post.pleft}}"

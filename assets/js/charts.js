@@ -3,27 +3,35 @@ function isFunction(functionToCheck) {
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
 }
 
-function generateChart(params, wrapper) {
+function generateChart(params, container) {
   /*
-  initiate variables
+  initiate defaults
   */
   var max = null,
     pleft = null,
     show = true,
     rotated = false,
-    names = {};
-  
+    names = {},
+    legend = 'bottom',
+    type = 'area',
+    mimeType = 'csv';
   /* detect whether the data is being passed via external url */  
   var url = (/^https?:\/\//.test(params.data)) ? params.data : '/data/' + params.data;
-  
-  params.legend = params.legend == '' ? 'bottom' : params.legend;
+  /* define derived variables based on input params */
   show = params.legend == 'none' ? false : true;
-  params.groups = params.groups == null ? [] : params.groups;
-  params.type = params.type == '' ? 'area' : params.type;
   rotated = params.type == 'bar-horizontal' ? true : false;
-  params.mimeType = params.mimeType == '' ? 'csv' : params.mimeType;
+  /* redefine certain parameters */
+  params.legend = params.legend == '' ? legend : params.legend;
+  params.groups = params.groups == null ? [] : params.groups;
+  params.type = params.type == '' ? type : (params.type == 'bar-horizontal' ? 'bar' : params.type);
+  params.mimeType = params.mimeType == '' ? mimeType : params.mimeType;
   params.yFormat = (params.yFormat != '' && !isFunction(params.yFormat)) ? d3.format(params.yFormat) : params.yFormat;
-  params.emphasis = (params.emphasis != '' ? params.emphasis.split(",") : [null, null, null]);
+  params.emphasis = params.emphasis == null ? [null, null, null] : params.emphasis;
+  /* 
+  generate names from chart values to make them human friendly
+  - remove underscores
+  - title case
+  */
   if (params.value) {
     params.value.forEach(function(v) {
       var name = v.replace(/_/g, " ");
@@ -31,7 +39,8 @@ function generateChart(params, wrapper) {
     })
   }
   
-  function tooltip_contents(d, defaultTitleFormat, defaultValueFormat, color) {
+  /* override tooltips for Margins of Error*/
+  var tooltip_contents = function (d, defaultTitleFormat, defaultValueFormat, color) {
     var $$ = this,
       config = $$.config,
       CLASS = $$.CLASS,
@@ -71,7 +80,7 @@ function generateChart(params, wrapper) {
   }
 
   var chart = c3.generate({
-    bindto: '#chart',
+    bindto: container,
     padding: {
       bottom: 30,
       left: pleft
