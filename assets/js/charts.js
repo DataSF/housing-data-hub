@@ -16,7 +16,7 @@ function generateChart(params, container) {
     type = 'area',
     mimeType = 'csv';
   /* detect whether the data is being passed via external url */  
-  var url = (/^https?:\/\//.test(params.data)) ? params.data : '/data/' + params.data;
+  var url = (/^https?:\/\//.test(params.data)) ? params.data : '/data-browser/data/' + params.data;
   /* define derived variables based on input params */
   show = params.legend == 'none' ? false : true;
   rotated = params.type == 'bar-horizontal' ? true : false;
