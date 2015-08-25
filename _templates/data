@@ -1,0 +1,24 @@
+---
+# required
+layout: data
+title:
+chartTitle: 
+category:
+data:
+column:
+axisType:
+source:
+# required if json data
+dataType: json
+chartvalues:
+# optional
+type:
+notes:
+xInputFormat:
+xTickFormat:
+published:
+scale:
+colors:
+yFormat:
+legend:
+---

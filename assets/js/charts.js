@@ -1,9 +1,32 @@
+var transform = function(data, label) {
+  var output = [];
+  var total = 0;
+  $.each(data, function(idx, rec) {
+    output.push([rec[label], rec.count]);
+    total += +rec.count;
+  });
+  if (total == 0) {
+    return false;
+  }
+  else {
+    return output;
+  }
+}
+
 function isFunction(functionToCheck) {
   var getType = {};
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
 }
 
-function generateChart(params, container) {
+function processChart(params, container) {
+  var params = params;
+  var container = container;
+  
+  
+  
+}
+
+function renderChart(data, params, container) {
   /*
   initiate defaults
   */

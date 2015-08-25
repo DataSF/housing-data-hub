@@ -42,8 +42,11 @@ prose:
           value: "data"
       - name: "category"
         field:
-          element: "text"
+          element: "select"
           label: "Category"
+          options: "http://housing.datasf.org/api/categories.json?callback=categoriesCallback"
+          alterable: true
+          placeholder: "Choose"
       - name: "title"
         field:
           element: "text"

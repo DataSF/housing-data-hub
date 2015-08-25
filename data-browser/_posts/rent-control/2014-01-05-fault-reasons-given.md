@@ -5,7 +5,7 @@ title: Fault notices by type by year
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 #data: "rent-control/fault_reasons_given.csv"
-data: "https://cdn.rawgit.com/DataSF/summary-data/24e23d1d7df7bb243585c2ab15193d2315bec690/fault_reasons_given.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/7f7d5cfd4ee85d8a79d30bd0851840691bba2f2d/fault_reasons_given.csv"
 column: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"

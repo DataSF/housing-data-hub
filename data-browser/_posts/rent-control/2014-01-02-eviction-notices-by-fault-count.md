@@ -4,7 +4,7 @@ title: Eviction notices by fault type
 "chart-title": "Fault and no fault eviction notices by year since 1997"
 category: "Rent-Control"
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-data: "https://cdn.rawgit.com/DataSF/summary-data/24e23d1d7df7bb243585c2ab15193d2315bec690/eviction_notices_by_fault_count.csv"
+data: "https://cdn.rawgit.com/DataSF/summary-data/7f7d5cfd4ee85d8a79d30bd0851840691bba2f2d/eviction_notices_by_fault_count.csv"
 #data: "rent-control/eviction_notices_by_fault_count.csv"
 column: Year
 source: San Francisco Rent Board

@@ -3,8 +3,11 @@ layout: data
 title: Developer choice (completed)
 "chart-title": "Developer choice for completed projects since 1992"
 category: "Inclusionary-Housing"
-data: inclusionary/projects_by_dev_choice.csv
-column: Project Type
+#data: inclusionary/projects_by_dev_choice.csv
+data: https://data.sfgov.org/resource/gf2u-2nfi.json?&$select=section_415_declaration_label,count(*)&$where=status_of_project=%27Completed%27+AND+NOT+section_415_declaration_label=%27Units%20for%20Off-Site%20Project%27&$group=section_415_declaration_label
+column: section_415_declaration_label
+chartvalues:
+  - count
 source: "Mayor's Office of Housing and Community Development"
 portalID: "f2n6-ybnq"
 published: true
