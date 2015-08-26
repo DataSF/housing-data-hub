@@ -1,8 +1,3 @@
-function isFunction(functionToCheck) {
-  var getType = {};
-  return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
-}
-
 var hubChart = {
   version: ".1"
 };
@@ -39,7 +34,7 @@ HubChart.prototype.loadData = function() {
             throw new Error('transformer does not exist for ' + this.options.chartTitle);
           }
         }
-        $$.data = response
+        $$.data = response;
         $$.render();
       }
     });
@@ -47,7 +42,7 @@ HubChart.prototype.loadData = function() {
     $$.data = $$.options.data;
     $$.render();
   }
-}
+};
 
 HubChart.prototype.render = function() {
   /*
@@ -73,7 +68,7 @@ HubChart.prototype.render = function() {
   this.options.groups = this.options.groups == null ? [] : this.options.groups;
   this.options.type = this.options.type == '' ? type : (this.options.type == 'bar-horizontal' ? 'bar' : this.options.type);
   this.options.mimeType = this.options.mimeType == '' ? mimeType : this.options.mimeType;
-  this.options.yFormat = (this.options.yFormat != '' && !isFunction(this.options.yFormat)) ? d3.format(this.options.yFormat) : this.options.yFormat;
+  this.options.yFormat = (Object.prototype.toString.call(this.options.yFormat) === '[object Function]') ? d3.format(this.options.yFormat) : this.options.yFormat;
   this.options.emphasis = this.options.emphasis == null ? [null, null, null] : this.options.emphasis;
   /* 
   generate names from chart values to make them human friendly
@@ -84,7 +79,7 @@ HubChart.prototype.render = function() {
     this.options.value.forEach(function(v) {
       var name = v.replace(/_/g, " ");
       names[v] = name.toTitleCase();
-    })
+    });
   }
 
   /* override tooltips to include Margins of Error where applicable*/
@@ -125,7 +120,7 @@ HubChart.prototype.render = function() {
       text += "</tr>";
     }
     return text + "</table>";
-  }
+  };
 
   /* call c3 to render chart set options to local scope */
 
@@ -190,11 +185,11 @@ HubChart.prototype.render = function() {
       }
     }
   });
-}
+};
 
 hubChart.generate = function(options, container) {
   if (container) {
     options.container = container;
   }
-  return new HubChart(options)
-}
+  return new HubChart(options);
+};
