@@ -16,10 +16,7 @@
   {% if page.data %}
   <script>
     $(function() {
-      //generateChart(browserData['{{page.id}}'],'#chart');
       var chart = hubChart.generate(browserData['{{page.id}}'],'#chart');
-      console.log(chart.data);
-      //getData(browserData['{{page.id}}']);
     });
   </script>
   <!-- {% include mainjs.html %} -->
