@@ -1,32 +1,55 @@
-var transform = function(data, label) {
-  var output = [];
-  var total = 0;
-  $.each(data, function(idx, rec) {
-    output.push([rec[label], rec.count]);
-    total += +rec.count;
-  });
-  if (total == 0) {
-    return false;
-  }
-  else {
-    return output;
-  }
-}
-
 function isFunction(functionToCheck) {
   var getType = {};
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
 }
 
-function processChart(params, container) {
-  var params = params;
-  var container = container;
-  
-  
-  
+var hubChart = {
+  version: ".1"
+};
+
+function HubChart(options) {
+  this.options = options;
+  this.data = "";
+  this.loadData();
 }
 
-function renderChart(data, params, container) {
+HubChart.prototype.getOption = function(key) {
+  return this.options[key];
+}
+
+HubChart.prototype.setOption = function(key, value) {
+  return this.options[key] = value;
+}
+
+HubChart.prototype.loadData = function() {
+  $$ = this;
+  if ($$.options.mimeType === "json") {
+    $.ajax({
+      url: $$.options.data,
+      type: 'GET',
+      success: function(response) {
+        if ($$.options.transform !== "") {
+          var transformer = new Transformer();
+          var transform = new window[$$.options.transform];
+          if (typeof transform === "object") {
+            transformer.setTransform(transform);
+            response = transformer.run(response, $$);
+          }
+          else {
+            throw new Error('transformer does not exist for ' + this.options.chartTitle);
+          }
+        }
+        $$.data = response
+        $$.render();
+      }
+    });
+  } else {
+    $$.data = $$.options.data;
+    $$.render();
+  }
+}
+
+HubChart.prototype.render = function() {
   /*
   initiate defaults
   */
@@ -38,32 +61,34 @@ function renderChart(data, params, container) {
     legend = 'bottom',
     type = 'area',
     mimeType = 'csv';
-  /* detect whether the data is being passed via external url */  
-  var url = (/^https?:\/\//.test(params.data)) ? params.data : '/data-browser/data/' + params.data;
-  /* define derived variables based on input params */
-  show = params.legend == 'none' ? false : true;
-  rotated = params.type == 'bar-horizontal' ? true : false;
+  /* detect whether the data is being passed via external url */
+  if (typeof this.data === "string") {
+    var url = (/^https?:\/\//.test(this.data)) ? this.data : '/data-browser/data/' + this.data;
+  }
+  /* define derived variables based on input this.options */
+  show = this.options.legend == 'none' ? false : true;
+  rotated = this.options.type == 'bar-horizontal' ? true : false;
   /* redefine certain parameters */
-  params.legend = params.legend == '' ? legend : params.legend;
-  params.groups = params.groups == null ? [] : params.groups;
-  params.type = params.type == '' ? type : (params.type == 'bar-horizontal' ? 'bar' : params.type);
-  params.mimeType = params.mimeType == '' ? mimeType : params.mimeType;
-  params.yFormat = (params.yFormat != '' && !isFunction(params.yFormat)) ? d3.format(params.yFormat) : params.yFormat;
-  params.emphasis = params.emphasis == null ? [null, null, null] : params.emphasis;
+  this.options.legend = this.options.legend == '' ? legend : this.options.legend;
+  this.options.groups = this.options.groups == null ? [] : this.options.groups;
+  this.options.type = this.options.type == '' ? type : (this.options.type == 'bar-horizontal' ? 'bar' : this.options.type);
+  this.options.mimeType = this.options.mimeType == '' ? mimeType : this.options.mimeType;
+  this.options.yFormat = (this.options.yFormat != '' && !isFunction(this.options.yFormat)) ? d3.format(this.options.yFormat) : this.options.yFormat;
+  this.options.emphasis = this.options.emphasis == null ? [null, null, null] : this.options.emphasis;
   /* 
   generate names from chart values to make them human friendly
   - remove underscores
   - title case
   */
-  if (params.value) {
-    params.value.forEach(function(v) {
+  if (this.options.value) {
+    this.options.value.forEach(function(v) {
       var name = v.replace(/_/g, " ");
       names[v] = name.toTitleCase();
     })
   }
-  
+
   /* override tooltips to include Margins of Error where applicable*/
-  var tooltip_contents = function (d, defaultTitleFormat, defaultValueFormat, color) {
+  var tooltip_contents = function(d, defaultTitleFormat, defaultValueFormat, color) {
     var $$ = this,
       config = $$.config,
       CLASS = $$.CLASS,
@@ -102,26 +127,32 @@ function renderChart(data, params, container) {
     return text + "</table>";
   }
 
+  /* call c3 to render chart set options to local scope */
+
+  var options = this.options;
+  var data = this.data;
   var chart = c3.generate({
-    bindto: container,
+    bindto: options.container,
     padding: {
       bottom: 30,
       left: pleft
     },
     data: {
-      url: url,
-      x: params.x,
-      xFormat: params.xFormat,
-      mimeType: params.mimeType,
+      url: url || undefined,
+      json: (Object.prototype.toString.call(data[0]) === '[object Object]' ? data : undefined),
+      columns: (Object.prototype.toString.call(data[0]) === '[object Array]' ? data : undefined),
+      x: (Object.prototype.toString.call(data[0]) === '[object Array]' ? undefined : options.x),
+      xFormat: options.xFormat,
+      mimeType: options.mimeType,
       keys: {
-        x: params.x,
-        value: params.value
+        x: options.x,
+        value: options.value
       },
       names: names,
-      groups: [params.groups],
-      type: params.type,
+      groups: [options.groups],
+      type: options.type,
       color: function(color, d) {
-        return d.id && d.index == params.emphasis[1] && d.id == params.emphasis[0] ? d3.rgb('#' + params.emphasis[2]) : color;
+        return d.id && d.index == options.emphasis[1] && d.id == options.emphasis[0] ? d3.rgb('#' + options.emphasis[2]) : color;
       },
       order: null,
       hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
@@ -133,16 +164,16 @@ function renderChart(data, params, container) {
       pattern: ['#5a9bd4', '#7ac36a', '#faa75b', '#9e67ab', '#ce7058', '#d77fb4', '#f15a60', '#737373']
     },
     legend: {
-      position: params.legend,
+      position: options.legend,
       show: show,
       hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
     },
     axis: {
       rotated: rotated,
       x: {
-        type: params.axisType,
+        type: options.axisType,
         tick: {
-          format: params.xTickFormat,
+          format: options.xTickFormat,
           width: 150
         }
       },
@@ -154,11 +185,16 @@ function renderChart(data, params, container) {
           top: 3
         },
         tick: {
-          format: params.yFormat
+          format: options.yFormat
         }
       }
     }
   });
-  
-  return chart;
+}
+
+hubChart.generate = function(options, container) {
+  if (container) {
+    options.container = container;
+  }
+  return new HubChart(options)
 }

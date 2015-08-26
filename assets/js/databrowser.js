@@ -22,6 +22,7 @@ var browserData =
   		"units" : "{{post.units}}",
   		"yFormat" : "{{post.yFormat}}",
   		"axisType" : "{{post.axisType}}",
+  		"transform": "{{post.transform}}",
       "groups" : {{post.groups | jsonify}},
       "popup" : {{post.popup | jsonify }},
       "margin": "{{post.margin}}",
