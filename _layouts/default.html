@@ -16,7 +16,11 @@
   {% if page.data %}
   <script>
     $(function() {
-      var chart = hubChart.generate(browserData['{{page.id}}'],'#chart');
+      if(browserData['{{page.id}}'].type.indexOf("map") > -1) {
+        var map = hubMap.generate(browserData['{{page.id}}'],'#chart');
+      } else {
+         var chart = hubChart.generate(browserData['{{page.id}}'],'#chart');
+      }
     });
   </script>
   <!-- {% include mainjs.html %} -->

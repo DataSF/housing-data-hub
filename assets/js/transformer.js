@@ -55,3 +55,32 @@ var countBoolean = function() {
     return output;
   }
 }
+
+/* special transform to categorize fault vs. no fault evictions,
+this could be abstracted to pass in the categories as an object, but for now this will do*/
+var categorizeFault = function() {
+  this.run = function(data,chart) {
+    var map = {};
+    var noFault = false;
+    $.each(data,function(idx, rec) {
+      for(var prop in rec) {
+          noFault = (typeof rec[prop] === "boolean" ? rec[prop] : false);
+          if(noFault) break;
+        }
+      if(!map[rec[chart.options.x]]) {
+        map[rec[chart.options.x]] = {};
+        map[rec[chart.options.x]]['fault'] = (!noFault ? 1 : 0);
+        map[rec[chart.options.x]]['no_fault'] = (noFault ? 1 : 0);
+        map[rec[chart.options.x]][chart.options.x] = rec[chart.options.x]
+      } else {
+        map[rec[chart.options.x]]['fault'] = (!noFault ? 1 + map[rec[chart.options.x]]['fault'] : map[rec[chart.options.x]]['fault']);
+        map[rec[chart.options.x]]['no_fault'] = (noFault ? 1 + map[rec[chart.options.x]]['no_fault'] : map[rec[chart.options.x]]['no_fault']);
+      }
+    });
+    var output = [];
+    for (var prop in map) {
+      output.push(map[prop]);
+    }
+    return output;
+  }
+}

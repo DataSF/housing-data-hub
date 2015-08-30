@@ -38,7 +38,8 @@ HubChart.prototype.loadData = function() {
         $$.render();
       }
     });
-  } else {
+  }
+  else {
     $$.data = $$.options.data;
     $$.render();
   }
@@ -48,7 +49,10 @@ HubChart.prototype.render = function() {
   /*
   initiate defaults
   */
-  var max = null,
+  
+  var options = this.options,
+    data = this.data,
+    max = null,
     pleft = null,
     show = true,
     rotated = false,
@@ -56,29 +60,30 @@ HubChart.prototype.render = function() {
     legend = 'bottom',
     type = 'area',
     mimeType = 'csv';
+    
+    console.log(data);
   /* detect whether the data is being passed via external url */
-  if (typeof this.data === "string") {
-    var url = (/^https?:\/\//.test(this.data)) ? this.data : '/data-browser/data/' + this.data;
+  if (typeof data === "string") {
+    var url = (/^https?:\/\//.test(data)) ? data : '/data-browser/data/' + data;
   }
-  /* define derived variables based on input this.options */
-  show = this.options.legend == 'none' ? false : true;
-  rotated = this.options.type == 'bar-horizontal' ? true : false;
+  /* define derived variables based on input options */
+  show = options.legend == 'none' ? false : true;
+  rotated = options.type == 'bar-horizontal' ? true : false;
   /* redefine certain parameters */
-  this.options.legend = this.options.legend == '' ? legend : this.options.legend;
-  this.options.groups = this.options.groups == null ? [] : this.options.groups;
-  this.options.type = this.options.type == '' ? type : (this.options.type == 'bar-horizontal' ? 'bar' : this.options.type);
-  this.options.mimeType = this.options.mimeType == '' ? mimeType : this.options.mimeType;
-  this.options.yFormat = (Object.prototype.toString.call(this.options.yFormat) === '[object Function]') ? d3.format(this.options.yFormat) : this.options.yFormat;
-  this.options.emphasis = this.options.emphasis == null ? [null, null, null] : this.options.emphasis;
+  options.legend = options.legend == '' ? legend : options.legend;
+  options.groups = options.groups == null ? [] : options.groups;
+  options.type = options.type == '' ? type : (options.type == 'bar-horizontal' ? 'bar' : options.type);
+  options.mimeType = options.mimeType == '' ? mimeType : options.mimeType;
+  options.yFormat = (Object.prototype.toString.call(options.yFormat) === '[object Function]') ? options.yFormat : d3.format(options.yFormat);
+  options.emphasis = options.emphasis == null ? [null, null, null] : options.emphasis;
   /* 
   generate names from chart values to make them human friendly
   - remove underscores
   - title case
   */
-  if (this.options.value) {
-    this.options.value.forEach(function(v) {
-      var name = v.replace(/_/g, " ");
-      names[v] = name.toTitleCase();
+  if (options.value) {
+    options.value.forEach(function(v, idx) {
+      names[v] = (options.names ? options.names[idx] : v.replace(/_/g, " ").toTitleCase());
     });
   }
 
@@ -122,10 +127,6 @@ HubChart.prototype.render = function() {
     return text + "</table>";
   };
 
-  /* call c3 to render chart set options to local scope */
-
-  var options = this.options;
-  var data = this.data;
   var chart = c3.generate({
     bindto: options.container,
     padding: {

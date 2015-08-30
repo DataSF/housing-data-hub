@@ -12,6 +12,7 @@ var browserData =
   		"xTickFormat" : "{{post.xTickFormat}}",
   		"mimeType" : "{{post.dataType}}",
   		"value": {{post.chartvalues | jsonify}},
+  		"names": {{post.chartnames | jsonify}},
   		"description" : '{{post.content | strip_newlines | escape_once }}',
   		"source" : "{{post.source}}",
   		"notes" : "{{post.notes | escape }}",
