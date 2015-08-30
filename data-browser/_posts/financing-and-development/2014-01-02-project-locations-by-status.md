@@ -5,9 +5,18 @@ title: Project locations by status
 category: "Financing-and-Development"
 data: "financing-and-development/project_locations.csv"
 type: map-point
-popup: "Sponsor,Affordable Units,Beds,Target Population,Status,Affordability Requirement Year"
+popup:
+  title: label
+  subtitle: description
+  info: 
+    - Sponsor
+    - Affordable Units
+    - Beds
+    - Target Population
+    - Status
+    - Affordability Requirement Year
 "axisType": category
-column: Status
+column: status
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"

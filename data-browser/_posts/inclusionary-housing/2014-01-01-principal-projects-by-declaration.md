@@ -3,12 +3,16 @@ layout: data
 title: Developer choice (all projects)
 "chart-title": "Principal project locations by developer choice, all projects"
 category: "Inclusionary-Housing"
-data: "https://data.sfgov.org/resource/f2n6-ybnq.json"
-#data: inclusionary/inclusionary_locations.csv
+data: "https://data.sfgov.org/resource/gf2u-2nfi.geojson"
 type: "map-point"
 column: section_415_declaration_label
-"legend-cats": "On-Site BMR Project,Off-Site BMR Project,Fee BMR Project,Combination Project,Land Dedication,Units for Off-Site Project"
-#popup: "section_415_declaration_of_intent,total_bmr_s_in_this_building_or_phase"
+legendCategories:
+  - On-Site BMR Project
+  - Off-Site BMR Project
+  - Fee BMR Project
+  - Combination Project
+  - Land Dedication
+  - Units for Off-Site Project
 scale: "4"
 colors: Paired
 published: true

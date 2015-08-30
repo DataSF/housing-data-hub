@@ -30,6 +30,7 @@ var browserData =
       "legendTitle": "{{post.legend-title}}",
       "emphasis": {{post.emphasis | jsonify}},
       "legend": "{{post.legend}}",
+      "legendCategories": {{post.legendCategories | jsonify}},
       "max": "{{post.max}}",
       "pleft": "{{post.pleft}}"
   	} {% unless forloop.last %},{% endunless%}
