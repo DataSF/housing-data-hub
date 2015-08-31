@@ -15,11 +15,9 @@ popup:
     - Target Population
     - Status
     - Affordability Requirement Year
-"axisType": category
 column: status
 published: true
 source: "Mayor's Office of Housing and Community Development."
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: Set2
 ---
