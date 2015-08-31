@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse">
           {% unless page.layout == 'front' %}
           <ul class="nav navbar-nav navbar-right">
-            {% for link in site.navigation %} {% assign current = nil %} {% if page.url == link.actual or page.layout == link.layout %} {% assign current = 'active' %} {% endif %}
+            {% for link in site.data.navigation %} {% assign current = nil %} {% if page.url == link.actual or page.layout == link.layout %} {% assign current = 'active' %} {% endif %}
             <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
               <a class="{{ current }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
             </li>

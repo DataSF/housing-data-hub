@@ -6,7 +6,7 @@
       </div>
       <div class="col-sm-4 left-border-dotted">
         <ul class="list-unstyled">
-          {% for link in site.navigation %}
+          {% for link in site.data.navigation %}
           <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
             <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
           </li>
