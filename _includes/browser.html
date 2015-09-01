@@ -1,5 +1,5 @@
 <div class="panel-group" id="accordion">
-  {% for group in site.data.browser %}
+  {% for group in site.data.categories %}
   <h2>{{ group.supergroup}}</h2>
   {% for cat in group.categories %}
   {% assign category = site.categories[cat] %}
