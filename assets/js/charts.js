@@ -128,7 +128,7 @@ HubChart.prototype.render = function() {
   };
 
   var chart = c3.generate({
-    bindto: options.container,
+    bindto: '#' + options.container,
     padding: {
       bottom: 30,
       left: pleft

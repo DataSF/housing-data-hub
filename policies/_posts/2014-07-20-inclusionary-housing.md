@@ -1,7 +1,7 @@
 ---
 layout: policy
 summary: Programs that require new housing to “include” affordable units (or pay a fee) are called inclusionary.
-"data-category": "inclusionary-housing"
+dataCategory: "inclusionary-housing"
 published: true
 ami: 100
 target: units

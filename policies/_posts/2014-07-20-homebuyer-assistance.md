@@ -6,7 +6,7 @@ published: true
 ami: 120
 target: people
 image: homebuyers.png
-"data-category": "homebuyer-assistance"
+dataCategory: "homebuyer-assistance"
 ---
 
 Buyer assistance programs make homeownership possible for many families by reducing  the upfront and ongoing costs of buying a home. The goal of the program is to create more low to moderate income homeowners in San Francisco.

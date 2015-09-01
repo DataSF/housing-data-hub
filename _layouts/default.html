@@ -11,19 +11,46 @@
       {{ content }}
     </div>
   </main>
-  {% include footer.html %} {% include js.html %}
+  {% include footer.html %} 
+  {% include js.html %}
   
-  {% if page.data %}
+  
   <script>
-    $(function() {
-      if(browserData['{{page.id}}'].type.indexOf("map") > -1) {
-        var map = hubMap.generate(browserData['{{page.id}}'],'chart');
-      } else {
-         var chart = hubChart.generate(browserData['{{page.id}}'],'#chart');
-      }
+  $(function() {
+    var map = false, chart = false;
+    {% if page.data %}
+    if(browserData['{{page.id}}'].type.indexOf("map") > -1) {
+      var map = hubMap.generate(browserData['{{page.id}}'],'chart');
+    } else {
+      var chart = hubChart.generate(browserData['{{page.id}}'],'chart');
+    }
+    {% endif %}
+    $('.viz-wrapper').each(function(index, val) {
+      var vizData = browserData[$('#' + val.id + ' .data-browser-select').val()];
+      loadViz(vizData, val.id)      
     });
+
+    $('.data-browser-select').change(function() {
+      var vizData = browserData[$(this).val()];
+      loadViz(vizData, $(this).parent().attr('id'));
+    });
+
+    function loadViz(options,parent) {
+      if(options.type.indexOf("map") > -1) {
+        $('#' + parent + ' .chart').hide();
+        $('#' + parent + ' .map').show();
+        if(map) {
+          map.map.remove();
+        }
+        map = hubMap.generate(options, $('#' + parent + ' .map').attr('id'));
+      } else {
+        $('#' + parent + ' .map').hide();
+        $('#' + parent + ' .chart').show();
+        chart = hubChart.generate(options, $('#' + parent + ' .chart').attr('id'));
+      }
+    }
+  });
   </script>
-  {% endif %}
 </body>
 
 </html>
