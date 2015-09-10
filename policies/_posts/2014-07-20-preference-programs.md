@@ -33,6 +33,8 @@ The Certificate of Preference Program (COP) is available to residents displaced 
 The 1986 Ellis Act is a California State law that allows property owners to evict tenants in order to exit the rental business.
 The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. Eligibility depends on criteria such as length of stay, date when the eviction notice is received, and the health condition of the tenant. 
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

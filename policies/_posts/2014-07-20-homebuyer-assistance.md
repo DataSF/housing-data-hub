@@ -25,6 +25,8 @@ AMI | One | Two | Three | Four
 80% AMI | $54,350| $62,150| $69,900| $77,700
 120% AMI| $81,550|$93,250|$104,900|$116,500
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

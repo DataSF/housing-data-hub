@@ -17,6 +17,8 @@ Homeownership SF (a collaboration of certified housing counseling agencies) prov
 
 Owners who own a home offered through one of the City’s other housing programs, e.g. inclusionary housing, may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

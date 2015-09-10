@@ -13,8 +13,6 @@ source: "Mayor's Office of Housing and Community Development"
 portalID: "f2n6-ybnq"
 published: true
 type: area
-scale: "5"
-colors: Blues
 "axisType": timeseries
 xTickFormat: '%Y'
 xInputFormat: '%Y-%m-%dT%H:%M:%S'

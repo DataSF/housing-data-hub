@@ -371,7 +371,6 @@ HubMap.prototype.loadData = function() {
   HubMap.prototype.bindInteractive = function() {
     var $$ = this, options = $$.options;
     $('#' + options.container).off('click').on('click', '.legend-item', function(e) {
-      console.log('click');
       $(this).children('.legend-filter').prop('checked') ? $(this).children('.legend-filter').prop('checked', false) : $(this).children('.legend-filter').prop('checked', true);
       $(this).children('i').toggleClass('off');
       var enabled = {};

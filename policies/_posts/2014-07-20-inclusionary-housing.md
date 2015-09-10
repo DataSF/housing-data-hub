@@ -44,6 +44,8 @@ The Affordable Housing Fees are used to:
 - Provide assistance to low and moderate income homebuyers
 - Pay for studies to determine the affordable housing fee
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

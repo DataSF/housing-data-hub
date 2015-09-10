@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+{% include core/head.html %}
 
 <body>
   <!--<![endif]-->
-  {% include header.html %}
+  {% include core/header.html %}
   <main role="main" id="maincontent">
     <div class="{% if page.fluid %} container-fluid {% else %} container {% endif %}">
       {{ content }}
     </div>
   </main>
-  {% include footer.html %} 
-  {% include js.html %}
-  
-  
+  {% include core/footer.html %} 
+  {% include core/js.html %}
   <script>
   $(function() {
     var map = false, chart = false;
+
     {% if page.data %}
     if(browserData['{{page.id}}'].type.indexOf("map") > -1) {
       var map = hubMap.generate(browserData['{{page.id}}'],'chart');
@@ -25,6 +24,33 @@
       var chart = hubChart.generate(browserData['{{page.id}}'],'chart');
     }
     {% endif %}
+
+    $('table').addClass('table table-striped');
+    $('.hover-tooltip').tooltip();
+    $('.definition').popover(); 
+
+    if($('.nav-toc').length > 0) {
+      buildTOC();
+      $('body').scrollspy({
+        target: '.nav-toc'
+      });
+
+      $('.nav-toc').affix({
+        offset: {
+          top: $('.nav-toc').offset().top - 102
+        }
+      });
+
+      $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        var $bodyMargin = $('body').css('margin-top').split("px")[0];
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 10
+        }, 1000, 'easeInOutExpo');
+        event.preventDefault();
+      });
+    }
+
     $('.viz-wrapper').each(function(index, val) {
       var vizData = browserData[$('#' + val.id + ' .data-browser-select').val()];
       loadViz(vizData, val.id)      
@@ -37,18 +63,28 @@
 
     function loadViz(options,parent) {
       if(options.type.indexOf("map") > -1) {
-        $('#' + parent + ' .chart').hide();
-        $('#' + parent + ' .map').show();
+        $('#' + parent + ' .chart-wrapper').hide();
+        $('#' + parent + ' .map-wrapper').show();
         if(map) {
           map.map.remove();
         }
         map = hubMap.generate(options, $('#' + parent + ' .map').attr('id'));
       } else {
-        $('#' + parent + ' .map').hide();
-        $('#' + parent + ' .chart').show();
+        $('#' + parent + ' .map-wrapper').hide();
+        $('#' + parent + ' .chart-wrapper').show();
         chart = hubChart.generate(options, $('#' + parent + ' .chart').attr('id'));
       }
+      options.description ? $('#' + parent + ' .description').html(options.description) : $('#' + parent + ' .description').html('');
+      options.source ? $('#' + parent + ' .source').html('<strong>Source:</strong> ' + options.source) : $('#' + parent + ' .source').html('');
+      options.notes ? $('#' + parent + ' .notes').html('<strong>Notes:</strong> ' + options.notes) : $('#' + parent + ' .notes').html('');
     }
+
+    function buildTOC() {
+      $('h2').each(function(i, el) {
+        $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '" class="page-scroll">' + $(el).html() + '</a></li>');
+      })
+    }
+
   });
   </script>
 </body>

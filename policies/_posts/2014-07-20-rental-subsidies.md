@@ -19,6 +19,8 @@ Project-based operating subsidies are a related form of assistance for low-incom
 
 Examples of operating subsidy programs include Project-Based Section 8 Rental Assistance Shelter + Care, both funded by HUD, as well as Project-Based Section 8 Housing Choice Vouchers (a SFHA program), provisions of the Mental Health Services Act (funded by the California Department of Housing and Community Development), and the Local Operating Subsidy Program (funded by the City of San Francisco).
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

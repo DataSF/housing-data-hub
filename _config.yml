@@ -22,7 +22,7 @@ prose:
         field:
           element: "select"
           label: "Category"
-          options: "http://housing.datasf.org/api/categories.json?callback=categoriesCallback"
+          options: "http://housing.datasf.org/api/categories.jsonp?callback=categoriesCallback"
           alterable: true
           placeholder: "Choose"
       - name: "title"

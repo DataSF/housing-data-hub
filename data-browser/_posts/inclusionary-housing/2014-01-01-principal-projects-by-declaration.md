@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Developer choice (all projects)
-"chart-title": "Principal project locations by developer choice, all projects"
+"chart-title": "All completed inclusionary projects by developer choice"
 category: "Inclusionary-Housing"
 data: "https://data.sfgov.org/resource/gf2u-2nfi.geojson"
 type: "map-point"

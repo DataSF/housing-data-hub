@@ -50,6 +50,8 @@ Other|||
 
 [3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

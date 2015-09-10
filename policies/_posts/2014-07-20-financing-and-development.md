@@ -64,6 +64,8 @@ Affordable housing funding programs often restrict occupancy to certain populati
 ### Converting Market-Rate Units to Affordable Units: the Small Sites Program
 Rent control keeps a significant amount of San Francisco’s housing stock affordable, but under the State’s Ellis Act, such units are at-risk of conversion to market-rate if owners sell them to new buyers who convert them to tenancies-in-common.  To protect residents living in these at-risk units, MOHCD launched its “Small Sites Program” in 2014.  With below-market-rate funding from MOHCD, affordable developers can buy small buildings, make any necessary repairs, and keep them permanently affordable.
 
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
+
 ## Organizations
 Organization | What it does
 -------------|--------------

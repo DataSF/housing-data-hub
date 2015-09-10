@@ -234,6 +234,7 @@ h2.panel-title {
 }
 .navbar-inverse {
   background-color: #245f7b;
+  border-color: transparent;
 }
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
@@ -257,7 +258,7 @@ h2.panel-title {
   position: relative;
   min-height: 32px;
   line-height: 32px;
-  background-color: #222222;
+  background-color: #133140;
   margin: 0;
   border: none;
 }
@@ -361,7 +362,7 @@ aside p {
 .affix {
   width: inherit;
   position: fixed;
-  top: 125px;
+  top: 102px;
 }
 .affix-bottom {
   width: inherit;
@@ -417,7 +418,7 @@ h2:before, #maincontent:before {
 }
 
 .home-buttons {
-  margin-bottom: 50px;
+  margin: 25px 0 50px 0;
 }
 
 
@@ -532,6 +533,13 @@ footer a {
 
 footer a:hover, footer a:focus {
   color: #55A5C9;
+}
+
+footer .made-in {
+  background-color: #245f7b;
+  color: #fff;
+  margin-top: 25px;
+  padding: 5px 0;
 }
 
 a.no-underline, a:hover.no-underline {

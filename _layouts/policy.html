@@ -8,10 +8,9 @@ layout: default
       <p class="lead">{{ page.summary }}</p>
       <h2 id="description">Description</h2> 
       {{ content }}
-      {% include dataembed.html embed=page.dataCategory count="1" %}
     </article>
   </div>
   <div class="col-sm-3" role="complementary">
-    {% include sidenav.html %}
+    {% include core/sidenav.html %}
   </div>
 </div>

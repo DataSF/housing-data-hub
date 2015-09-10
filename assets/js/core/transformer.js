@@ -32,6 +32,18 @@ var toColumns = function() {
   }
 };
 
+var toMatrix = function() {
+  this.run = function(data,chart) {
+    var output = [[chart.options.x]];
+    $.each(data,function(idx,rec) {
+      if(output[0].indexOf(rec[chart.options.pivot]) !== -1) {
+        output[0].push()
+      }
+      
+    });
+  }
+}
+
 /* turn booleans from portal to counts where true */
 var countBoolean = function() {
   this.run = function(data,chart) {

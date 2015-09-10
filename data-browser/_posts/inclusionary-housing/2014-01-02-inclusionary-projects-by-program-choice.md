@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Developer choice (completed)
-"chart-title": "Developer choice for completed projects since 1992"
+"chart-title": "All completed inclusionary projects since 1992 by developer choice"
 category: "Inclusionary-Housing"
 #data: inclusionary/projects_by_dev_choice.csv
 data: "https://data.sfgov.org/resource/gf2u-2nfi.json?&$select=section_415_declaration_label,count(*)&$where=status_of_project=%27Completed%27+AND+NOT+section_415_declaration_label=%27Units%20for%20Off-Site%20Project%27&$group=section_415_declaration_label&$order=count+desc"
