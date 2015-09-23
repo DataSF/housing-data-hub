@@ -7,8 +7,8 @@ category: "homeowner-assistance"
 data: "assistance-for-homeowners/total_grants_loans.csv"
 column: Label
 type: bar
-"axis-type": category
-"y-format": "$,"
+"axisType": category
+"yFormat": "$,"
 source: "Mayor's Office of Housing and Community Development"
 published: true
 scale: "5"

@@ -6,31 +6,12 @@ redcarpet:
 gems:
 - jekyll-sitemap
 
-navigation:
-- text: Home
-  url: /?ref=home
-  actual: /index.html
-- text: Overview
-  url: /overview/
-  actual: /overview/index.html
-- text: 'Policies & Programs'
-  url: /policies/
-  actual: /policies/index.html
-  layout: policy
-- text: Data Browser
-  url: /data-browser/
-  actual: /data-browser/index.html
-  layout: data
-- text: Resources
-  url: /resources/
-  actual: /resources/index.html
-- text: About
-  url: /about/
-  actual: /about/index.html
+sass:
+  style: :compressed
 
 prose:
   siteurl: 'http://housing.datasf.org'
-  media: 'images'
+  media: 'assets/images'
   metadata:
     data-browser/_posts:
       - name: "layout"
@@ -39,8 +20,11 @@ prose:
           value: "data"
       - name: "category"
         field:
-          element: "text"
+          element: "select"
           label: "Category"
+          options: "http://housing.datasf.org/api/categories.jsonp?callback=categoriesCallback"
+          alterable: true
+          placeholder: "Choose"
       - name: "title"
         field:
           element: "text"
@@ -165,7 +149,7 @@ prose:
               value: 'Set2'
             - name: 'Qualitative: Set3'
               value: 'Set3'
-      - name: "axis-type"
+      - name: "axisType"
         field:
           element: "select"
           label: "Axis Type"
@@ -177,7 +161,7 @@ prose:
               value: 'category'
             - name: 'Time Series'
               value: 'timeseries'
-      - name: "y-format"
+      - name: "yFormat"
         field:
           element: "select"
           label: "Y Format"

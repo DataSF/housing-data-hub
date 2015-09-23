@@ -5,9 +5,9 @@ title: Affordability by tenure
 category: "Housing-Affordability"
 data: housing-affordability/ACS13_1YR_affordability_by_tenure.csv
 type: bar
-"axis-type": category
+"axisType": category
 column: Tenure
-"y-format": .2p
+"yFormat": .2p
 published: true
 source: "Census Bureau, 2013 American Community Survey 1-Year Estimates. Selected Housing Characteristics."
 scale: "5"

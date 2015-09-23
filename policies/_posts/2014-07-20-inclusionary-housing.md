@@ -1,7 +1,7 @@
 ---
 layout: policy
 summary: Programs that require new housing to “include” affordable units (or pay a fee) are called inclusionary.
-"data-category": "inclusionary-housing"
+dataCategory: "inclusionary-housing"
 published: true
 ami: 100
 target: units
@@ -43,6 +43,8 @@ The Affordable Housing Fees are used to:
 - Increase the supply of affordable housing, including minimum amounts allocated to acquiring or rehabilitating “Small Sites,” which are properties with up to 25 units
 - Provide assistance to low and moderate income homebuyers
 - Pay for studies to determine the affordable housing fee
+
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
 Organization | What it does

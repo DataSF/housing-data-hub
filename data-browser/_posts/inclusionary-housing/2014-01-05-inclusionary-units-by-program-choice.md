@@ -12,8 +12,8 @@ published: true
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": category
-"y-format": ","
+"axisType": category
+"yFormat": ","
 ---
 
 Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. The chart below shows how many units have resulted from those choices. Please note that fees go toward financing additional affordable housing. You can see data on this under affordable housing finance and development.

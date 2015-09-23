@@ -5,14 +5,14 @@ title: Mortgage credit certificates
 category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/mcc_by_year.csv"
 type: bar
-"axis-type": ""
+"axisType": ""
 column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-"y-format": ","
+"yFormat": ","
 notes: "Data as of April 1, 2015."
 ---
 

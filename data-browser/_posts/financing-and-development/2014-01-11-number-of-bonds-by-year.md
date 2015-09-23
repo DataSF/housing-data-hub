@@ -5,7 +5,7 @@ title: Number of bonds by year
 category: "Financing-and-Development"
 data: "financing-and-development/bonds_by_year.csv"
 type: bar
-"axis-type": ""
+"axisType": ""
 column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."

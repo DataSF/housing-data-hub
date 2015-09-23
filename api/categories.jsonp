@@ -1,0 +1,10 @@
+---
+---
+categoriesCallback([
+{% for category in site.categories %}
+	{
+		"name": "{{ author[1].name }}",
+		"value": "{{ author[0] }}"
+	}{% if forloop.last != true %},{% endif %} 
+{% endfor %}
+]);

@@ -5,13 +5,13 @@ title: Housing age
 category: "housing-stock-and-occupancy"
 data: housing-overview/ACS13_5YR_housing_age.csv
 column: Decades
-"axis-type": category
+"axisType": category
 type: bar
 published: true
 source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
 scale: "5"
 colors: YlGn
-"y-format": ","
+"yFormat": ","
 notes: "This data is based on a sample survey conducted between 2009 and 2013. As a result, it does not fully capture units created since 2010."
 ---
 

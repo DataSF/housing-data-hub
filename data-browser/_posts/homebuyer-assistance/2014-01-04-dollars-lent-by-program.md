@@ -5,14 +5,14 @@ title: Value of loans
 category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/201504/dollars_lent_by_program.csv"
 type: "bar-horizontal"
-"axis-type": category
+"axisType": category
 column: Program
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-"y-format": "$,"
+"yFormat": "$,"
 notes: "Data as of April 1, 2015."
 ---
 

@@ -5,7 +5,7 @@ title: Applications by household size (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_household_size.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Household size
 published: true
 source: "Mayor's Office of Housing and Community Development."

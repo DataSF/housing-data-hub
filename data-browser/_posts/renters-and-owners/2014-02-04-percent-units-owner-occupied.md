@@ -2,7 +2,7 @@
 layout: data
 title: "Owner-occupied units"
 category: "renters-and-owners"
-data: DEC_10_DP_DPDP1.csv
+data: renters-and-owners/DEC_10_DP_DPDP1.csv
 column: HD02_S181
 scale: "5"
 colors: PuBu
@@ -10,8 +10,8 @@ legend-title: "Percent owner-occupied"
 type: map
 units: "%"
 published: true
-"axis-type": category
-"y-format": "$,"
+"axisType": category
+"yFormat": "$,"
 source: "U.S. Census Bureau, 2010 Census. Profile of General Population and Housing Characteristics."
 notes: null
 "chart-title": "Percent of units that are owner-occupied"

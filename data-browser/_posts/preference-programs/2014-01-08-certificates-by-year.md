@@ -7,7 +7,7 @@ data: "preference-programs/certificates_by_decade.csv"
 type: bar
 column: Decade
 published: true
-"axis-type": category
+"axisType": category
 source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn

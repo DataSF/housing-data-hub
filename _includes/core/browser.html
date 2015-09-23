@@ -1,0 +1,34 @@
+<div class="panel-group" id="accordion">
+  {% for group in site.data.categories %}
+  <h2>{{ group.supergroup}}</h2>
+  {% for cat in group.categories %}
+  {% assign category = site.categories[cat] %}
+  {% assign matchCat = cat %}
+  {% assign pageCatLower = page.category | downcase %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a data-toggle="collapse" data-parent="#accordion" href="#{{ cat replace: ' ','-' }}">
+      <h3 class="panel-title">
+        {{ cat | replace: "-"," " | capitalize }}
+      </h3>
+      </a>
+    </div>
+
+    <div id="{{ cat | replace: ' ','-' }}" class="panel-collapse collapse {% if pageCatLower == matchCat %} in {% endif %} ">
+      <div class="panel-body">
+        <ul class="nav-browser">
+          {% assign count = '0' %} 
+          {% for post in category reversed %} 
+          {% if post.url %} 
+          {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+          <li {% if post.url == page.url %} class="active" {%endif%}><a href="{{site.baseurl}}{{post.url}}" data-content-id="{{ count }}">{{post.title}}</a>
+          </li>
+          {% endif %} 
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endfor %}
+</div>

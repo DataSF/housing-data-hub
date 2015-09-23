@@ -7,7 +7,7 @@ data: "preference-programs/applications_by_month.csv"
 type: bar
 column: Month
 published: true
-"axis-type": category
+"axisType": category
 source: "Mayor's Office of Housing and Community Development."
 notes: "Data as of October 21, 2014."
 scale: "5"

@@ -6,7 +6,7 @@ category: "homeowner-assistance"
 data: "assistance-for-homeowners/loans_by_year.csv"
 column: Year
 type: bar
-"y-format": "$,"
+"yFormat": "$,"
 source: "Mayor's Office of Housing and Community Development"
 published: true
 scale: "5"

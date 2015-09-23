@@ -8,7 +8,7 @@ notes: Average household size was calculated by dividing the household populatio
 published: true
 type: bar
 column: Year
-"axis-type": category
+"axisType": category
 legend: right
 groups: "1-2 Units,3-10 Units,11-49 Units,50-250 Units,Above 250 Units"
 data: "decennial-census/avg_household_size.csv"

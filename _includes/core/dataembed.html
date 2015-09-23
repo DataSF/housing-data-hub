@@ -1,0 +1,31 @@
+<div id="viz-wrapper-{{include.count}}" class="viz-wrapper">
+  <h2 id="data">Data</h2>
+  {% assign pageCat = include.embed %}
+  {% if pageCat == '' %}
+    <p>No data to report yet. Data is still being discovered for this policy. <a href="{{site.baseurl}}/about#our-process" title="Click here to read about our process of continuous improvement">Read more about our process of continuous improvement.</a></p>
+  {% else %}
+  <select class="form-control data-browser-select">
+    {% for post in site.categories[pageCat] reversed %}
+    {% if post.layout == 'data' %}
+    <option value="{{post.id}}">{{post.chart-title}}</option>
+    {% endif %}
+    {% endfor %}
+  </select>
+  <div id="chart-wrapper-{{include.count}}" class="chart-wrapper">
+    <div class="description"></div>
+    <div id="chart-{{include.count}}" class="chart"></div>
+    <div class="footnote">
+      <p class="source"></p>
+      <p class="notes"></p>
+    </div>
+  </div>
+  <div id="map-wrapper-{{include.count}}" class="map-wrapper">
+    <div class="description"></div>
+    <div id="map-{{include.count}}" class="map" style="height: 500px;"></div>
+    <div class="footnote">
+      <p class="source"></p>
+      <p class="notes"></p>
+    </div>
+  </div>
+  {% endif %}
+</div>

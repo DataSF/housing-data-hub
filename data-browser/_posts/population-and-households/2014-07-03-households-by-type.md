@@ -5,13 +5,13 @@ title: Family and nonfamily households
 category: "population-and-households"
 data: "decennial-census/households_by_type.csv"
 column: Year
-"axis-type": category
+"axisType": category
 type: line
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
 colors: YlGn
-"y-format": ","
+"yFormat": ","
 notes: ""
 ---
 

@@ -4,18 +4,18 @@ title: Annual allowable increase
 "chart-title": "Annual allowable rent increase over time since 1982"
 category: "Rent-Control"
 data: "https://data.sfgov.org/resource/hsxb-ci7b.json"
-datatype: json
+dataType: json
 chartvalues:
   - annual_allowable_increase
-#data: "rent-control/annual_allowable_increase.csv"
 column: effective_starting_date
 source: San Francisco Rent Board
 portalID: "hsxb-ci7b"
 published: true
 type: step
-"axis-type": timeseries
-"y-format": 'function(value) { return value + "%"}'
+"axisType": timeseries
+"yFormat": 'function(value) { return value + "%"}'
 xInputFormat: '%Y-%m-%dT%H:%M:%S'
+xTickFormat: '%m/%d/%Y'
 scale: "5"
 colors: YlGn
 ---

@@ -1,59 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Housing Policy Guide">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-  <title>SF Housing Data Hub | {{page.title}}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="{{site.baseurl}}/style.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/styles/c3.css" rel="stylesheet">
-
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+{% include core/head.html %}
 
 <body>
-  {% include header.html %}
-  <main role="main" class="content">
-    <div class="container-fluid masthead data-browser">
-      <div class="darkener"></div>
-      <div class="container">
-        <h2>Data Browser</h2>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        {% include alert.html %}
-        <div class="col-sm-5 col-md-4">
-          <div class="panel-group" id="accordion">
-            {% include browser.html %}
-          </div>
-        </div>
-        <div class="col-sm-7 col-md-8">
-          <h1 class="top">{{ page.title }}</h1>
-          <div id="chart"></div>
-          {{content}}
-          <a href="{{ page.policy-link }}">More on this policy</a>
-        </div>
-      </div>
+  <!--<![endif]-->
+  {% include core/header.html %}
+  <main role="main" id="maincontent">
+    <div class="{% if page.fluid %} container-fluid {% else %} container {% endif %}">
+      {{ content }}
     </div>
   </main>
-  {% include footer.html %}
+  {% include core/footer.html %} 
+  {% include core/js.html %}
+  <script>
+  $(function() {
+    var map = false, chart = false;
+
+    {% if page.data %}
+    if(browserData['{{page.id}}'].type.indexOf("map") > -1) {
+      var map = hubMap.generate(browserData['{{page.id}}'],'chart');
+    } else {
+      var chart = hubChart.generate(browserData['{{page.id}}'],'chart');
+    }
+    {% endif %}
+
+    $('table').addClass('table table-striped');
+    $('.hover-tooltip').tooltip();
+    $('.definition').popover(); 
+
+    if($('.nav-toc').length > 0) {
+      buildTOC();
+      $('body').scrollspy({
+        target: '.nav-toc'
+      });
+
+      $('.nav-toc').affix({
+        offset: {
+          top: $('.nav-toc').offset().top - 102
+        }
+      });
+
+      $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        var $bodyMargin = $('body').css('margin-top').split("px")[0];
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 10
+        }, 1000, 'easeInOutExpo');
+        event.preventDefault();
+      });
+    }
+
+    $('.viz-wrapper').each(function(index, val) {
+      var vizData = browserData[$('#' + val.id + ' .data-browser-select').val()];
+      loadViz(vizData, val.id)      
+    });
+
+    $('.data-browser-select').change(function() {
+      var vizData = browserData[$(this).val()];
+      loadViz(vizData, $(this).parent().attr('id'));
+    });
+
+    function loadViz(options,parent) {
+      if(options.type.indexOf("map") > -1) {
+        $('#' + parent + ' .chart-wrapper').hide();
+        $('#' + parent + ' .map-wrapper').show();
+        if(map) {
+          map.map.remove();
+        }
+        map = hubMap.generate(options, $('#' + parent + ' .map').attr('id'));
+      } else {
+        $('#' + parent + ' .map-wrapper').hide();
+        $('#' + parent + ' .chart-wrapper').show();
+        chart = hubChart.generate(options, $('#' + parent + ' .chart').attr('id'));
+      }
+      options.description ? $('#' + parent + ' .description').html(options.description) : $('#' + parent + ' .description').html('');
+      options.source ? $('#' + parent + ' .source').html('<strong>Source:</strong> ' + options.source) : $('#' + parent + ' .source').html('');
+      options.notes ? $('#' + parent + ' .notes').html('<strong>Notes:</strong> ' + options.notes) : $('#' + parent + ' .notes').html('');
+    }
+
+    function buildTOC() {
+      $('h2').each(function(i, el) {
+        $('.nav.toc').append('<li><a href="#' + $(el).attr('id') + '" class="page-scroll">' + $(el).html() + '</a></li>');
+      })
+    }
+
+  });
+  </script>
 </body>
 
 </html>

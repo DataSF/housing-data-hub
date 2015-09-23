@@ -5,14 +5,14 @@ title: Dollars lent by year
 category: "Financing-and-Development"
 data: "financing-and-development/city_dollars_by_project_status.csv"
 type: bar
-"axis-type": ""
+"axisType": ""
 column: Year
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-"y-format": "$,"
+yFormat: "$,"
 notes: "(1) Projects are typically developed within a 5-year period. Pre-2009 funding amounts shown as “under construction” or “in predevelopment” experienced some delay after receiving an initial funding commitment from the City. (2) The amounts contributed to projects “under construction” or “in predevelopment” are incomplete and will be revised by 11/30/14. (3) The amounts contributed to some operational projects may be understated Additional research to verify the accuracy of the funding tallies will be complete by 12/31/14. "
 ---
 

@@ -5,7 +5,7 @@ title: Applications by gender (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_gender.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Gender
 published: true
 source: "Mayor's Office of Housing and Community Development."

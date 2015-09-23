@@ -5,7 +5,7 @@ title: Applications by status (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_status.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Status
 published: true
 source: "Mayor's Office of Housing and Community Development."

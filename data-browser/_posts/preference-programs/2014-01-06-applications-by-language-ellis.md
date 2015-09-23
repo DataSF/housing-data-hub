@@ -5,7 +5,7 @@ title: Applications by language (Ellis)
 category: "Preference-Programs"
 data: "preference-programs/applications_by_primary_language.csv"
 type: bar
-"axis-type": category
+"axisType": category
 column: Primary Language
 published: true
 source: "Mayor's Office of Housing and Community Development."

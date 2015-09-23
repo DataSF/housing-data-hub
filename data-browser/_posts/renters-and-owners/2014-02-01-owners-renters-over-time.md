@@ -2,8 +2,8 @@
 layout: data
 title: Tenure over time
 category: "renters-and-owners"
-data: tenure_by_decade.csv
-"y-format": ","
+data: renters-and-owners/tenure_by_decade.csv
+"yFormat": ","
 published: true
 type: line
 "chart-title": "Number of owner and renter-occupied units over time"

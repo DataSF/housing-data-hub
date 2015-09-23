@@ -3,7 +3,7 @@ layout: policy
 summary: "Homeowners can receive a variety of assistance including education, grants, and loans to help them be successful homeowners."
 published: true
 title: Homeowner Assistance
-"data-category": "homeowner-assistance"
+dataCategory: "homeowner-assistance"
 image: ownership.png
 ami: 91
 target: people
@@ -16,6 +16,8 @@ In San Francisco, the Mayor’s Office of Housing and Community Development (MOH
 Homeownership SF (a collaboration of certified housing counseling agencies) provides post-purchase counseling services including foreclosure intervention, home maintenance, and refinancing and loan modification services.
 
 Owners who own a home offered through one of the City’s other housing programs, e.g. inclusionary housing, may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
+
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
 Organization | What it does

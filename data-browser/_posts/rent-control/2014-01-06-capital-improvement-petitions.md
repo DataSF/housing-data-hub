@@ -10,8 +10,8 @@ source: San Francisco Rent Board
 published: false
 type: bar
 colors: Blues
-"axis-type": ""
-"y-format": ","
+"axisType": ""
+"yFormat": ","
 scale: "5"
 ---
 

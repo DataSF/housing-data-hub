@@ -6,7 +6,7 @@ published: true
 ami: 120
 target: people
 image: homebuyers.png
-"data-category": "homebuyer-assistance"
+dataCategory: "homebuyer-assistance"
 ---
 
 Buyer assistance programs make homeownership possible for many families by reducing  the upfront and ongoing costs of buying a home. The goal of the program is to create more low to moderate income homeowners in San Francisco.
@@ -24,6 +24,8 @@ AMI | One | Two | Three | Four
 ----|-----|-----|-------|------
 80% AMI | $54,350| $62,150| $69,900| $77,700
 120% AMI| $81,550|$93,250|$104,900|$116,500
+
+{% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
 Organization | What it does
