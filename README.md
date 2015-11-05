@@ -33,4 +33,4 @@ To run the site on your machine:
 
 Issue the command `bundle exec jekyll serve` and the site should be available at `http://localhost:4000`
 
-Check our the Jekyll documentation [here](http://jekyllrb.com/docs/usage/) and the Github Pages documentation [here](https://help.github.com/articles/using-jekyll-with-pages/) for more.
+Check out the Jekyll documentation [here](http://jekyllrb.com/docs/usage/) and the Github Pages documentation [here](https://help.github.com/articles/using-jekyll-with-pages/) for more.
