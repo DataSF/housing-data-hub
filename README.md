@@ -27,7 +27,7 @@ Do this the first time:
 1. Fork and clone the repo to a directory on your machine
 2. Make sure you have Ruby installed by running `ruby --version` You should have either `1.9.3` or `2.0.0` If you don't, follow [these installation instructions](https://www.ruby-lang.org/en/downloads/).
 3. Get Bundler by running `gem install bundler`. Bundler is a package mangager that makes versioning Ruby software a lot easier.
-4. Now issue the command `gem install bundler` in the cloned repo root directory, this will set you up with Jekyll and the key dependencies
+4. Now issue the command `bundle install` in the cloned repo root directory, this will set you up with Jekyll and the key dependencies
 
 To run the site on your machine:
 
