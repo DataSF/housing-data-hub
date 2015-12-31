@@ -292,13 +292,7 @@ h2.panel-title {
     margin-top: 55px;
   }
 }
-#chart, #chart-1, #chart-2, #chart-3 {
-  height: 450px;
-}
 
-h1.chart-title {
-  font-size: 25px;
-}
 
 table {
   width: 100%;
@@ -575,6 +569,18 @@ Popups
 /*
 Charts
  */
+#chart, #chart-1, #chart-2, #chart-3 {
+  height: 450px;
+}
+
+h1.chart-title {
+  font-size: 25px;
+}
+
+#chart-embed {
+  height: 300px;
+}
+
 .c3 line, .c3 path {
   stroke: #d9d9d9;
 }
