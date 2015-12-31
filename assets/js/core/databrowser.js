@@ -24,6 +24,7 @@ var browserData =
   		"yFormat" : "{{post.yFormat}}",
   		"axisType" : "{{post.axisType}}",
   		"transform": "{{post.transform}}",
+      "pivot": "{{post.pivot}}",
       "groups" : {{post.groups | jsonify}},
       "popup" : {{post.popup | jsonify }},
       "margin": "{{post.margin}}",
@@ -32,7 +33,8 @@ var browserData =
       "legend": "{{post.legend}}",
       "legendCategories": {{post.legendCategories | jsonify}},
       "max": "{{post.max}}",
-      "pleft": "{{post.pleft}}"
+      "pleft": "{{post.pleft}}",
+      "portalID": "{{post.portalID}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}

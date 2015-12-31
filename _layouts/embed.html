@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include core/head.html %}
+
+<body class="embed">
+	<div class="container-fluid">
+		<div class="row">
+			<div id="viz" class="col-md-12">
+				<article role="article">
+					<h1 class="chart-title top"></h1> 
+					<div class="description"></div>
+					<div id="chart-embed"></div>
+					<div class="row action-links" style="margin-top: 10px;">
+						<div class="col-md-6">
+							<a class="policy" href="http://housing.datasf.org/policies" target="_blank" title="Read more about this policy">
+								<button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-read-more">Learn more at the SF Housing Data Hub</button>
+							</a>
+						</div>
+						<div class="col-md-6">
+							<a class="get-data" href="" target="_blank" title="Get the source dataset">
+								<button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-source">Get the source dataset</button>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 footnote">
+							<div class="source"></div>
+							<div class="notes"></div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="{{site.baseurl}}/assets/js/vendor/c3.min.js"></script>
+
+<!-- for maps -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+
+<!-- utilities -->
+<script src="{{site.baseurl}}/assets/js/vendor/toTitleCase.js"></script>
+<script src="{{site.baseurl}}/assets/js/vendor/colorbrewer.js"></script>
+
+<!-- core hub scripts powering visuals -->
+<script src="{{site.baseurl}}/assets/js/core/databrowser.js"></script>
+<script src="{{site.baseurl}}/assets/js/core/transformer.js"></script>
+<script src="{{site.baseurl}}/assets/js/core/charts.js"></script>
+<script src="{{site.baseurl}}/assets/js/core/maps.js"></script>
+
+<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+  $(function() {
+
+    var map = false, 
+    	chart = false,
+    	pageId = getParameterByName('pageId'),
+    	options = browserData[pageId], 
+    	parent = 'viz',
+    	domain = 'http://housing.datasf.org';
+
+    if(options.type.indexOf("map") > -1) {
+      var map = hubMap.generate(options,'chart-embed');
+    } else {
+      var chart = hubChart.generate(options,'chart-embed');
+    }
+    options.chartTitle ? $('#' + parent + ' .chart-title').html(options.chartTitle) : $('#' + parent + ' .chart-title').html('');
+    options.description ? $('#' + parent + ' .description').html(options.description) : $('#' + parent + ' .description').html('');
+    options.source ? $('#' + parent + ' .source').html('<strong>Source:</strong> ' + options.source) : $('#' + parent + ' .source').html('');
+    options.notes ? $('#' + parent + ' .notes').html('<strong>Notes:</strong> ' + options.notes) : $('#' + parent + ' .notes').html('');
+    
+    if (options.portalID != "") {
+    	$('.action-links .get-data').attr('href','http://data.sfgov.org/d/'+options.portalID)
+    } else {
+    	$('.action-links .get-data').hide();
+    }
+
+  });
+ </script>
+
+</html>

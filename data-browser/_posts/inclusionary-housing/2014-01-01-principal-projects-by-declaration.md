@@ -3,21 +3,14 @@ layout: data
 title: Developer choice (all projects)
 "chart-title": "All completed inclusionary projects by developer choice"
 category: "Inclusionary-Housing"
-data: "https://data.sfgov.org/resource/gf2u-2nfi.geojson"
+data: "https://data.sfgov.org/resource/kdpp-67mq.geojson"
 type: "map-point"
-column: section_415_declaration_label
-legendCategories:
-  - On-Site BMR Project
-  - Off-Site BMR Project
-  - Fee BMR Project
-  - Combination Project
-  - Land Dedication
-  - Units for Off-Site Project
+column: section_415_declaration_of_intent
 scale: "4"
 colors: Paired
 published: true
 source: "Mayor's Office of Housing and Community Development."
-portalID: "f2n6-ybnq"
+portalID: "nj3x-rw36"
 notes: null
 popup:
   title: building_name

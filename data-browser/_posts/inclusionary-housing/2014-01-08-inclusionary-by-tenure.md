@@ -13,7 +13,7 @@ colors: Blues
 "axisType": ""
 "yFormat": ","
 source: "Mayor's Office of Housing and Community Development."
-portalID: "f2n6-ybnq"
+portalID: "nj3x-rw36"
 notes: null
 ---
 

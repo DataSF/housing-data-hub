@@ -3,18 +3,17 @@ layout: data
 title: Unit locations by construction status
 "chart-title": Projects with planned or constructed inclusionary units 
 category: "Inclusionary-Housing"
-data: "https://data.sfgov.org/resource/gf2u-2nfi.geojson?$where=total_bmr_s_in_this_building_or_phase%3E0"
+data: "https://data.sfgov.org/resource/kdpp-67mq.geojson?$where=total_bmrs_in_this_building_or_phase%3E0"
 type: "map-point"
-column: status_of_project
+column: project_status
 scale: "4"
 colors: Set2
-published: true
 source: "Mayor's Office of Housing and Community Development."
-portalID: "f2n6-ybnq"
+portalID: "nj3x-rw36"
 legendCategories:
-  - Entitled
-  - BP Issued
-  - First Const Doc Issued
+  - Entitled/Approved
+  - Building Permit Issued
+  - First Construction Document Issued
   - Completed
 popup:
   title: building_name

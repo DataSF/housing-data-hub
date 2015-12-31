@@ -61,7 +61,6 @@ HubChart.prototype.render = function() {
     type = 'area',
     mimeType = 'csv';
     
-    console.log(data);
   /* detect whether the data is being passed via external url */
   if (typeof data === "string") {
     var url = (/^https?:\/\//.test(data)) ? data : '/data-browser/data/' + data;
