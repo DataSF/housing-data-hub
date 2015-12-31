@@ -8,7 +8,7 @@ x: Year
 column: Year
 type: bar
 source: "Mayor's Office of Housing and Community Development."
-portalID: "f2n6-ybnq"
+portalID: "nj3x-rw36"
 published: true
 scale: "5"
 colors: Blues

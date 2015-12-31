@@ -7,7 +7,7 @@ category: "Inclusionary-Housing"
 data: inclusionary/units_by_dev_choice.csv
 column: BMR Project Type
 source: "Mayor's Office of Housing and Community Development"
-portalID: "f2n6-ybnq"
+portalID: "nj3x-rw36"
 published: true
 type: bar
 scale: "5"
