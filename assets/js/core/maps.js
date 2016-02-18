@@ -149,8 +149,10 @@ HubMap.prototype.loadData = function() {
         });
       }
     }
-    $$.buildLegend();
-    $$.map.legendControl.addLegend($$.legend);
+    if(!$$.options.legendCategories) {
+      $$.buildLegend();
+      $$.map.legendControl.addLegend($$.legend);
+    }
     $$.bindInteractive();
 
     var info = L.control({
@@ -307,6 +309,7 @@ HubMap.prototype.loadData = function() {
       return "transparent";
     }
     return colorbrewer[this.options.colors][s][num - 1];
+
   };
 
   /*
