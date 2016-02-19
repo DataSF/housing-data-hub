@@ -1,10 +1,12 @@
 baseurl: ''
 permalink:	/:categories/:title
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown: kramdown
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 gems:
 - jekyll-sitemap
+
+exclude: ['.c9']
 
 sass:
   style: :compressed

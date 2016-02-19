@@ -4,35 +4,21 @@
 {% include core/head.html %}
 
 <body class="embed">
-	<div class="container-fluid">
-		<div class="row">
-			<div id="viz" class="col-md-12">
-				<article role="article">
-					<h1 class="chart-title top"></h1> 
-					<div class="description"></div>
-					<div id="chart-embed"></div>
-					<div class="row action-links" style="margin-top: 10px;">
-						<div class="col-md-6">
-							<a class="policy" href="http://housing.datasf.org/policies" target="_blank" title="Read more about this policy">
-								<button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-read-more">Learn more at the SF Housing Data Hub</button>
-							</a>
-						</div>
-						<div class="col-md-6">
-							<a class="get-data" href="" target="_blank" title="Get the source dataset">
-								<button type="button" style="width:100%" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-source">Get the source dataset</button>
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 footnote">
-							<div class="source"></div>
-							<div class="notes"></div>
-						</div>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
+  <div id="viz">
+  <div id="front-matter">
+    
+  </div>
+  <div id="chart-embed"></div>
+  
+  <div id="endnotes">
+    <a class='get-data' href="#" title="Get the source dataset" target="_blank">
+      <button type="button" style="width:50%; border-radius: 0; float:left" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-source">Get the source data</button>
+    </a>
+    <a class='visit-hub' href="http://housing.datasf.org" title="Visit the housing data hub to learn more about housing programs and policy" target="_blank">
+      <button type="button" style="width:50%; border-radius: 0; float: left" class="btn btn-primary btn-lightblue btn-lg btn-block action-links-source">Read more at the housing data hub</button>
+    </a>
+  </div>
+  </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -67,9 +53,16 @@
     var map = false, 
     	chart = false,
     	pageId = getParameterByName('pageId'),
+    	compact = getParameterByName('compact') || null,
+    	hubLink = getParameterByName('hubLink') || null,
+    	zoom = getParameterByName('zoom') || null,
     	options = browserData[pageId], 
     	parent = 'viz',
     	domain = 'http://housing.datasf.org';
+    
+    if(zoom !== null) {
+      options.zoom = zoom
+    }
 
     if(options.type.indexOf("map") > -1) {
       var map = hubMap.generate(options,'chart-embed');
@@ -82,9 +75,14 @@
     options.notes ? $('#' + parent + ' .notes').html('<strong>Notes:</strong> ' + options.notes) : $('#' + parent + ' .notes').html('');
     
     if (options.portalID != "") {
-    	$('.action-links .get-data').attr('href','http://data.sfgov.org/d/'+options.portalID)
+    	$('#endnotes .get-data').attr('href','http://data.sfgov.org/d/'+options.portalID)
     } else {
-    	$('.action-links .get-data').hide();
+    	$('#endnotes .get-data').hide();
+    }
+    
+    if( hubLink === "false") {
+      $('.visit-hub').hide()
+      $('.get-data button').css({width:'100%'})
     }
 
   });

@@ -15,9 +15,12 @@ function HubMap(options) {
   this.overlays = ['/data-browser/data/sup_districts.json', '/data-browser/data/neighborhoods.json'];
   this.overlayData = [];
   this.overlayTemplate = "";
-
-  this.loadData();
 }
+
+HubMap.prototype.getMap = function() {
+  return this.map
+}
+
 /*
 Load and process data for use in the map
 */
@@ -132,7 +135,8 @@ HubMap.prototype.loadData = function() {
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiZGF0YXNmIiwiYSI6Ilo3bVlHRDQifQ.7gkiPnZtioL8CnCvJ5z9Bg';
     /* initialize map and extra controls */
-    $$.map = L.mapbox.map($$.options.container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], 12);
+    var z = options.zoom || 12
+    $$.map = L.mapbox.map($$.options.container, 'datasf.j9b9ihf0').setView([37.767806, -122.438153], z);
     L.control.fullscreen().addTo($$.map);
     /* add base layer: this can be abstracted further to just pass in geojson data and layer function */
     if(options.type == 'map-point') { 
@@ -149,8 +153,10 @@ HubMap.prototype.loadData = function() {
         });
       }
     }
-    $$.buildLegend();
-    $$.map.legendControl.addLegend($$.legend);
+    if(!$$.options.legendCategories) {
+      $$.buildLegend();
+      $$.map.legendControl.addLegend($$.legend);
+    }
     $$.bindInteractive();
 
     var info = L.control({
@@ -307,6 +313,7 @@ HubMap.prototype.loadData = function() {
       return "transparent";
     }
     return colorbrewer[this.options.colors][s][num - 1];
+
   };
 
   /*
@@ -389,5 +396,7 @@ HubMap.prototype.loadData = function() {
     if (container) {
       options.container = container;
     }
-    return new HubMap(options);
+    var hubMap = new HubMap(options);
+    hubMap.loadData();
+    return hubMap
   }
