@@ -1,7 +1,7 @@
 ---
 layout: data
-title: Affordable rental project locations
-"chart-title": Location of operational affordable MOHCD rental units
+title: Affordable rental project map
+"chart-title": Location of affordable rental housing monitored by the Mayor’s Office of Housing and Community Development
 category: "Financing-and-Development"
 #data: "financing-and-development/project_locations.csv"
 data: "https://data.sfgov.org/resource/yd5s-bd6e.geojson?$where=project_location+is+not+null"
@@ -18,6 +18,6 @@ popup:
     - project_sponsor
     - project_total_units
     - project_affordable_units
-    - project_affordable_beds
+    - project_beds
 ---
-Affordable rental housing is developed in partnership with non-profit and private developers and financed through the Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) through City Funding Agreements, Ground Leases, Disposition & Participation Agreements and Conduit Mortgage Revenue Bond Financing. The map below shows projects that have received support of some kind and are operational as of December 2015.
+The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing for the development of affordable rental housing in San Francisco through City Funding Agreements, Ground Leases, Disposition & Participation Agreements and Conduit Mortgage Revenue Bond Financing. The map below shows completed affordable rental housing built by non-profit and private developers that have received support of some kind and that is monitored by the Mayor’s Office of Housing and Community Development as of December 2015.
