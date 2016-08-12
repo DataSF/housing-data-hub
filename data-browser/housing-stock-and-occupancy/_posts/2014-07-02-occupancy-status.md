@@ -7,6 +7,9 @@ data: "decennial-census/housing_units_occ_status.csv"
 column: Year
 "axisType": category
 type: bar
+groups:
+  - Vacant housing units
+  - Occupied housing units
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
