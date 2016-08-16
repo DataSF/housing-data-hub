@@ -5,9 +5,9 @@ category: "renters-and-owners"
 data: renters-and-owners/tenure_by_decade.csv
 "yFormat": ","
 published: true
-type: bar
+type: area-spline
 column: Year
-axisType: timeseries
+axisType: category
 legend: right
 groups:
     -Renter Occupied
