@@ -6,7 +6,7 @@ data: renters-and-owners/tenure_by_decade.csv
 "yFormat": ","
 published: true
 type: area
-axisType: timeseries
+
 legend: right
 groups:
     -Renter Occupied
