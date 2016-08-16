@@ -5,7 +5,7 @@ category: "renters-and-owners"
 data: renters-and-owners/tenure_by_decade.csv
 "yFormat": ","
 published: true
-type: area-spline
+type: line
 column: Year
 legend: right
 groups:
