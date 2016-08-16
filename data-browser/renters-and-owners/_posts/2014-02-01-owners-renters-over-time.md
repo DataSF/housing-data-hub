@@ -8,7 +8,7 @@ published: true
 type: bar
 column: year
 axistype: category
-group:
+groups:
     -Renter Occupied
     -Owner Occupied
 "chart-title": "Number of owner and renter-occupied units over time test"
