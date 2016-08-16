@@ -6,6 +6,7 @@ data: renters-and-owners/tenure_by_decade.csv
 "yFormat": ","
 published: true
 type: bar
+column: rentown
 group:
     -Renter Occupied
     -Owner Occupied
