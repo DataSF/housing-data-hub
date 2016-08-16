@@ -7,7 +7,7 @@ data: renters-and-owners/tenure_by_decade.csv
 published: true
 type: bar
 column: Year
-axisType: timeseries
+axisType: category
 legend: right
 groups:
     -Renter Occupied
