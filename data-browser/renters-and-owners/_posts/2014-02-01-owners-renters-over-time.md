@@ -8,6 +8,7 @@ published: true
 type: bar
 column: Year
 axisType: category
+legend: right
 groups:
     -Renter Occupied
     -Owner Occupied
