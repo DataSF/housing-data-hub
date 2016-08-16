@@ -9,7 +9,7 @@ type: area
 group:
     -Renter Occupied
     -Owner Occupied
-"chart-title": "Number of owner and renter-occupied units over time"
+"chart-title": "Number of owner and renter-occupied units over time test"
 column: Year
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011. https://www.nhgis.org/; US Census 1970-2010"
 ---
