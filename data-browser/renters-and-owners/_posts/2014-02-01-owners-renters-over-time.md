@@ -5,8 +5,7 @@ category: "renters-and-owners"
 data: renters-and-owners/tenure_by_decade.csv
 "yFormat": ","
 published: true
-type: bar
-
+type: area
 axisType: timeseries
 legend: right
 groups:
