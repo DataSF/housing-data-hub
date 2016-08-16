@@ -9,7 +9,7 @@ portalID: n5ik-nmm3
 published: true
 type: bar
 column: Status
-
+axisType: category
 legend: right
 groups:
   - 1-2 Units
