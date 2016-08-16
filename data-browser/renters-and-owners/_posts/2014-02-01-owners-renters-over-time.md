@@ -3,11 +3,11 @@ layout: data
 title: Tenure over time
 category: "renters-and-owners"
 data: renters-and-owners/tenure_by_decade.csv
-
+"yFormat": ","
 published: true
 type: bar
 column: Year
-axistype: category
+axisType: category
 groups:
     -Renter Occupied
     -Owner Occupied
