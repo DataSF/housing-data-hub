@@ -7,7 +7,6 @@ data: renters-and-owners/tenure_by_decade.csv
 published: true
 type: area-spline
 column: Year
-axisType: category
 legend: right
 groups:
     -Renter Occupied
