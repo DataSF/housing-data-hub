@@ -10,8 +10,8 @@ type: area
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 groups:
-    - Household population
     - Group quarters population
+    - Household population
 scale: "5"
 colors: YlGn
 "yFormat": ","
