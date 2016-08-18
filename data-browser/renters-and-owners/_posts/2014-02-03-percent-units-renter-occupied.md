@@ -15,4 +15,4 @@ source: "U.S. Census Bureau, 2010 Census. Profile of General Population and Hous
 notes: "Note that open spaces, such as Golden Gate Park and the Presidio, have very few units. "
 ---
 
-This map shows percentage of occupied units that are rented (as opposed to owned) by census tract. Data are from the 2010 Decennial Census.
+This map shows percentage of occupied units that are rented (as opposed to owned) by census tract.
