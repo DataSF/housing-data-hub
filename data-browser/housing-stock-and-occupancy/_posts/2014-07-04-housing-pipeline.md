@@ -11,7 +11,7 @@ type: bar
 column: Status
 axisType: category
 legend: right
-xlabel: 'test'
+xlabel: test
 groups:
   - 1-2 Units
   - 3-10 Units
