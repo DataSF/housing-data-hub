@@ -12,6 +12,7 @@ source: "Minnesota Population Center. National Historical Geographic Information
 groups:
     - Household population
     - Group quarters population
+axisType: category
 scale: "5"
 colors: YlGn
 "yFormat": ","
