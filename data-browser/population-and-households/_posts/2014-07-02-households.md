@@ -15,4 +15,4 @@ colors: YlGn
 notes: ""
 ---
 
-A household consists of one or more people leaving together within a single housing unit. The chart below shows the total number of households over time, including both family and nonfamily households.
+A household consists of one or more people leaving together within a single housing unit. The chart below shows the total number of households over time.
