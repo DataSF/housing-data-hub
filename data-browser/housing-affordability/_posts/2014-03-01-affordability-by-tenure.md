@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Affordability by tenure
-"chart-title": "Distribution of households paying more or less than the recommended affordable share of income (2014)"
+"chart-title": "Distribution of households paying more or less than the recommended affordable share of income"
 category: "Housing-Affordability"
 data: housing-affordability/ACS14_1YR_affordability_by_tenure.csv
 type: bar
