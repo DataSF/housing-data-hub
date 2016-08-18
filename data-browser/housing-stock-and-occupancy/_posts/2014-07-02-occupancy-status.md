@@ -6,7 +6,7 @@ category: "housing-stock-and-occupancy"
 data: "decennial-census/housing_units_occ_status.csv"
 column: Year
 "axisType": category
-type: bar
+type: area
 groups:
   - Vacant housing units
   - Occupied housing units
@@ -18,4 +18,4 @@ colors: YlGn
 notes: ""
 ---
 
-Each decade since 1970 has seen an increase in the number of occupied units, while number of vacant units has fluctuated.
+Then census categorizes housing units as either vacant or occupied.  Each decade since 1970 has seen an increase in the number of occupied units, while number of vacant units has fluctuated.
