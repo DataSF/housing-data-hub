@@ -6,7 +6,7 @@ category: "housing-stock-and-occupancy"
 data: housing-overview/ACS13_5YR_housing_age.csv
 column: Decades
 "axisType": category
-type: bar
+type: bar-horizontal
 published: true
 source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
 scale: "5"
