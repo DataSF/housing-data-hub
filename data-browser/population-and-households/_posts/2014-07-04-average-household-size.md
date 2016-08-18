@@ -11,7 +11,7 @@ column: Year
 "axisType": category
 legend: right
 data: "decennial-census/avg_household_size.csv"
-scale: "5"
+scale: "20"
 colors: YlGn
 ---
 
