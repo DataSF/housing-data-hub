@@ -10,7 +10,6 @@ type: bar
 column: Year
 "axisType": category
 legend: right
-groups: "1-2 Units,3-10 Units,11-49 Units,50-250 Units,Above 250 Units"
 data: "decennial-census/avg_household_size.csv"
 scale: "5"
 colors: YlGn
