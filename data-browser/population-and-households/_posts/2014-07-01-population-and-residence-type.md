@@ -6,13 +6,12 @@ category: "population-and-households"
 data: "decennial-census/population_and_resident_type.csv"
 column: Year
 "axisType": category
-type: line
+type: area
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 groups:
     - Household population
     - Group quarters population
-axisType: category
 scale: "5"
 colors: YlGn
 "yFormat": ","
