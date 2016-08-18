@@ -6,7 +6,7 @@ category: "population-and-households"
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 notes: Average household size was calculated by dividing the household population by the number of households.
 published: true
-type: bar
+type: line
 column: Year
 "axisType": category
 legend: right
