@@ -9,6 +9,7 @@ published: true
 type: line
 column: Year
 "axisType": category
+yTickValues:1,2,3,4
 legend: bottom
 data: "decennial-census/avg_household_size.csv"
 colors: YlGn
