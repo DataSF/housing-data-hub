@@ -12,15 +12,15 @@ source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selecte
 scale: "5"
 colors: YlGn
 groups:
-    - 1939 or earlier
-    - 1940 to 1949
-    - 1950 to 1959
-    - 1960 to 1969
-    - 1970 to 1979
-    - 1980 to 1989
-    - 1990 to 1999
-    - 2000 to 2009
-    - 2010 to 2013
+    - Before 1940
+    - 1940-1949
+    - 1950-1959
+    - 1960-1969
+    - 1970-1979
+    - 1980-1989
+    - 1990-1999
+    - 2000-2009
+    - 2010-2013
 "yFormat": ","
 notes: "This data is based on a sample survey conducted between 2009 and 2013. As a result, it does not fully capture units created since 2010."
 ---
