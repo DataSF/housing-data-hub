@@ -15,4 +15,4 @@ scale: "5"
 colors: YlGn
 ---
 
-The chart below shows the average household size (average number of people living in a household) over time.
+The chart below shows the average number of people living in a household over time.
