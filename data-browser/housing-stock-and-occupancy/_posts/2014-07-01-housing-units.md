@@ -6,7 +6,7 @@ category: "housing-stock-and-occupancy"
 data: "decennial-census/housing_units.csv"
 column: Year
 "axisType": category
-type: line
+type: area
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
