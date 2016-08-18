@@ -17,4 +17,4 @@ notes: null
 "chart-title": "Percent of units that are owner-occupied"
 ---
 
-This map shows percentage of occupied units that are owned (as opposed to rented) by census tract. Data are from the 2010 Decennial Census.
+This map shows percentage of occupied units that are owned (as opposed to rented) by census tract.
