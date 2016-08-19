@@ -8,7 +8,7 @@ column: Decades
 "axisType": category
 type: bar-horizontal
 published: true
-source: "Census Bureau, 2013 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
+source: "Census Bureau, 2014 American Community Survey 5-Year Estimates. Selected Housing Characteristics."
 scale: "5"
 colors: YlGn
 groups:
