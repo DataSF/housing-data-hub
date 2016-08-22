@@ -4,7 +4,7 @@ title: Completed units by target population
 "chart-title": Completed units from projects receiving City financing by target population
 category: "Financing-and-Development"
 data: "financing-and-development/units_beds_by_target_population.csv"
-type: bar
+type: bar-horizontal
 "axisType": category
 column: Target Population
 published: true
