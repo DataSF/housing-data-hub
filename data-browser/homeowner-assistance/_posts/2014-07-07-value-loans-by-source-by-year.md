@@ -11,6 +11,8 @@ source: "Mayor's Office of Housing and Community Development"
 published: true
 scale: "5"
 colors: YlGn
+yLabel: Value of Loans
+xLabel: Year
 ---
 
 Currently, CalHOME is the primary funding program for loans from the Mayor's Office of Housing and Community Development. These are funded through periodic rewards from the California Department of Housing and Community Development. In the past there were additional sources including the California Housing Rehabilitation Program (CHRP) and the California Environmental Redevelopment Fund (CERF). Those are broken out in the chart below.
