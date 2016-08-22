@@ -11,7 +11,7 @@ transform: toColumns
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
-type: bar
+type: bar-horizontal
 scale: "5"
 colors: Blues
 "axisType": category
