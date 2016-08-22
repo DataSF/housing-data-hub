@@ -17,13 +17,13 @@ colors: Blues
 "axisType": category
 "yFormat": ","
 groups:
-  - On-site BMR Project
-  - Fee Payment
+  - On-site BMR Project 
+  - Fee Payment 
   - Off-site BMR Project
   - Units for Off-site Project
   - Units for Off-site Project with On-site Obligation
   - Combination Project
-  - Land Dedication
+  - Land Dedication 
   - Units for Off-site Project with Onsite Obligation
 yLabel: Projects
 ---
