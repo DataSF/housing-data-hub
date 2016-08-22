@@ -28,8 +28,6 @@ San Francisco’s RAD program involves eight community-led development teams. By
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [US Department of Housing and Urban Development (HUD)](http://www.hud.gov) | HUD provides funding and financing for public housing management, development, and rehabilitation.
 [San Francisco Housing Authority (SFHA)](http://www.sfha.org/) | SFHA is the local housing authority that manages the 40 public housing developments in San Francisco.
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD works with SFHA to plan and coordinate the HOPE SF project.
