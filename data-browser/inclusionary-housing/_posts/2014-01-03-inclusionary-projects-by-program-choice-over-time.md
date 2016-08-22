@@ -7,7 +7,7 @@ category: "Inclusionary-Housing"
 data: inclusionary/project_choices_over_time.csv
 #dataType: json
 column: Year
-pivot: section_415_declaration_of_intent
+pivot: Year
 transform: toMatrix
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
