@@ -4,7 +4,7 @@ title: Value of loans
 "chart-title": Value of loans by program
 category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/201504/dollars_lent_by_program.csv"
-type: donut
+type: bar-horizontal
 "axisType": category
 column: Program
 published: true
