@@ -67,8 +67,6 @@ Rent control keeps a significant amount of San Francisco’s housing stock affor
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-| Organization | What it does |
-|-------------|--------------|
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages local funding programs, including issuing funds and monitoring program compliance.
 [Office of Community Investment and Infrastructure (OCII)](http://www.sfredevelopment.org/) | The successor agency to the former San Francisco Redevelopment Agency, OCII implements SFRA’s contractual obligations, including affordable housing production.
 [California Department of Housing and Community Development (HCD)](http://www.hcd.ca.gov/) | HCD manages California loan and grant programs for affordable housing.
