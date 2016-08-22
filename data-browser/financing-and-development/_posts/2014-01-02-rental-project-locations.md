@@ -16,8 +16,9 @@ popup:
   subtitle: project_address
   info: 
     - project_sponsor
-    - project_total_units
-    - project_affordable_units
-    - project_beds
+    - total_units
+    - affordable_units
+    - total_beds
+    - affordable_beds
 ---
-The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing for the development of affordable rental housing in San Francisco through City Funding Agreements, Ground Leases, Disposition & Participation Agreements and Conduit Mortgage Revenue Bond Financing. The map below shows completed affordable rental housing built by non-profit and private developers that have received support of some kind and that is monitored by the Mayor’s Office of Housing and Community Development as of December 2015.
+The Mayor’s Office of Housing and Community Development (MOHCD) and the Office of Community Investment and Infrastructure (OCII) provide financing for the development of affordable rental housing in San Francisco through City Funding Agreements, Ground Leases, Disposition & Participation Agreements and Conduit Mortgage Revenue Bond Financing. The map below shows completed affordable rental housing built by non-profit and private developers that have received support of some kind and that is monitored by the Mayor’s Office of Housing and Community Development.
