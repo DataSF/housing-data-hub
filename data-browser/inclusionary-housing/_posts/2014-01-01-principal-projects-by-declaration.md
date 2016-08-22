@@ -23,8 +23,7 @@ popup:
     - total_units_subject_to_section_415
     - total_bmrs_in_this_building_or_phase
     - off_site_units_at_this_site
-    - planning_approval_date
-    - completion_date
+
 ---
 
 Developers have a choice for how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on the main site, develop units off-site, a combination of the prior three or on occasion, dedicate land. The map below shows the location of principal projects by choice for completed, planned or in progress projects. Additionally, the map shows locations of projects containing units for off-site unit elections.
