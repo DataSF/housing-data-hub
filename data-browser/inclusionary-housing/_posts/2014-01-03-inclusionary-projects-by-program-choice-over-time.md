@@ -15,13 +15,17 @@ published: true
 type: bar
 scale: "5"
 colors: Blues
-"axis-type": ""
+"axis-type": category
 "y-format": ","
 groups:
   - "On-site BMR Project "
   - "Fee Payment "
-  - "Off-site BMR Project"
-  - "Units for Off-site Project"
+  - Off-site BMR Project
+  - Units for Off-site Project
+  - Units for Off-site Project with On-site Obligation
+  - Combination Project
+  - "Land Dedication "
+  - Units for Off-site Project with Onsite Obligation
 yLabel: Projects
 xLabel: Year
 ---
