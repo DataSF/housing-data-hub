@@ -3,12 +3,12 @@ layout: data
 title: Developer choice by year (completed)
 "chart-title": "All completed inclusionary projects by year since 1992 by developer choice"
 category: "Inclusionary-Housing"
-data: "https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)+as+year,section_415_declaration_of_intent,count(*)&$group=year,section_415_declaration_of_intent&$where=completion_date%3E%271991-01-01%27&$order=year"
-#data: inclusionary/project_choices_over_time.csv
-dataType: json
+#data: "https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)+as+year,section_415_declaration_of_intent,count(*)&$group=year,section_415_declaration_of_intent&$where=completion_date%3E%271991-01-01%27&$order=year"
+data: inclusionary/project_choices_over_time.csv
+#dataType: json
 column: Year
-#pivot: Year
-transform: toColumns
+pivot: Year
+transform: pivot
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
