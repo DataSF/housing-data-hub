@@ -13,7 +13,7 @@ Ownership assistance programs provide education and resources, which help occupa
 
 In San Francisco, the Mayor’s Office of Housing and Community Development (MOHCD) funds ownership assistance programs. MOHCD provides direct financial assistance to single-family homeowners to rehabilitate property in need of repair and/or lead remediation. Assistance can address code deficiencies as well as remove lead paint and other hazards. Property owners can also receive financial assistance if renting to low-income tenants in single-family homes or multi-unit properties.
 
-Homeownership SF (a collaboration of certified housing counseling agencies) provides post-purchase counseling services including foreclosure intervention, home maintenance, and refinancing and loan modification services.
+[Homeownership SF](http://www.homeownershipsf.org/) (a collaboration of certified housing counseling agencies) provides post-purchase counseling services including foreclosure intervention, home maintenance, and refinancing and loan modification services.
 
 Owners who own a home offered through one of the City’s other housing programs, e.g. inclusionary housing, may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
 
