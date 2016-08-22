@@ -16,6 +16,7 @@ groups:
   - Projects
   - Projects Targeting Singles & Families
   - Projects Targeting Singles & Families & Seniors
+
 ---
 
 While the previous chart shows the number of projects by target population, the chart below shows the number of units by target population. Some of the projects express their units in terms of beds versus a standard unit.
