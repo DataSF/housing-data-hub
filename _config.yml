@@ -1,5 +1,5 @@
 baseurl: ''
-permalink:	/:categories/:title
+permalink:	/:categories/:title/
 markdown: kramdown
 gems:
 - jekyll-sitemap
