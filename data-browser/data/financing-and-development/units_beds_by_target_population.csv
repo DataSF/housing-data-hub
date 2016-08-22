@@ -1,6 +1,4 @@
-Target Population,Units,Beds
-Singles & Families & Seniors,245,0
-Singles & Families,1759,16
-Seniors,3705,15
-Families,5287,38
-Singles,6189,726
+Target Population,Targeting One Specific Population,Targeting Both Singles and Families,Targeting All Three Populations
+Seniors,3720,1775,245
+Families,5325,1775,245
+Singles,6915,1775,245
