@@ -5,7 +5,7 @@ title: Value of loans
 category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/201504/dollars_lent_by_program.csv"
 type: donut
-
+"axisType": category
 column: Program
 published: true
 source: "Mayor's Office of Housing and Community Development."
