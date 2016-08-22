@@ -15,7 +15,7 @@ In San Francisco, the Mayor’s Office of Housing and Community Development (MOH
 
 [Homeownership SF](http://www.homeownershipsf.org/) (a collaboration of certified housing counseling agencies) provides post-purchase counseling services including foreclosure intervention, home maintenance, and refinancing and loan modification services.
 
-Owners who own a home offered through one of the City’s other housing programs, e.g. inclusionary housing, may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
+Owners who own a home offered through one of the City’s other housing programs, e.g. [inclusionary housing](https://housing.datasf.org/policies/inclusionary-housing), may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
 
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
