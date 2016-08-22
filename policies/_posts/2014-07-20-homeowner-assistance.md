@@ -20,8 +20,6 @@ Owners who own a home offered through one of the City’s other housing programs
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the city’s ownership assistance programs, including applications and monitoring and enforcement of loan and grant terms.
 [California Department of Housing and Community Development (HCD)](http://www.hcd.ca.gov/) | HCD provides funds for the rehabilitation loan program, [CalHOME](http://www.hcd.ca.gov/fa/calhome/).
 [Homeownership SF](http://www.homeownershipsf.org/) |Homeownership SF provides post purchase housing Counseling Services.
