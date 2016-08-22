@@ -13,6 +13,13 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 "yFormat": "$,"
+groups:
+  - DALP
+  - BMR DALP Plus
+  - First Responders
+  - Teacher Next Door
+  - Police in the Community
+  - City Second
 notes: "Data as of April 1, 2015."
 ---
 
