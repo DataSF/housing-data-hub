@@ -22,8 +22,6 @@ Examples of operating subsidy programs include Project-Based Section 8 Rental As
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [US Department of Housing and Urban Development (HUD)](http://www.hud.gov) | HUD provides funding and oversight for most rental subsidy programs in San Francisco.
 [San Francisco Housing Authority (SFHA)](http://www.sfha.org/) | SFHA administers the voucher program in San Francisco by managing the waitlist, ensuring eligibility, and payments to building owners.
 
