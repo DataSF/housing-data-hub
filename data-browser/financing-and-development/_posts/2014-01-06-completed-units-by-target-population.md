@@ -5,7 +5,7 @@ title: Completed units by target population
 category: "Financing-and-Development"
 data: "financing-and-development/units_beds_by_target_population.csv"
 type: bar
-"axisType": category
+"axisType": ""
 column: Target Population
 published: true
 source: "Mayor's Office of Housing and Community Development."
