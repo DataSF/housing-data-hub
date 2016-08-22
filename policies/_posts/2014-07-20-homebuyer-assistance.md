@@ -28,8 +28,6 @@ AMI | One | Two | Three | Four
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the city’s loan assistance programs, which includes registration for loan assistance programs, eligibility, and personal consultation.
 [HomeownershipSF](http://www.homeownershipsf.org/) | HomeownershipSF provides first-time homebuyer counseling and education workshops required by the program.
 
