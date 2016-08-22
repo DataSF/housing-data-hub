@@ -1,7 +1,7 @@
 ---
 layout: data
 title: Developer choice (all projects)
-"chart-title": "All completed inclusionary projects by developer choice"
+"chart-title": "All inclusionary projects by developer choice"
 category: "Inclusionary-Housing"
 data: "https://data.sfgov.org/resource/kdpp-67mq.geojson"
 type: "map-point"
