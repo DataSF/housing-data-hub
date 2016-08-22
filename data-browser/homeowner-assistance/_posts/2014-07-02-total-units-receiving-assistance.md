@@ -11,7 +11,7 @@ source: "Mayor's Office of Housing and Community Development"
 published: true
 scale: "5"
 colors: YlGn
-yLabel: Units Receiving Assistance
+yLabel: Units
 ---
 
 The Mayor’s Office of Housing and Community Development administers loans and grants to help low income homeowners rehabilitate their properties, bring them up to code and reduce hazards. This chart shows the total number of units served by the grants and loans programs from 2004 to June 2014.
