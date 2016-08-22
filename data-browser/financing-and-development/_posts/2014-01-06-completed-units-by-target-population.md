@@ -10,7 +10,7 @@ column: Target Population
 published: true
 source: "Mayor's Office of Housing and Community Development."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
-
+scale: "5"
 colors: YlGn
 groups:
   - Projects
