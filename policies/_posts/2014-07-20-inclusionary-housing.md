@@ -35,7 +35,7 @@ Inclusionary housing programs serve individuals and families ranging from 55% of
 AMI | One | Two | Three | Four
 ----|-----|-----|-------|------
 55% AMI |$41,450|$47,400|$53,300|$59,250
-120% AMI|$90,500$103,400|$116,350|$129,250
+120% AMI|$90,500|$103,400|$116,350|$129,250
 
 ### Use of the Affordable Housing Fee
 The Affordable Housing Fees are used to:
