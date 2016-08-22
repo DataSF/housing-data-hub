@@ -7,8 +7,8 @@ data: "https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(compl
 #data: inclusionary/project_choices_over_time.csv
 dataType: json
 column: Year
-pivot: Year
-transform: pivot
+#pivot: Year
+transform: toColumns
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
