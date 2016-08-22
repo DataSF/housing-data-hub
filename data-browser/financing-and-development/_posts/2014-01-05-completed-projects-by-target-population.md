@@ -13,8 +13,9 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 groups:
-  - Units
-  - Beds
+  - X
+  - Y
+  - Z
 ---
 
 Projects that receive City financing meet certain housing goals, such as providing affordable housing for seniors or families. The chart below shows the number of City- supported projects by target population.
