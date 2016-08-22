@@ -13,9 +13,9 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 groups:
-  - Projects
-  - Projects Targeting Singles & Families
-  - Projects Targeting Singles & Families & Seniors
+  - X
+  - Y
+  - Z
 
 ---
 
