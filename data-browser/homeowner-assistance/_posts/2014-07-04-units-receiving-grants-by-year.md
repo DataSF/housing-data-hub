@@ -10,7 +10,7 @@ source: "Mayor's Office of Housing and Community Development"
 published: true
 scale: "5"
 colors: YlGn
-yLabel: Units Receiving Land Remediation Grants
+yLabel: Units
 xLabel: Year
 ---
 
