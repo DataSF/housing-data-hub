@@ -17,6 +17,11 @@ scale: "5"
 colors: Blues
 "axis-type": ""
 "y-format": ","
+groups:
+  - "On-site BMR Project "
+  - "Fee Payment "
+  - "Off-site BMR Project"
+  - "Units for Off-site Project"
 ---
 
 Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. You can see below how developer choices have varied over time. The chart below shows the choice at the time of building completion.
