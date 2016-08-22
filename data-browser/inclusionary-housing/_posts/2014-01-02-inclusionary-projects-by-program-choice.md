@@ -26,6 +26,7 @@ groups:
   - "Land Dedication "
   - Units for Off-site Project with Onsite Obligation
 yLabel: Projects
+xLabel: All completed inclusionary projects since 1992
 ---
 
 Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. The chart below focuses only on the total completed projects to date by developer choice.
