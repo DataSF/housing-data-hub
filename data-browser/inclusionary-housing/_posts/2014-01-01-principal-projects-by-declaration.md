@@ -16,7 +16,7 @@ popup:
   title: building_name
   subtitle: mapping_address
   info: 
-    - Project_Status
+    - project_status
     - section_415_declaration_of_intent
     - tenure
     - total_units_in_building_or_phase
