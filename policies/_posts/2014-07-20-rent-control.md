@@ -53,8 +53,6 @@ Other|||
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Rent Arbitration Board](http://www.sfrb.org/)	| The Rent Board implements the rent ordinance and establishes additional rules; arbitrates and mediates disputes between tenants and landlords; investigates complaints of wrongful evictions and provides other services, such as counseling on the details of the law.
 
 ## Resources
