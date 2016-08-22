@@ -20,6 +20,7 @@ groups:
   - Teacher Next Door
   - Police in the Community
   - City Second
+yLabel: Value of Loans
 
 notes: "Data as of April 1, 2015."
 ---
