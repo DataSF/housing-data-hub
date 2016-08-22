@@ -21,6 +21,7 @@ groups:
   - Police in the Community
   - City Second
 notes: "Data as of April 1, 2015."
+yLabel: Number of Loans
 ---
 
 The general Downpayment Assistance Loan Program (DALP) is for low to moderate income homebuyers. Other programs target specific groups, such as first responders, teachers, police, or homebuyers buying in designated areas or developments (City Second). Income requirements vary by program and have different eligibility requirements.
