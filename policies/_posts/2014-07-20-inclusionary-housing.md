@@ -47,8 +47,6 @@ The Affordable Housing Fees are used to:
 {% include core/dataembed.html embed=page.dataCategory count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD implements and monitors the inclusionary housing program, including tracking properties, determining fee levels, and monitoring the marketing and sale or lease of affordable units. MOHCD also oversees almost 2,000 inclusionary units that were part of projects initiated under the City’s Redevelopment Agency, which was dissolved in 2012.
 [Office of Community Investment and Infrastructure (OCII)](http://www.sfredevelopment.org/) | OCII is the successor agency that oversees the competition of projects begun by the Redevelopment Agency. Once developed, these units will be transferred to MOHCD for monitoring. 
 [City Planning](http://www.sf-planning.org/) |	City Planning implements inclusionary housing procedures related to the permitting and approval of units that fall under the policy. Planning is also responsible for enforcing the Inclusionary Housing Ordinance.
