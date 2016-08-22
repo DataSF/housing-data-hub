@@ -5,7 +5,7 @@ title: Value of loans
 category: "Homebuyer-Assistance"
 data: "first-time-homebuyers/201504/dollars_lent_by_program.csv"
 type: donut
-"axisType": category
+
 column: Program
 published: true
 source: "Mayor's Office of Housing and Community Development."
@@ -13,13 +13,7 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 "yFormat": "$,"
-groups:
-  - DALP
-  - BMR DALP Plus
-  - First Responders
-  - Teacher Next Door
-  - Police in the Community
-  - City Second
+
 notes: "Data as of April 1, 2015."
 ---
 
