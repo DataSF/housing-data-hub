@@ -14,7 +14,7 @@ scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: "Data as of April 1, 2015."
-yLabel: Number of Certificates
+yLabel: Mortgage Credit Recipients
 xLabel: Year
 ---
 
