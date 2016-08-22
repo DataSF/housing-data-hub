@@ -19,4 +19,4 @@ groups:
 yLabel: Projects
 ---
 
-Projects that receive City financing meet certain housing goals, such as providing affordable housing for seniors or families. The chart below shows the number of City- supported projects by target population.
+Projects that receive City financing meet certain housing goals, such as providing affordable housing for seniors or families. The chart below shows the number of City-supported projects by target population.  Certain projects target multiple populations.
