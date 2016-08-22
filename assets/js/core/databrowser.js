@@ -13,7 +13,7 @@ var browserData =
   		"mimeType" : "{{post.dataType}}",
   		"value": {{post.chartvalues | jsonify}},
   		"names": {{post.chartnames | jsonify}},
-  		"description" : '{{post.content | strip_newlines | escape_once }}',
+  		"description" : '{{post.content | remove: "<p>" | remove: "</p>" | strip_newlines | escape_once }}',
   		"source" : "{{post.source}}",
   		"notes" : "{{post.notes | escape }}",
   		"chartTitle" : "{{post.chart-title}}",
@@ -34,7 +34,9 @@ var browserData =
       "legendCategories": {{post.legendCategories | jsonify}},
       "max": "{{post.max}}",
       "pleft": "{{post.pleft}}",
-      "portalID": "{{post.portalID}}"
+      "portalID": "{{post.portalID}}",
+      "xLabel": "{{post.xLabel}}",
+      "yLabel": "{{post.yLabel}}"
   	} {% unless forloop.last %},{% endunless%}
 {% endif %}
 {% endfor %}

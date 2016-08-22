@@ -166,6 +166,10 @@ HubChart.prototype.render = function() {
     axis: {
       rotated: rotated,
       x: {
+        label: {
+          text: options.xLabel || null,
+          position: 'outer-center'
+        },
         type: options.axisType,
         tick: {
           format: options.xTickFormat,
@@ -173,6 +177,10 @@ HubChart.prototype.render = function() {
         }
       },
       y: {
+        label: {
+          text: options.yLabel || null,
+          position: 'outer-middle'
+        },
         min: 0,
         max: max,
         padding: {
