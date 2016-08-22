@@ -4,8 +4,8 @@ title: Completed projects by target population
 "chart-title": Completed projects receiving city financing by target population
 category: "Financing-and-Development"
 data: "financing-and-development/projects_by_target_population.csv"
-type: bar-horizontal
-"axisType": category
+type: bar
+"axisType": ""
 column: Target Population
 published: true
 source: "Mayor's Office of Housing and Community Development."
