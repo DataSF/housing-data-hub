@@ -30,7 +30,7 @@ Alternative 3	| Combination	| Any combination of the above options
 The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
 
 ### Income levels served
-Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income. The table shows income levels based on persons per household.
+Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income. The table shows income levels based on persons per household for 2016.
 
 AMI | One | Two | Three | Four
 ----|-----|-----|-------|------
