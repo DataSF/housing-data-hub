@@ -8,7 +8,7 @@ data: inclusionary/project_choices_over_time.csv
 #dataType: json
 column: Year
 pivot: Year
-transform: toMatrix
+transform: pivot
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
