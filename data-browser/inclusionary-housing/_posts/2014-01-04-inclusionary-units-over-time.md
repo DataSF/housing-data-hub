@@ -7,7 +7,7 @@ category: "Inclusionary-Housing"
 data: "https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)%20as%20year,sum(total_bmrs_in_this_building_or_phase)%20as%20total_units&$group=year&$where=completion_date%3E%271991-01-01%27&$order=year"
 chartvalues:
   - total_units
-#dataType: json
+dataType: json
 column: year
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
