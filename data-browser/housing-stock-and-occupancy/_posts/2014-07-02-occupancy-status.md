@@ -15,6 +15,8 @@ source: "Minnesota Population Center. National Historical Geographic Information
 scale: "5"
 colors: YlGn
 notes: ""
+
+#Update from here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B25002/0500000US06075
 ---
 
 Then census categorizes housing units as either vacant or occupied.  Each decade since 1970 has seen an increase in the number of occupied units, while number of vacant units has fluctuated.
