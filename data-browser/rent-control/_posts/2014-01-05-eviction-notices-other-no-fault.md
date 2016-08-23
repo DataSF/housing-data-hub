@@ -10,13 +10,13 @@ data: "https://data.sfgov.org/resource/93gi-sfd2.json?$select=date_trunc_y(file_
 transform: countBoolean
 dataType: json
 column: year
-chartvalues:
+chartvalues: 
   - roommate_same_unit
   - capital_improvement
   - substantial_rehab
   - good_samaritan_ends
   - lead_remediation
-chartnames:
+chartnames: 
   - Roommate Living in Same Unit
   - Capital Improvement
   - Substantial Rehabilitation
