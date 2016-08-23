@@ -3,7 +3,9 @@ layout: data
 title: Tenure over time
 category: "renters-and-owners"
 data: "renters-and-owners/tenure_by_decade.csv"
-"yFormat": ","
+yFormat: ","
+yLabel: Housing Units
+xLabel: Year
 published: true
 type: area
 column: Year
