@@ -13,6 +13,6 @@ scale: "4"
 colors: Set2
 
 
-data: "https://data.sfgov.org/resource/6iid-qfaz.geojson"
+data: "https://data.sfgov.org/resource/6iid-qfaz.geojson?$where=units>0"
 ---
 Housing development in San Francisco, as in other cities, must move through a planning and permitting process leading to eventual construction. Housing development is happening across the City, but at different levels geographically. This chart shows number of new units in progress by neighborhood. Note that these units are at different phases of the planning, permitting and development process not shown in this chart. The neighborhoods below correspond to [this map](http://www.sf-planning.org/index.aspx?page=1654) provided by the Planning Department.
