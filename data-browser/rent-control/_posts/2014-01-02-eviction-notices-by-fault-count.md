@@ -22,6 +22,8 @@ axisType: timeseries
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
+yLabel: Total Eviction Notices
+xLabel: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: true
