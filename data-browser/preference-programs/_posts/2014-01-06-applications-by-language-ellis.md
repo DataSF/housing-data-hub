@@ -1,6 +1,6 @@
 ---
 layout: data
-title: Applications by language (Ellis)
+title: "Applications by language (Ellis)"
 "chart-title": Applications for the Ellis Act Housing Preference by Reported Primary Language
 category: "Preference-Programs"
 data: "preference-programs/applications_by_primary_language.csv"
