@@ -21,8 +21,16 @@ chartnames:
   - Demolition
   - Development Agreement
   - Condo Conversion
-type: line
+type: area
+groups:
+  - owner_move_in
+  - ellis_act_withdrawal
+  - demolition
+  - development
+  - condo_conversion
 axisType: timeseries
+yLabel: Total No-fault Eviction Notices
+xLabel: Year
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
