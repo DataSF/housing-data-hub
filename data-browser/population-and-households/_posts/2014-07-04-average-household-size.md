@@ -12,6 +12,8 @@ column: Year
 legend: bottom
 data: "decennial-census/avg_household_size.csv"
 colors: YlGn
+xLabel: Year
+yLabel: Average Household Size
 
 #Update from here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/B25010/0500000US06075
 ---
