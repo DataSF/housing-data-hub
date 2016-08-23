@@ -4,7 +4,7 @@ title: Applications by gender (Ellis)
 "chart-title": Applications for the Ellis Act Housing Preference by Reported Gender
 category: "Preference-Programs"
 data: "preference-programs/applications_by_gender.csv"
-type: bar
+type: donut
 "axisType": category
 column: Gender
 published: true
