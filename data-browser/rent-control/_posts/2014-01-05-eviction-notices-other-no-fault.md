@@ -3,6 +3,9 @@ layout: data
 title: Other no fault notices
 "chart-title": "Other no fault eviction notices by type by year since 1997"
 category: "Rent-Control"
+"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
+#data: "rent-control/eviction_notices_no_fault_other.csv"
+#data: "https://cdn.rawgit.com/DataSF/summary-data/7f7d5cfd4ee85d8a79d30bd0851840691bba2f2d/eviction_notices_no_fault_other.csv"
 data: "https://data.sfgov.org/resource/93gi-sfd2.json?$select=date_trunc_y(file_date)+as+year,lead_remediation,good_samaritan_ends,substantial_rehab,roommate_same_unit,capital_improvement&$order=year&$limit=50000"
 transform: countBoolean
 dataType: json
@@ -19,14 +22,8 @@ chartnames:
   - Substantial Rehabilitation
   - Good Samaritan Tenancy Ends
   - Lead Remediation
-type: area
-groups:
-  - roommate_same_unit
-  - capital_improvement
-  - substantial_rehab
-  - good_samaritan_ends
-  - lead_remediation
-axisType: category
+type: line
+axisType: timeseries
 "yFormat": ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
