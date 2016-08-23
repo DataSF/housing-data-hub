@@ -9,7 +9,16 @@ notes: The chart does not include very large projects over 800 units.
 published: true
 type: "map-point"
 colors: Set2
-
+column: beststat
+popup:
+  title: nameaddr
+  subtitle: neighborhood
+  info: 
+    - bldguse
+    - beststat
+    - units
+    - pln_desc
+    
 
 data: "https://data.sfgov.org/resource/g5sr-9nhs.geojson?$where=units>0"
 ---
