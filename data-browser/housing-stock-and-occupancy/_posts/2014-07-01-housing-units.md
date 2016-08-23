@@ -13,6 +13,8 @@ scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: ""
+yLabel: Housing Units
+xLabel: Year
 
 #Update from here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B25002/0500000US06075
 ---
