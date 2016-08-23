@@ -32,7 +32,7 @@ xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
-published: false
+published: true
 xLabel: Year
 yLabel No-fault Eviction Notices
 ---
