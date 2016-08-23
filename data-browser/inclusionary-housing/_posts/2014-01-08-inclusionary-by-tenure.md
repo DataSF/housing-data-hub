@@ -15,6 +15,11 @@ colors: Blues
 source: "Mayor's Office of Housing and Community Development."
 portalID: "nj3x-rw36"
 notes: null
+groups:
+  - Rental
+  - Ownership
+yLabel: Units
+xLabel: Year
 ---
 
 The Inclusionary Housing program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development.
