@@ -4,7 +4,7 @@ title: Certificates by year
 "chart-title": Certificates of Preference issued by decade
 category: "Preference-Programs"
 data: "preference-programs/certificates_by_decade.csv"
-type: bar
+type: line
 column: Decade
 published: true
 "axisType": category
