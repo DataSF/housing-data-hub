@@ -13,11 +13,6 @@ notes: "Data as of October 21, 2014."
 "policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 scale: "5"
 colors: YlGn
-groups:
-  - Female
-  - Male
-  - Transgender
-  - Not reported
 ---
 
 The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. The chart below shows applicants by gender as reported by the applicant.
