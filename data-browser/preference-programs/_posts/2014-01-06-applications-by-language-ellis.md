@@ -16,4 +16,4 @@ xLabel:Primary Language
 yLabel:Applications
 ---
 
-The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. The chart below shows applicants by the primary language spoken as reported by by the applicant.
+The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. The chart below shows applicants by the primary language spoken as reported by the applicant.
