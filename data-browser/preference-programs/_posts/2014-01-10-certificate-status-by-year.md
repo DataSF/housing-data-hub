@@ -11,6 +11,9 @@ published: true
 source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
+groups:
+  - Exercised
+  - Not Exercised
 ---
 
 The majority of Certificates of Preference were issued in the 1960’s and 1970’s. The chart below shows the number of certificates that were exercised or not by decade issued.
