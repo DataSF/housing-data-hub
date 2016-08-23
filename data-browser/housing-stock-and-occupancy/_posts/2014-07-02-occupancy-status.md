@@ -15,6 +15,7 @@ source: "Minnesota Population Center. National Historical Geographic Information
 scale: "5"
 colors: YlGn
 notes: ""
+yFormat: ","
 yLabel: Housing Units
 xLabel: Year
 
