@@ -12,6 +12,8 @@ column: Year
 legend: bottom
 data: "decennial-census/avg_household_size.csv"
 colors: YlGn
+
+#Update from here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/B25010/0500000US06075
 ---
 
 The chart below shows the average number of people living in a household over time.
