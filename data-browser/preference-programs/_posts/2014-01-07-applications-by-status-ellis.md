@@ -17,7 +17,7 @@ groups:
   - Approved
   - In progress
   - Not approved
-yLabel:Applications
+yLabel: Applications
 ---
 
 The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. The chart below shows applicants by the status of the application.
