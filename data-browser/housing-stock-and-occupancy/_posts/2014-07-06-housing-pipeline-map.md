@@ -12,12 +12,12 @@ type: "map-point"
 scale: "4"
 colors: Set2
 column: beststat
-legendCategories:
+legendCategories: 
   - Entitled/Approved
   - Building Permit Issued
   - First Construction Document Issued
   - Completed
-popup:
+popup: 
   title: nameaddr
   subtitle: neighborhood
   info: 
