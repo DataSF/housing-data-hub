@@ -23,6 +23,8 @@ groups:
     - 2010-2014
 "yFormat": ","
 notes: "This data is based on a sample survey conducted between 2009 and 2013. As a result, it does not fully capture units created since 2010."
+
+#Update from here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B25034/0500000US06075
 ---
 
 Nearly half of San Francisco’s housing units were built before 1940. Over 80% of units were constructed before 1980.
