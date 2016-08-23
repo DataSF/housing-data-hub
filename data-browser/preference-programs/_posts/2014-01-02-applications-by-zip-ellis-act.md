@@ -1,8 +1,8 @@
 ---
 layout: data
-title: "Renter-occupied units"
-"chart-title": "Percent of units that are renter-occupied"
-category: "renters-and-owners"
+title: Applications by zip code (Ellis)
+"chart-title": Applications for the Ellis Act Housing Preference by Zip Code
+category: "Preference-Programs"
 data: "preference-programs/applications_by_zip_code.csv"
 column: Zip Code
 scale: 5
