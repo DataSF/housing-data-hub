@@ -22,7 +22,13 @@ chartnames:
   - Substantial Rehabilitation
   - Good Samaritan Tenancy Ends
   - Lead Remediation
-type: line
+type: area
+groups:
+  - roommate_same_unit
+  - capital_improvement
+  - substantial_rehab
+  - good_samaritan_ends
+  - lead_remediation
 axisType: timeseries
 "yFormat": ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
