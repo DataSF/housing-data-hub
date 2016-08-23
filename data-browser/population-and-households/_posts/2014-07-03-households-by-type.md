@@ -16,6 +16,8 @@ scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: ""
+
+#Update from Here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/S1101/0500000US06075
 ---
 
 The census categorizes households as either family or non-family. A family consists of two or more people (one of whom is the householder) related by birth, marriage, or adoption who live in the same housing unit. A non-family consists of any living arrangement that does not meet the definition of family. Examples of this are roommates or someone living alone.   The chart below compares the number of family households and non-family households over time.
