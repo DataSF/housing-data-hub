@@ -16,6 +16,9 @@ colors: Blues
 "yFormat": ","
 notes: null
 yLabel: Units
+groups:
+  - BMR On-Site Units
+  - BMR Off-Site Units
 ---
 
 When building inclusionary units, developers have the option of electing to build units on the main site or at a second location. If a developer selects the off-site option, they must build a higher percentage of units than on-site (e.g. 12% for on-site versus 20% for off-site). Off-site units must also be within a mile of the main development. 2006 was the first year off-site units were completed, but developers had elected the option as early as 2003.
