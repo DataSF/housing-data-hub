@@ -18,7 +18,7 @@ type: area
 groups:
   - fault
   - no_fault
-axisType: category
+axisType: timeseries
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
