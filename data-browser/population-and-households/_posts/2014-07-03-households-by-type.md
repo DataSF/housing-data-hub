@@ -16,7 +16,8 @@ scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: ""
-
+xLabel: Year
+yLabel: Households
 #Update from Here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/S1101/0500000US06075
 ---
 
