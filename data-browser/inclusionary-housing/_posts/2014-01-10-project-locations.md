@@ -3,7 +3,7 @@ layout: data
 title: Unit locations by construction status
 "chart-title": Projects with planned or constructed inclusionary units 
 category: "Inclusionary-Housing"
-data: "https://data.sfgov.org/resource/g5sr-9nhs.geojson"
+data: "https://data.sfgov.org/resource/kdpp-67mq.geojson?$where=total_bmrs_in_this_building_or_phase%3E0"
 type: "map-point"
 column: project_status
 scale: "4"
