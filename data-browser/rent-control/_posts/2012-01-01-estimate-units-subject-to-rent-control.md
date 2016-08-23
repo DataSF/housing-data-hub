@@ -17,6 +17,9 @@ emphasis:
   - Renter
   - 0
   - 185aa9
+groups:
+  - Renter
+  - Owner
 yLabel: Units
 source: "U.S. Census Bureau, 2014 American Community Survey 5-Year Estimates. Tenure by Year Built."
 #source:http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/B25036/0500000US06075
