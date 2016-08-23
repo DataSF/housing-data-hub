@@ -13,7 +13,7 @@ xTickFormat: '%Y'
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: true
-type: bar
+type: area
 scale: "5"
 colors: Blues
 axisType: timeseries
