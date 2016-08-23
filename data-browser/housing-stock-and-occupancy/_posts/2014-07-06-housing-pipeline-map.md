@@ -8,8 +8,6 @@ portalID: g5sr-9nhs
 notes: The chart does not include very large projects over 800 units.
 published: true
 type: "map-point"
-column: beststat
-scale: "4"
 colors: Set2
 
 
