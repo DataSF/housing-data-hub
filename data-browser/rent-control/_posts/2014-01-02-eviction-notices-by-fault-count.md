@@ -15,6 +15,9 @@ chartnames:
   - Fault Eviction Notices
   - No Fault Eviction Notices
 type: area
+groups:
+  - Fault Eviction Notices
+  - No Fault Eviction Notices
 axisType: timeseries
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
