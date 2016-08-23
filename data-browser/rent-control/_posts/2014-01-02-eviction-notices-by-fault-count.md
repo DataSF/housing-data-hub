@@ -14,7 +14,7 @@ chartvalues:
 chartnames:
   - Fault Eviction Notices
   - No Fault Eviction Notices
-type: line
+type: area
 axisType: timeseries
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
