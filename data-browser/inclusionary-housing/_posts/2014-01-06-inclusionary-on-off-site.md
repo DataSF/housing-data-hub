@@ -16,6 +16,7 @@ colors: Blues
 "yFormat": ","
 notes: null
 yLabel: Units
+xLabel: Year
 groups:
   - BMR On-Site Units
   - BMR Off-Site Units
