@@ -11,20 +11,7 @@ data: "https://data.sfgov.org/resource/g5sr-9nhs.geojson"
 type: "map-point"
 scale: "4"
 colors: Set2
-column: beststat
-legendCategories: 
-  - Entitled/Approved
-  - Building Permit Issued
-  - First Construction Document Issued
-  - Completed
-popup: 
-  title: nameaddr
-  subtitle: neighborhood
-  info: 
-    - bldguse
-    - beststat
-    - units
-    - pln_desc
+
     
 
 
