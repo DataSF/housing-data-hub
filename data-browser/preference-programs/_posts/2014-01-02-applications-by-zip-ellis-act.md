@@ -1,16 +1,17 @@
 ---
 layout: data
-title: Applications by zip code (Ellis)
-"chart-title": Applications for the Ellis Act Housing Preference by Zip Code
-category: "Preference-Programs"
+title: "Renter-occupied units"
+"chart-title": "Percent of units that are renter-occupied"
+category: "renters-and-owners"
 data: "preference-programs/applications_by_zip_code.csv"
-type: bar
-"axisType": category
 column: Zip Code
+scale: 5
+colors: PuBu
+"legend-title": "Percent renter-occupied"
+type: map
+units: "%"
 published: true
 source: "Mayor's Office of Housing and Community Development."
-notes: "Data as of October 21, 2014."
-scale: "5"
 colors: YlGn
 ---
 
