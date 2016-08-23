@@ -19,8 +19,16 @@ chartnames:
   - Non-payment of Rent
   - Illegal Use of Unit
   - Unapproved Subtenant
-type: line
+type: area
+groups:
+  - breach
+  - nuisance
+  - non_payment
+  - illegal_use
+  - unapproved_subtenant
 axisType: timeseries
+yLabel: Total Fault Notices
+xLabel: Year
 "yFormat": ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
