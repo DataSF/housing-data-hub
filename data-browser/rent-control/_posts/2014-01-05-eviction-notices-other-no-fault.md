@@ -26,7 +26,7 @@ groups:
   - substantial_rehab
   - good_samaritan_ends
   - lead_remediation
-axisType: timeseries
+axisType: category
 "yFormat": ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
