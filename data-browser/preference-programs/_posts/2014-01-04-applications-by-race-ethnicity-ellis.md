@@ -4,7 +4,7 @@ title: Applications by race / ethnicity (Ellis)
 "chart-title": Applications for the Ellis Act Housing Preference by Reported Race / Ethnicity
 category: "Preference-Programs"
 data: "preference-programs/applications_by_race_ethnicity.csv"
-type: bar
+type: donut
 "axisType": category
 column: Race / Ethnicity
 published: true
