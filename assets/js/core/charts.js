@@ -125,7 +125,79 @@ HubChart.prototype.render = function() {
     }
     return text + "</table>";
   };
+  
+  console.log(options)
 
+
+var chart = c3.generate({
+  bindto: '#' + options.container,
+  padding: {
+    bottom: 30,
+    left: pleft
+  },
+  data: {
+    x: options.x,
+    xFormat: options.xFormat,
+    url: url || undefined,
+    json: (Object.prototype.toString.call(data[0]) === '[object Object]' ? data : undefined),
+    columns: (Object.prototype.toString.call(data[0]) === '[object Array]' ? data : undefined),
+    mimeType: options.mimeType,
+    keys: {
+      x: options.x,
+      value: options.value
+    },
+    names: names,
+    groups: [options.groups],
+    type: options.type,
+    color: function(color, d) {
+      return d.id && d.index == options.emphasis[1] && d.id == options.emphasis[0] ? d3.rgb('#' + options.emphasis[2]) : color;
+    },
+    order: null,
+    hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
+  },
+  tooltip: {
+    contents: tooltip_contents
+  },
+  color: {
+    pattern: ['#5a9bd4', '#7ac36a', '#faa75b', '#9e67ab', '#ce7058', '#d77fb4', '#f15a60', '#737373']
+  },
+  legend: {
+    position: options.legend,
+    show: show,
+    hide: ["MOE", "MOE_Renter", "MOE_Owner", "MOE_More", "MOE_Less"]
+  },
+  axis: {
+    rotated: rotated,
+    x: {
+      label: {
+        text: options.xLabel || null,
+        position: 'outer-center'
+      },
+      type: options.axisType,
+      tick: {
+        format: options.xTickFormat,
+        width: 150
+      }
+    },
+    y: {
+      label: {
+        text: options.yLabel || null,
+        position: 'outer-middle'
+      },
+      min: 0,
+      max: max,
+      padding: {
+        bottom: 0,
+        top: 3
+      },
+      tick: {
+        format: options.yFormat
+      }
+    }
+  }
+});
+
+/*
   var chart = c3.generate({
     bindto: '#' + options.container,
     padding: {
@@ -134,11 +206,18 @@ HubChart.prototype.render = function() {
     },
     data: {
       url: url || undefined,
+      //x: options.x,
       json: (Object.prototype.toString.call(data[0]) === '[object Object]' ? data : undefined),
-      columns: (Object.prototype.toString.call(data[0]) === '[object Array]' ? data : undefined),
-      x: (Object.prototype.toString.call(data[0]) === '[object Array]' ? undefined : options.x),
+      //columns: (Object.prototype.toString.call(data[0]) === '[object Array]' ? data : undefined),
+      //x: (Object.prototype.toString.call(data[0]) === '[object Array]' ? undefined : options.x),
       xFormat: options.xFormat,
-      mimeType: options.mimeType,
+      x: 'x',
+      columns: [
+            ['x', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01'],
+            ['sample', 30, 200, 100, 400, 150, 250]
+        ],
+      //mimeType: options.mimeType,
+      /*
       keys: {
         x: options.x,
         value: options.value
@@ -193,6 +272,7 @@ HubChart.prototype.render = function() {
       }
     }
   });
+  */
 };
 
 hubChart.generate = function(options, container) {

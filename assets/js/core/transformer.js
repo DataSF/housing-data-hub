@@ -35,16 +35,32 @@ var toColumns = function() {
 var toMatrix = function() {
   this.run = function(data,chart) {
     var output = [[chart.options.x]];
-    var rows = [];
-    var cols = [];
+    var rows = [chart.options.x];
+    var cols = [chart.options.x];
     $.each(data,function(idx,rec) {
-      if(output[0].indexOf(rec[chart.options.x]) === -1) {
-        console.log(chart.options.pivot);
+      var colIdx = cols.indexOf(rec[chart.options.pivot])
+      var rowIdx = rows.indexOf(rec[chart.options.x])
+      if(rowIdx === -1) {
         output[0].push(rec[chart.options.x]);
+        rowIdx = rows.push(rec[chart.options.x]) - 1
       }
-      
+      if(colIdx === -1) {
+        colIdx = cols.push(rec[chart.options.pivot]) - 1
+        var arrayInit = new Array(50)
+        for (var i = 0; i < arrayInit.length; i++) {
+          arrayInit[i] = 0
+        }
+        output[colIdx] = [rec[chart.options.pivot]].concat(arrayInit)
+      }
+      output[colIdx][rowIdx] = parseInt(rec['count']);
     });
+    var numRows = output[0].length
+    var numCols = output.length
+    for (var i = 1; i < numCols; i++) {
+      output[i] = output[i].slice(0,numRows)
+    }
     console.log(output);
+    return output;
   }
 }
 

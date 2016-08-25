@@ -3,7 +3,6 @@ layout: data
 title: Completed units by on/off site
 "chart-title": "Completed inclusionary units by on/off site since 1992"
 category: "Inclusionary-Housing"
-"policy-link": "http://jasonlally.com/housing-policy-hub/policies/inclusionary-housing/"
 data: inclusionary/units_by_dev_choice.csv
 column: BMR Project Type
 source: "Mayor's Office of Housing and Community Development"
