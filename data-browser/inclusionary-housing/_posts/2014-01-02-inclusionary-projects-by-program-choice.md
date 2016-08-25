@@ -8,6 +8,7 @@ data: "https://data.sfgov.org/resource/kdpp-67mq.json?&$select=section_415_decla
 dataType: json
 column: section_415_declaration_of_intent
 transform: toColumns
+#column: Project Type
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
@@ -17,13 +18,13 @@ colors: Blues
 "axisType": category
 "yFormat": ","
 groups:
-  - "On-site BMR Project "
-  - "Fee Payment "
-  - Off-site BMR Project
+  - On-site BMR Project
+  - Fee Payment
   - Units for Off-site Project
+  - Off-site BMR Project
   - Units for Off-site Project with On-site Obligation
   - Combination Project
-  - "Land Dedication "
+  - Land Dedication
   - Units for Off-site Project with Onsite Obligation
 yLabel: Projects
 ---
