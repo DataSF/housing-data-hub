@@ -15,7 +15,7 @@ portalID: "kdpp-67mq"
 published: true
 scale: "5"
 colors: Blues
-axisType: category
+"axisType": category
 "yFormat": ","
 notes: null
 yLabel: Units
