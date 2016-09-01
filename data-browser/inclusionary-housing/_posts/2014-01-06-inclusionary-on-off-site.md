@@ -3,13 +3,9 @@ layout: data
 title: Completed units by on/off site by year
 "chart-title": "Completed inclusionary units by on/off site by year since 1992"
 category: "Inclusionary-Housing"
-#data: inclusionary/bmr_on_off_site.csv
-data: "https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)+as+year,section_415_declaration_of_intent,count(*)&$group=year,section_415_declaration_of_intent&$where=completion_date%3E%271991-01-01%27&$order=year"
-dataType: json
-transform: toMatrix
+data: inclusionary/bmr_on_off_site.csv
 x: Year
 column: Year
-pivot: section_415_declaration_of_intent
 type: bar
 source: "Mayor's Office of Housing and Community Development."
 portalID: "nj3x-rw36"
