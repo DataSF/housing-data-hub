@@ -4,7 +4,8 @@ title: Completed units by on/off site by year
 "chart-title": "Completed inclusionary units by on/off site by year since 1992"
 category: "Inclusionary-Housing"
 #data: inclusionary/bmr_on_off_site.csv
-data:https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)+as+year,sum(total_bmrs_off_site) AS BMR_Off_Site_Units,sum(total_bmrs_on_site) AS BMR_On_Site_Units&$group=year&$where=completion_date%3E%271991-01-01%27&$order=year
+data:"https://data.sfgov.org/resource/kdpp-67mq.json?$select=date_trunc_y(completion_date)+as+year,sum(total_bmrs_off_site) AS BMR_Off_Site_Units,sum(total_bmrs_on_site) AS BMR_On_Site_Units&$group=year&$where=completion_date%3E%271991-01-01%27&$order=year"
+dataType:json
 x: year
 column: year
 type: bar
