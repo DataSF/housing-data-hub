@@ -3,7 +3,7 @@ layout: data
 title: Completed units by on/off site by year
 "chart-title": "Completed inclusionary units by on/off site by year since 1992"
 category: "Inclusionary-Housing"
-data: inclusionary/bmr_on_off_site.csv
+#data: inclusionary/bmr_on_off_site.csv
 #x: Year
 column: Year
 type: bar
