@@ -9,10 +9,9 @@ dataType: json
 column: year
 transform: toColumns
 #x: Year
-column: Year
 type: bar
 source: "Mayor's Office of Housing and Community Development."
-portalID: "nj3x-rw36"
+portalID: "kdpp-67mq"
 published: true
 scale: "5"
 colors: Blues
