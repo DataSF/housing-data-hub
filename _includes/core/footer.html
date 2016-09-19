@@ -1,26 +1,26 @@
 <footer>
-  <div class="container footer">
-    <div class="row">
-      <div class="col-sm-4">
-        <p>The San Francisco Housing Data Hub is your go-to resource for learning about policies and programs that affect housing affordability and are administered by local government agencies in San Francisco. We provide an overview of each of the major programs - what it is, its purpose, and related data.</p>
-      </div>
-      <div class="col-sm-4 left-border-dotted">
-        <ul class="list-unstyled">
-          {% for link in site.data.navigation %}
-          <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
-            <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <a href="http://datasf.org" title="Go to DataSF, the official open data program of the City and County of San Francisco" class="no-underline"><span class="brand"><span class="brand-highlight">Data</span>SF</span></a>
-        <p>The Official Open Data Program of the City and County of San Francisco</p>
-      </div>
-    </div>
-    <div class="row license">
-      <div class="col-md-12">
-        Data released by the City and County of San Francisco is licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a>. For other sources, such as State or Federal, please refer to the relevant terms and conditions.
+  <div class="footer-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <p>The San Francisco Housing Data Hub is your go-to resource for learning about policies and programs that affect housing affordability and are administered by local government agencies in San Francisco. We provide an overview of each of the major programs - what it is, its purpose, and related data.</p>
+        </div>
+        <div class="col-sm-4 left-border-dotted">
+          <ul class="list-unstyled">
+            {% for link in site.data.navigation %}
+            <li class="{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
+              <a href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a href="http://datasf.org" title="Go to DataSF" class="no-underline"><span class="brand"><span class="brand-highlight">Data</span>SF</span></a>
+          <p>Empowering use of the City's data</p>
+        </div>
+        <div class="col-md-12 license">
+          Data released by the City and County of San Francisco is licensed under the <a href="http://opendatacommons.org/licenses/pddl/summary/" title="Public Domain Dedication License summary">Public Domain Dedication License (PDDL v1.0)</a>. For other sources, such as State or Federal, please refer to the relevant terms and conditions.
+        </div>
       </div>
     </div>
   </div>

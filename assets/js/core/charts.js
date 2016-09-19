@@ -131,8 +131,6 @@ HubChart.prototype.render = function() {
     }
     return text + "</table>";
   };
-  
-  console.log(options.groups)
 
   var chart = c3.generate({
     bindto: '#' + options.container,

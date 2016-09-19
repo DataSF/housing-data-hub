@@ -1,6 +1,3 @@
-- text: Home
-  url: /?ref=home
-  actual: /index.html
 - text: Overview
   url: /overview/
   actual: /overview/index.html

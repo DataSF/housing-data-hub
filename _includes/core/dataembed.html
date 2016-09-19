@@ -1,5 +1,5 @@
 <div id="viz-wrapper-{{include.count}}" class="viz-wrapper">
-  <h2 id="data">Data</h2>
+  <h3 id="data-{{include.count}}">Data</h3>
   {% assign pageCat = include.embed %}
   {% if pageCat == nil %}
     <p>No data to report yet. Data is still being discovered for this policy. <a href="{{site.baseurl}}/about#our-process" title="Click here to read about our process of continuous improvement">Read more about our process of continuous improvement.</a></p>

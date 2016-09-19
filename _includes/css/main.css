@@ -1,18 +1,7 @@
-body {
-  margin-top: 87px;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-}
-
 body.embed {
   margin-top: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
 /*
  * Global add-ons
  */
@@ -195,6 +184,7 @@ ul.nav-browser li.active {
 .masthead h1 {
   position: absolute;
   bottom: 20px;
+  color: #fff;
 }
 
 h1.top, h2:first {
@@ -232,32 +222,36 @@ h2.panel-title {
 }
 /* Navbar overrides */
 
-.navbar {
-  min-height: 55px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+.toc li a {
+  color: #317ab9;
+  padding: 10px;
 }
+
 .navbar-inverse {
   background-color: #245f7b;
   border-color: transparent;
 }
-.navbar-inverse .navbar-nav>li>a {
-  color: #fff;
-  line-height: 25px;
-  font-size: .875em;
-  font-weight: 400;
-}
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-  background-color: #2b5e76;
-}
+
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
   background-color: #2b5e76;
 }
-.navbar-inverse .navbar-brand {
+
+.nav-group .navbar-default .navbar-brand {
   color: #fff;
+  font-size: 1.5em;
 }
-.navbar-inverse .navbar-brand:hover {
-  color: #999;
+
+@media (min-width: 768px) {
+  .nav-group .navbar-default .navbar-brand {
+      font-size: 1.5em;
+  }
 }
+
+.navbar-default .navbar-brand {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #fff;
+}
+
 .navbar.navbar-mini {
   position: relative;
   min-height: 32px;
@@ -266,23 +260,7 @@ h2.panel-title {
   margin: 0;
   border: none;
 }
-.navbar.navbar-mini li {
-  vertical-align: top;
-  margin-left: -2px;
-  font-size: 12px;
-  line-height: 32px;
-}
-.navbar.navbar-mini li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-  color: #c1c1c1;
-  line-height: 32px;
-}
-.navbar.navbar-mini li a:hover {
-  background-color: #333
-}
+
 .navbar.navbar-mini li.icon a {
   padding: 0 5px;
   font-size: 1.4em;
@@ -468,6 +446,15 @@ h2:before, #maincontent:before {
   background-color: #317ab9;
 }
 
+.btn-primary {
+  font-weight: normal;
+  text-transform: none;
+}
+
+.action-links a {
+  text-decoration: none;
+}
+
 button p {
   font-size: 18px;
 }
@@ -508,20 +495,15 @@ a:hover button {
   color: #6dbce2;
 }
 
-footer {
-  font-size: .9em;
+footer .brand-highlight {
+  color: #133140;
 }
 
 footer ul.list-unstyled li {
   margin-bottom: 5px;
 }
 
-footer .made-in {
-  background-color: #245f7b;
-}
-
 footer {
-  background-color: #222;
   color: #fff;
 }
 
@@ -531,13 +513,6 @@ footer a {
 
 footer a:hover, footer a:focus {
   color: #55A5C9;
-}
-
-footer .made-in {
-  background-color: #245f7b;
-  color: #fff;
-  margin-top: 25px;
-  padding: 5px 0;
 }
 
 a.no-underline, a:hover.no-underline {
@@ -551,6 +526,10 @@ a.no-underline, a:hover.no-underline {
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+footer .license {
+  margin-bottom: 15px;
 }
 /*
 Popups
@@ -688,13 +667,16 @@ a.definition:hover, a.definition:focus {
   right: 0;
 }
 
+.ami-container {
+  font-size: .9em;
+}
+
 .ami-lower {
   position: absolute;
   height: 30px;
   left: -20px;
   top: 0;
   padding-top: 5px;
-  font-size: 12px;
   font-weight: bold;
 }
 
@@ -704,14 +686,12 @@ a.definition:hover, a.definition:focus {
   right: -35px;
   top: 0;
   padding-top: 5px;
-  font-size: 12px;
   font-weight: bold;
 }
 
 .ami-label {
   color: #000;
   font-weight: bold;
-  font-size: 12px;
   text-align: right;
   padding: 5px 5px 0 0;
 }
