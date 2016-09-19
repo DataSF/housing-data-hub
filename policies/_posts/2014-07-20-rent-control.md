@@ -2,10 +2,11 @@
 layout: policy
 summary: "Rent control is a housing policy that regulates rent adjustments and evictions by private landlords. "
 published: true
-dataCategory: "rent-control"
+data_category: "rent-control"
 image: rentcontrol.png
 ami: none
 target: units
+order: 6
 ---
 
 The goal of rent control is to safeguard tenants from excessive rent increases and, at the same time, to assure landlords of fair and adequate rents. In this type of program, the City regulates rent increases and evictions in the private market, but does not provide the housing itself.
@@ -18,9 +19,9 @@ San Francisco’s rent control law, Chapter 37 of the Administrative Code, was p
 
 When landlords want to increase rent (beyond the annual allowable increase) they generally must file a petition with the Rent Board. In most cases, landlords must also file notices to evict tenants. Tenants may also file petitions against their landlords. The Rent Board's primary function is to conduct hearings and mediations of tenant and landlord petitions regarding the adjustment of rents under the City's rent control laws. The Rent Board also investigates reports of Alleged Wrongful Eviction.
 
-Rent control affects housing affordability in a variety of ways. Evictions can affect the supply of rent controlled units if the goal is to convert the unit to an owner occupied unit. Evictions can also increase the asking rent, as landlords may rent vacant units to new tenants at prevailing market rates. Changes and improvements to units that result in allowable rent increases may affect affordability for current occupants, although in most cases financial hardship provisions protect tenants.
+Evictions affects housing affordability in a variety of ways. One way is via the number of rent controlled units available. Evictions can affect the supply of rent controlled units if the goal of the eviction is to convert the unit to an owner occupied unit. Evictions can also result in an increase in the asking rent, as landlords may rent units now vacant due to evictions to new tenants at prevailing market rates. Changes and improvements to units that result in allowable rent increases may affect affordability for current occupants, although in most cases financial hardship provisions protect tenants.
 
-The table below summarizes the reasons for evictions, distinguishes between good faith or “no fault” evictions and “fault” evictions, where the tenant has committed an act that serves as a “just cause” for eviction, and indicates evictions that impact the supply of rent controlled units.
+The table below summarizes the reasons for evictions, distinguishes between good faith or “no fault” evictions and “fault” evictions, where the tenant has committed an act that serves as a “just cause” for eviction.  The table aslo indicates which eviction reasons impact the supply of rent controlled units.
 
 Reason for eviction|Fault or No Fault|Supply Impact[1]|Citation
 -------------------|-----------------|----------------------------------------------------------|--------
@@ -50,11 +51,9 @@ Other|||
 
 [3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Rent Arbitration Board](http://www.sfrb.org/)	| The Rent Board implements the rent ordinance and establishes additional rules; arbitrates and mediates disputes between tenants and landlords; investigates complaints of wrongful evictions and provides other services, such as counseling on the details of the law.
 
 ## Resources

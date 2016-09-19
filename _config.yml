@@ -1,8 +1,9 @@
 baseurl: ''
-permalink:	/:categories/:title
+permalink:	/:categories/:title/
 markdown: kramdown
 gems:
 - jekyll-sitemap
+
 version: 3.0.3
 
 kramdown:

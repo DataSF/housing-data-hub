@@ -6,13 +6,19 @@ category: "population-and-households"
 data: "decennial-census/households_by_type.csv"
 column: Year
 "axisType": category
-type: line
+type: area
+groups:
+    - Family households
+    - Nonfamily households
 published: true
 source: "Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011."
 scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: ""
+xLabel: Year
+yLabel: Households
+#Update from Here: http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/S1101/0500000US06075
 ---
 
-The chart below shows both family and nonfamily households over time. A family consists of two or more people (one of whom is the householder) related by birth, marriage, or adoption residing in the same housing unit. A household consists of all people who occupy a housing unit regardless of relationship. A household may consist of a person living alone or multiple unrelated individuals or families living together.
+The census categorizes households as either family or non-family. A family consists of two or more people (one of whom is the householder) related by birth, marriage, or adoption who live in the same housing unit. A non-family consists of any living arrangement that does not meet the definition of family. Examples of this are roommates or someone living alone.   The chart below compares the number of family households and non-family households over time.

@@ -16,6 +16,7 @@ yFormat: ","
 groups: 
   - Units
   - Beds
+yLabel: Affordable Units or Beds
 ---
 
-While the previous chart shows the number of projects, the chart below shows the number of units available. Some of the projects express their units in terms of beds versus a standard unit. The year reflects the year that the affordability requirement started (when a project begins leasing units under the requirements).
+An affordable housing project can contain a handful of housing units to several hundred.  While the previous chart shows the number of projects, the chart below shows the number of units available. Some of the projects express their units in terms of beds versus a standard unit. The year reflects the year a project begins leasing units under the affordability requirements.

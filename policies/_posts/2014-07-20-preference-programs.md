@@ -3,9 +3,10 @@ layout: policy
 summary: Housing preference programs give target groups priority access to affordable housing programs.
 published: true
 image: preference.png
-data-category: "preference-programs"
+data_category: "preference-programs"
 ami: none
 target: people
+order: 5
 note: "However, while given preference for affordable housing through certificates of preference, certificate holders must meet the income eligibility for whichever other program in which they are seeking to participate."
 ---
 
@@ -33,11 +34,9 @@ The Certificate of Preference Program (COP) is available to residents displaced 
 The 1986 Ellis Act is a California State law that allows property owners to evict tenants in order to exit the rental business.
 The Ellis Act Housing Preference (EAHP), launched in April 2014, gives preference in affordable housing programs administered or funded by the City and OCII for eligible tenants who are evicted under the Ellis Act. Eligibility depends on criteria such as length of stay, date when the eviction notice is received, and the health condition of the tenant. 
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the Certificate of Preference (COP) program and the application process for the Ellis Act Housing Preference (EAHP) Certificate.
 
 ## Resources

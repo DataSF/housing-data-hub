@@ -5,6 +5,7 @@ published: true
 ami: 80
 target: units
 image: publichousing.png
+order: 4
 ---
 
 Public housing offers affordable rental units to low to extremely low-income households. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.
@@ -25,11 +26,9 @@ In 2012, HUD created the Rental Assistance Demonstration (RAD) program to addres
 
 San Francisco’s RAD program involves eight community-led development teams. By the end of 2016, the teams will take ownership of the units, rehabilitate them, bring new services to residents, while preserving resident rights, and then manage the units over the long-term.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [US Department of Housing and Urban Development (HUD)](http://www.hud.gov) | HUD provides funding and financing for public housing management, development, and rehabilitation.
 [San Francisco Housing Authority (SFHA)](http://www.sfha.org/) | SFHA is the local housing authority that manages the 40 public housing developments in San Francisco.
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD works with SFHA to plan and coordinate the HOPE SF project.

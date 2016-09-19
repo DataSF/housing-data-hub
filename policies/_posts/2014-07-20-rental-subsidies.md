@@ -6,6 +6,7 @@ published: true
 image: rentsubsidy.png
 ami: 80
 target: people
+order: 7
 ---
 
 The goal of rental subsidies (or vouchers) is to close the gap between the amount of rent a landlord charges and what a family can afford. Subsidies provide assistance to families and individuals, rather than trying to increase or maintain the number of affordable places for rent.
@@ -19,11 +20,9 @@ Project-based operating subsidies are a related form of assistance for low-incom
 
 Examples of operating subsidy programs include Project-Based Section 8 Rental Assistance Shelter + Care, both funded by HUD, as well as Project-Based Section 8 Housing Choice Vouchers (a SFHA program), provisions of the Mental Health Services Act (funded by the California Department of Housing and Community Development), and the Local Operating Subsidy Program (funded by the City of San Francisco).
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [US Department of Housing and Urban Development (HUD)](http://www.hud.gov) | HUD provides funding and oversight for most rental subsidy programs in San Francisco.
 [San Francisco Housing Authority (SFHA)](http://www.sfha.org/) | SFHA administers the voucher program in San Francisco by managing the waitlist, ensuring eligibility, and payments to building owners.
 

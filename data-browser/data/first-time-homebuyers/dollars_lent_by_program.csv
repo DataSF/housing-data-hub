@@ -1,7 +1,2 @@
-Program,Dollars Lent
-DALP,4139018
-BMR DALP Plus,724556
-Fire Responders,393750
-Teacher Next Door,260000
-Police in the Community,20000
-City Second,397750
+Program,DALP,BMR DALP Plus,Fire Responders,Teacher Next Door,Police in the Community,City Second
+Count,4139018,724556,393750,260000,20000,397750

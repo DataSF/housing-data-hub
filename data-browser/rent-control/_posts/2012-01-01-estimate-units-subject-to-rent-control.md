@@ -17,7 +17,12 @@ emphasis:
   - Renter
   - 0
   - 185aa9
-source: "U.S. Census Bureau, 2013 American Community Survey 5-Year Estimates. Tenure by Year Built."
+groups:
+  - Renter
+  - Owner
+yLabel: Units
+source: "U.S. Census Bureau, 2014 American Community Survey 5-Year Estimates. Tenure by Year Built."
+#source:http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_5YR/B25036/0500000US06075
 notes: "The actual number of rent controlled units cannot be determined because the rent control ordinance only covers properties built before June 13, 1979 and because there is an exemption from price controls in single family homes/condos where tenants moved in after 1995. In addition, an unknown number of rental units are covered by rent control but are unpermitted. Also, please note the margins of error for each estimate (visible when hovering over the chart)."
 ---
 

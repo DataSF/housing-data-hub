@@ -1,1 +1,35 @@
-Neighborhood,1-2 Units,3-10 Units,11-49 Units,50-250 Units,Above 250 UnitsDowntown,0,23,285,2209,882Showpl/Potrero,37,28,125,359,2422Market Octavia,9,36,383,1642,828Rincon Hill,1,0,0,232,2137TB Combo,0,0,0,140,1587East SoMa,4,44,255,944,282Central Waterfront,3,25,94,624,599Mission,28,119,188,524,351Northeast,16,63,193,669,0WSoMa,7,48,102,314,408Western Addition,8,54,3,396,260Mission Bay,0,0,0,188,263"BVHP Area A,B",22,0,0,402,0"South of Market, Other",0,0,0,394,0Marina,17,18,196,154,0"South Central, Other",57,44,32,122,0Richmond,58,65,52,50,0Park Merced,0,0,0,182,0Other S Bayshore,11,34,94,0,0Bernal Heights,46,25,0,50,0"Ingleside, Other",37,14,64,0,2Central,67,40,0,0,0Balboa Park,1,14,13,71,0Inner Sunset,35,28,34,0,0Outer Sunset,30,11,0,56,0Candlestick,0,0,0,77,0Buena Vista,17,7,36,0,0HP Shipyard,0,18,36,0,0India Basin,2,22,0,0,0VisVal,0,18,0,0,0Executive Park,0,0,0,12,0Japantown,0,4,0,0,0Glen Park Compact,1,0,0,0,0
+Neighborhood,1-2 Units,3-10 Units,11-49 Units,50-250 Units,250-800 Units
+Bayview,87,49,84,908,1083
+Bernal Heights,61,26,,50,
+Castro/Upper Market,45,37,127,147,
+Chinatown,5,,68,,
+Crocker Amazon,12,13,,,
+Downtown/Civic Center,,33,436,2118,1051
+Excelsior,64,17,34,198,
+Financial District,2,9,78,935,2275
+Glen Park,14,6,,,
+Haight Ashbury,16,39,16,,
+Inner Richmond,42,45,77,,449
+Inner Sunset,20,27,34,,460
+Lakeshore,15,3,,482,612
+Marina,25,47,177,53,
+Mission,45,352,413,1351,625
+Nob Hill,4,43,189,170,
+Noe Valley,48,61,,,
+North Beach,1,17,30,,
+Ocean View,51,12,42,,
+Outer Mission,37,29,,61,
+Outer Richmond,63,65,69,,
+Outer Sunset,73,15,24,,
+Pacific Heights,2,8,47,76,
+Parkside,39,26,,56,
+Potrero Hill,58,40,287,1501,1240
+Presidio Heights,14,11,21,,
+Russian Hill,15,69,39,124,
+Seacliff,1,,,,
+South of Market,14,107,658,5400,5660
+Treasure Island/YBI,,,,,
+Twin Peaks,5,8,,,
+Visitacion Valley,28,20,,229,
+West of Twin Peaks,12,12,13,,
+Western Addition,22,133,193,1397,516

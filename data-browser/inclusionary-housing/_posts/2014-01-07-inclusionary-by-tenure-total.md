@@ -16,4 +16,4 @@ portalID: "nj3x-rw36"
 notes: null
 ---
 
-The Inclusionary Housing program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development.
+Tenure is the arrangement under which a person lives in a housing unit.  The most common types of tenure are renting or owning. The Inclusionary Housing program allows for both rental and ownership units. Typically, the tenure of units matches what the tenure is in the rest of the housing development.
