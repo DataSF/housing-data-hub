@@ -6,6 +6,7 @@ published: true
 image: rentsubsidy.png
 ami: 80
 target: people
+order: 7
 ---
 
 The goal of rental subsidies (or vouchers) is to close the gap between the amount of rent a landlord charges and what a family can afford. Subsidies provide assistance to families and individuals, rather than trying to increase or maintain the number of affordable places for rent.

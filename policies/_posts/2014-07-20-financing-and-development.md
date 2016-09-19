@@ -7,6 +7,7 @@ data_category: "financing-and-development"
 ami: 60
 image: development.png
 target: units
+order: 0
 ---
 
 The goal of below-market rate financing programs is to promote the development and preservation of affordable housing by reducing the costs of capital. Cost reductions can come from use of 0% loans with 55-year terms, rental subsidies, land donations, long-term ground leases and more. Local, state and federal agencies, as well as private parties and philanthropists, provide a variety of below-market financing options.

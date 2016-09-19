@@ -6,6 +6,7 @@ image: preference.png
 data_category: "preference-programs"
 ami: none
 target: people
+order: 5
 note: "However, while given preference for affordable housing through certificates of preference, certificate holders must meet the income eligibility for whichever other program in which they are seeking to participate."
 ---
 

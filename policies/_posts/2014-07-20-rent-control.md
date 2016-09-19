@@ -6,6 +6,7 @@ data_category: "rent-control"
 image: rentcontrol.png
 ami: none
 target: units
+order: 6
 ---
 
 The goal of rent control is to safeguard tenants from excessive rent increases and, at the same time, to assure landlords of fair and adequate rents. In this type of program, the City regulates rent increases and evictions in the private market, but does not provide the housing itself.

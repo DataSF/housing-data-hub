@@ -7,6 +7,7 @@ data_category: "homeowner-assistance"
 image: ownership.png
 ami: 91
 target: people
+order: 3
 ---
 
 Ownership assistance programs provide education and resources, which help occupants stay in their homes. Programs can also offer loans or other forms of financial assistance.

@@ -7,6 +7,7 @@ ami: 100
 target: units
 image: inclusionary.png
 note: "The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 60%."
+order: 2
 ---
 
 The price of new housing is based on what people are willing to pay. But market rates are usually not affordable to people with lower incomes. This program requires new housing to "include" affordable units. This helps create new affordable housing at the same rate as market housing.

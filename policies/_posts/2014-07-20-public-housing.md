@@ -5,6 +5,7 @@ published: true
 ami: 80
 target: units
 image: publichousing.png
+order: 4
 ---
 
 Public housing offers affordable rental units to low to extremely low-income households. Unlike most housing in the City, public housing is developed and managed by the government versus private landlords.
