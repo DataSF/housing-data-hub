@@ -116,6 +116,12 @@ HubChart.prototype.render = function() {
       if ((typeof allData[i + i + 1] != "undefined") && allData[i + i + 1].id.indexOf("MOE") > -1) {
         value += " +/-" + valueFormat(allData[i + i + 1].values[d[i].index].value);
       }
+      
+      if (config.data_type === 'donut' || config.data_type === 'pie') {
+        var formatComma = d3.format(",")
+        value = formatComma(d[i].value)
+      }
+      
       bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
 
       text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
