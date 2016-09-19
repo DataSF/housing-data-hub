@@ -3,7 +3,7 @@ layout: policy
 title: Affordable Housing Financing and Development
 summary: "Housing developers use debt or equity to finance the construction or rehabilitation of housing.  But low-income rents and sales prices cannot cover the costs of repaying market-rate financing..."
 published: true
-dataCategory: "financing-and-development"
+data_category: "financing-and-development"
 ami: 60
 image: development.png
 target: units
@@ -64,7 +64,7 @@ Affordable housing funding programs often restrict occupancy to certain populati
 ### Converting Market-Rate Units to Affordable Units: the Small Sites Program
 Rent control keeps a significant amount of San Francisco’s housing stock affordable, but under the State’s Ellis Act, such units are at-risk of conversion to market-rate if owners sell them to new buyers who convert them to tenancies-in-common.  To protect residents living in these at-risk units, MOHCD launched its “Small Sites Program” in 2014.  With below-market-rate funding from MOHCD, affordable developers can buy small buildings, make any necessary repairs, and keep them permanently affordable.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages local funding programs, including issuing funds and monitoring program compliance.

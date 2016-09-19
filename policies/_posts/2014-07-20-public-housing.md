@@ -25,7 +25,7 @@ In 2012, HUD created the Rental Assistance Demonstration (RAD) program to addres
 
 San Francisco’s RAD program involves eight community-led development teams. By the end of 2016, the teams will take ownership of the units, rehabilitate them, bring new services to residents, while preserving resident rights, and then manage the units over the long-term.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
 [US Department of Housing and Urban Development (HUD)](http://www.hud.gov) | HUD provides funding and financing for public housing management, development, and rehabilitation.

@@ -3,7 +3,7 @@ layout: policy
 summary: "Homeowners can receive a variety of assistance including education, grants, and loans to help them be successful homeowners."
 published: true
 title: Homeowner Assistance
-dataCategory: "homeowner-assistance"
+data_category: "homeowner-assistance"
 image: ownership.png
 ami: 91
 target: people
@@ -17,7 +17,7 @@ In San Francisco, the Mayor’s Office of Housing and Community Development (MOH
 
 Owners who own a home offered through one of the City’s other housing programs, e.g. [inclusionary housing](https://housing.datasf.org/policies/inclusionary-housing), may also be eligible for refinancing to lower their interest rate and take advantage of current low rates.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD manages the city’s ownership assistance programs, including applications and monitoring and enforcement of loan and grant terms.

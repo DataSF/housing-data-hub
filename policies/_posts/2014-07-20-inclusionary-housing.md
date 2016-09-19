@@ -1,7 +1,7 @@
 ---
 layout: policy
 summary: Inclusionary housing programs require new housing projects to “include” affordable units or pay a fee.
-dataCategory: "inclusionary-housing"
+data_category: "inclusionary-housing"
 published: true
 ami: 100
 target: units
@@ -44,7 +44,7 @@ The Affordable Housing Fees are used to:
 - Provide assistance to low and moderate income homebuyers
 - Pay for studies to determine the affordable housing fee
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD implements and monitors the inclusionary housing program, including tracking properties, determining fee levels, and monitoring the marketing and sale or lease of affordable units. MOHCD also oversees almost 2,000 inclusionary units that were part of projects initiated under the City’s Redevelopment Agency, which was dissolved in 2012.

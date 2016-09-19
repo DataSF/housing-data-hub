@@ -2,7 +2,7 @@
 layout: policy
 summary: "Rent control is a housing policy that regulates rent adjustments and evictions by private landlords. "
 published: true
-dataCategory: "rent-control"
+data_category: "rent-control"
 image: rentcontrol.png
 ami: none
 target: units
@@ -50,7 +50,7 @@ Other|||
 
 [3] The terms of development agreements are on a case by case basis and the impact on the number of rent control units varies depending on the agreement terms. Terms can include a requirement to replace rent controlled units at a different location or to provide rent controlled units to occupants in place at the time of the agreement.
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
 [Rent Arbitration Board](http://www.sfrb.org/)	| The Rent Board implements the rent ordinance and establishes additional rules; arbitrates and mediates disputes between tenants and landlords; investigates complaints of wrongful evictions and provides other services, such as counseling on the details of the law.
