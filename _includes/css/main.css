@@ -267,7 +267,7 @@ h2.panel-title {
 }
 @media (max-width: 992px) {
   body {
-    margin-top: 55px;
+    margin-top: 50px;
   }
 }
 
@@ -379,11 +379,10 @@ h2:before, #maincontent:before {
   height: 0;
 }
 
-@media (max-width: 1200px) {
-  .home-buttons h2 {
+
+.home-buttons h2 {
   min-height: 132px;
   }
-}
 
 .acknowledge {
   margin-bottom: 50px;
