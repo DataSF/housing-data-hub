@@ -49,7 +49,7 @@ HubChart.prototype.render = function() {
   /*
   initiate defaults
   */
-  
+
   var options = this.options,
     data = this.data,
     max = null,
@@ -60,7 +60,7 @@ HubChart.prototype.render = function() {
     legend = 'bottom',
     type = 'area',
     mimeType = 'csv';
-    
+
   /* detect whether the data is being passed via external url */
   if (typeof data === "string") {
     var url = (/^https?:\/\//.test(data)) ? data : '/data-browser/data/' + data;
@@ -116,6 +116,12 @@ HubChart.prototype.render = function() {
       if ((typeof allData[i + i + 1] != "undefined") && allData[i + i + 1].id.indexOf("MOE") > -1) {
         value += " +/-" + valueFormat(allData[i + i + 1].values[d[i].index].value);
       }
+      
+      if (config.data_type === 'donut' || config.data_type === 'pie') {
+        var formatComma = d3.format(",")
+        value = formatComma(d[i].value)
+      }
+      
       bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
 
       text += "<tr class='" + CLASS.tooltipName + "-" + d[i].id + "'>";
@@ -133,11 +139,11 @@ HubChart.prototype.render = function() {
       left: pleft
     },
     data: {
+      x: options.x,
+      xFormat: options.xFormat,
       url: url || undefined,
       json: (Object.prototype.toString.call(data[0]) === '[object Object]' ? data : undefined),
       columns: (Object.prototype.toString.call(data[0]) === '[object Array]' ? data : undefined),
-      x: (Object.prototype.toString.call(data[0]) === '[object Array]' ? undefined : options.x),
-      xFormat: options.xFormat,
       mimeType: options.mimeType,
       keys: {
         x: options.x,
@@ -166,6 +172,10 @@ HubChart.prototype.render = function() {
     axis: {
       rotated: rotated,
       x: {
+        label: {
+          text: options.xLabel || null,
+          position: 'outer-center'
+        },
         type: options.axisType,
         tick: {
           format: options.xTickFormat,
@@ -173,6 +183,10 @@ HubChart.prototype.render = function() {
         }
       },
       y: {
+        label: {
+          text: options.yLabel || null,
+          position: 'outer-middle'
+        },
         min: 0,
         max: max,
         padding: {

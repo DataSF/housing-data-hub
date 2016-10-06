@@ -17,10 +17,10 @@ Transformer.prototype = {
 /* turn categories from portal to columns */
 var toColumns = function() {
   this.run = function(data,chart) {
-    var output = [];
+    var output = [[chart.options.x, 'Count' ]];
     var total = 0;
     $.each(data, function(idx, rec) {
-      output.push([rec[chart.options.x], rec.count]);
+      output.push([rec[chart.options.x].trim(), rec.count]);
       total += +rec.count;
     });
     if (total == 0) {
@@ -35,16 +35,33 @@ var toColumns = function() {
 var toMatrix = function() {
   this.run = function(data,chart) {
     var output = [[chart.options.x]];
-    var rows = [];
-    var cols = [];
+    var rows = [chart.options.x];
+    var cols = [chart.options.x];
     $.each(data,function(idx,rec) {
-      if(output[0].indexOf(rec[chart.options.x]) === -1) {
-        console.log(chart.options.pivot);
+      var colIdx = cols.indexOf(rec[chart.options.pivot].trim())
+      var rowIdx = rows.indexOf(rec[chart.options.x])
+      if(rowIdx === -1) {
         output[0].push(rec[chart.options.x]);
+        rowIdx = rows.push(rec[chart.options.x]) - 1
       }
-      
+      if(colIdx === -1) {
+        colIdx = cols.push(rec[chart.options.pivot].trim()) - 1
+        var arrayInit = new Array(50)
+        for (var i = 0; i < arrayInit.length; i++) {
+          arrayInit[i] = 0
+        }
+        output[colIdx] = [rec[chart.options.pivot].trim()].concat(arrayInit)
+      }
+      output[colIdx][rowIdx] = parseInt(rec['count']);
     });
-    console.log(output);
+    var numRows = output[0].length
+    var numCols = output.length
+    for (var i = 1; i < numCols; i++) {
+      output[i] = output[i].slice(0,numRows)
+    }
+    
+    console.log(output)
+    return output;
   }
 }
 

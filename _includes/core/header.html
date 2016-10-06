@@ -19,12 +19,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="http://sfgov.org/">SFGov</a></li>
             <li><a href="http://www.datasf.org">DataSF</a></li>
-            <li class="icon"><a href="https://twitter.com/DataSF" title="DataSF Twitter Profile"><i class="fa fa-fw fa-twitter"></i><span class="sr-only">DataSF Twitter Profile</span></a></li>
           </ul>
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,7 +37,7 @@
         <div class="collapse navbar-collapse">
           {% unless page.layout == 'front' %}
           <ul class="nav navbar-nav navbar-right">
-            {% for link in site.data.navigation %} {% assign current = nil %} {% if page.url == link.actual or page.layout == link.layout %} {% assign current = 'active' %} {% endif %}
+            {% for link in site.data.navigation %} {% assign current = nil %} {% if page.url == link.url or page.layout == link.layout %} {% assign current = 'active' %} {% endif %}
             <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
               <a class="{{ current }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
             </li>

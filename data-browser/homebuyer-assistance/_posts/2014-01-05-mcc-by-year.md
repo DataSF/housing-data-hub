@@ -14,6 +14,8 @@ scale: "5"
 colors: YlGn
 "yFormat": ","
 notes: "Data as of April 1, 2015."
+yLabel: Mortgage Credit Recipients
+xLabel: Year
 ---
 
 In addition to loans, the City administers a mortgage credit program. Qualifying homebuyers can receive a certificate that allows them to claim their interest payments as a tax credit. This in turn reduces their federal income taxes, lowering the cost of homeownership.

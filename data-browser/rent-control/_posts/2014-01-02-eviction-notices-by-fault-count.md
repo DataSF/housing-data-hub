@@ -3,8 +3,6 @@ layout: data
 title: Eviction notices by fault type
 "chart-title": "Fault and no fault eviction notices by year since 1997"
 category: "Rent-Control"
-#data: "https://cdn.rawgit.com/DataSF/summary-data/7f7d5cfd4ee85d8a79d30bd0851840691bba2f2d/eviction_notices_by_fault_count.csv"
-#data: "rent-control/eviction_notices_by_fault_count.csv"
 data: "https://data.sfgov.org/resource/93gi-sfd2.json?$select=date_trunc_y(file_date)+as+year,owner_move_in,ellis_act_withdrawal,demolition,development,condo_conversion,lead_remediation,good_samaritan_ends,substantial_rehab,roommate_same_unit,capital_improvement&$order=year&$limit=50000"
 transform: categorizeFault
 column: year
@@ -16,11 +14,16 @@ chartvalues:
 chartnames:
   - Fault Eviction Notices
   - No Fault Eviction Notices
-type: line
+type: area
+groups:
+  - fault
+  - no_fault
 axisType: timeseries
 yFormat: ","
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
 xTickFormat: '%Y'
+yLabel: Total Eviction Notices
+xLabel: Year
 source: San Francisco Rent Board
 portalID: "5cei-gny5"
 published: true

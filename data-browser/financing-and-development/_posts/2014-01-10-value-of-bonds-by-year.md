@@ -13,6 +13,8 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 yFormat: "$,"
+yLabel: Bond Value
+xLabel: Year
 ---
 
 The City is authorized to issue tax-exempt bonds (which carry lower interest rates than regular debt) for the purpose of building affordable housing. Banks and other financial institutions purchase the bonds, and those proceeds fund the housing developments.

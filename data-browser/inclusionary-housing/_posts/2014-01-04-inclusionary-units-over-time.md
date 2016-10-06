@@ -16,6 +16,8 @@ type: area
 "axisType": timeseries
 xTickFormat: '%Y'
 xInputFormat: '%Y-%m-%dT%H:%M:%S.%L'
+xLabel: Year
+yLabel: Units
 ---
 
 The chart below shows the number of completed inclusionary units (versus projects) by year. The Inclusionary Housing program has been in place in various forms since 1992. Since the program is tied to new private housing developments, spikes in inclusionary units generally track periods of major building and development in the City.

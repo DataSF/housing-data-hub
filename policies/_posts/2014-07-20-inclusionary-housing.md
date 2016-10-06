@@ -1,12 +1,13 @@
 ---
 layout: policy
-summary: Programs that require new housing to “include” affordable units (or pay a fee) are called inclusionary.
-dataCategory: "inclusionary-housing"
+summary: Inclusionary housing programs require new housing projects to “include” affordable units or pay a fee.
+data_category: "inclusionary-housing"
 published: true
 ami: 100
 target: units
 image: inclusionary.png
 note: "The AMI eligibility varies for rental inclusionary and owner inclusionary. Owners are up to 100%, renters are eligible up to 60%."
+order: 2
 ---
 
 The price of new housing is based on what people are willing to pay. But market rates are usually not affordable to people with lower incomes. This program requires new housing to "include" affordable units. This helps create new affordable housing at the same rate as market housing.
@@ -30,12 +31,12 @@ Alternative 3	| Combination	| Any combination of the above options
 The BMR units are allocated through a lottery process. All individuals and households can enter the lottery. However, applicants must meet income requirements and certain conditions determine preferences in the lottery ranking process.
 
 ### Income levels served
-Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income. The table shows income levels based on persons per household.
+Inclusionary housing programs serve individuals and families ranging from 55% of Area Median Income to 120% of Area Median Income. The table shows income levels based on persons per household for 2016.
 
 AMI | One | Two | Three | Four
 ----|-----|-----|-------|------
-55% AMI | $37,350| $42,750| $48,050| $53,400
-120% AMI| $81,550| $93,250| $104,900| $116,500
+55% AMI |$41,450|$47,400|$53,300|$59,250
+120% AMI|$90,500|$103,400|$116,350|$129,250
 
 ### Use of the Affordable Housing Fee
 The Affordable Housing Fees are used to:
@@ -44,11 +45,9 @@ The Affordable Housing Fees are used to:
 - Provide assistance to low and moderate income homebuyers
 - Pay for studies to determine the affordable housing fee
 
-{% include core/dataembed.html embed=page.dataCategory count="1" %}
+{% include core/dataembed.html embed=page.data_category count="1" %}
 
 ## Organizations
-Organization | What it does
--------------|--------------
 [Mayor’s Office of Housing and Community Development (MOHCD)](http://sf-moh.org/)	| MOHCD implements and monitors the inclusionary housing program, including tracking properties, determining fee levels, and monitoring the marketing and sale or lease of affordable units. MOHCD also oversees almost 2,000 inclusionary units that were part of projects initiated under the City’s Redevelopment Agency, which was dissolved in 2012.
 [Office of Community Investment and Infrastructure (OCII)](http://www.sfredevelopment.org/) | OCII is the successor agency that oversees the competition of projects begun by the Redevelopment Agency. Once developed, these units will be transferred to MOHCD for monitoring. 
 [City Planning](http://www.sf-planning.org/) |	City Planning implements inclusionary housing procedures related to the permitting and approval of units that fall under the policy. Planning is also responsible for enforcing the Inclusionary Housing Ordinance.

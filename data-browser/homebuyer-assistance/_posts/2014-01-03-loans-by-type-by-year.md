@@ -13,7 +13,16 @@ source: "Mayor's Office of Housing and Community Development."
 scale: "5"
 colors: YlGn
 "yFormat": ","
+groups:
+  - DALP
+  - BMR DALP Plus
+  - First Responders
+  - Teacher Next Door
+  - Police in the Community
+  - City Second
 notes: "Data as of April 1, 2015."
+yLabel: Number of Loans
+xLabel: Year
 ---
 
 The general Downpayment Assistance Loan Program (DALP) is for low to moderate income homebuyers. Other programs target specific groups, such as first responders, teachers, police, or homebuyers buying in designated areas or developments (City Second). Income requirements vary by program and have different eligibility requirements.

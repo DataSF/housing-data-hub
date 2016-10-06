@@ -8,14 +8,25 @@ data: "https://data.sfgov.org/resource/kdpp-67mq.json?&$select=section_415_decla
 dataType: json
 column: section_415_declaration_of_intent
 transform: toColumns
+#column: Project Type
 source: "Mayor's Office of Housing and Community Development"
 portalID: "nj3x-rw36"
 published: true
-type: bar
+type: bar-horizontal
 scale: "5"
 colors: Blues
 "axisType": category
 "yFormat": ","
+groups:
+  - On-site BMR Project
+  - Fee Payment
+  - Units for Off-site Project
+  - Off-site BMR Project
+  - Units for Off-site Project with On-site Obligation
+  - Combination Project
+  - Land Dedication
+  - Units for Off-site Project with Onsite Obligation
+yLabel: Projects
 ---
 
-Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. The chart below shows the total completed projects to date by developer choice.
+Developers have a choice on how they can "include" affordable housing as part of the inclusionary requirements. They can choose to pay a fee, develop units on site, develop units off-site, or a combination of the prior three options. The chart below focuses only on the total completed projects to date by developer choice.
