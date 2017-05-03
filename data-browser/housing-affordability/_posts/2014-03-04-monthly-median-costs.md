@@ -3,7 +3,7 @@ layout: data
 title: "Monthly costs"
 chart-title: "Estimated median monthly costs by tenure"
 category: Housing-Affordability
-data: housing-affordability/ACS14_1YR_median_monthly_costs.csv
+data: housing-affordability/acs14_1yr_median_monthly_costs.csv
 type: bar
 axisType: category
 column: Tenure
