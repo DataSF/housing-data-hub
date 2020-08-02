@@ -1,7 +1,7 @@
 baseurl: ''
 permalink:	/:categories/:title/
 markdown: kramdown
-gems:
+plugins:
 - jekyll-sitemap
 
 version: 3.0.3
